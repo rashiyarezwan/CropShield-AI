@@ -2,8 +2,10 @@ from pathlib import Path
 
 import numpy as np
 import tensorflow as tf
+
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
 from PIL import Image
 import io
 
@@ -13,7 +15,6 @@ import io
 # ---------------------------------
 
 MODEL_PATH = Path("model/saved/crop_disease_model.keras")
-
 IMG_SIZE = (224, 224)
 
 CLASS_NAMES = [
@@ -45,16 +46,24 @@ app = FastAPI(
     description="AI-powered crop disease diagnosis API",
     version="1.0.0",
 )
+
+
+# ---------------------------------
+# CORS
+# ---------------------------------
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://crop-shield-ai-six.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ---------------------------------
 # Health check
@@ -77,7 +86,6 @@ def home():
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
 
-    # Check image type
     if file.content_type not in [
         "image/jpeg",
         "image/png",
@@ -89,37 +97,29 @@ async def predict(file: UploadFile = File(...)):
         )
 
     try:
-        # Read uploaded image
+
         contents = await file.read()
 
         image = Image.open(
             io.BytesIO(contents)
         ).convert("RGB")
 
-        # Resize
         image = image.resize(IMG_SIZE)
 
-        # Convert to NumPy
         image_array = np.array(image).astype(
             np.float32
         )
 
-        # Add batch dimension
         image_array = np.expand_dims(
             image_array,
             axis=0
         )
 
-        # MobileNetV2 preprocessing
-        
-
-        # CNN prediction
         predictions = model.predict(
             image_array,
             verbose=0
         )[0]
 
-        # Best class
         predicted_index = int(
             np.argmax(predictions)
         )
@@ -132,7 +132,6 @@ async def predict(file: UploadFile = File(...)):
             predicted_index
         ]
 
-        # Convert class name to readable name
         readable_name = predicted_class.replace(
             "Tomato___",
             ""
@@ -141,7 +140,6 @@ async def predict(file: UploadFile = File(...)):
             " "
         )
 
-        # Confidence threshold
         if confidence < 0.80:
             diagnosis_status = "Needs Expert Review"
         else:
@@ -159,6 +157,7 @@ async def predict(file: UploadFile = File(...)):
         }
 
     except Exception as e:
+
         raise HTTPException(
             status_code=500,
             detail=f"Prediction failed: {str(e)}"
