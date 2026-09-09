@@ -1,13 +1,12 @@
 from pathlib import Path
+import io
 
 import numpy as np
 import tensorflow as tf
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
 from PIL import Image
-import io
 
 
 # ---------------------------------
@@ -86,6 +85,7 @@ def home():
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
 
+    # Check image type
     if file.content_type not in [
         "image/jpeg",
         "image/png",
@@ -93,33 +93,38 @@ async def predict(file: UploadFile = File(...)):
     ]:
         raise HTTPException(
             status_code=400,
-            detail="Please upload a JPG or PNG image."
+            detail="Please upload a JPG or PNG image.",
         )
 
     try:
-
+        # Read uploaded image
         contents = await file.read()
 
         image = Image.open(
             io.BytesIO(contents)
         ).convert("RGB")
 
+        # Resize image
         image = image.resize(IMG_SIZE)
 
-        image_array = np.array(image).astype(
-            np.float32
-        )
+        # Convert to NumPy
+        image_array = np.array(
+            image
+        ).astype(np.float32)
 
+        # Add batch dimension
         image_array = np.expand_dims(
             image_array,
-            axis=0
+            axis=0,
         )
 
+        # CNN prediction
         predictions = model.predict(
             image_array,
-            verbose=0
+            verbose=0,
         )[0]
 
+        # Best class
         predicted_index = int(
             np.argmax(predictions)
         )
@@ -132,18 +137,22 @@ async def predict(file: UploadFile = File(...)):
             predicted_index
         ]
 
-        readable_name = predicted_class.replace(
-            "Tomato___",
-            ""
-        ).replace(
-            "_",
-            " "
+        # Convert class name to readable name
+        readable_name = (
+            predicted_class
+            .replace("Tomato___", "")
+            .replace("_", " ")
         )
 
+        # Confidence threshold
         if confidence < 0.80:
-            diagnosis_status = "Needs Expert Review"
+            diagnosis_status = (
+                "Needs Expert Review"
+            )
         else:
-            diagnosis_status = "AI Diagnosis"
+            diagnosis_status = (
+                "AI Diagnosis"
+            )
 
         return {
             "success": True,
@@ -151,14 +160,13 @@ async def predict(file: UploadFile = File(...)):
             "class": predicted_class,
             "confidence": round(
                 confidence * 100,
-                2
+                2,
             ),
             "status": diagnosis_status,
         }
 
     except Exception as e:
-
         raise HTTPException(
             status_code=500,
-            detail=f"Prediction failed: {str(e)}"
+            detail=f"Prediction failed: {str(e)}",
         )
