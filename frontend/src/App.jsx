@@ -104,178 +104,208 @@ const languages = [
 ];
 
 /* =========================================================
-   TRANSLATIONS
+   BASE ENGLISH TRANSLATIONS
+========================================================= */
+
+const english = {
+  nav: {
+    diagnosis: "Diagnosis",
+    risk: "Risk Forecast",
+    hotspots: "Hotspots",
+    advisories: "Advisories",
+    language: "Language",
+  },
+
+  systemOnline: "AI SYSTEM ONLINE",
+  heroTitle: "Protect your crops",
+  heroSubtitle: "before it's too late.",
+  startDiagnosis: "Start Diagnosis",
+
+  aiDiagnosis: "AI-powered diagnosis",
+  riskInsights: "Real-time risk insights",
+
+  cropHealth: "CROP HEALTH",
+  diagnosisTitle: "AI Diagnosis",
+  detectedCondition: "DETECTED CONDITION",
+  analyzingLeaf: "Analyzing leaf...",
+  ready: "Ready for analysis",
+  uploadHint: "Upload a clear image of a crop leaf",
+  confidence: "confidence",
+  aiConfidence: "AI CONFIDENCE",
+  severity: "SEVERITY",
+  riskLevel: "RISK LEVEL",
+  cropHealthStatus: "CROP HEALTH STATUS",
+  recommendedAction: "RECOMMENDED ACTION",
+  whatShouldIDo: "What should I do?",
+  cropAdvisory: "CROP ADVISORY",
+  listen: "Listen to advisory",
+  speaking: "Speaking advisory...",
+  highConfidence: "High-confidence AI diagnosis",
+  expertValidation: "Expert validation recommended",
+  analyzingButton: "Analyzing...",
+  analyzeAnother: "Analyze Another Leaf",
+  uploadLeaf: "Upload Leaf Image",
+  scan: "AI is analyzing...",
+
+  riskTitle: "Crop Risk Forecast",
+  overallRisk: "OVERALL RISK",
+  currentConditions: "CURRENT CONDITIONS",
+  fieldEnvironment: "Field Environment",
+  earlyWarning: "EARLY WARNING",
+
+  riskKicker: "EARLY WARNING SYSTEM",
+  riskDescription: "Prototype risk estimate for",
+  sevenDayOutlook: "7-DAY OUTLOOK",
+
+  temperature: "Temperature",
+  humidity: "Humidity",
+  rainfall: "Today's rainfall",
+  pestActivity: "Pest activity",
+  cropStage: "Crop stage",
+
+  weatherLive: "LIVE WEATHER",
+  weatherUpdated: "Weather updated",
+  fetchingWeather: "Fetching live weather...",
+  weatherUnavailable: "Live weather unavailable",
+  refreshWeather: "Refresh weather",
+
+  warningTitle:
+    "Conditions are favorable for disease development.",
+
+  warningText:
+    "The prototype risk engine combines environmental conditions, crop stage, and pest activity to prioritize potential outbreaks.",
+
+  recommendedActionRisk: "Recommended action",
+
+  recommendedActionText:
+    "Increase field monitoring, inspect nearby plants, and follow appropriate integrated pest-management guidance.",
+
+  pestTrap: "Pest trap signal",
+
+  pestTrapText:
+    "Prototype sensor feed indicates elevated pest activity in the monitored area.",
+
+  nextUpdate: "Next update",
+
+  nextUpdateText:
+    "Risk should be recalculated when new weather, crop-stage, or pest observations are received.",
+
+  fieldIntelligence: "FIELD INTELLIGENCE",
+  sensorPanelTitle: "Pest Trap & Sensor",
+
+  sensorPanelText:
+    "Prototype sensor feed for the monitored field.",
+
+  pestTrapCount: "Pest trap count",
+  soilMoisture: "Soil moisture",
+  sensorStatus: "Sensor status",
+  refreshSensor: "Refresh sensor",
+  lastUpdate: "Last update",
+
+  expertValidationTitle: "EXPERT VALIDATION",
+  expertReviewTitle: "Expert Review",
+
+  expertReviewText:
+    "Uncertain AI results can be submitted for agriculture-expert validation.",
+
+  sendForExpert: "Send for Expert Review",
+  requestExpert: "Request Expert Validation",
+  caseSubmitted: "Case submitted",
+  waitingValidation: "Waiting for expert validation",
+  uploadFirst: "Upload a leaf image first.",
+
+  hotspotsKicker: "GEOSPATIAL INTELLIGENCE",
+  hotspotTitle: "Disease Hotspots",
+
+  hotspotsDescription:
+    "Visualize reported crop-health cases, identify clusters, and prioritize field inspection.",
+
+  prototypeData: "PROTOTYPE DATA",
+  reportedClusters: "REPORTED CLUSTERS",
+  highCritical: "HIGH / CRITICAL",
+  affectedReports: "AFFECTED REPORTS",
+  fieldMap: "FIELD MAP",
+  reportedActivity: "Reported Disease Activity",
+  searchField: "Search field",
+  resetView: "Reset view",
+  mapHint: "Pan • zoom • tap a hotspot",
+  recentReports: "RECENT REPORTS",
+  priorityAreas: "Priority Areas",
+  reportedCases: "reported cases",
+  mapRisk: "RISK",
+  mapReports: "Reports",
+
+  hotspotValidation:
+    "Prototype hotspot records are for demonstration. Field reports should be validated before operational decisions are made.",
+
+  critical: "Critical",
+  high: "High",
+  medium: "Medium",
+  low: "Low",
+  selectDistrict: "Select Maharashtra district",
+
+  advisoriesKicker: "FARMER ACTION CENTER",
+  advisoriesTitle: "Crop Advisories",
+
+  advisoriesDescription:
+    "Translate the AI diagnosis into clear field-level next steps, prevention habits, and monitoring guidance.",
+
+  aiAssisted: "AI-ASSISTED GUIDANCE",
+  currentCondition: "CURRENT CONDITION",
+  noDiagnosis: "No diagnosis yet",
+  status: "STATUS",
+  immediateAction: "IMMEDIATE ACTION",
+  whatToDoNow: "What to do now",
+  prevention: "PREVENTION",
+  reduceFutureRisk: "Reduce future risk",
+  monitoring: "MONITORING",
+  keepWatching: "Keep watching",
+
+  expertTitle:
+    "AI-assisted guidance — expert validation recommended",
+
+  expertText:
+    "CropShield provides decision support. Field symptoms, crop variety, local conditions, and official agricultural guidance should be considered before operational treatment decisions.",
+
+  fieldRoutine: "FIELD ROUTINE",
+  scoutConsistently: "Scout consistently",
+
+  scoutText:
+    "Regular observation improves early detection.",
+
+  recordKeeping: "RECORD KEEPING",
+  captureLocation: "Capture location",
+
+  recordText:
+    "Use field reports to support hotspot mapping.",
+
+  escalation: "ESCALATION",
+  askExpert: "Ask an expert",
+
+  escalationText:
+    "Escalate uncertain or spreading cases.",
+
+  backToDiagnosis: "Back to Diagnosis",
+
+  footer: "Built for smarter, safer farming",
+
+  errors: {
+    prediction: "Prediction failed",
+    server:
+      "Unable to connect to the AI server. Make sure the FastAPI backend is running.",
+  },
+};
+
+/* =========================================================
+   LANGUAGE OVERRIDES
 ========================================================= */
 
 const translations = {
-  en: {
-    nav: {
-      diagnosis: "Diagnosis",
-      risk: "Risk Forecast",
-      hotspots: "Hotspots",
-      advisories: "Advisories",
-      language: "Language",
-    },
-
-    systemOnline: "AI SYSTEM ONLINE",
-    heroTitle: "Protect your crops",
-    heroSubtitle: "before it's too late.",
-    startDiagnosis: "Start Diagnosis",
-
-    aiDiagnosis: "AI-powered diagnosis",
-    riskInsights: "Real-time risk insights",
-
-    cropHealth: "CROP HEALTH",
-    diagnosisTitle: "AI Diagnosis",
-    detectedCondition: "DETECTED CONDITION",
-    analyzingLeaf: "Analyzing leaf...",
-    ready: "Ready for analysis",
-    uploadHint: "Upload a clear image of a crop leaf",
-    confidence: "confidence",
-    aiConfidence: "AI CONFIDENCE",
-    severity: "SEVERITY",
-    riskLevel: "RISK LEVEL",
-    cropHealthStatus: "CROP HEALTH STATUS",
-    recommendedAction: "RECOMMENDED ACTION",
-    whatShouldIDo: "What should I do?",
-    cropAdvisory: "CROP ADVISORY",
-    listen: "Listen to advisory",
-    speaking: "Speaking advisory...",
-    highConfidence: "High-confidence AI diagnosis",
-    expertValidation: "Expert validation recommended",
-    analyzingButton: "Analyzing...",
-    analyzeAnother: "Analyze Another Leaf",
-    uploadLeaf: "Upload Leaf Image",
-    scan: "AI is analyzing...",
-
-    riskTitle: "Crop Risk Forecast",
-    overallRisk: "OVERALL RISK",
-    currentConditions: "CURRENT CONDITIONS",
-    fieldEnvironment: "Field Environment",
-    earlyWarning: "EARLY WARNING",
-
-    riskKicker: "EARLY WARNING SYSTEM",
-    riskDescription: "Prototype risk estimate for",
-    sevenDayOutlook: "7-DAY OUTLOOK",
-
-    temperature: "Temperature",
-    humidity: "Humidity",
-    rainfall: "Today's rainfall",
-    pestActivity: "Pest activity",
-    cropStage: "Crop stage",
-
-    weatherLive: "LIVE WEATHER",
-    weatherUpdated: "Weather updated",
-    fetchingWeather: "Fetching live weather...",
-    weatherUnavailable: "Live weather unavailable",
-    refreshWeather: "Refresh weather",
-
-    warningTitle:
-      "Conditions are favorable for disease development.",
-    warningText:
-      "The prototype risk engine combines environmental conditions, crop stage, and pest activity to prioritize potential outbreaks.",
-
-    recommendedActionRisk: "Recommended action",
-    recommendedActionText:
-      "Increase field monitoring, inspect nearby plants, and follow appropriate integrated pest-management guidance.",
-
-    pestTrap: "Pest trap signal",
-    pestTrapText:
-      "Prototype sensor feed indicates elevated pest activity in the monitored area.",
-
-    nextUpdate: "Next update",
-    nextUpdateText:
-      "Risk should be recalculated when new weather, crop-stage, or pest observations are received.",
-
-    fieldIntelligence: "FIELD INTELLIGENCE",
-    sensorPanelTitle: "Pest Trap & Sensor",
-    sensorPanelText:
-      "Prototype sensor feed for the monitored field.",
-    pestTrapCount: "Pest trap count",
-    soilMoisture: "Soil moisture",
-    sensorStatus: "Sensor status",
-    refreshSensor: "Refresh sensor",
-    lastUpdate: "Last update",
-
-    expertValidationTitle: "EXPERT VALIDATION",
-    expertReviewTitle: "Expert Review",
-    expertReviewText:
-      "Uncertain AI results can be submitted for agriculture-expert validation.",
-    sendForExpert: "Send for Expert Review",
-    requestExpert: "Request Expert Validation",
-    caseSubmitted: "Case submitted",
-    waitingValidation: "Waiting for expert validation",
-    uploadFirst: "Upload a leaf image first.",
-
-    hotspotsKicker: "GEOSPATIAL INTELLIGENCE",
-    hotspotTitle: "Disease Hotspots",
-    hotspotsDescription:
-      "Visualize reported crop-health cases, identify clusters, and prioritize field inspection.",
-    prototypeData: "PROTOTYPE DATA",
-    reportedClusters: "REPORTED CLUSTERS",
-    highCritical: "HIGH / CRITICAL",
-    affectedReports: "AFFECTED REPORTS",
-    fieldMap: "FIELD MAP",
-    reportedActivity: "Reported Disease Activity",
-    searchField: "Search field",
-    resetView: "Reset view",
-    mapHint: "Pan • zoom • tap a hotspot",
-    recentReports: "RECENT REPORTS",
-    priorityAreas: "Priority Areas",
-    reportedCases: "reported cases",
-    mapRisk: "RISK",
-    mapReports: "Reports",
-    hotspotValidation:
-      "Prototype hotspot records are for demonstration. Field reports should be validated before operational decisions are made.",
-    critical: "Critical",
-    high: "High",
-    medium: "Medium",
-    low: "Low",
-    selectDistrict: "Select Maharashtra district",
-
-    advisoriesKicker: "FARMER ACTION CENTER",
-    advisoriesTitle: "Crop Advisories",
-    advisoriesDescription:
-      "Translate the AI diagnosis into clear field-level next steps, prevention habits, and monitoring guidance.",
-    aiAssisted: "AI-ASSISTED GUIDANCE",
-    currentCondition: "CURRENT CONDITION",
-    noDiagnosis: "No diagnosis yet",
-    status: "STATUS",
-    immediateAction: "IMMEDIATE ACTION",
-    whatToDoNow: "What to do now",
-    prevention: "PREVENTION",
-    reduceFutureRisk: "Reduce future risk",
-    monitoring: "MONITORING",
-    keepWatching: "Keep watching",
-    expertTitle:
-      "AI-assisted guidance — expert validation recommended",
-    expertText:
-      "CropShield provides decision support. Field symptoms, crop variety, local conditions, and official agricultural guidance should be considered before operational treatment decisions.",
-    fieldRoutine: "FIELD ROUTINE",
-    scoutConsistently: "Scout consistently",
-    scoutText:
-      "Regular observation improves early detection.",
-    recordKeeping: "RECORD KEEPING",
-    captureLocation: "Capture location",
-    recordText:
-      "Use field reports to support hotspot mapping.",
-    escalation: "ESCALATION",
-    askExpert: "Ask an expert",
-    escalationText:
-      "Escalate uncertain or spreading cases.",
-
-    backToDiagnosis: "Back to Diagnosis",
-
-    footer: "Built for smarter, safer farming",
-
-    errors: {
-      prediction: "Prediction failed",
-      server:
-        "Unable to connect to the AI server. Make sure the FastAPI backend is running.",
-    },
-  },
+  en: english,
 
   mr: {
+    ...english,
+
     nav: {
       diagnosis: "निदान",
       risk: "जोखीम अंदाज",
@@ -297,22 +327,39 @@ const translations = {
     detectedCondition: "ओळखलेली स्थिती",
     analyzingLeaf: "पानाचे विश्लेषण सुरू आहे...",
     ready: "विश्लेषणासाठी तयार",
-    uploadHint: "पिकाच्या पानाचा स्पष्ट फोटो अपलोड करा",
+
+    uploadHint:
+      "पिकाच्या पानाचा स्पष्ट फोटो अपलोड करा",
+
     confidence: "विश्वास",
     aiConfidence: "AI विश्वास पातळी",
     severity: "तीव्रता",
     riskLevel: "जोखीम पातळी",
     cropHealthStatus: "पीक आरोग्य स्थिती",
-    recommendedAction: "शिफारस केलेली कृती",
+
+    recommendedAction:
+      "शिफारस केलेली कृती",
+
     whatShouldIDo: "काय करावे?",
     cropAdvisory: "पीक सल्ला",
     listen: "सल्ला ऐका",
     speaking: "सल्ला वाचला जात आहे...",
-    highConfidence: "उच्च-विश्वास AI निदान",
-    expertValidation: "तज्ज्ञ पडताळणीची शिफारस",
-    analyzingButton: "विश्लेषण करत आहे...",
-    analyzeAnother: "दुसरे पान तपासा",
-    uploadLeaf: "पानाचा फोटो अपलोड करा",
+
+    highConfidence:
+      "उच्च-विश्वास AI निदान",
+
+    expertValidation:
+      "तज्ज्ञ पडताळणीची शिफारस",
+
+    analyzingButton:
+      "विश्लेषण करत आहे...",
+
+    analyzeAnother:
+      "दुसरे पान तपासा",
+
+    uploadLeaf:
+      "पानाचा फोटो अपलोड करा",
+
     scan: "AI विश्लेषण करत आहे...",
 
     riskTitle: "पीक जोखीम अंदाज",
@@ -320,9 +367,15 @@ const translations = {
     currentConditions: "सध्याची परिस्थिती",
     fieldEnvironment: "शेतातील परिस्थिती",
     earlyWarning: "पूर्वसूचना",
-    riskKicker: "पूर्वसूचना प्रणाली",
-    riskDescription: "यासाठी नमुना जोखीम अंदाज:",
-    sevenDayOutlook: "७-दिवसांचा अंदाज",
+
+    riskKicker:
+      "पूर्वसूचना प्रणाली",
+
+    riskDescription:
+      "यासाठी नमुना जोखीम अंदाज:",
+
+    sevenDayOutlook:
+      "७-दिवसांचा अंदाज",
 
     temperature: "तापमान",
     humidity: "आर्द्रता",
@@ -332,115 +385,204 @@ const translations = {
 
     weatherLive: "थेट हवामान",
     weatherUpdated: "हवामान अद्यतन",
-    fetchingWeather: "थेट हवामान मिळवत आहे...",
-    weatherUnavailable: "थेट हवामान उपलब्ध नाही",
-    refreshWeather: "हवामान अद्यतनित करा",
+    fetchingWeather:
+      "थेट हवामान मिळवत आहे...",
+    weatherUnavailable:
+      "थेट हवामान उपलब्ध नाही",
+    refreshWeather:
+      "हवामान अद्यतनित करा",
 
-    warningTitle:
-      "रोगाच्या वाढीसाठी सध्याची परिस्थिती अनुकूल आहे.",
-    warningText:
-      "हे नमुना जोखीम इंजिन पर्यावरणीय परिस्थिती, पिकाची अवस्था आणि कीड क्रियाशीलता एकत्र करून संभाव्य प्रादुर्भावाला प्राधान्य देते.",
+    fieldIntelligence:
+      "शेत बुद्धिमत्ता",
 
-    recommendedActionRisk: "शिफारस केलेली कृती",
-    recommendedActionText:
-      "शेतातील निरीक्षण वाढवा, जवळपासच्या रोपांची तपासणी करा आणि योग्य एकात्मिक कीड व्यवस्थापन मार्गदर्शक तत्त्वांचे पालन करा.",
+    sensorPanelTitle:
+      "कीड सापळा आणि सेन्सर",
 
-    pestTrap: "कीड सापळा संकेत",
-    pestTrapText:
-      "नमुना सेन्सर फीड निरीक्षण क्षेत्रात वाढलेली कीड क्रियाशीलता दर्शवते.",
-
-    nextUpdate: "पुढील अद्यतन",
-    nextUpdateText:
-      "नवीन हवामान, पिकाची अवस्था किंवा कीड निरीक्षणे मिळाल्यावर जोखीम पुन्हा मोजली जावी.",
-
-    fieldIntelligence: "शेत बुद्धिमत्ता",
-    sensorPanelTitle: "कीड सापळा आणि सेन्सर",
     sensorPanelText:
       "निरीक्षण केलेल्या शेतासाठी नमुना सेन्सर फीड.",
-    pestTrapCount: "कीड सापळा संख्या",
-    soilMoisture: "मातीतील आर्द्रता",
-    sensorStatus: "सेन्सर स्थिती",
-    refreshSensor: "सेन्सर अद्यतनित करा",
-    lastUpdate: "शेवटचे अद्यतन",
 
-    expertValidationTitle: "तज्ज्ञ पडताळणी",
-    expertReviewTitle: "तज्ज्ञ पुनरावलोकन",
+    pestTrapCount:
+      "कीड सापळा संख्या",
+
+    soilMoisture:
+      "मातीतील आर्द्रता",
+
+    sensorStatus:
+      "सेन्सर स्थिती",
+
+    refreshSensor:
+      "सेन्सर अद्यतनित करा",
+
+    lastUpdate:
+      "शेवटचे अद्यतन",
+
+    expertValidationTitle:
+      "तज्ज्ञ पडताळणी",
+
+    expertReviewTitle:
+      "तज्ज्ञ पुनरावलोकन",
+
     expertReviewText:
       "अनिश्चित AI निकाल तज्ज्ञ पडताळणीसाठी पाठवता येतात.",
-    sendForExpert: "तज्ज्ञ पडताळणीसाठी पाठवा",
-    requestExpert: "तज्ज्ञ पडताळणी मागवा",
-    caseSubmitted: "प्रकरण पाठवले",
-    waitingValidation: "तज्ज्ञ पडताळणीची प्रतीक्षा",
-    uploadFirst: "प्रथम पानाचा फोटो अपलोड करा.",
 
-    hotspotsKicker: "भौगोलिक माहिती",
-    hotspotTitle: "रोग हॉटस्पॉट्स",
+    sendForExpert:
+      "तज्ज्ञ पडताळणीसाठी पाठवा",
+
+    requestExpert:
+      "तज्ज्ञ पडताळणी मागवा",
+
+    caseSubmitted:
+      "प्रकरण पाठवले",
+
+    waitingValidation:
+      "तज्ज्ञ पडताळणीची प्रतीक्षा",
+
+    uploadFirst:
+      "प्रथम पानाचा फोटो अपलोड करा.",
+
+    hotspotsKicker:
+      "भौगोलिक माहिती",
+
+    hotspotTitle:
+      "रोग हॉटस्पॉट्स",
+
     hotspotsDescription:
       "नोंदवलेली पीक-आरोग्य प्रकरणे पहा, समूह ओळखा आणि शेत तपासणीला प्राधान्य द्या.",
-    prototypeData: "प्रोटोटाइप डेटा",
-    reportedClusters: "नोंदवलेले समूह",
-    highCritical: "उच्च / गंभीर",
-    affectedReports: "प्रभावित अहवाल",
-    fieldMap: "शेत नकाशा",
-    reportedActivity: "नोंदवलेली रोग क्रियाशीलता",
-    searchField: "शेत शोधा",
-    resetView: "नकाशा रीसेट",
-    mapHint: "हलवा • झूम करा • हॉटस्पॉटवर टॅप करा",
-    recentReports: "अलीकडील अहवाल",
-    priorityAreas: "प्राधान्य क्षेत्रे",
-    reportedCases: "नोंदवलेली प्रकरणे",
-    mapRisk: "जोखीम",
-    mapReports: "अहवाल",
+
+    prototypeData:
+      "प्रोटोटाइप डेटा",
+
+    reportedClusters:
+      "नोंदवलेले समूह",
+
+    highCritical:
+      "उच्च / गंभीर",
+
+    affectedReports:
+      "प्रभावित अहवाल",
+
+    fieldMap:
+      "शेत नकाशा",
+
+    reportedActivity:
+      "नोंदवलेली रोग क्रियाशीलता",
+
+    searchField:
+      "शेत शोधा",
+
+    resetView:
+      "नकाशा रीसेट",
+
+    mapHint:
+      "हलवा • झूम करा • हॉटस्पॉटवर टॅप करा",
+
+    recentReports:
+      "अलीकडील अहवाल",
+
+    priorityAreas:
+      "प्राधान्य क्षेत्रे",
+
+    reportedCases:
+      "नोंदवलेली प्रकरणे",
+
+    mapRisk:
+      "जोखीम",
+
+    mapReports:
+      "अहवाल",
+
     hotspotValidation:
       "प्रोटोटाइप हॉटस्पॉट नोंदी प्रात्यक्षिकासाठी आहेत. प्रत्यक्ष निर्णय घेण्यापूर्वी शेत अहवालांची पडताळणी करावी.",
+
     critical: "गंभीर",
     high: "उच्च",
     medium: "मध्यम",
     low: "कमी",
-    selectDistrict: "महाराष्ट्रातील जिल्हा निवडा",
 
-    advisoriesKicker: "शेतकरी कृती केंद्र",
-    advisoriesTitle: "पीक सल्ला",
+    selectDistrict:
+      "महाराष्ट्रातील जिल्हा निवडा",
+
+    advisoriesKicker:
+      "शेतकरी कृती केंद्र",
+
+    advisoriesTitle:
+      "पीक सल्ला",
+
     advisoriesDescription:
       "AI निदानाचे स्पष्ट पुढील टप्पे, प्रतिबंध आणि निरीक्षण मार्गदर्शनात रूपांतर करा.",
-    aiAssisted: "AI-सहाय्यित मार्गदर्शन",
-    currentCondition: "सध्याची स्थिती",
-    noDiagnosis: "अद्याप निदान नाही",
+
+    aiAssisted:
+      "AI-सहाय्यित मार्गदर्शन",
+
+    currentCondition:
+      "सध्याची स्थिती",
+
+    noDiagnosis:
+      "अद्याप निदान नाही",
+
     status: "स्थिती",
-    immediateAction: "तात्काळ कृती",
-    whatToDoNow: "आता काय करावे",
-    prevention: "प्रतिबंध",
-    reduceFutureRisk: "भविष्यातील जोखीम कमी करा",
-    monitoring: "निरीक्षण",
-    keepWatching: "लक्ष ठेवा",
+
+    immediateAction:
+      "तात्काळ कृती",
+
+    whatToDoNow:
+      "आता काय करावे",
+
+    prevention:
+      "प्रतिबंध",
+
+    reduceFutureRisk:
+      "भविष्यातील जोखीम कमी करा",
+
+    monitoring:
+      "निरीक्षण",
+
+    keepWatching:
+      "लक्ष ठेवा",
+
     expertTitle:
       "AI-सहाय्यित मार्गदर्शन — तज्ज्ञ पडताळणीची शिफारस",
+
     expertText:
       "CropShield निर्णय सहाय्य देते. कृती करण्यापूर्वी शेतातील लक्षणे, पिकाची जात, स्थानिक परिस्थिती आणि अधिकृत कृषी मार्गदर्शन विचारात घ्यावे.",
-    fieldRoutine: "शेतातील दिनचर्या",
-    scoutConsistently: "नियमित पाहणी करा",
+
+    fieldRoutine:
+      "शेतातील दिनचर्या",
+
+    scoutConsistently:
+      "नियमित पाहणी करा",
+
     scoutText:
       "नियमित निरीक्षणामुळे रोग लवकर ओळखता येतो.",
-    recordKeeping: "नोंद ठेवणे",
-    captureLocation: "स्थान नोंदवा",
+
+    recordKeeping:
+      "नोंद ठेवणे",
+
+    captureLocation:
+      "स्थान नोंदवा",
+
     recordText:
       "फील्ड अहवाल हॉटस्पॉट नकाशासाठी वापरा.",
-    escalation: "तज्ज्ञ मदत",
-    askExpert: "तज्ज्ञांचा सल्ला घ्या",
+
+    escalation:
+      "तज्ज्ञ मदत",
+
+    askExpert:
+      "तज्ज्ञांचा सल्ला घ्या",
+
     escalationText:
       "अनिश्चित किंवा वाढणारी प्रकरणे तज्ज्ञांकडे पाठवा.",
 
-    backToDiagnosis: "निदानाकडे परत जा",
-    footer: "अधिक स्मार्ट आणि सुरक्षित शेतीसाठी",
+    backToDiagnosis:
+      "निदानाकडे परत जा",
 
-    errors: {
-      prediction: "निदान अयशस्वी झाले",
-      server:
-        "AI सर्व्हरशी कनेक्ट होता आले नाही.",
-    },
+    footer:
+      "अधिक स्मार्ट आणि सुरक्षित शेतीसाठी",
   },
 
   hi: {
+    ...english,
+
     nav: {
       diagnosis: "निदान",
       risk: "जोखिम पूर्वानुमान",
@@ -449,186 +591,343 @@ const translations = {
       language: "भाषा",
     },
 
-    systemOnline: "AI सिस्टम ऑनलाइन",
-    heroTitle: "अपनी फसलों की रक्षा करें",
-    heroSubtitle: "बहुत देर होने से पहले।",
-    startDiagnosis: "निदान शुरू करें",
+    systemOnline:
+      "AI सिस्टम ऑनलाइन",
 
-    aiDiagnosis: "AI-संचालित निदान",
-    riskInsights: "रियल-टाइम जोखिम जानकारी",
+    heroTitle:
+      "अपनी फसलों की रक्षा करें",
 
-    cropHealth: "फसल स्वास्थ्य",
-    diagnosisTitle: "AI निदान",
-    detectedCondition: "पहचानी गई स्थिति",
-    analyzingLeaf: "पत्ती का विश्लेषण हो रहा है...",
-    ready: "विश्लेषण के लिए तैयार",
+    heroSubtitle:
+      "बहुत देर होने से पहले।",
+
+    startDiagnosis:
+      "निदान शुरू करें",
+
+    aiDiagnosis:
+      "AI-संचालित निदान",
+
+    riskInsights:
+      "रियल-टाइम जोखिम जानकारी",
+
+    cropHealth:
+      "फसल स्वास्थ्य",
+
+    diagnosisTitle:
+      "AI निदान",
+
+    detectedCondition:
+      "पहचानी गई स्थिति",
+
+    analyzingLeaf:
+      "पत्ती का विश्लेषण हो रहा है...",
+
+    ready:
+      "विश्लेषण के लिए तैयार",
+
     uploadHint:
       "फसल की पत्ती की साफ तस्वीर अपलोड करें",
-    confidence: "विश्वास",
-    aiConfidence: "AI विश्वास",
-    severity: "गंभीरता",
-    riskLevel: "जोखिम स्तर",
-    cropHealthStatus: "फसल स्वास्थ्य स्थिति",
-    recommendedAction: "अनुशंसित कार्रवाई",
-    whatShouldIDo: "क्या करें?",
-    cropAdvisory: "फसल सलाह",
-    listen: "सलाह सुनें",
-    speaking: "सलाह सुनाई जा रही है...",
-    highConfidence: "उच्च-विश्वास AI निदान",
-    expertValidation: "विशेषज्ञ सत्यापन की सलाह",
-    analyzingButton: "विश्लेषण हो रहा है...",
-    analyzeAnother: "दूसरी पत्ती जांचें",
-    uploadLeaf: "पत्ती की तस्वीर अपलोड करें",
-    scan: "AI विश्लेषण कर रहा है...",
 
-    riskTitle: "फसल जोखिम पूर्वानुमान",
-    overallRisk: "कुल जोखिम",
-    currentConditions: "वर्तमान स्थिति",
-    fieldEnvironment: "खेत का वातावरण",
-    earlyWarning: "पूर्व चेतावनी",
-    riskKicker: "पूर्व चेतावनी प्रणाली",
+    confidence:
+      "विश्वास",
+
+    aiConfidence:
+      "AI विश्वास",
+
+    severity:
+      "गंभीरता",
+
+    riskLevel:
+      "जोखिम स्तर",
+
+    cropHealthStatus:
+      "फसल स्वास्थ्य स्थिति",
+
+    recommendedAction:
+      "अनुशंसित कार्रवाई",
+
+    whatShouldIDo:
+      "क्या करें?",
+
+    cropAdvisory:
+      "फसल सलाह",
+
+    listen:
+      "सलाह सुनें",
+
+    speaking:
+      "सलाह सुनाई जा रही है...",
+
+    highConfidence:
+      "उच्च-विश्वास AI निदान",
+
+    expertValidation:
+      "विशेषज्ञ सत्यापन की सलाह",
+
+    analyzingButton:
+      "विश्लेषण हो रहा है...",
+
+    analyzeAnother:
+      "दूसरी पत्ती जांचें",
+
+    uploadLeaf:
+      "पत्ती की तस्वीर अपलोड करें",
+
+    scan:
+      "AI विश्लेषण कर रहा है...",
+
+    riskTitle:
+      "फसल जोखिम पूर्वानुमान",
+
+    overallRisk:
+      "कुल जोखिम",
+
+    currentConditions:
+      "वर्तमान स्थिति",
+
+    fieldEnvironment:
+      "खेत का वातावरण",
+
+    earlyWarning:
+      "पूर्व चेतावनी",
+
+    riskKicker:
+      "पूर्व चेतावनी प्रणाली",
+
     riskDescription:
       "इसके लिए प्रोटोटाइप जोखिम अनुमान:",
-    sevenDayOutlook: "7-दिन का पूर्वानुमान",
 
-    temperature: "तापमान",
-    humidity: "नमी",
-    rainfall: "आज की वर्षा",
-    pestActivity: "कीट गतिविधि",
-    cropStage: "फसल अवस्था",
+    sevenDayOutlook:
+      "7-दिन का पूर्वानुमान",
 
-    weatherLive: "लाइव मौसम",
-    weatherUpdated: "मौसम अपडेट",
+    temperature:
+      "तापमान",
+
+    humidity:
+      "नमी",
+
+    rainfall:
+      "आज की वर्षा",
+
+    pestActivity:
+      "कीट गतिविधि",
+
+    cropStage:
+      "फसल अवस्था",
+
+    weatherLive:
+      "लाइव मौसम",
+
+    weatherUpdated:
+      "मौसम अपडेट",
+
     fetchingWeather:
       "लाइव मौसम प्राप्त हो रहा है...",
+
     weatherUnavailable:
       "लाइव मौसम उपलब्ध नहीं है",
-    refreshWeather: "मौसम अपडेट करें",
 
-    warningTitle:
-      "मौजूदा परिस्थितियाँ रोग विकास के लिए अनुकूल हैं।",
-    warningText:
-      "यह प्रोटोटाइप जोखिम इंजन पर्यावरणीय परिस्थितियों, फसल अवस्था और कीट गतिविधि को मिलाकर संभावित प्रकोपों को प्राथमिकता देता है।",
+    refreshWeather:
+      "मौसम अपडेट करें",
 
-    recommendedActionRisk: "अनुशंसित कार्रवाई",
-    recommendedActionText:
-      "खेत की निगरानी बढ़ाएं, आसपास के पौधों का निरीक्षण करें और उचित एकीकृत कीट प्रबंधन दिशानिर्देशों का पालन करें।",
+    fieldIntelligence:
+      "खेत की जानकारी",
 
-    pestTrap: "कीट ट्रैप संकेत",
-    pestTrapText:
-      "प्रोटोटाइप सेंसर फीड निगरानी क्षेत्र में बढ़ी हुई कीट गतिविधि दिखाता है.",
+    sensorPanelTitle:
+      "कीट ट्रैप और सेंसर",
 
-    nextUpdate: "अगला अपडेट",
-    nextUpdateText:
-      "नए मौसम या कीट अवलोकन मिलने पर जोखिम की पुनर्गणना की जानी चाहिए।",
-
-    fieldIntelligence: "खेत की जानकारी",
-    sensorPanelTitle: "कीट ट्रैप और सेंसर",
     sensorPanelText:
       "निगरानी किए गए खेत के लिए प्रोटोटाइप सेंसर फीड।",
-    pestTrapCount: "कीट ट्रैप संख्या",
-    soilMoisture: "मिट्टी की नमी",
-    sensorStatus: "सेंसर स्थिति",
-    refreshSensor: "सेंसर अपडेट करें",
-    lastUpdate: "अंतिम अपडेट",
 
-    expertValidationTitle: "विशेषज्ञ सत्यापन",
-    expertReviewTitle: "विशेषज्ञ समीक्षा",
+    pestTrapCount:
+      "कीट ट्रैप संख्या",
+
+    soilMoisture:
+      "मिट्टी की नमी",
+
+    sensorStatus:
+      "सेंसर स्थिति",
+
+    refreshSensor:
+      "सेंसर अपडेट करें",
+
+    lastUpdate:
+      "अंतिम अपडेट",
+
+    expertValidationTitle:
+      "विशेषज्ञ सत्यापन",
+
+    expertReviewTitle:
+      "विशेषज्ञ समीक्षा",
+
     expertReviewText:
       "अनिश्चित AI परिणाम विशेषज्ञ सत्यापन के लिए भेजे जा सकते हैं।",
+
     sendForExpert:
       "विशेषज्ञ समीक्षा के लिए भेजें",
+
     requestExpert:
       "विशेषज्ञ सत्यापन का अनुरोध करें",
-    caseSubmitted: "केस भेजा गया",
+
+    caseSubmitted:
+      "केस भेजा गया",
+
     waitingValidation:
       "विशेषज्ञ सत्यापन की प्रतीक्षा",
+
     uploadFirst:
       "पहले पत्ती की तस्वीर अपलोड करें।",
 
-    hotspotsKicker: "भौगोलिक जानकारी",
-    hotspotTitle: "रोग हॉटस्पॉट",
+    hotspotsKicker:
+      "भौगोलिक जानकारी",
+
+    hotspotTitle:
+      "रोग हॉटस्पॉट",
+
     hotspotsDescription:
-      "रिपोर्ट किए गए फसल-स्वास्थ्य मामलों को देखें, क्लस्टर पहचानें और खेत निरीक्षण को प्राथमिकता दें।",
-    prototypeData: "प्रोटोटाइप डेटा",
+      "रिपोर्ट किए गए फसल स्वास्थ्य मामलों को देखें और खेत निरीक्षण को प्राथमिकता दें।",
+
+    prototypeData:
+      "प्रोटोटाइप डेटा",
+
     reportedClusters:
       "रिपोर्ट किए गए क्लस्टर",
-    highCritical: "उच्च / गंभीर",
-    affectedReports: "प्रभावित रिपोर्ट",
-    fieldMap: "खेत का नक्शा",
+
+    highCritical:
+      "उच्च / गंभीर",
+
+    affectedReports:
+      "प्रभावित रिपोर्ट",
+
+    fieldMap:
+      "खेत का नक्शा",
+
     reportedActivity:
       "रिपोर्ट की गई रोग गतिविधि",
-    searchField: "खेत खोजें",
-    resetView: "नक्शा रीसेट",
+
+    searchField:
+      "खेत खोजें",
+
+    resetView:
+      "नक्शा रीसेट",
+
     mapHint:
       "स्थान बदलें • ज़ूम करें • हॉटस्पॉट दबाएं",
-    recentReports: "हाल की रिपोर्ट",
-    priorityAreas: "प्राथमिक क्षेत्र",
+
+    recentReports:
+      "हाल की रिपोर्ट",
+
+    priorityAreas:
+      "प्राथमिक क्षेत्र",
+
     reportedCases:
       "रिपोर्ट किए गए मामले",
-    mapRisk: "जोखिम",
-    mapReports: "रिपोर्ट",
+
+    mapRisk:
+      "जोखिम",
+
+    mapReports:
+      "रिपोर्ट",
+
     hotspotValidation:
       "प्रोटोटाइप हॉटस्पॉट रिकॉर्ड केवल प्रदर्शन के लिए हैं।",
-    critical: "गंभीर",
-    high: "उच्च",
-    medium: "मध्यम",
-    low: "कम",
+
+    critical:
+      "गंभीर",
+
+    high:
+      "उच्च",
+
+    medium:
+      "मध्यम",
+
+    low:
+      "कम",
+
     selectDistrict:
       "महाराष्ट्र जिला चुनें",
 
     advisoriesKicker:
       "किसान कार्रवाई केंद्र",
-    advisoriesTitle: "फसल सलाह",
+
+    advisoriesTitle:
+      "फसल सलाह",
+
     advisoriesDescription:
       "AI निदान को स्पष्ट अगले कदम, रोकथाम और निगरानी मार्गदर्शन में बदलें।",
+
     aiAssisted:
       "AI-सहायता प्राप्त मार्गदर्शन",
+
     currentCondition:
       "वर्तमान स्थिति",
+
     noDiagnosis:
       "अभी निदान नहीं",
-    status: "स्थिति",
+
+    status:
+      "स्थिति",
+
     immediateAction:
       "तत्काल कार्रवाई",
+
     whatToDoNow:
       "अभी क्या करें",
-    prevention: "रोकथाम",
+
+    prevention:
+      "रोकथाम",
+
     reduceFutureRisk:
       "भविष्य का जोखिम कम करें",
-    monitoring: "निगरानी",
-    keepWatching: "नज़र रखें",
+
+    monitoring:
+      "निगरानी",
+
+    keepWatching:
+      "नज़र रखें",
+
     expertTitle:
       "AI-सहायता प्राप्त मार्गदर्शन — विशेषज्ञ सत्यापन की सलाह",
+
     expertText:
       "कार्रवाई से पहले खेत के लक्षण, फसल की किस्म, स्थानीय परिस्थितियों और आधिकारिक कृषि मार्गदर्शन पर विचार करें।",
-    fieldRoutine: "खेत की दिनचर्या",
+
+    fieldRoutine:
+      "खेत की दिनचर्या",
+
     scoutConsistently:
       "नियमित निरीक्षण करें",
+
     scoutText:
       "नियमित निरीक्षण से रोग का जल्दी पता लगाने में मदद मिलती है।",
-    recordKeeping: "रिकॉर्ड रखना",
-    captureLocation: "स्थान दर्ज करें",
+
+    recordKeeping:
+      "रिकॉर्ड रखना",
+
+    captureLocation:
+      "स्थान दर्ज करें",
+
     recordText:
       "हॉटस्पॉट मैपिंग में खेत की रिपोर्ट का उपयोग करें।",
-    escalation: "विशेषज्ञ सहायता",
-    askExpert: "विशेषज्ञ से पूछें",
+
+    escalation:
+      "विशेषज्ञ सहायता",
+
+    askExpert:
+      "विशेषज्ञ से पूछें",
+
     escalationText:
-      "अनिश्चित या फैलते मामलों को विशेषज्ञ के पास भेजें।",
+      "अनिश्चित मामलों को विशेषज्ञ के पास भेजें।",
 
     backToDiagnosis:
       "निदान पर वापस जाएं",
+
     footer:
       "अधिक स्मार्ट और सुरक्षित खेती के लिए",
-
-    errors: {
-      prediction: "निदान विफल हुआ",
-      server:
-        "AI सर्वर से कनेक्ट नहीं हो सका।",
-    },
   },
 
   te: {
+    ...english,
+
     nav: {
       diagnosis: "నిర్ధారణ",
       risk: "ప్రమాద అంచనా",
@@ -639,266 +938,341 @@ const translations = {
 
     systemOnline:
       "AI వ్యవస్థ ఆన్‌లైన్‌లో ఉంది",
+
     heroTitle:
       "మీ పంటలను రక్షించండి",
+
     heroSubtitle:
       "చాలా ఆలస్యం కాకముందే.",
+
     startDiagnosis:
       "నిర్ధారణ ప్రారంభించండి",
 
     aiDiagnosis:
       "AI ఆధారిత నిర్ధారణ",
+
     riskInsights:
       "రియల్-టైమ్ ప్రమాద సమాచారం",
 
     cropHealth:
       "పంట ఆరోగ్యం",
+
     diagnosisTitle:
       "AI నిర్ధారణ",
+
     detectedCondition:
       "గుర్తించిన పరిస్థితి",
+
     analyzingLeaf:
       "ఆకును విశ్లేషిస్తోంది...",
+
     ready:
       "విశ్లేషణకు సిద్ధంగా ఉంది",
+
     uploadHint:
       "పంట ఆకు యొక్క స్పష్టమైన చిత్రాన్ని అప్లోడ్ చేయండి",
-    confidence: "నమ్మకం",
+
+    confidence:
+      "నమ్మకం",
+
     aiConfidence:
       "AI నమ్మక స్థాయి",
-    severity: "తీవ్రత",
+
+    severity:
+      "తీవ్రత",
+
     riskLevel:
       "ప్రమాద స్థాయి",
+
     cropHealthStatus:
       "పంట ఆరోగ్య స్థితి",
+
     recommendedAction:
       "సిఫారసు చేసిన చర్య",
-    whatShouldIDo: "ఏం చేయాలి?",
+
+    whatShouldIDo:
+      "ఏం చేయాలి?",
+
     cropAdvisory:
       "పంట సలహా",
+
     listen:
       "సలహా వినండి",
+
     speaking:
       "సలహా చదువుతోంది...",
+
     highConfidence:
       "అధిక నమ్మకంతో AI నిర్ధారణ",
+
     expertValidation:
       "నిపుణుల ధృవీకరణ సిఫారసు",
+
     analyzingButton:
       "విశ్లేషిస్తోంది...",
+
     analyzeAnother:
       "మరో ఆకును విశ్లేషించండి",
+
     uploadLeaf:
       "ఆకు చిత్రాన్ని అప్లోడ్ చేయండి",
+
     scan:
       "AI విశ్లేషిస్తోంది...",
 
     riskTitle:
       "పంట ప్రమాద అంచనా",
+
     overallRisk:
       "మొత్తం ప్రమాదం",
+
     currentConditions:
       "ప్రస్తుత పరిస్థితులు",
+
     fieldEnvironment:
       "పొల వాతావరణం",
+
     earlyWarning:
       "ముందస్తు హెచ్చరిక",
+
     riskKicker:
       "ముందస్తు హెచ్చరిక వ్యవస్థ",
+
     riskDescription:
       "దీని కోసం నమూనా ప్రమాద అంచనా:",
+
     sevenDayOutlook:
       "7-రోజుల అంచనా",
 
     temperature:
       "ఉష్ణోగ్రత",
+
     humidity:
       "తేమ",
+
     rainfall:
       "ఈరోజు వర్షపాతం",
+
     pestActivity:
       "పురుగు కార్యకలాపం",
+
     cropStage:
       "పంట దశ",
 
     weatherLive:
       "ప్రత్యక్ష వాతావరణం",
+
     weatherUpdated:
       "వాతావరణ నవీకరణ",
+
     fetchingWeather:
       "ప్రత్యక్ష వాతావరణాన్ని పొందుతోంది...",
+
     weatherUnavailable:
       "ప్రత్యక్ష వాతావరణం అందుబాటులో లేదు",
+
     refreshWeather:
       "వాతావరణాన్ని నవీకరించండి",
 
-    warningTitle:
-      "ప్రస్తుత పరిస్థితులు వ్యాధి అభివృద్ధికి అనుకూలంగా ఉన్నాయి.",
-    warningText:
-      "ఈ నమూనా రిస్క్ ఇంజిన్ పర్యావరణ పరిస్థితులు, పంట దశ మరియు పురుగు కార్యకలాపాలను కలిపి సంభావ్య వ్యాప్తికి ప్రాధాన్యత ఇస్తుంది.",
-
-    recommendedActionRisk:
-      "సిఫారసు చేసిన చర్య",
-    recommendedActionText:
-      "పొలం పర్యవేక్షణ పెంచండి, సమీప మొక్కలను పరిశీలించండి మరియు తగిన సమీకృత పురుగు నిర్వహణ మార్గదర్శకాలను అనుసరించండి.",
-
-    pestTrap:
-      "పురుగు ఉచ్చు సంకేతం",
-    pestTrapText:
-      "నమూనా సెన్సర్ ఫీడ్ పర్యవేక్షిత ప్రాంతంలో పెరిగిన పురుగు కార్యకలాపాన్ని సూచిస్తుంది.",
-
-    nextUpdate:
-      "తదుపరి నవీకరణ",
-    nextUpdateText:
-      "కొత్త వాతావరణం లేదా పురుగు పరిశీలనలు వచ్చినప్పుడు ప్రమాదాన్ని తిరిగి లెక్కించాలి.",
-
     fieldIntelligence:
       "ఫీల్డ్ ఇంటెలిజెన్స్",
+
     sensorPanelTitle:
       "పురుగు ఉచ్చు మరియు సెన్సర్",
+
     sensorPanelText:
       "పర్యవేక్షిత పొలానికి నమూనా సెన్సర్ ఫీడ్.",
+
     pestTrapCount:
       "పురుగు ఉచ్చు సంఖ్య",
+
     soilMoisture:
       "మట్టి తేమ",
+
     sensorStatus:
       "సెన్సర్ స్థితి",
+
     refreshSensor:
       "సెన్సర్ నవీకరించండి",
+
     lastUpdate:
       "చివరి నవీకరణ",
 
     expertValidationTitle:
       "నిపుణుల ధృవీకరణ",
+
     expertReviewTitle:
       "నిపుణుల సమీక్ష",
+
     expertReviewText:
       "అనిశ్చిత AI ఫలితాలను నిపుణుల ధృవీకరణ కోసం పంపవచ్చు.",
+
     sendForExpert:
       "నిపుణుల సమీక్షకు పంపండి",
+
     requestExpert:
       "నిపుణుల ధృవీకరణ అభ్యర్థించండి",
+
     caseSubmitted:
       "కేసు పంపబడింది",
+
     waitingValidation:
       "నిపుణుల ధృవీకరణ కోసం వేచి ఉంది",
+
     uploadFirst:
       "ముందుగా ఆకు చిత్రాన్ని అప్లోడ్ చేయండి.",
 
     hotspotsKicker:
       "భౌగోళిక సమాచారం",
+
     hotspotTitle:
       "వ్యాధి హాట్‌స్పాట్‌లు",
+
     hotspotsDescription:
-      "నివేదించబడిన పంట ఆరోగ్య కేసులను చూడండి, క్లస్టర్లను గుర్తించండి మరియు పొల పరిశీలనకు ప్రాధాన్యత ఇవ్వండి.",
+      "నివేదించిన పంట ఆరోగ్య కేసులను చూడండి మరియు పొల పరిశీలనకు ప్రాధాన్యత ఇవ్వండి.",
+
     prototypeData:
       "ప్రోటోటైప్ డేటా",
+
     reportedClusters:
       "నివేదించిన క్లస్టర్లు",
+
     highCritical:
       "అధిక / తీవ్రమైన",
+
     affectedReports:
       "ప్రభావిత నివేదికలు",
+
     fieldMap:
       "పొల మ్యాప్",
+
     reportedActivity:
       "నివేదించిన వ్యాధి కార్యకలాపం",
+
     searchField:
       "పొలం శోధించండి",
+
     resetView:
       "మ్యాప్ రీసెట్",
+
     mapHint:
       "కదపండి • జూమ్ చేయండి • హాట్‌స్పాట్‌ను నొక్కండి",
+
     recentReports:
       "ఇటీవలి నివేదికలు",
+
     priorityAreas:
       "ప్రాధాన్య ప్రాంతాలు",
+
     reportedCases:
       "నివేదించిన కేసులు",
+
     mapRisk:
       "ప్రమాదం",
+
     mapReports:
       "నివేదికలు",
+
     hotspotValidation:
       "ప్రోటోటైప్ హాట్‌స్పాట్ రికార్డులు ప్రదర్శన కోసం మాత్రమే.",
-    critical: "తీవ్రమైన",
-    high: "అధిక",
-    medium: "మధ్యస్థ",
-    low: "తక్కువ",
+
+    critical:
+      "తీవ్రమైన",
+
+    high:
+      "అధిక",
+
+    medium:
+      "మధ్యస్థ",
+
+    low:
+      "తక్కువ",
+
     selectDistrict:
       "మహారాష్ట్ర జిల్లాను ఎంచుకోండి",
 
     advisoriesKicker:
       "రైతు చర్య కేంద్రం",
+
     advisoriesTitle:
       "పంట సలహాలు",
+
     advisoriesDescription:
       "AI నిర్ధారణను స్పష్టమైన తదుపరి చర్యలు, నివారణ మరియు పర్యవేక్షణ మార్గదర్శకంగా మార్చండి.",
+
     aiAssisted:
       "AI సహాయక మార్గదర్శకం",
+
     currentCondition:
       "ప్రస్తుత పరిస్థితి",
+
     noDiagnosis:
       "ఇంకా నిర్ధారణ లేదు",
+
     status:
       "స్థితి",
+
     immediateAction:
       "తక్షణ చర్య",
+
     whatToDoNow:
       "ఇప్పుడు ఏమి చేయాలి",
+
     prevention:
       "నివారణ",
+
     reduceFutureRisk:
       "భవిష్యత్ ప్రమాదాన్ని తగ్గించండి",
+
     monitoring:
       "పర్యవేక్షణ",
+
     keepWatching:
       "గమనిస్తూ ఉండండి",
+
     expertTitle:
       "AI సహాయక మార్గదర్శకం — నిపుణుల ధృవీకరణ సిఫారసు చేయబడింది",
+
     expertText:
       "చర్యకు ముందు పొల లక్షణాలు, పంట రకం, స్థానిక పరిస్థితులు మరియు అధికారిక వ్యవసాయ మార్గదర్శకాలను పరిగణించాలి.",
+
     fieldRoutine:
       "పొల దినచర్య",
+
     scoutConsistently:
       "క్రమం తప్పకుండా పరిశీలించండి",
+
     scoutText:
       "నిరంతర పరిశీలన వ్యాధిని ముందుగానే గుర్తించడంలో సహాయపడుతుంది.",
+
     recordKeeping:
       "రికార్డు నిర్వహణ",
+
     captureLocation:
       "స్థానాన్ని నమోదు చేయండి",
+
     recordText:
       "హాట్‌స్పాట్ మ్యాపింగ్ కోసం ఫీల్డ్ నివేదికలను ఉపయోగించండి.",
+
     escalation:
       "నిపుణుల సహాయం",
+
     askExpert:
       "నిపుణుడిని అడగండి",
+
     escalationText:
-      "అనిశ్చిత లేదా వ్యాప్తి చెందుతున్న కేసులను నిపుణులకు పంపండి.",
+      "అనిశ్చిత కేసులను నిపుణులకు పంపండి.",
 
     backToDiagnosis:
       "నిర్ధారణకు తిరిగి వెళ్లండి",
+
     footer:
       "మరింత తెలివైన, సురక్షితమైన వ్యవసాయం కోసం",
-
-    errors: {
-      prediction:
-        "నిర్ధారణ విఫలమైంది",
-      server:
-        "AI సర్వర్‌కు కనెక్ట్ కాలేకపోయింది.",
-    },
   },
 
-  /* ---------------------------------------------------------
-     Remaining languages use English fallback for missing
-     interface phrases while disease voice content below
-     contains native-language versions.
-  --------------------------------------------------------- */
-
   kn: {
-    ...{},
+    ...english,
+
     nav: {
       diagnosis: "ರೋಗನಿರ್ಣಯ",
       risk: "ಅಪಾಯದ ಮುನ್ಸೂಚನೆ",
@@ -906,132 +1280,344 @@ const translations = {
       advisories: "ಸಲಹೆಗಳು",
       language: "ಭಾಷೆ",
     },
-    systemOnline: "AI ವ್ಯವಸ್ಥೆ ಆನ್‌ಲೈನ್",
-    heroTitle: "ನಿಮ್ಮ ಬೆಳೆಗಳನ್ನು ರಕ್ಷಿಸಿ",
-    heroSubtitle: "ತಡವಾಗುವ ಮೊದಲು.",
-    startDiagnosis: "ರೋಗನಿರ್ಣಯ ಪ್ರಾರಂಭಿಸಿ",
-    aiDiagnosis: "AI ಆಧಾರಿತ ರೋಗನಿರ್ಣಯ",
-    riskInsights: "ರಿಯಲ್-ಟೈಮ್ ಅಪಾಯ ಮಾಹಿತಿ",
-    cropHealth: "ಬೆಳೆ ಆರೋಗ್ಯ",
-    diagnosisTitle: "AI ರೋಗನಿರ್ಣಯ",
-    detectedCondition: "ಗುರುತಿಸಿದ ಸ್ಥಿತಿ",
-    analyzingLeaf: "ಎಲೆಯನ್ನು ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
-    ready: "ವಿಶ್ಲೇಷಣೆಗೆ ಸಿದ್ಧ",
-    uploadHint: "ಬೆಳೆಯ ಎಲೆಯ ಸ್ಪಷ್ಟ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
-    confidence: "ವಿಶ್ವಾಸ",
-    aiConfidence: "AI ವಿಶ್ವಾಸ",
-    severity: "ತೀವ್ರತೆ",
-    riskLevel: "ಅಪಾಯದ ಮಟ್ಟ",
-    cropHealthStatus: "ಬೆಳೆ ಆರೋಗ್ಯ ಸ್ಥಿತಿ",
-    recommendedAction: "ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ರಮ",
-    whatShouldIDo: "ಏನು ಮಾಡಬೇಕು?",
-    cropAdvisory: "ಬೆಳೆ ಸಲಹೆ",
-    listen: "ಸಲಹೆ ಕೇಳಿ",
-    speaking: "ಸಲಹೆಯನ್ನು ಓದಲಾಗುತ್ತಿದೆ...",
-    highConfidence: "ಹೆಚ್ಚಿನ ವಿಶ್ವಾಸದ AI ರೋಗನಿರ್ಣಯ",
-    expertValidation: "ತಜ್ಞರ ಪರಿಶೀಲನೆ ಶಿಫಾರಸು",
-    analyzingButton: "ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
-    analyzeAnother: "ಮತ್ತೊಂದು ಎಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
-    uploadLeaf: "ಎಲೆಯ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
-    scan: "AI ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
-    riskTitle: "ಬೆಳೆ ಅಪಾಯದ ಮುನ್ಸೂಚನೆ",
-    overallRisk: "ಒಟ್ಟು ಅಪಾಯ",
-    currentConditions: "ಪ್ರಸ್ತುತ ಪರಿಸ್ಥಿತಿಗಳು",
-    fieldEnvironment: "ಹೊಲದ ಪರಿಸರ",
-    earlyWarning: "ಮುನ್ನೆಚ್ಚರಿಕೆ",
-    riskKicker: "ಮುನ್ನೆಚ್ಚರಿಕೆ ವ್ಯವಸ್ಥೆ",
-    riskDescription: "ಇದಕ್ಕಾಗಿ ಮಾದರಿ ಅಪಾಯ ಅಂದಾಜು:",
-    sevenDayOutlook: "7-ದಿನಗಳ ಮುನ್ಸೂಚನೆ",
-    temperature: "ಉಷ್ಣತೆ",
-    humidity: "ಆರ್ದ್ರತೆ",
-    rainfall: "ಇಂದಿನ ಮಳೆ",
-    pestActivity: "ಕೀಟ ಚಟುವಟಿಕೆ",
-    cropStage: "ಬೆಳೆ ಹಂತ",
-    weatherLive: "ನೇರ ಹವಾಮಾನ",
-    weatherUpdated: "ಹವಾಮಾನ ನವೀಕರಣ",
-    fetchingWeather: "ನೇರ ಹವಾಮಾನ ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
-    weatherUnavailable: "ನೇರ ಹವಾಮಾನ ಲಭ್ಯವಿಲ್ಲ",
-    refreshWeather: "ಹವಾಮಾನ ನವೀಕರಿಸಿ",
-    warningTitle: "ಪ್ರಸ್ತುತ ಪರಿಸ್ಥಿತಿಗಳು ರೋಗ ಬೆಳವಣಿಗೆಗೆ ಅನುಕೂಲಕರವಾಗಿವೆ.",
-    warningText: "ಈ ಮಾದರಿ ಅಪಾಯ ಎಂಜಿನ್ ಪರಿಸರ ಪರಿಸ್ಥಿತಿಗಳು, ಬೆಳೆ ಹಂತ ಮತ್ತು ಕೀಟ ಚಟುವಟಿಕೆಯನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ.",
-    recommendedActionRisk: "ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ರಮ",
-    recommendedActionText: "ಹೊಲದ ಮೇಲ್ವಿಚಾರಣೆ ಹೆಚ್ಚಿಸಿ ಮತ್ತು ಹತ್ತಿರದ ಸಸ್ಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
-    pestTrap: "ಕೀಟ ಬಲೆ ಸಂಕೇತ",
-    pestTrapText: "ಮಾದರಿ ಸೆನ್ಸಾರ್ ಫೀಡ್ ಹೆಚ್ಚಿದ ಕೀಟ ಚಟುವಟಿಕೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
-    nextUpdate: "ಮುಂದಿನ ನವೀಕರಣ",
-    nextUpdateText: "ಹೊಸ ಮಾಹಿತಿ ಬಂದಾಗ ಅಪಾಯವನ್ನು ಮರು ಲೆಕ್ಕಾಚಾರ ಮಾಡಬೇಕು.",
-    fieldIntelligence: "ಫೀಲ್ಡ್ ಇಂಟೆಲಿಜೆನ್ಸ್",
-    sensorPanelTitle: "ಕೀಟ ಬಲೆ ಮತ್ತು ಸೆನ್ಸರ್",
-    sensorPanelText: "ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿದ ಹೊಲಕ್ಕೆ ಮಾದರಿ ಸೆನ್ಸರ್ ಫೀಡ್.",
-    pestTrapCount: "ಕೀಟ ಬಲೆ ಸಂಖ್ಯೆ",
-    soilMoisture: "ಮಣ್ಣಿನ ತೇವಾಂಶ",
-    sensorStatus: "ಸೆನ್ಸರ್ ಸ್ಥಿತಿ",
-    refreshSensor: "ಸೆನ್ಸರ್ ನವೀಕರಿಸಿ",
-    lastUpdate: "ಕೊನೆಯ ನವೀಕರಣ",
-    expertValidationTitle: "ತಜ್ಞರ ಪರಿಶೀಲನೆ",
-    expertReviewTitle: "ತಜ್ಞರ ವಿಮರ್ಶೆ",
-    expertReviewText: "ಅನಿಶ್ಚಿತ AI ಫಲಿತಾಂಶಗಳನ್ನು ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಬಹುದು.",
-    sendForExpert: "ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಿ",
-    requestExpert: "ತಜ್ಞರ ಪರಿಶೀಲನೆ ವಿನಂತಿಸಿ",
-    caseSubmitted: "ಕೇಸ್ ಕಳುಹಿಸಲಾಗಿದೆ",
-    waitingValidation: "ತಜ್ಞರ ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ",
-    uploadFirst: "ಮೊದಲು ಎಲೆಯ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.",
-    hotspotsKicker: "ಭೌಗೋಳಿಕ ಮಾಹಿತಿ",
-    hotspotTitle: "ರೋಗ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳು",
-    hotspotsDescription: "ಬೆಳೆ ಆರೋಗ್ಯ ಪ್ರಕರಣಗಳನ್ನು ನೋಡಿ ಮತ್ತು ಹೊಲ ಪರಿಶೀಲನೆಗೆ ಆದ್ಯತೆ ನೀಡಿ.",
-    prototypeData: "ಪ್ರೋಟೋಟೈಪ್ ಡೇಟಾ",
-    reportedClusters: "ವರದಿಯಾದ ಗುಂಪುಗಳು",
-    highCritical: "ಹೆಚ್ಚು / ತೀವ್ರ",
-    affectedReports: "ಪರಿಣಾಮಿತ ವರದಿಗಳು",
-    fieldMap: "ಹೊಲ ನಕ್ಷೆ",
-    reportedActivity: "ವರದಿಯಾದ ರೋಗ ಚಟುವಟಿಕೆ",
-    searchField: "ಹೊಲ ಹುಡುಕಿ",
-    resetView: "ನಕ್ಷೆ ಮರುಹೊಂದಿಸಿ",
-    mapHint: "ಸರಿಸಿ • ಜೂಮ್ ಮಾಡಿ • ಹಾಟ್‌ಸ್ಪಾಟ್ ಒತ್ತಿರಿ",
-    recentReports: "ಇತ್ತೀಚಿನ ವರದಿಗಳು",
-    priorityAreas: "ಪ್ರಾಥಮ್ಯ ಪ್ರದೇಶಗಳು",
-    reportedCases: "ವರದಿಯಾದ ಪ್ರಕರಣಗಳು",
-    mapRisk: "ಅಪಾಯ",
-    mapReports: "ವರದಿಗಳು",
-    hotspotValidation: "ಪ್ರೋಟೋಟೈಪ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ದಾಖಲೆಗಳು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾತ್ರ.",
-    critical: "ತೀವ್ರ",
-    high: "ಹೆಚ್ಚು",
-    medium: "ಮಧ್ಯಮ",
-    low: "ಕಡಿಮೆ",
-    selectDistrict: "ಮಹಾರಾಷ್ಟ್ರ ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-    advisoriesKicker: "ರೈತ ಕಾರ್ಯ ಕೇಂದ್ರ",
-    advisoriesTitle: "ಬೆಳೆ ಸಲಹೆಗಳು",
-    advisoriesDescription: "AI ರೋಗನಿರ್ಣಯವನ್ನು ಕ್ರಮಗಳು ಮತ್ತು ಮೇಲ್ವಿಚಾರಣಾ ಮಾರ್ಗದರ್ಶನವಾಗಿ ಪರಿವರ್ತಿಸಿ.",
-    aiAssisted: "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ",
-    currentCondition: "ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ",
-    noDiagnosis: "ಇನ್ನೂ ರೋಗನಿರ್ಣಯವಿಲ್ಲ",
-    status: "ಸ್ಥಿತಿ",
-    immediateAction: "ತಕ್ಷಣದ ಕ್ರಮ",
-    whatToDoNow: "ಈಗ ಏನು ಮಾಡಬೇಕು",
-    prevention: "ತಡೆಗಟ್ಟುವಿಕೆ",
-    reduceFutureRisk: "ಭವಿಷ್ಯದ ಅಪಾಯ ಕಡಿಮೆ ಮಾಡಿ",
-    monitoring: "ಮೇಲ್ವಿಚಾರಣೆ",
-    keepWatching: "ಗಮನಿಸುತ್ತಿರಿ",
-    expertTitle: "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ — ತಜ್ಞರ ಪರಿಶೀಲನೆ ಶಿಫಾರಸು",
-    expertText: "ಸ್ಥಳೀಯ ಪರಿಸ್ಥಿತಿಗಳು ಮತ್ತು ಅಧಿಕೃತ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಪರಿಗಣಿಸಿ.",
-    fieldRoutine: "ಹೊಲದ ದಿನಚರಿ",
-    scoutConsistently: "ನಿಯಮಿತವಾಗಿ ಪರಿಶೀಲಿಸಿ",
-    scoutText: "ನಿಯಮಿತ ಗಮನವು ರೋಗವನ್ನು ಬೇಗ ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
-    recordKeeping: "ದಾಖಲೆ ನಿರ್ವಹಣೆ",
-    captureLocation: "ಸ್ಥಳ ದಾಖಲಿಸಿ",
-    recordText: "ಹಾಟ್‌ಸ್ಪಾಟ್ ಮ್ಯಾಪಿಂಗ್‌ಗೆ ಕ್ಷೇತ್ರ ವರದಿಗಳನ್ನು ಬಳಸಿ.",
-    escalation: "ತಜ್ಞರ ಸಹಾಯ",
-    askExpert: "ತಜ್ಞರನ್ನು ಕೇಳಿ",
-    escalationText: "ಅನಿಶ್ಚಿತ ಪ್ರಕರಣಗಳನ್ನು ತಜ್ಞರಿಗೆ ಕಳುಹಿಸಿ.",
-    backToDiagnosis: "ರೋಗನಿರ್ಣಯಕ್ಕೆ ಹಿಂತಿರುಗಿ",
-    footer: "ಹೆಚ್ಚು ಸ್ಮಾರ್ಟ್ ಮತ್ತು ಸುರಕ್ಷಿತ ಕೃಷಿಗಾಗಿ",
-    errors: {
-      prediction: "ರೋಗನಿರ್ಣಯ ವಿಫಲವಾಗಿದೆ",
-      server: "AI ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
-    },
+
+    systemOnline:
+      "AI ವ್ಯವಸ್ಥೆ ಆನ್‌ಲೈನ್",
+
+    heroTitle:
+      "ನಿಮ್ಮ ಬೆಳೆಗಳನ್ನು ರಕ್ಷಿಸಿ",
+
+    heroSubtitle:
+      "ತಡವಾಗುವ ಮೊದಲು.",
+
+    startDiagnosis:
+      "ರೋಗನಿರ್ಣಯ ಪ್ರಾರಂಭಿಸಿ",
+
+    aiDiagnosis:
+      "AI ಆಧಾರಿತ ರೋಗನಿರ್ಣಯ",
+
+    riskInsights:
+      "ರಿಯಲ್-ಟೈಮ್ ಅಪಾಯ ಮಾಹಿತಿ",
+
+    cropHealth:
+      "ಬೆಳೆ ಆರೋಗ್ಯ",
+
+    diagnosisTitle:
+      "AI ರೋಗನಿರ್ಣಯ",
+
+    detectedCondition:
+      "ಗುರುತಿಸಿದ ಸ್ಥಿತಿ",
+
+    analyzingLeaf:
+      "ಎಲೆಯನ್ನು ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+
+    ready:
+      "ವಿಶ್ಲೇಷಣೆಗೆ ಸಿದ್ಧ",
+
+    uploadHint:
+      "ಬೆಳೆಯ ಎಲೆಯ ಸ್ಪಷ್ಟ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+
+    confidence:
+      "ವಿಶ್ವಾಸ",
+
+    aiConfidence:
+      "AI ವಿಶ್ವಾಸ",
+
+    severity:
+      "ತೀವ್ರತೆ",
+
+    riskLevel:
+      "ಅಪಾಯದ ಮಟ್ಟ",
+
+    cropHealthStatus:
+      "ಬೆಳೆ ಆರೋಗ್ಯ ಸ್ಥಿತಿ",
+
+    recommendedAction:
+      "ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ರಮ",
+
+    whatShouldIDo:
+      "ಏನು ಮಾಡಬೇಕು?",
+
+    cropAdvisory:
+      "ಬೆಳೆ ಸಲಹೆ",
+
+    listen:
+      "ಸಲಹೆ ಕೇಳಿ",
+
+    speaking:
+      "ಸಲಹೆಯನ್ನು ಓದಲಾಗುತ್ತಿದೆ...",
+
+    highConfidence:
+      "ಹೆಚ್ಚಿನ ವಿಶ್ವಾಸದ AI ರೋಗನಿರ್ಣಯ",
+
+    expertValidation:
+      "ತಜ್ಞರ ಪರಿಶೀಲನೆ ಶಿಫಾರಸು",
+
+    analyzingButton:
+      "ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+
+    analyzeAnother:
+      "ಮತ್ತೊಂದು ಎಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
+
+    uploadLeaf:
+      "ಎಲೆಯ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+
+    scan:
+      "AI ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+
+    riskTitle:
+      "ಬೆಳೆ ಅಪಾಯದ ಮುನ್ಸೂಚನೆ",
+
+    overallRisk:
+      "ಒಟ್ಟು ಅಪಾಯ",
+
+    currentConditions:
+      "ಪ್ರಸ್ತುತ ಪರಿಸ್ಥಿತಿಗಳು",
+
+    fieldEnvironment:
+      "ಹೊಲದ ಪರಿಸರ",
+
+    earlyWarning:
+      "ಮುನ್ನೆಚ್ಚರಿಕೆ",
+
+    riskKicker:
+      "ಮುನ್ನೆಚ್ಚರಿಕೆ ವ್ಯವಸ್ಥೆ",
+
+    riskDescription:
+      "ಇದಕ್ಕಾಗಿ ಮಾದರಿ ಅಪಾಯ ಅಂದಾಜು:",
+
+    sevenDayOutlook:
+      "7-ದಿನಗಳ ಮುನ್ಸೂಚನೆ",
+
+    temperature:
+      "ಉಷ್ಣತೆ",
+
+    humidity:
+      "ಆರ್ದ್ರತೆ",
+
+    rainfall:
+      "ಇಂದಿನ ಮಳೆ",
+
+    pestActivity:
+      "ಕೀಟ ಚಟುವಟಿಕೆ",
+
+    cropStage:
+      "ಬೆಳೆ ಹಂತ",
+
+    weatherLive:
+      "ನೇರ ಹವಾಮಾನ",
+
+    weatherUpdated:
+      "ಹವಾಮಾನ ನವೀಕರಣ",
+
+    fetchingWeather:
+      "ನೇರ ಹವಾಮಾನ ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
+
+    weatherUnavailable:
+      "ನೇರ ಹವಾಮಾನ ಲಭ್ಯವಿಲ್ಲ",
+
+    refreshWeather:
+      "ಹವಾಮಾನ ನವೀಕರಿಸಿ",
+
+    fieldIntelligence:
+      "ಫೀಲ್ಡ್ ಇಂಟೆಲಿಜೆನ್ಸ್",
+
+    sensorPanelTitle:
+      "ಕೀಟ ಬಲೆ ಮತ್ತು ಸೆನ್ಸರ್",
+
+    sensorPanelText:
+      "ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿದ ಹೊಲಕ್ಕೆ ಮಾದರಿ ಸೆನ್ಸರ್ ಫೀಡ್.",
+
+    pestTrapCount:
+      "ಕೀಟ ಬಲೆ ಸಂಖ್ಯೆ",
+
+    soilMoisture:
+      "ಮಣ್ಣಿನ ತೇವಾಂಶ",
+
+    sensorStatus:
+      "ಸೆನ್ಸರ್ ಸ್ಥಿತಿ",
+
+    refreshSensor:
+      "ಸೆನ್ಸರ್ ನವೀಕರಿಸಿ",
+
+    lastUpdate:
+      "ಕೊನೆಯ ನವೀಕರಣ",
+
+    expertValidationTitle:
+      "ತಜ್ಞರ ಪರಿಶೀಲನೆ",
+
+    expertReviewTitle:
+      "ತಜ್ಞರ ವಿಮರ್ಶೆ",
+
+    expertReviewText:
+      "ಅನಿಶ್ಚಿತ AI ಫಲಿತಾಂಶಗಳನ್ನು ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಬಹುದು.",
+
+    sendForExpert:
+      "ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಿ",
+
+    requestExpert:
+      "ತಜ್ಞರ ಪರಿಶೀಲನೆ ವಿನಂತಿಸಿ",
+
+    caseSubmitted:
+      "ಕೇಸ್ ಕಳುಹಿಸಲಾಗಿದೆ",
+
+    waitingValidation:
+      "ತಜ್ಞರ ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ",
+
+    uploadFirst:
+      "ಮೊದಲು ಎಲೆಯ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.",
+
+    hotspotsKicker:
+      "ಭೌಗೋಳಿಕ ಮಾಹಿತಿ",
+
+    hotspotTitle:
+      "ರೋಗ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳು",
+
+    hotspotsDescription:
+      "ಬೆಳೆ ಆರೋಗ್ಯ ಪ್ರಕರಣಗಳನ್ನು ನೋಡಿ ಮತ್ತು ಹೊಲ ಪರಿಶೀಲನೆಗೆ ಆದ್ಯತೆ ನೀಡಿ.",
+
+    prototypeData:
+      "ಪ್ರೋಟೋಟೈಪ್ ಡೇಟಾ",
+
+    reportedClusters:
+      "ವರದಿಯಾದ ಗುಂಪುಗಳು",
+
+    highCritical:
+      "ಹೆಚ್ಚು / ತೀವ್ರ",
+
+    affectedReports:
+      "ಪರಿಣಾಮಿತ ವರದಿಗಳು",
+
+    fieldMap:
+      "ಹೊಲ ನಕ್ಷೆ",
+
+    reportedActivity:
+      "ವರದಿಯಾದ ರೋಗ ಚಟುವಟಿಕೆ",
+
+    searchField:
+      "ಹೊಲ ಹುಡುಕಿ",
+
+    resetView:
+      "ನಕ್ಷೆ ಮರುಹೊಂದಿಸಿ",
+
+    mapHint:
+      "ಸರಿಸಿ • ಜೂಮ್ ಮಾಡಿ • ಹಾಟ್‌ಸ್ಪಾಟ್ ಒತ್ತಿರಿ",
+
+    recentReports:
+      "ಇತ್ತೀಚಿನ ವರದಿಗಳು",
+
+    priorityAreas:
+      "ಪ್ರಾಥಮ್ಯ ಪ್ರದೇಶಗಳು",
+
+    reportedCases:
+      "ವರದಿಯಾದ ಪ್ರಕರಣಗಳು",
+
+    mapRisk:
+      "ಅಪಾಯ",
+
+    mapReports:
+      "ವರದಿಗಳು",
+
+    hotspotValidation:
+      "ಪ್ರೋಟೋಟೈಪ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ದಾಖಲೆಗಳು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾತ್ರ.",
+
+    critical:
+      "ತೀವ್ರ",
+
+    high:
+      "ಹೆಚ್ಚು",
+
+    medium:
+      "ಮಧ್ಯಮ",
+
+    low:
+      "ಕಡಿಮೆ",
+
+    selectDistrict:
+      "ಮಹಾರಾಷ್ಟ್ರ ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+
+    advisoriesKicker:
+      "ರೈತ ಕಾರ್ಯ ಕೇಂದ್ರ",
+
+    advisoriesTitle:
+      "ಬೆಳೆ ಸಲಹೆಗಳು",
+
+    advisoriesDescription:
+      "AI ರೋಗನಿರ್ಣಯವನ್ನು ಕ್ರಮಗಳು ಮತ್ತು ಮೇಲ್ವಿಚಾರಣಾ ಮಾರ್ಗದರ್ಶನವಾಗಿ ಪರಿವರ್ತಿಸಿ.",
+
+    aiAssisted:
+      "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ",
+
+    currentCondition:
+      "ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ",
+
+    noDiagnosis:
+      "ಇನ್ನೂ ರೋಗನಿರ್ಣಯವಿಲ್ಲ",
+
+    status:
+      "ಸ್ಥಿತಿ",
+
+    immediateAction:
+      "ತಕ್ಷಣದ ಕ್ರಮ",
+
+    whatToDoNow:
+      "ಈಗ ಏನು ಮಾಡಬೇಕು",
+
+    prevention:
+      "ತಡೆಗಟ್ಟುವಿಕೆ",
+
+    reduceFutureRisk:
+      "ಭವಿಷ್ಯದ ಅಪಾಯ ಕಡಿಮೆ ಮಾಡಿ",
+
+    monitoring:
+      "ಮೇಲ್ವಿಚಾರಣೆ",
+
+    keepWatching:
+      "ಗಮನಿಸುತ್ತಿರಿ",
+
+    expertTitle:
+      "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ — ತಜ್ಞರ ಪರಿಶೀಲನೆ ಶಿಫಾರಸು",
+
+    expertText:
+      "ಸ್ಥಳೀಯ ಪರಿಸ್ಥಿತಿಗಳು ಮತ್ತು ಅಧಿಕೃತ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಪರಿಗಣಿಸಿ.",
+
+    fieldRoutine:
+      "ಹೊಲದ ದಿನಚರಿ",
+
+    scoutConsistently:
+      "ನಿಯಮಿತವಾಗಿ ಪರಿಶೀಲಿಸಿ",
+
+    scoutText:
+      "ನಿಯಮಿತ ಗಮನವು ರೋಗವನ್ನು ಬೇಗ ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
+
+    recordKeeping:
+      "ದಾಖಲೆ ನಿರ್ವಹಣೆ",
+
+    captureLocation:
+      "ಸ್ಥಳ ದಾಖಲಿಸಿ",
+
+    recordText:
+      "ಹಾಟ್‌ಸ್ಪಾಟ್ ಮ್ಯಾಪಿಂಗ್‌ಗೆ ಕ್ಷೇತ್ರ ವರದಿಗಳನ್ನು ಬಳಸಿ.",
+
+    escalation:
+      "ತಜ್ಞರ ಸಹಾಯ",
+
+    askExpert:
+      "ತಜ್ಞರನ್ನು ಕೇಳಿ",
+
+    escalationText:
+      "ಅನಿಶ್ಚಿತ ಪ್ರಕರಣಗಳನ್ನು ತಜ್ಞರಿಗೆ ಕಳುಹಿಸಿ.",
+
+    backToDiagnosis:
+      "ರೋಗನಿರ್ಣಯಕ್ಕೆ ಹಿಂತಿರುಗಿ",
+
+    footer:
+      "ಹೆಚ್ಚು ಸ್ಮಾರ್ಟ್ ಮತ್ತು ಸುರಕ್ಷಿತ ಕೃಷಿಗಾಗಿ",
   },
 
   gu: {
+    ...english,
+
     nav: {
       diagnosis: "નિદાન",
       risk: "જોખમ આગાહી",
@@ -1039,132 +1625,344 @@ const translations = {
       advisories: "સલાહ",
       language: "ભાષા",
     },
-    systemOnline: "AI સિસ્ટમ ઓનલાઈન",
-    heroTitle: "તમારા પાકનું રક્ષણ કરો",
-    heroSubtitle: "ખૂબ મોડું થાય તે પહેલાં.",
-    startDiagnosis: "નિદાન શરૂ કરો",
-    aiDiagnosis: "AI આધારિત નિદાન",
-    riskInsights: "રિયલ-ટાઇમ જોખમ માહિતી",
-    cropHealth: "પાક આરોગ્ય",
-    diagnosisTitle: "AI નિદાન",
-    detectedCondition: "ઓળખાયેલી સ્થિતિ",
-    analyzingLeaf: "પાનનું વિશ્લેષણ થઈ રહ્યું છે...",
-    ready: "વિશ્લેષણ માટે તૈયાર",
-    uploadHint: "પાકના પાનનો સ્પષ્ટ ફોટો અપલોડ કરો",
-    confidence: "વિશ્વાસ",
-    aiConfidence: "AI વિશ્વાસ",
-    severity: "તીવ્રતા",
-    riskLevel: "જોખમ સ્તર",
-    cropHealthStatus: "પાક આરોગ્ય સ્થિતિ",
-    recommendedAction: "ભલામણ કરેલ પગલું",
-    whatShouldIDo: "શું કરવું?",
-    cropAdvisory: "પાક સલાહ",
-    listen: "સલાહ સાંભળો",
-    speaking: "સલાહ વાંચી રહ્યા છીએ...",
-    highConfidence: "ઉચ્ચ વિશ્વાસવાળું AI નિદાન",
-    expertValidation: "નિષ્ણાત ચકાસણીની ભલામણ",
-    analyzingButton: "વિશ્લેષણ થઈ રહ્યું છે...",
-    analyzeAnother: "બીજું પાન તપાસો",
-    uploadLeaf: "પાનની તસવીર અપલોડ કરો",
-    scan: "AI વિશ્લેષણ કરી રહ્યું છે...",
-    riskTitle: "પાક જોખમ આગાહી",
-    overallRisk: "કુલ જોખમ",
-    currentConditions: "વર્તમાન પરિસ્થિતિ",
-    fieldEnvironment: "ખેતરનું વાતાવરણ",
-    earlyWarning: "પૂર્વ ચેતવણી",
-    riskKicker: "પૂર્વ ચેતવણી પ્રણાલી",
-    riskDescription: "આ માટે નમૂના જોખમ અંદાજ:",
-    sevenDayOutlook: "7-દિવસનો અંદાજ",
-    temperature: "તાપમાન",
-    humidity: "ભેજ",
-    rainfall: "આજનો વરસાદ",
-    pestActivity: "જીવાત પ્રવૃત્તિ",
-    cropStage: "પાકનો તબક્કો",
-    weatherLive: "લાઇવ હવામાન",
-    weatherUpdated: "હવામાન અપડેટ",
-    fetchingWeather: "લાઇવ હવામાન મેળવી રહ્યા છીએ...",
-    weatherUnavailable: "લાઇવ હવામાન ઉપલબ્ધ નથી",
-    refreshWeather: "હવામાન અપડેટ કરો",
-    warningTitle: "હાલની પરિસ્થિતિઓ રોગ વિકાસ માટે અનુકૂળ છે.",
-    warningText: "આ નમૂના જોખમ એન્જિન પર્યાવરણીય પરિસ્થિતિઓ, પાકનો તબક્કો અને જીવાત પ્રવૃત્તિને જોડે છે.",
-    recommendedActionRisk: "ભલામણ કરેલ પગલું",
-    recommendedActionText: "ખેતરની દેખરેખ વધારો અને નજીકના છોડની તપાસ કરો.",
-    pestTrap: "જીવાત ટ્રેપ સંકેત",
-    pestTrapText: "નમૂના સેન્સર ફીડ વધેલી જીવાત પ્રવૃત્તિ દર્શાવે છે.",
-    nextUpdate: "આગલું અપડેટ",
-    nextUpdateText: "નવી માહિતી મળ્યા પછી જોખમ ફરી ગણતરી કરવી જોઈએ.",
-    fieldIntelligence: "ફીલ્ડ ઇન્ટેલિજન્સ",
-    sensorPanelTitle: "જીવાત ટ્રેપ અને સેન્સર",
-    sensorPanelText: "નિરીક્ષણ હેઠળના ખેતર માટે પ્રોટોટાઇપ સેન્સર ફીડ.",
-    pestTrapCount: "જીવાત ટ્રેપ સંખ્યા",
-    soilMoisture: "માટીનો ભેજ",
-    sensorStatus: "સેન્સર સ્થિતિ",
-    refreshSensor: "સેન્સર અપડેટ કરો",
-    lastUpdate: "છેલ્લું અપડેટ",
-    expertValidationTitle: "નિષ્ણાત ચકાસણી",
-    expertReviewTitle: "નિષ્ણાત સમીક્ષા",
-    expertReviewText: "અનિશ્ચિત AI પરિણામો નિષ્ણાત ચકાસણી માટે મોકલી શકાય છે.",
-    sendForExpert: "નિષ્ણાત સમીક્ષા માટે મોકલો",
-    requestExpert: "નિષ્ણાત ચકાસણીની વિનંતી કરો",
-    caseSubmitted: "કેસ મોકલાયો",
-    waitingValidation: "નિષ્ણાત ચકાસણીની રાહ જોઈ રહ્યા છીએ",
-    uploadFirst: "પહેલા પાનની તસવીર અપલોડ કરો.",
-    hotspotsKicker: "ભૌગોલિક માહિતી",
-    hotspotTitle: "રોગ હોટસ્પોટ્સ",
-    hotspotsDescription: "નોંધાયેલા પાક આરોગ્ય કેસો જુઓ અને ખેતર તપાસને પ્રાથમિકતા આપો.",
-    prototypeData: "પ્રોટોટાઇપ ડેટા",
-    reportedClusters: "નોંધાયેલા ક્લસ્ટરો",
-    highCritical: "ઉચ્ચ / ગંભીર",
-    affectedReports: "અસરગ્રસ્ત અહેવાલો",
-    fieldMap: "ખેતર નકશો",
-    reportedActivity: "નોંધાયેલી રોગ પ્રવૃત્તિ",
-    searchField: "ખેતર શોધો",
-    resetView: "નકશો રીસેટ",
-    mapHint: "ખસેડો • ઝૂમ કરો • હોટસ્પોટ દબાવો",
-    recentReports: "તાજેતરના અહેવાલો",
-    priorityAreas: "પ્રાથમિક વિસ્તારો",
-    reportedCases: "નોંધાયેલા કેસો",
-    mapRisk: "જોખમ",
-    mapReports: "અહેવાલો",
-    hotspotValidation: "પ્રોટોટાઇપ હોટસ્પોટ રેકોર્ડ પ્રદર્શન માટે છે.",
-    critical: "ગંભીર",
-    high: "ઉચ્ચ",
-    medium: "મધ્યમ",
-    low: "નીચું",
-    selectDistrict: "મહારાષ્ટ્ર જિલ્લો પસંદ કરો",
-    advisoriesKicker: "ખેડૂત કાર્ય કેન્દ્ર",
-    advisoriesTitle: "પાક સલાહ",
-    advisoriesDescription: "AI નિદાનને સ્પષ્ટ આગળના પગલાં અને દેખરેખ માર્ગદર્શનમાં ફેરવો.",
-    aiAssisted: "AI સહાયિત માર્ગદર્શન",
-    currentCondition: "વર્તમાન સ્થિતિ",
-    noDiagnosis: "હજુ નિદાન નથી",
-    status: "સ્થિતિ",
-    immediateAction: "તાત્કાલિક પગલું",
-    whatToDoNow: "હવે શું કરવું",
-    prevention: "નિવારણ",
-    reduceFutureRisk: "ભવિષ્યનું જોખમ ઘટાડો",
-    monitoring: "દેખરેખ",
-    keepWatching: "નજર રાખો",
-    expertTitle: "AI સહાયિત માર્ગદર્શન — નિષ્ણાત ચકાસણીની ભલામણ",
-    expertText: "સ્થાનિક પરિસ્થિતિ અને સત્તાવાર કૃષિ માર્ગદર્શન ધ્યાનમાં રાખો.",
-    fieldRoutine: "ખેતરની દિનચર્યા",
-    scoutConsistently: "નિયમિત તપાસ કરો",
-    scoutText: "નિયમિત દેખરેખથી રોગ વહેલો ઓળખી શકાય છે.",
-    recordKeeping: "રેકોર્ડ રાખવું",
-    captureLocation: "સ્થાન નોંધો",
-    recordText: "હોટસ્પોટ નકશા માટે ક્ષેત્ર અહેવાલોનો ઉપયોગ કરો.",
-    escalation: "નિષ્ણાત સહાય",
-    askExpert: "નિષ્ણાતને પૂછો",
-    escalationText: "અનિશ્ચિત કેસોને નિષ્ણાત પાસે મોકલો.",
-    backToDiagnosis: "નિદાન પર પાછા જાઓ",
-    footer: "વધુ સ્માર્ટ અને સુરક્ષિત ખેતી માટે",
-    errors: {
-      prediction: "નિદાન નિષ્ફળ થયું",
-      server: "AI સર્વર સાથે જોડાઈ શકાઈ નથી.",
-    },
+
+    systemOnline:
+      "AI સિસ્ટમ ઓનલાઈન",
+
+    heroTitle:
+      "તમારા પાકનું રક્ષણ કરો",
+
+    heroSubtitle:
+      "ખૂબ મોડું થાય તે પહેલાં.",
+
+    startDiagnosis:
+      "નિદાન શરૂ કરો",
+
+    aiDiagnosis:
+      "AI આધારિત નિદાન",
+
+    riskInsights:
+      "રિયલ-ટાઇમ જોખમ માહિતી",
+
+    cropHealth:
+      "પાક આરોગ્ય",
+
+    diagnosisTitle:
+      "AI નિદાન",
+
+    detectedCondition:
+      "ઓળખાયેલી સ્થિતિ",
+
+    analyzingLeaf:
+      "પાનનું વિશ્લેષણ થઈ રહ્યું છે...",
+
+    ready:
+      "વિશ્લેષણ માટે તૈયાર",
+
+    uploadHint:
+      "પાકના પાનનો સ્પષ્ટ ફોટો અપલોડ કરો",
+
+    confidence:
+      "વિશ્વાસ",
+
+    aiConfidence:
+      "AI વિશ્વાસ",
+
+    severity:
+      "તીવ્રતા",
+
+    riskLevel:
+      "જોખમ સ્તર",
+
+    cropHealthStatus:
+      "પાક આરોગ્ય સ્થિતિ",
+
+    recommendedAction:
+      "ભલામણ કરેલ પગલું",
+
+    whatShouldIDo:
+      "શું કરવું?",
+
+    cropAdvisory:
+      "પાક સલાહ",
+
+    listen:
+      "સલાહ સાંભળો",
+
+    speaking:
+      "સલાહ વાંચી રહ્યા છીએ...",
+
+    highConfidence:
+      "ઉચ્ચ વિશ્વાસવાળું AI નિદાન",
+
+    expertValidation:
+      "નિષ્ણાત ચકાસણીની ભલામણ",
+
+    analyzingButton:
+      "વિશ્લેષણ થઈ રહ્યું છે...",
+
+    analyzeAnother:
+      "બીજું પાન તપાસો",
+
+    uploadLeaf:
+      "પાનની તસવીર અપલોડ કરો",
+
+    scan:
+      "AI વિશ્લેષણ કરી રહ્યું છે...",
+
+    riskTitle:
+      "પાક જોખમ આગાહી",
+
+    overallRisk:
+      "કુલ જોખમ",
+
+    currentConditions:
+      "વર્તમાન પરિસ્થિતિ",
+
+    fieldEnvironment:
+      "ખેતરનું વાતાવરણ",
+
+    earlyWarning:
+      "પૂર્વ ચેતવણી",
+
+    riskKicker:
+      "પૂર્વ ચેતવણી પ્રણાલી",
+
+    riskDescription:
+      "આ માટે નમૂના જોખમ અંદાજ:",
+
+    sevenDayOutlook:
+      "7-દિવસનો અંદાજ",
+
+    temperature:
+      "તાપમાન",
+
+    humidity:
+      "ભેજ",
+
+    rainfall:
+      "આજનો વરસાદ",
+
+    pestActivity:
+      "જીવાત પ્રવૃત્તિ",
+
+    cropStage:
+      "પાકનો તબક્કો",
+
+    weatherLive:
+      "લાઇવ હવામાન",
+
+    weatherUpdated:
+      "હવામાન અપડેટ",
+
+    fetchingWeather:
+      "લાઇવ હવામાન મેળવી રહ્યા છીએ...",
+
+    weatherUnavailable:
+      "લાઇવ હવામાન ઉપલબ્ધ નથી",
+
+    refreshWeather:
+      "હવામાન અપડેટ કરો",
+
+    fieldIntelligence:
+      "ફીલ્ડ ઇન્ટેલિજન્સ",
+
+    sensorPanelTitle:
+      "જીવાત ટ્રેપ અને સેન્સર",
+
+    sensorPanelText:
+      "નિરીક્ષણ હેઠળના ખેતર માટે પ્રોટોટાઇપ સેન્સર ફીડ.",
+
+    pestTrapCount:
+      "જીવાત ટ્રેપ સંખ્યા",
+
+    soilMoisture:
+      "માટીનો ભેજ",
+
+    sensorStatus:
+      "સેન્સર સ્થિતિ",
+
+    refreshSensor:
+      "સેન્સર અપડેટ કરો",
+
+    lastUpdate:
+      "છેલ્લું અપડેટ",
+
+    expertValidationTitle:
+      "નિષ્ણાત ચકાસણી",
+
+    expertReviewTitle:
+      "નિષ્ણાત સમીક્ષા",
+
+    expertReviewText:
+      "અનિશ્ચિત AI પરિણામો નિષ્ણાત ચકાસણી માટે મોકલી શકાય છે.",
+
+    sendForExpert:
+      "નિષ્ણાત સમીક્ષા માટે મોકલો",
+
+    requestExpert:
+      "નિષ્ણાત ચકાસણીની વિનંતી કરો",
+
+    caseSubmitted:
+      "કેસ મોકલાયો",
+
+    waitingValidation:
+      "નિષ્ણાત ચકાસણીની રાહ જોઈ રહ્યા છીએ",
+
+    uploadFirst:
+      "પહેલા પાનની તસવીર અપલોડ કરો.",
+
+    hotspotsKicker:
+      "ભૌગોલિક માહિતી",
+
+    hotspotTitle:
+      "રોગ હોટસ્પોટ્સ",
+
+    hotspotsDescription:
+      "નોંધાયેલા પાક આરોગ્ય કેસો જુઓ અને ખેતર તપાસને પ્રાથમિકતા આપો.",
+
+    prototypeData:
+      "પ્રોટોટાઇપ ડેટા",
+
+    reportedClusters:
+      "નોંધાયેલા ક્લસ્ટરો",
+
+    highCritical:
+      "ઉચ્ચ / ગંભીર",
+
+    affectedReports:
+      "અસરગ્રસ્ત અહેવાલો",
+
+    fieldMap:
+      "ખેતર નકશો",
+
+    reportedActivity:
+      "નોંધાયેલી રોગ પ્રવૃત્તિ",
+
+    searchField:
+      "ખેતર શોધો",
+
+    resetView:
+      "નકશો રીસેટ",
+
+    mapHint:
+      "ખસેડો • ઝૂમ કરો • હોટસ્પોટ દબાવો",
+
+    recentReports:
+      "તાજેતરના અહેવાલો",
+
+    priorityAreas:
+      "પ્રાથમિક વિસ્તારો",
+
+    reportedCases:
+      "નોંધાયેલા કેસો",
+
+    mapRisk:
+      "જોખમ",
+
+    mapReports:
+      "અહેવાલો",
+
+    hotspotValidation:
+      "પ્રોટોટાઇપ હોટસ્પોટ રેકોર્ડ પ્રદર્શન માટે છે.",
+
+    critical:
+      "ગંભીર",
+
+    high:
+      "ઉચ્ચ",
+
+    medium:
+      "મધ્યમ",
+
+    low:
+      "નીચું",
+
+    selectDistrict:
+      "મહારાષ્ટ્ર જિલ્લો પસંદ કરો",
+
+    advisoriesKicker:
+      "ખેડૂત કાર્ય કેન્દ્ર",
+
+    advisoriesTitle:
+      "પાક સલાહ",
+
+    advisoriesDescription:
+      "AI નિદાનને સ્પષ્ટ આગળના પગલાં અને દેખરેખ માર્ગદર્શનમાં ફેરવો.",
+
+    aiAssisted:
+      "AI સહાયિત માર્ગદર્શન",
+
+    currentCondition:
+      "વર્તમાન સ્થિતિ",
+
+    noDiagnosis:
+      "હજુ નિદાન નથી",
+
+    status:
+      "સ્થિતિ",
+
+    immediateAction:
+      "તાત્કાલિક પગલું",
+
+    whatToDoNow:
+      "હવે શું કરવું",
+
+    prevention:
+      "નિવારણ",
+
+    reduceFutureRisk:
+      "ભવિષ્યનું જોખમ ઘટાડો",
+
+    monitoring:
+      "દેખરેખ",
+
+    keepWatching:
+      "નજર રાખો",
+
+    expertTitle:
+      "AI સહાયિત માર્ગદર્શન — નિષ્ણાત ચકાસણીની ભલામણ",
+
+    expertText:
+      "સ્થાનિક પરિસ્થિતિ અને સત્તાવાર કૃષિ માર્ગદર્શન ધ્યાનમાં રાખો.",
+
+    fieldRoutine:
+      "ખેતરની દિનચર્યા",
+
+    scoutConsistently:
+      "નિયમિત તપાસ કરો",
+
+    scoutText:
+      "નિયમિત દેખરેખથી રોગ વહેલો ઓળખી શકાય છે.",
+
+    recordKeeping:
+      "રેકોર્ડ રાખવું",
+
+    captureLocation:
+      "સ્થાન નોંધો",
+
+    recordText:
+      "હોટસ્પોટ નકશા માટે ક્ષેત્ર અહેવાલોનો ઉપયોગ કરો.",
+
+    escalation:
+      "નિષ્ણાત સહાય",
+
+    askExpert:
+      "નિષ્ણાતને પૂછો",
+
+    escalationText:
+      "અનિશ્ચિત કેસોને નિષ્ણાત પાસે મોકલો.",
+
+    backToDiagnosis:
+      "નિદાન પર પાછા જાઓ",
+
+    footer:
+      "વધુ સ્માર્ટ અને સુરક્ષિત ખેતી માટે",
   },
 
   ta: {
+    ...english,
+
     nav: {
       diagnosis: "நோயறிதல்",
       risk: "ஆபத்து கணிப்பு",
@@ -1172,132 +1970,344 @@ const translations = {
       advisories: "ஆலோசனைகள்",
       language: "மொழி",
     },
-    systemOnline: "AI அமைப்பு செயல்பாட்டில்",
-    heroTitle: "உங்கள் பயிர்களை பாதுகாக்குங்கள்",
-    heroSubtitle: "தாமதமாகும் முன்.",
-    startDiagnosis: "நோயறிதலை தொடங்கவும்",
-    aiDiagnosis: "AI அடிப்படையிலான நோயறிதல்",
-    riskInsights: "நேரடி ஆபத்து தகவல்",
-    cropHealth: "பயிர் ஆரோக்கியம்",
-    diagnosisTitle: "AI நோயறிதல்",
-    detectedCondition: "கண்டறியப்பட்ட நிலை",
-    analyzingLeaf: "இலை பகுப்பாய்வு செய்யப்படுகிறது...",
-    ready: "பகுப்பாய்வுக்கு தயார்",
-    uploadHint: "பயிர் இலையின் தெளிவான படத்தை பதிவேற்றுங்கள்",
-    confidence: "நம்பிக்கை",
-    aiConfidence: "AI நம்பிக்கை",
-    severity: "தீவிரம்",
-    riskLevel: "ஆபத்து நிலை",
-    cropHealthStatus: "பயிர் ஆரோக்கிய நிலை",
-    recommendedAction: "பரிந்துரைக்கப்பட்ட நடவடிக்கை",
-    whatShouldIDo: "என்ன செய்ய வேண்டும்?",
-    cropAdvisory: "பயிர் ஆலோசனை",
-    listen: "ஆலோசனையை கேளுங்கள்",
-    speaking: "ஆலோசனை வாசிக்கப்படுகிறது...",
-    highConfidence: "உயர் நம்பிக்கை AI நோயறிதல்",
-    expertValidation: "நிபுணர் சரிபார்ப்பு பரிந்துரைக்கப்படுகிறது",
-    analyzingButton: "பகுப்பாய்வு செய்யப்படுகிறது...",
-    analyzeAnother: "மற்றொரு இலையை ஆய்வு செய்யுங்கள்",
-    uploadLeaf: "இலைப் படத்தை பதிவேற்றுங்கள்",
-    scan: "AI பகுப்பாய்வு செய்கிறது...",
-    riskTitle: "பயிர் ஆபத்து கணிப்பு",
-    overallRisk: "மொத்த ஆபத்து",
-    currentConditions: "தற்போதைய நிலை",
-    fieldEnvironment: "வயல் சூழல்",
-    earlyWarning: "முன்னெச்சரிக்கை",
-    riskKicker: "முன்னெச்சரிக்கை அமைப்பு",
-    riskDescription: "இதற்கான முன்மாதிரி ஆபத்து மதிப்பீடு:",
-    sevenDayOutlook: "7-நாள் முன்னறிவிப்பு",
-    temperature: "வெப்பநிலை",
-    humidity: "ஈரப்பதம்",
-    rainfall: "இன்றைய மழைப்பொழிவு",
-    pestActivity: "பூச்சி செயல்பாடு",
-    cropStage: "பயிர் நிலை",
-    weatherLive: "நேரடி வானிலை",
-    weatherUpdated: "வானிலை புதுப்பிப்பு",
-    fetchingWeather: "நேரடி வானிலையைப் பெறுகிறது...",
-    weatherUnavailable: "நேரடி வானிலை கிடைக்கவில்லை",
-    refreshWeather: "வானிலையைப் புதுப்பிக்கவும்",
-    warningTitle: "தற்போதைய நிலைமைகள் நோய் வளர்ச்சிக்கு சாதகமாக உள்ளன.",
-    warningText: "இந்த முன்மாதிரி ஆபத்து இயந்திரம் சுற்றுச்சூழல் நிலைமைகள், பயிர் நிலை மற்றும் பூச்சி செயல்பாட்டை இணைக்கிறது.",
-    recommendedActionRisk: "பரிந்துரைக்கப்பட்ட நடவடிக்கை",
-    recommendedActionText: "வயல் கண்காணிப்பை அதிகரிக்கவும் மற்றும் அருகிலுள்ள செடிகளை ஆய்வு செய்யவும்.",
-    pestTrap: "பூச்சி பொறி சமிக்ஞை",
-    pestTrapText: "முன்மாதிரி சென்சார் அதிகரித்த பூச்சி செயல்பாட்டைக் காட்டுகிறது.",
-    nextUpdate: "அடுத்த புதுப்பிப்பு",
-    nextUpdateText: "புதிய தரவு கிடைக்கும்போது ஆபத்து மீண்டும் கணக்கிடப்பட வேண்டும்.",
-    fieldIntelligence: "வயல் நுண்ணறிவு",
-    sensorPanelTitle: "பூச்சி பொறி மற்றும் சென்சார்",
-    sensorPanelText: "கண்காணிக்கப்படும் வயலுக்கான முன்மாதிரி சென்சார் தரவு.",
-    pestTrapCount: "பூச்சி பொறி எண்ணிக்கை",
-    soilMoisture: "மண் ஈரப்பதம்",
-    sensorStatus: "சென்சார் நிலை",
-    refreshSensor: "சென்சார் புதுப்பிக்கவும்",
-    lastUpdate: "கடைசி புதுப்பிப்பு",
-    expertValidationTitle: "நிபுணர் சரிபார்ப்பு",
-    expertReviewTitle: "நிபுணர் மதிப்பாய்வு",
-    expertReviewText: "நிச்சயமற்ற AI முடிவுகளை நிபுணர் சரிபார்ப்புக்காக அனுப்பலாம்.",
-    sendForExpert: "நிபுணர் மதிப்பாய்வுக்கு அனுப்பவும்",
-    requestExpert: "நிபுணர் சரிபார்ப்பை கோரவும்",
-    caseSubmitted: "வழக்கு அனுப்பப்பட்டது",
-    waitingValidation: "நிபுணர் சரிபார்ப்புக்காக காத்திருக்கிறது",
-    uploadFirst: "முதலில் இலைப் படத்தைப் பதிவேற்றவும்.",
-    hotspotsKicker: "புவியியல் தகவல்",
-    hotspotTitle: "நோய் ஹாட்ஸ்பாட்கள்",
-    hotspotsDescription: "பதிவான பயிர் ஆரோக்கிய வழக்குகளைப் பார்த்து வயல் ஆய்வுக்கு முன்னுரிமை அளிக்கவும்.",
-    prototypeData: "முன்மாதிரி தரவு",
-    reportedClusters: "பதிவான குழுக்கள்",
-    highCritical: "உயர் / தீவிர",
-    affectedReports: "பாதிக்கப்பட்ட அறிக்கைகள்",
-    fieldMap: "வயல் வரைபடம்",
-    reportedActivity: "பதிவான நோய் செயல்பாடு",
-    searchField: "வயலைத் தேடு",
-    resetView: "வரைபடத்தை மீட்டமை",
-    mapHint: "நகர்த்தவும் • பெரிதாக்கவும் • ஹாட்ஸ்பாட்டைத் தட்டவும்",
-    recentReports: "சமீபத்திய அறிக்கைகள்",
-    priorityAreas: "முன்னுரிமைப் பகுதிகள்",
-    reportedCases: "பதிவான வழக்குகள்",
-    mapRisk: "ஆபத்து",
-    mapReports: "அறிக்கைகள்",
-    hotspotValidation: "முன்மாதிரி ஹாட்ஸ்பாட் பதிவுகள் விளக்கத்திற்காக மட்டுமே.",
-    critical: "தீவிர",
-    high: "உயர்",
-    medium: "மிதமான",
-    low: "குறைந்த",
-    selectDistrict: "மகாராஷ்டிரா மாவட்டத்தைத் தேர்ந்தெடுக்கவும்",
-    advisoriesKicker: "விவசாயி நடவடிக்கை மையம்",
-    advisoriesTitle: "பயிர் ஆலோசனைகள்",
-    advisoriesDescription: "AI நோயறிதலை அடுத்த நடவடிக்கைகள் மற்றும் கண்காணிப்பு வழிகாட்டுதலாக மாற்றுங்கள்.",
-    aiAssisted: "AI உதவியுடன் வழிகாட்டுதல்",
-    currentCondition: "தற்போதைய நிலை",
-    noDiagnosis: "இன்னும் நோயறிதல் இல்லை",
-    status: "நிலை",
-    immediateAction: "உடனடி நடவடிக்கை",
-    whatToDoNow: "இப்போது என்ன செய்ய வேண்டும்",
-    prevention: "தடுப்பு",
-    reduceFutureRisk: "எதிர்கால ஆபத்தை குறைக்கவும்",
-    monitoring: "கண்காணிப்பு",
-    keepWatching: "கவனித்துக்கொண்டிருங்கள்",
-    expertTitle: "AI உதவியுடன் வழிகாட்டுதல் — நிபுணர் சரிபார்ப்பு பரிந்துரைக்கப்படுகிறது",
-    expertText: "உள்ளூர் நிலைமைகள் மற்றும் அதிகாரப்பூர்வ வேளாண் வழிகாட்டுதலை கருத்தில் கொள்ளுங்கள்.",
-    fieldRoutine: "வயல் நடைமுறை",
-    scoutConsistently: "தொடர்ந்து ஆய்வு செய்யுங்கள்",
-    scoutText: "தொடர்ச்சியான கண்காணிப்பு ஆரம்பகால கண்டறிதலை மேம்படுத்துகிறது.",
-    recordKeeping: "பதிவு பராமரிப்பு",
-    captureLocation: "இடத்தை பதிவு செய்யுங்கள்",
-    recordText: "ஹாட்ஸ்பாட் வரைபடத்திற்கு வயல் அறிக்கைகளைப் பயன்படுத்தவும்.",
-    escalation: "நிபுணர் உதவி",
-    askExpert: "நிபுணரை கேளுங்கள்",
-    escalationText: "நிச்சயமற்ற வழக்குகளை நிபுணரிடம் அனுப்பவும்.",
-    backToDiagnosis: "நோயறிதலுக்குத் திரும்பு",
-    footer: "மேலும் புத்திசாலி மற்றும் பாதுகாப்பான விவசாயத்திற்காக",
-    errors: {
-      prediction: "நோயறிதல் தோல்வியடைந்தது",
-      server: "AI சேவையகத்துடன் இணைக்க முடியவில்லை.",
-    },
+
+    systemOnline:
+      "AI அமைப்பு செயல்பாட்டில்",
+
+    heroTitle:
+      "உங்கள் பயிர்களை பாதுகாக்குங்கள்",
+
+    heroSubtitle:
+      "தாமதமாகும் முன்.",
+
+    startDiagnosis:
+      "நோயறிதலை தொடங்கவும்",
+
+    aiDiagnosis:
+      "AI அடிப்படையிலான நோயறிதல்",
+
+    riskInsights:
+      "நேரடி ஆபத்து தகவல்",
+
+    cropHealth:
+      "பயிர் ஆரோக்கியம்",
+
+    diagnosisTitle:
+      "AI நோயறிதல்",
+
+    detectedCondition:
+      "கண்டறியப்பட்ட நிலை",
+
+    analyzingLeaf:
+      "இலை பகுப்பாய்வு செய்யப்படுகிறது...",
+
+    ready:
+      "பகுப்பாய்வுக்கு தயார்",
+
+    uploadHint:
+      "பயிர் இலையின் தெளிவான படத்தை பதிவேற்றுங்கள்",
+
+    confidence:
+      "நம்பிக்கை",
+
+    aiConfidence:
+      "AI நம்பிக்கை",
+
+    severity:
+      "தீவிரம்",
+
+    riskLevel:
+      "ஆபத்து நிலை",
+
+    cropHealthStatus:
+      "பயிர் ஆரோக்கிய நிலை",
+
+    recommendedAction:
+      "பரிந்துரைக்கப்பட்ட நடவடிக்கை",
+
+    whatShouldIDo:
+      "என்ன செய்ய வேண்டும்?",
+
+    cropAdvisory:
+      "பயிர் ஆலோசனை",
+
+    listen:
+      "ஆலோசனையை கேளுங்கள்",
+
+    speaking:
+      "ஆலோசனை வாசிக்கப்படுகிறது...",
+
+    highConfidence:
+      "உயர் நம்பிக்கை AI நோயறிதல்",
+
+    expertValidation:
+      "நிபுணர் சரிபார்ப்பு பரிந்துரைக்கப்படுகிறது",
+
+    analyzingButton:
+      "பகுப்பாய்வு செய்யப்படுகிறது...",
+
+    analyzeAnother:
+      "மற்றொரு இலையை ஆய்வு செய்யுங்கள்",
+
+    uploadLeaf:
+      "இலைப் படத்தை பதிவேற்றுங்கள்",
+
+    scan:
+      "AI பகுப்பாய்வு செய்கிறது...",
+
+    riskTitle:
+      "பயிர் ஆபத்து கணிப்பு",
+
+    overallRisk:
+      "மொத்த ஆபத்து",
+
+    currentConditions:
+      "தற்போதைய நிலை",
+
+    fieldEnvironment:
+      "வயல் சூழல்",
+
+    earlyWarning:
+      "முன்னெச்சரிக்கை",
+
+    riskKicker:
+      "முன்னெச்சரிக்கை அமைப்பு",
+
+    riskDescription:
+      "இதற்கான முன்மாதிரி ஆபத்து மதிப்பீடு:",
+
+    sevenDayOutlook:
+      "7-நாள் முன்னறிவிப்பு",
+
+    temperature:
+      "வெப்பநிலை",
+
+    humidity:
+      "ஈரப்பதம்",
+
+    rainfall:
+      "இன்றைய மழைப்பொழிவு",
+
+    pestActivity:
+      "பூச்சி செயல்பாடு",
+
+    cropStage:
+      "பயிர் நிலை",
+
+    weatherLive:
+      "நேரடி வானிலை",
+
+    weatherUpdated:
+      "வானிலை புதுப்பிப்பு",
+
+    fetchingWeather:
+      "நேரடி வானிலையைப் பெறுகிறது...",
+
+    weatherUnavailable:
+      "நேரடி வானிலை கிடைக்கவில்லை",
+
+    refreshWeather:
+      "வானிலையைப் புதுப்பிக்கவும்",
+
+    fieldIntelligence:
+      "வயல் நுண்ணறிவு",
+
+    sensorPanelTitle:
+      "பூச்சி பொறி மற்றும் சென்சார்",
+
+    sensorPanelText:
+      "கண்காணிக்கப்படும் வயலுக்கான முன்மாதிரி சென்சார் தரவு.",
+
+    pestTrapCount:
+      "பூச்சி பொறி எண்ணிக்கை",
+
+    soilMoisture:
+      "மண் ஈரப்பதம்",
+
+    sensorStatus:
+      "சென்சார் நிலை",
+
+    refreshSensor:
+      "சென்சார் புதுப்பிக்கவும்",
+
+    lastUpdate:
+      "கடைசி புதுப்பிப்பு",
+
+    expertValidationTitle:
+      "நிபுணர் சரிபார்ப்பு",
+
+    expertReviewTitle:
+      "நிபுணர் மதிப்பாய்வு",
+
+    expertReviewText:
+      "நிச்சயமற்ற AI முடிவுகளை நிபுணர் சரிபார்ப்புக்காக அனுப்பலாம்.",
+
+    sendForExpert:
+      "நிபுணர் மதிப்பாய்வுக்கு அனுப்பவும்",
+
+    requestExpert:
+      "நிபுணர் சரிபார்ப்பை கோரவும்",
+
+    caseSubmitted:
+      "வழக்கு அனுப்பப்பட்டது",
+
+    waitingValidation:
+      "நிபுணர் சரிபார்ப்புக்காக காத்திருக்கிறது",
+
+    uploadFirst:
+      "முதலில் இலைப் படத்தைப் பதிவேற்றவும்.",
+
+    hotspotsKicker:
+      "புவியியல் தகவல்",
+
+    hotspotTitle:
+      "நோய் ஹாட்ஸ்பாட்கள்",
+
+    hotspotsDescription:
+      "பதிவான பயிர் ஆரோக்கிய வழக்குகளைப் பார்த்து வயல் ஆய்வுக்கு முன்னுரிமை அளிக்கவும்.",
+
+    prototypeData:
+      "முன்மாதிரி தரவு",
+
+    reportedClusters:
+      "பதிவான குழுக்கள்",
+
+    highCritical:
+      "உயர் / தீவிர",
+
+    affectedReports:
+      "பாதிக்கப்பட்ட அறிக்கைகள்",
+
+    fieldMap:
+      "வயல் வரைபடம்",
+
+    reportedActivity:
+      "பதிவான நோய் செயல்பாடு",
+
+    searchField:
+      "வயலைத் தேடு",
+
+    resetView:
+      "வரைபடத்தை மீட்டமை",
+
+    mapHint:
+      "நகர்த்தவும் • பெரிதாக்கவும் • ஹாட்ஸ்பாட்டைத் தட்டவும்",
+
+    recentReports:
+      "சமீபத்திய அறிக்கைகள்",
+
+    priorityAreas:
+      "முன்னுரிமைப் பகுதிகள்",
+
+    reportedCases:
+      "பதிவான வழக்குகள்",
+
+    mapRisk:
+      "ஆபத்து",
+
+    mapReports:
+      "அறிக்கைகள்",
+
+    hotspotValidation:
+      "முன்மாதிரி ஹாட்ஸ்பாட் பதிவுகள் விளக்கத்திற்காக மட்டுமே.",
+
+    critical:
+      "தீவிர",
+
+    high:
+      "உயர்",
+
+    medium:
+      "மிதமான",
+
+    low:
+      "குறைந்த",
+
+    selectDistrict:
+      "மகாராஷ்டிரா மாவட்டத்தைத் தேர்ந்தெடுக்கவும்",
+
+    advisoriesKicker:
+      "விவசாயி நடவடிக்கை மையம்",
+
+    advisoriesTitle:
+      "பயிர் ஆலோசனைகள்",
+
+    advisoriesDescription:
+      "AI நோயறிதலை அடுத்த நடவடிக்கைகள் மற்றும் கண்காணிப்பு வழிகாட்டுதலாக மாற்றுங்கள்.",
+
+    aiAssisted:
+      "AI உதவியுடன் வழிகாட்டுதல்",
+
+    currentCondition:
+      "தற்போதைய நிலை",
+
+    noDiagnosis:
+      "இன்னும் நோயறிதல் இல்லை",
+
+    status:
+      "நிலை",
+
+    immediateAction:
+      "உடனடி நடவடிக்கை",
+
+    whatToDoNow:
+      "இப்போது என்ன செய்ய வேண்டும்",
+
+    prevention:
+      "தடுப்பு",
+
+    reduceFutureRisk:
+      "எதிர்கால ஆபத்தை குறைக்கவும்",
+
+    monitoring:
+      "கண்காணிப்பு",
+
+    keepWatching:
+      "கவனித்துக்கொண்டிருங்கள்",
+
+    expertTitle:
+      "AI உதவியுடன் வழிகாட்டுதல் — நிபுணர் சரிபார்ப்பு பரிந்துரைக்கப்படுகிறது",
+
+    expertText:
+      "உள்ளூர் நிலைமைகள் மற்றும் அதிகாரப்பூர்வ வேளாண் வழிகாட்டுதலை கருத்தில் கொள்ளுங்கள்.",
+
+    fieldRoutine:
+      "வயல் நடைமுறை",
+
+    scoutConsistently:
+      "தொடர்ந்து ஆய்வு செய்யுங்கள்",
+
+    scoutText:
+      "தொடர்ச்சியான கண்காணிப்பு ஆரம்பகால கண்டறிதலை மேம்படுத்துகிறது.",
+
+    recordKeeping:
+      "பதிவு பராமரிப்பு",
+
+    captureLocation:
+      "இடத்தை பதிவு செய்யுங்கள்",
+
+    recordText:
+      "ஹாட்ஸ்பாட் வரைபடத்திற்கு வயல் அறிக்கைகளைப் பயன்படுத்தவும்.",
+
+    escalation:
+      "நிபுணர் உதவி",
+
+    askExpert:
+      "நிபுணரை கேளுங்கள்",
+
+    escalationText:
+      "நிச்சயமற்ற வழக்குகளை நிபுணரிடம் அனுப்பவும்.",
+
+    backToDiagnosis:
+      "நோயறிதலுக்குத் திரும்பு",
+
+    footer:
+      "மேலும் புத்திசாலி மற்றும் பாதுகாப்பான விவசாயத்திற்காக",
   },
 
   bn: {
+    ...english,
+
     nav: {
       diagnosis: "রোগ নির্ণয়",
       risk: "ঝুঁকি পূর্বাভাস",
@@ -1306,132 +2316,292 @@ const translations = {
       language: "ভাষা",
     },
 
-    systemOnline: "AI সিস্টেম অনলাইন",
-    heroTitle: "আপনার ফসল রক্ষা করুন",
-    heroSubtitle: "অনেক দেরি হওয়ার আগে।",
-    startDiagnosis: "রোগ নির্ণয় শুরু করুন",
-    aiDiagnosis: "AI-চালিত রোগ নির্ণয়",
-    riskInsights: "রিয়েল-টাইম ঝুঁকি তথ্য",
-    cropHealth: "ফসলের স্বাস্থ্য",
-    diagnosisTitle: "AI রোগ নির্ণয়",
-    detectedCondition: "শনাক্ত অবস্থা",
-    analyzingLeaf: "পাতা বিশ্লেষণ করা হচ্ছে...",
-    ready: "বিশ্লেষণের জন্য প্রস্তুত",
-    uploadHint: "ফসলের পাতার স্পষ্ট ছবি আপলোড করুন",
-    confidence: "বিশ্বাস",
-    aiConfidence: "AI বিশ্বাসযোগ্যতা",
-    severity: "তীব্রতা",
-    riskLevel: "ঝুঁকির স্তর",
-    cropHealthStatus: "ফসলের স্বাস্থ্য অবস্থা",
-    recommendedAction: "প্রস্তাবিত পদক্ষেপ",
-    whatShouldIDo: "কী করবেন?",
-    cropAdvisory: "ফসল পরামর্শ",
-    listen: "পরামর্শ শুনুন",
-    speaking: "পরামর্শ পড়া হচ্ছে...",
-    highConfidence: "উচ্চ-আত্মবিশ্বাসী AI রোগ নির্ণয়",
-    expertValidation: "বিশেষজ্ঞ যাচাইয়ের পরামর্শ",
-    analyzingButton: "বিশ্লেষণ করা হচ্ছে...",
-    analyzeAnother: "আরেকটি পাতা পরীক্ষা করুন",
-    uploadLeaf: "পাতার ছবি আপলোড করুন",
-    scan: "AI বিশ্লেষণ করছে...",
-    riskTitle: "ফসলের ঝুঁকি পূর্বাভাস",
-    overallRisk: "মোট ঝুঁকি",
-    currentConditions: "বর্তমান পরিস্থিতি",
-    fieldEnvironment: "ক্ষেতের পরিবেশ",
-    earlyWarning: "প্রাথমিক সতর্কতা",
-    riskKicker: "প্রাথমিক সতর্কতা ব্যবস্থা",
-    riskDescription: "এর জন্য প্রোটোটাইপ ঝুঁকি অনুমান:",
-    sevenDayOutlook: "৭-দিনের পূর্বাভাস",
-    temperature: "তাপমাত্রা",
-    humidity: "আর্দ্রতা",
-    rainfall: "আজকের বৃষ্টিপাত",
-    pestActivity: "পোকামাকড়ের কার্যকলাপ",
-    cropStage: "ফসলের পর্যায়",
-    weatherLive: "লাইভ আবহাওয়া",
-    weatherUpdated: "আবহাওয়া আপডেট",
-    fetchingWeather: "লাইভ আবহাওয়া সংগ্রহ করা হচ্ছে...",
-    weatherUnavailable: "লাইভ আবহাওয়া পাওয়া যাচ্ছে না",
-    refreshWeather: "আবহাওয়া আপডেট করুন",
-    warningTitle: "বর্তমান পরিস্থিতি রোগ বিকাশের জন্য অনুকূল।",
-    warningText: "এই প্রোটোটাইপ ঝুঁকি ইঞ্জিন পরিবেশগত পরিস্থিতি, ফসলের পর্যায় এবং পোকামাকড়ের কার্যকলাপকে একত্রিত করে।",
-    recommendedActionRisk: "প্রস্তাবিত পদক্ষেপ",
-    recommendedActionText: "ক্ষেতের পর্যবেক্ষণ বাড়ান এবং আশেপাশের গাছ পরীক্ষা করুন।",
-    pestTrap: "পোকা ফাঁদ সংকেত",
-    pestTrapText: "প্রোটোটাইপ সেন্সর ফিড বর্ধিত পোকামাকড়ের কার্যকলাপ নির্দেশ করে।",
-    nextUpdate: "পরবর্তী আপডেট",
-    nextUpdateText: "নতুন তথ্য পাওয়া গেলে ঝুঁকি পুনরায় গণনা করা উচিত।",
-    fieldIntelligence: "ক্ষেত্র বুদ্ধিমত্তা",
-    sensorPanelTitle: "পোকা ফাঁদ এবং সেন্সর",
-    sensorPanelText: "পর্যবেক্ষণ করা ক্ষেত্রের জন্য প্রোটোটাইপ সেন্সর ফিড।",
-    pestTrapCount: "পোকা ফাঁদের সংখ্যা",
-    soilMoisture: "মাটির আর্দ্রতা",
-    sensorStatus: "সেন্সর অবস্থা",
-    refreshSensor: "সেন্সর আপডেট করুন",
-    lastUpdate: "শেষ আপডেট",
-    expertValidationTitle: "বিশেষজ্ঞ যাচাই",
-    expertReviewTitle: "বিশেষজ্ঞ পর্যালোচনা",
-    expertReviewText: "অনিশ্চিত AI ফলাফল বিশেষজ্ঞ যাচাইয়ের জন্য পাঠানো যেতে পারে।",
-    sendForExpert: "বিশেষজ্ঞ পর্যালোচনার জন্য পাঠান",
-    requestExpert: "বিশেষজ্ঞ যাচাইয়ের অনুরোধ করুন",
-    caseSubmitted: "কেস পাঠানো হয়েছে",
-    waitingValidation: "বিশেষজ্ঞ যাচাইয়ের অপেক্ষায়",
-    uploadFirst: "প্রথমে পাতার ছবি আপলোড করুন।",
-    hotspotsKicker: "ভৌগোলিক তথ্য",
-    hotspotTitle: "রোগের হটস্পট",
-    hotspotsDescription: "রিপোর্ট করা ফসলের স্বাস্থ্য কেস দেখুন এবং ক্ষেত্র পরিদর্শনকে অগ্রাধিকার দিন।",
-    prototypeData: "প্রোটোটাইপ ডেটা",
-    reportedClusters: "রিপোর্ট করা ক্লাস্টার",
-    highCritical: "উচ্চ / গুরুতর",
-    affectedReports: "প্রভাবিত রিপোর্ট",
-    fieldMap: "ক্ষেত্রের মানচিত্র",
-    reportedActivity: "রিপোর্ট করা রোগ কার্যকলাপ",
-    searchField: "ক্ষেত্র অনুসন্ধান",
-    resetView: "মানচিত্র রিসেট",
-    mapHint: "সরান • জুম করুন • হটস্পটে ট্যাপ করুন",
-    recentReports: "সাম্প্রতিক রিপোর্ট",
-    priorityAreas: "অগ্রাধিকার এলাকা",
-    reportedCases: "রিপোর্ট করা কেস",
-    mapRisk: "ঝুঁকি",
-    mapReports: "রিপোর্ট",
-    hotspotValidation: "প্রোটোটাইপ হটস্পট রেকর্ড প্রদর্শনের জন্য।",
-    critical: "গুরুতর",
-    high: "উচ্চ",
-    medium: "মাঝারি",
-    low: "কম",
-    selectDistrict: "মহারাষ্ট্র জেলা নির্বাচন করুন",
-    advisoriesKicker: "কৃষক কর্ম কেন্দ্র",
-    advisoriesTitle: "ফসল পরামর্শ",
-    advisoriesDescription: "AI রোগ নির্ণয়কে পরবর্তী পদক্ষেপ এবং পর্যবেক্ষণ নির্দেশিকায় রূপান্তর করুন।",
-    aiAssisted: "AI-সহায়িত নির্দেশনা",
-    currentCondition: "বর্তমান অবস্থা",
-    noDiagnosis: "এখনও রোগ নির্ণয় নেই",
-    status: "অবস্থা",
-    immediateAction: "তাৎক্ষণিক পদক্ষেপ",
-    whatToDoNow: "এখন কী করবেন",
-    prevention: "প্রতিরোধ",
-    reduceFutureRisk: "ভবিষ্যতের ঝুঁকি কমান",
-    monitoring: "পর্যবেক্ষণ",
-    keepWatching: "নজর রাখুন",
-    expertTitle: "AI-সহায়িত নির্দেশনা — বিশেষজ্ঞ যাচাইয়ের পরামর্শ",
-    expertText: "স্থানীয় পরিস্থিতি এবং সরকারি কৃষি নির্দেশিকা বিবেচনা করুন।",
-    fieldRoutine: "ক্ষেতের রুটিন",
-    scoutConsistently: "নিয়মিত পরিদর্শন করুন",
-    scoutText: "নিয়মিত পর্যবেক্ষণ প্রাথমিকভাবে রোগ শনাক্ত করতে সাহায্য করে।",
-    recordKeeping: "রেকর্ড রাখা",
-    captureLocation: "অবস্থান নথিভুক্ত করুন",
-    recordText: "হটস্পট ম্যাপিংয়ের জন্য ক্ষেতের রিপোর্ট ব্যবহার করুন।",
-    escalation: "বিশেষজ্ঞ সহায়তা",
-    askExpert: "বিশেষজ্ঞকে জিজ্ঞাসা করুন",
-    escalationText: "অনিশ্চিত কেস বিশেষজ্ঞের কাছে পাঠান।",
-    backToDiagnosis: "নির্ণয়ে ফিরে যান",
-    footer: "আরও স্মার্ট ও নিরাপদ কৃষির জন্য",
-    errors: {
-      prediction: "রোগ নির্ণয় ব্যর্থ হয়েছে",
-      server: "AI সার্ভারের সাথে সংযোগ করা যায়নি।",
-    },
+    systemOnline:
+      "AI সিস্টেম অনলাইন",
+
+    heroTitle:
+      "আপনার ফসল রক্ষা করুন",
+
+    heroSubtitle:
+      "অনেক দেরি হওয়ার আগে।",
+
+    startDiagnosis:
+      "রোগ নির্ণয় শুরু করুন",
+
+    cropHealth:
+      "ফসলের স্বাস্থ্য",
+
+    diagnosisTitle:
+      "AI রোগ নির্ণয়",
+
+    detectedCondition:
+      "শনাক্ত অবস্থা",
+
+    analyzingLeaf:
+      "পাতা বিশ্লেষণ করা হচ্ছে...",
+
+    ready:
+      "বিশ্লেষণের জন্য প্রস্তুত",
+
+    uploadHint:
+      "ফসলের পাতার স্পষ্ট ছবি আপলোড করুন",
+
+    confidence:
+      "বিশ্বাস",
+
+    aiConfidence:
+      "AI বিশ্বাসযোগ্যতা",
+
+    listen:
+      "পরামর্শ শুনুন",
+
+    speaking:
+      "পরামর্শ পড়া হচ্ছে...",
+
+    uploadLeaf:
+      "পাতার ছবি আপলোড করুন",
+
+    analyzeAnother:
+      "আরেকটি পাতা পরীক্ষা করুন",
+
+    riskTitle:
+      "ফসলের ঝুঁকি পূর্বাভাস",
+
+    overallRisk:
+      "মোট ঝুঁকি",
+
+    currentConditions:
+      "বর্তমান পরিস্থিতি",
+
+    fieldEnvironment:
+      "ক্ষেতের পরিবেশ",
+
+    earlyWarning:
+      "প্রাথমিক সতর্কতা",
+
+    temperature:
+      "তাপমাত্রা",
+
+    humidity:
+      "আর্দ্রতা",
+
+    rainfall:
+      "আজকের বৃষ্টিপাত",
+
+    pestActivity:
+      "পোকামাকড়ের কার্যকলাপ",
+
+    cropStage:
+      "ফসলের পর্যায়",
+
+    weatherLive:
+      "লাইভ আবহাওয়া",
+
+    fetchingWeather:
+      "লাইভ আবহাওয়া সংগ্রহ করা হচ্ছে...",
+
+    weatherUnavailable:
+      "লাইভ আবহাওয়া পাওয়া যাচ্ছে না",
+
+    refreshWeather:
+      "আবহাওয়া আপডেট করুন",
+
+    fieldIntelligence:
+      "ক্ষেত্র বুদ্ধিমত্তা",
+
+    sensorPanelTitle:
+      "পোকা ফাঁদ এবং সেন্সর",
+
+    sensorPanelText:
+      "পর্যবেক্ষণ করা ক্ষেত্রের জন্য প্রোটোটাইপ সেন্সর ফিড।",
+
+    pestTrapCount:
+      "পোকা ফাঁদের সংখ্যা",
+
+    soilMoisture:
+      "মাটির আর্দ্রতা",
+
+    sensorStatus:
+      "সেন্সর অবস্থা",
+
+    refreshSensor:
+      "সেন্সর আপডেট করুন",
+
+    lastUpdate:
+      "শেষ আপডেট",
+
+    expertValidationTitle:
+      "বিশেষজ্ঞ যাচাই",
+
+    expertReviewTitle:
+      "বিশেষজ্ঞ পর্যালোচনা",
+
+    expertReviewText:
+      "অনিশ্চিত AI ফলাফল বিশেষজ্ঞ যাচাইয়ের জন্য পাঠানো যেতে পারে।",
+
+    sendForExpert:
+      "বিশেষজ্ঞ পর্যালোচনার জন্য পাঠান",
+
+    requestExpert:
+      "বিশেষজ্ঞ যাচাইয়ের অনুরোধ করুন",
+
+    caseSubmitted:
+      "কেস পাঠানো হয়েছে",
+
+    waitingValidation:
+      "বিশেষজ্ঞ যাচাইয়ের অপেক্ষায়",
+
+    uploadFirst:
+      "প্রথমে পাতার ছবি আপলোড করুন।",
+
+    hotspotsKicker:
+      "ভৌগোলিক তথ্য",
+
+    hotspotTitle:
+      "রোগের হটস্পট",
+
+    hotspotsDescription:
+      "রিপোর্ট করা ফসলের স্বাস্থ্য কেস দেখুন এবং ক্ষেত্র পরিদর্শনকে অগ্রাধিকার দিন।",
+
+    prototypeData:
+      "প্রোটোটাইপ ডেটা",
+
+    reportedClusters:
+      "রিপোর্ট করা ক্লাস্টার",
+
+    highCritical:
+      "উচ্চ / গুরুতর",
+
+    affectedReports:
+      "প্রভাবিত রিপোর্ট",
+
+    fieldMap:
+      "ক্ষেত্রের মানচিত্র",
+
+    reportedActivity:
+      "রিপোর্ট করা রোগ কার্যকলাপ",
+
+    searchField:
+      "ক্ষেত্র অনুসন্ধান",
+
+    resetView:
+      "মানচিত্র রিসেট",
+
+    mapHint:
+      "সরান • জুম করুন • হটস্পটে ট্যাপ করুন",
+
+    recentReports:
+      "সাম্প্রতিক রিপোর্ট",
+
+    priorityAreas:
+      "অগ্রাধিকার এলাকা",
+
+    reportedCases:
+      "রিপোর্ট করা কেস",
+
+    mapRisk:
+      "ঝুঁকি",
+
+    mapReports:
+      "রিপোর্ট",
+
+    critical:
+      "গুরুতর",
+
+    high:
+      "উচ্চ",
+
+    medium:
+      "মাঝারি",
+
+    low:
+      "কম",
+
+    selectDistrict:
+      "মহারাষ্ট্র জেলা নির্বাচন করুন",
+
+    advisoriesKicker:
+      "কৃষক কর্ম কেন্দ্র",
+
+    advisoriesTitle:
+      "ফসল পরামর্শ",
+
+    advisoriesDescription:
+      "AI রোগ নির্ণয়কে পরবর্তী পদক্ষেপ এবং পর্যবেক্ষণ নির্দেশিকায় রূপান্তর করুন।",
+
+    aiAssisted:
+      "AI-সহায়িত নির্দেশনা",
+
+    currentCondition:
+      "বর্তমান অবস্থা",
+
+    noDiagnosis:
+      "এখনও রোগ নির্ণয় নেই",
+
+    status:
+      "অবস্থা",
+
+    immediateAction:
+      "তাৎক্ষণিক পদক্ষেপ",
+
+    whatToDoNow:
+      "এখন কী করবেন",
+
+    prevention:
+      "প্রতিরোধ",
+
+    reduceFutureRisk:
+      "ভবিষ্যতের ঝুঁকি কমান",
+
+    monitoring:
+      "পর্যবেক্ষণ",
+
+    keepWatching:
+      "নজর রাখুন",
+
+    expertTitle:
+      "AI-সহায়িত নির্দেশনা — বিশেষজ্ঞ যাচাইয়ের পরামর্শ",
+
+    expertText:
+      "স্থানীয় পরিস্থিতি এবং সরকারি কৃষি নির্দেশিকা বিবেচনা করুন।",
+
+    fieldRoutine:
+      "ক্ষেতের রুটিন",
+
+    scoutConsistently:
+      "নিয়মিত পরিদর্শন করুন",
+
+    scoutText:
+      "নিয়মিত পর্যবেক্ষণ প্রাথমিকভাবে রোগ শনাক্ত করতে সাহায্য করে।",
+
+    recordKeeping:
+      "রেকর্ড রাখা",
+
+    captureLocation:
+      "অবস্থান নথিভুক্ত করুন",
+
+    recordText:
+      "হটস্পট ম্যাপিংয়ের জন্য ক্ষেতের রিপোর্ট ব্যবহার করুন।",
+
+    escalation:
+      "বিশেষজ্ঞ সহায়তা",
+
+    askExpert:
+      "বিশেষজ্ঞকে জিজ্ঞাসা করুন",
+
+    escalationText:
+      "অনিশ্চিত কেস বিশেষজ্ঞের কাছে পাঠান।",
+
+    backToDiagnosis:
+      "নির্ণয়ে ফিরে যান",
+
+    footer:
+      "আরও স্মার্ট ও নিরাপদ কৃষির জন্য",
   },
 
   ml: {
+    ...english,
+
     nav: {
       diagnosis: "രോഗനിർണയം",
       risk: "അപകട പ്രവചനം",
@@ -1440,132 +2610,292 @@ const translations = {
       language: "ഭാഷ",
     },
 
-    systemOnline: "AI സിസ്റ്റം ഓൺലൈനിലാണ്",
-    heroTitle: "നിങ്ങളുടെ വിളകൾ സംരക്ഷിക്കുക",
-    heroSubtitle: "വളരെ വൈകുന്നതിന് മുമ്പ്.",
-    startDiagnosis: "രോഗനിർണയം ആരംഭിക്കുക",
-    aiDiagnosis: "AI അധിഷ്ഠിത രോഗനിർണയം",
-    riskInsights: "തത്സമയ അപകട വിവരങ്ങൾ",
-    cropHealth: "വിളയുടെ ആരോഗ്യം",
-    diagnosisTitle: "AI രോഗനിർണയം",
-    detectedCondition: "കണ്ടെത്തിയ സ്ഥിതി",
-    analyzingLeaf: "ഇല വിശകലനം ചെയ്യുന്നു...",
-    ready: "വിശകലനത്തിന് തയ്യാറാണ്",
-    uploadHint: "വിളയുടെ ഇലയുടെ വ്യക്തമായ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
-    confidence: "വിശ്വാസം",
-    aiConfidence: "AI വിശ്വാസ്യത",
-    severity: "തീവ്രത",
-    riskLevel: "അപകടനില",
-    cropHealthStatus: "വിളയുടെ ആരോഗ്യസ്ഥിതി",
-    recommendedAction: "ശുപാർശ ചെയ്യുന്ന നടപടി",
-    whatShouldIDo: "എന്ത് ചെയ്യണം?",
-    cropAdvisory: "വിള ഉപദേശം",
-    listen: "ഉപദേശം കേൾക്കുക",
-    speaking: "ഉപദേശം വായിക്കുന്നു...",
-    highConfidence: "ഉയർന്ന വിശ്വാസ്യതയുള്ള AI രോഗനിർണയം",
-    expertValidation: "വിദഗ്ധ പരിശോധന ശുപാർശ ചെയ്യുന്നു",
-    analyzingButton: "വിശകലനം ചെയ്യുന്നു...",
-    analyzeAnother: "മറ്റൊരു ഇല പരിശോധിക്കുക",
-    uploadLeaf: "ഇലയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
-    scan: "AI വിശകലനം ചെയ്യുന്നു...",
-    riskTitle: "വിള അപകട പ്രവചനം",
-    overallRisk: "ആകെ അപകടം",
-    currentConditions: "നിലവിലെ സാഹചര്യങ്ങൾ",
-    fieldEnvironment: "വയൽ പരിസ്ഥിതി",
-    earlyWarning: "മുൻകൂർ മുന്നറിയിപ്പ്",
-    riskKicker: "മുൻകൂർ മുന്നറിയിപ്പ് സംവിധാനം",
-    riskDescription: "ഇതിനുള്ള മാതൃകാ അപകട അനുമാനം:",
-    sevenDayOutlook: "7-ദിവസത്തെ പ്രവചനം",
-    temperature: "താപനില",
-    humidity: "ആർദ്രത",
-    rainfall: "ഇന്നത്തെ മഴ",
-    pestActivity: "കീട പ്രവർത്തനം",
-    cropStage: "വിള ഘട്ടം",
-    weatherLive: "തത്സമയ കാലാവസ്ഥ",
-    weatherUpdated: "കാലാവസ്ഥ അപ്ഡേറ്റ്",
-    fetchingWeather: "തത്സമയ കാലാവസ്ഥ ലഭ്യമാക്കുന്നു...",
-    weatherUnavailable: "തത്സമയ കാലാവസ്ഥ ലഭ്യമല്ല",
-    refreshWeather: "കാലാവസ്ഥ പുതുക്കുക",
-    warningTitle: "നിലവിലെ സാഹചര്യങ്ങൾ രോഗവളർച്ചയ്ക്ക് അനുകൂലമാണ്.",
-    warningText: "ഈ മാതൃകാ റിസ്ക് എഞ്ചിൻ പാരിസ്ഥിതിക സാഹചര്യങ്ങൾ, വിള ഘട്ടം, കീട പ്രവർത്തനം എന്നിവ സംയോജിപ്പിക്കുന്നു.",
-    recommendedActionRisk: "ശുപാർശ ചെയ്യുന്ന നടപടി",
-    recommendedActionText: "വയൽ നിരീക്ഷണം വർദ്ധിപ്പിച്ച് സമീപത്തെ ചെടികൾ പരിശോധിക്കുക.",
-    pestTrap: "കീട കെണി സിഗ്നൽ",
-    pestTrapText: "മാതൃകാ സെൻസർ ഫീഡ് വർദ്ധിച്ച കീട പ്രവർത്തനം സൂചിപ്പിക്കുന്നു.",
-    nextUpdate: "അടുത്ത അപ്ഡേറ്റ്",
-    nextUpdateText: "പുതിയ വിവരങ്ങൾ ലഭിക്കുമ്പോൾ അപകടസാധ്യത വീണ്ടും കണക്കാക്കണം.",
-    fieldIntelligence: "വയൽ ബുദ്ധിശക്തി",
-    sensorPanelTitle: "കീട കെണിയും സെൻസറും",
-    sensorPanelText: "നിരീക്ഷിക്കുന്ന വയലിനുള്ള മാതൃകാ സെൻസർ ഫീഡ്.",
-    pestTrapCount: "കീട കെണി എണ്ണം",
-    soilMoisture: "മണ്ണിലെ ഈർപ്പം",
-    sensorStatus: "സെൻസർ നില",
-    refreshSensor: "സെൻസർ പുതുക്കുക",
-    lastUpdate: "അവസാന അപ്ഡേറ്റ്",
-    expertValidationTitle: "വിദഗ്ധ പരിശോധന",
-    expertReviewTitle: "വിദഗ്ധ അവലോകനം",
-    expertReviewText: "അനിശ്ചിത AI ഫലങ്ങൾ വിദഗ്ധ പരിശോധനയ്ക്ക് അയയ്ക്കാം.",
-    sendForExpert: "വിദഗ്ധ അവലോകനത്തിന് അയയ്ക്കുക",
-    requestExpert: "വിദഗ്ധ പരിശോധന അഭ്യർത്ഥിക്കുക",
-    caseSubmitted: "കേസ് അയച്ചു",
-    waitingValidation: "വിദഗ്ധ പരിശോധനയ്ക്കായി കാത്തിരിക്കുന്നു",
-    uploadFirst: "ആദ്യം ഇലയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക.",
-    hotspotsKicker: "ഭൗമ വിവരങ്ങൾ",
-    hotspotTitle: "രോഗ ഹോട്ട്‌സ്‌പോട്ടുകൾ",
-    hotspotsDescription: "റിപ്പോർട്ട് ചെയ്ത വിള ആരോഗ്യ കേസുകൾ കാണുകയും വയൽ പരിശോധനയ്ക്ക് മുൻഗണന നൽകുകയും ചെയ്യുക.",
-    prototypeData: "പ്രോട്ടോടൈപ്പ് ഡാറ്റ",
-    reportedClusters: "റിപ്പോർട്ട് ചെയ്ത ക്ലസ്റ്ററുകൾ",
-    highCritical: "ഉയർന്ന / ഗുരുതര",
-    affectedReports: "ബാധിച്ച റിപ്പോർട്ടുകൾ",
-    fieldMap: "വയൽ മാപ്പ്",
-    reportedActivity: "റിപ്പോർട്ട് ചെയ്ത രോഗ പ്രവർത്തനം",
-    searchField: "വയൽ തിരയുക",
-    resetView: "മാപ്പ് റീസെറ്റ്",
-    mapHint: "നീക്കുക • സൂം ചെയ്യുക • ഹോട്ട്‌സ്‌പോട്ട് അമർത്തുക",
-    recentReports: "സമീപകാല റിപ്പോർട്ടുകൾ",
-    priorityAreas: "മുൻഗണനാ മേഖലകൾ",
-    reportedCases: "റിപ്പോർട്ട് ചെയ്ത കേസുകൾ",
-    mapRisk: "അപകടം",
-    mapReports: "റിപ്പോർട്ടുകൾ",
-    hotspotValidation: "പ്രോട്ടോടൈപ്പ് ഹോട്ട്‌സ്‌പോട്ട് രേഖകൾ പ്രദർശനത്തിനായി മാത്രമാണ്.",
-    critical: "ഗുരുതരം",
-    high: "ഉയർന്ന",
-    medium: "മിതമായ",
-    low: "കുറഞ്ഞ",
-    selectDistrict: "മഹാരാഷ്ട്ര ജില്ല തിരഞ്ഞെടുക്കുക",
-    advisoriesKicker: "കർഷക പ്രവർത്തന കേന്ദ്രം",
-    advisoriesTitle: "വിള ഉപദേശങ്ങൾ",
-    advisoriesDescription: "AI രോഗനിർണയത്തെ അടുത്ത നടപടികളും നിരീക്ഷണ മാർഗ്ഗനിർദ്ദേശവുമാക്കി മാറ്റുക.",
-    aiAssisted: "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം",
-    currentCondition: "നിലവിലെ സ്ഥിതി",
-    noDiagnosis: "ഇനിയും രോഗനിർണയം ഇല്ല",
-    status: "സ്ഥിതി",
-    immediateAction: "തൽക്ഷണ നടപടി",
-    whatToDoNow: "ഇപ്പോൾ എന്ത് ചെയ്യണം",
-    prevention: "പ്രതിരോധം",
-    reduceFutureRisk: "ഭാവിയിലെ അപകടസാധ്യത കുറയ്ക്കുക",
-    monitoring: "നിരീക്ഷണം",
-    keepWatching: "ശ്രദ്ധിക്കുക",
-    expertTitle: "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം — വിദഗ്ധ പരിശോധന ശുപാർശ ചെയ്യുന്നു",
-    expertText: "പ്രാദേശിക സാഹചര്യങ്ങളും ഔദ്യോഗിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങളും പരിഗണിക്കുക.",
-    fieldRoutine: "വയൽ ദിനചര്യ",
-    scoutConsistently: "സ്ഥിരമായി പരിശോധിക്കുക",
-    scoutText: "സ്ഥിരമായ നിരീക്ഷണം രോഗം നേരത്തെ കണ്ടെത്താൻ സഹായിക്കുന്നു.",
-    recordKeeping: "രേഖ സൂക്ഷിക്കൽ",
-    captureLocation: "സ്ഥാനം രേഖപ്പെടുത്തുക",
-    recordText: "ഹോട്ട്‌സ്‌പോട്ട് മാപ്പിംഗിനായി ഫീൽഡ് റിപ്പോർട്ടുകൾ ഉപയോഗിക്കുക.",
-    escalation: "വിദഗ്ധ സഹായം",
-    askExpert: "വിദഗ്ധരോട് ചോദിക്കുക",
-    escalationText: "അനിശ്ചിത കേസുകൾ വിദഗ്ധരിലേക്ക് അയയ്ക്കുക.",
-    backToDiagnosis: "രോഗനിർണയത്തിലേക്ക് മടങ്ങുക",
-    footer: "കൂടുതൽ സ്മാർട്ടും സുരക്ഷിതവുമായ കൃഷിക്കായി",
-    errors: {
-      prediction: "രോഗനിർണയം പരാജയപ്പെട്ടു",
-      server: "AI സെർവറുമായി ബന്ധിപ്പിക്കാൻ കഴിഞ്ഞില്ല.",
-    },
+    systemOnline:
+      "AI സിസ്റ്റം ഓൺലൈനിലാണ്",
+
+    heroTitle:
+      "നിങ്ങളുടെ വിളകൾ സംരക്ഷിക്കുക",
+
+    heroSubtitle:
+      "വളരെ വൈകുന്നതിന് മുമ്പ്.",
+
+    startDiagnosis:
+      "രോഗനിർണയം ആരംഭിക്കുക",
+
+    cropHealth:
+      "വിളയുടെ ആരോഗ്യം",
+
+    diagnosisTitle:
+      "AI രോഗനിർണയം",
+
+    detectedCondition:
+      "കണ്ടെത്തിയ സ്ഥിതി",
+
+    analyzingLeaf:
+      "ഇല വിശകലനം ചെയ്യുന്നു...",
+
+    ready:
+      "വിശകലനത്തിന് തയ്യാറാണ്",
+
+    uploadHint:
+      "വിളയുടെ ഇലയുടെ വ്യക്തമായ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+
+    confidence:
+      "വിശ്വാസം",
+
+    aiConfidence:
+      "AI വിശ്വാസ്യത",
+
+    listen:
+      "ഉപദേശം കേൾക്കുക",
+
+    speaking:
+      "ഉപദേശം വായിക്കുന്നു...",
+
+    uploadLeaf:
+      "ഇലയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+
+    analyzeAnother:
+      "മറ്റൊരു ഇല പരിശോധിക്കുക",
+
+    riskTitle:
+      "വിള അപകട പ്രവചനം",
+
+    overallRisk:
+      "ആകെ അപകടം",
+
+    currentConditions:
+      "നിലവിലെ സാഹചര്യങ്ങൾ",
+
+    fieldEnvironment:
+      "വയൽ പരിസ്ഥിതി",
+
+    earlyWarning:
+      "മുൻകൂർ മുന്നറിയിപ്പ്",
+
+    temperature:
+      "താപനില",
+
+    humidity:
+      "ആർദ്രത",
+
+    rainfall:
+      "ഇന്നത്തെ മഴ",
+
+    pestActivity:
+      "കീട പ്രവർത്തനം",
+
+    cropStage:
+      "വിള ഘട്ടം",
+
+    weatherLive:
+      "തത്സമയ കാലാവസ്ഥ",
+
+    fetchingWeather:
+      "തത്സമയ കാലാവസ്ഥ ലഭ്യമാക്കുന്നു...",
+
+    weatherUnavailable:
+      "തത്സമയ കാലാവസ്ഥ ലഭ്യമല്ല",
+
+    refreshWeather:
+      "കാലാവസ്ഥ പുതുക്കുക",
+
+    fieldIntelligence:
+      "വയൽ ബുദ്ധിശക്തി",
+
+    sensorPanelTitle:
+      "കീട കെണിയും സെൻസറും",
+
+    sensorPanelText:
+      "നിരീക്ഷിക്കുന്ന വയലിനുള്ള മാതൃകാ സെൻസർ ഫീഡ്.",
+
+    pestTrapCount:
+      "കീട കെണി എണ്ണം",
+
+    soilMoisture:
+      "മണ്ണിലെ ഈർപ്പം",
+
+    sensorStatus:
+      "സെൻസർ നില",
+
+    refreshSensor:
+      "സെൻസർ പുതുക്കുക",
+
+    lastUpdate:
+      "അവസാന അപ്ഡേറ്റ്",
+
+    expertValidationTitle:
+      "വിദഗ്ധ പരിശോധന",
+
+    expertReviewTitle:
+      "വിദഗ്ധ അവലോകനം",
+
+    expertReviewText:
+      "അനിശ്ചിത AI ഫലങ്ങൾ വിദഗ്ധ പരിശോധനയ്ക്ക് അയയ്ക്കാം.",
+
+    sendForExpert:
+      "വിദഗ്ധ അവലോകനത്തിന് അയയ്ക്കുക",
+
+    requestExpert:
+      "വിദഗ്ധ പരിശോധന അഭ്യർത്ഥിക്കുക",
+
+    caseSubmitted:
+      "കേസ് അയച്ചു",
+
+    waitingValidation:
+      "വിദഗ്ധ പരിശോധനയ്ക്കായി കാത്തിരിക്കുന്നു",
+
+    uploadFirst:
+      "ആദ്യം ഇലയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക.",
+
+    hotspotsKicker:
+      "ഭൗമ വിവരങ്ങൾ",
+
+    hotspotTitle:
+      "രോഗ ഹോട്ട്‌സ്‌പോട്ടുകൾ",
+
+    hotspotsDescription:
+      "റിപ്പോർട്ട് ചെയ്ത വിള ആരോഗ്യ കേസുകൾ കാണുകയും വയൽ പരിശോധനയ്ക്ക് മുൻഗണന നൽകുകയും ചെയ്യുക.",
+
+    prototypeData:
+      "പ്രോട്ടോടൈപ്പ് ഡാറ്റ",
+
+    reportedClusters:
+      "റിപ്പോർട്ട് ചെയ്ത ക്ലസ്റ്ററുകൾ",
+
+    highCritical:
+      "ഉയർന്ന / ഗുരുതര",
+
+    affectedReports:
+      "ബാധിച്ച റിപ്പോർട്ടുകൾ",
+
+    fieldMap:
+      "വയൽ മാപ്പ്",
+
+    reportedActivity:
+      "റിപ്പോർട്ട് ചെയ്ത രോഗ പ്രവർത്തനം",
+
+    searchField:
+      "വയൽ തിരയുക",
+
+    resetView:
+      "മാപ്പ് റീസെറ്റ്",
+
+    mapHint:
+      "നീക്കുക • സൂം ചെയ്യുക • ഹോട്ട്‌സ്‌പോട്ട് അമർത്തുക",
+
+    recentReports:
+      "സമീപകാല റിപ്പോർട്ടുകൾ",
+
+    priorityAreas:
+      "മുൻഗണനാ മേഖലകൾ",
+
+    reportedCases:
+      "റിപ്പോർട്ട് ചെയ്ത കേസുകൾ",
+
+    mapRisk:
+      "അപകടം",
+
+    mapReports:
+      "റിപ്പോർട്ടുകൾ",
+
+    critical:
+      "ഗുരുതരം",
+
+    high:
+      "ഉയർന്ന",
+
+    medium:
+      "മിതമായ",
+
+    low:
+      "കുറഞ്ഞ",
+
+    selectDistrict:
+      "മഹാരാഷ്ട്ര ജില്ല തിരഞ്ഞെടുക്കുക",
+
+    advisoriesKicker:
+      "കർഷക പ്രവർത്തന കേന്ദ്രം",
+
+    advisoriesTitle:
+      "വിള ഉപദേശങ്ങൾ",
+
+    advisoriesDescription:
+      "AI രോഗനിർണയത്തെ അടുത്ത നടപടികളും നിരീക്ഷണ മാർഗ്ഗനിർദ്ദേശവുമാക്കി മാറ്റുക.",
+
+    aiAssisted:
+      "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം",
+
+    currentCondition:
+      "നിലവിലെ സ്ഥിതി",
+
+    noDiagnosis:
+      "ഇനിയും രോഗനിർണയം ഇല്ല",
+
+    status:
+      "സ്ഥിതി",
+
+    immediateAction:
+      "തൽക്ഷണ നടപടി",
+
+    whatToDoNow:
+      "ഇപ്പോൾ എന്ത് ചെയ്യണം",
+
+    prevention:
+      "പ്രതിരോധം",
+
+    reduceFutureRisk:
+      "ഭാവിയിലെ അപകടസാധ്യത കുറയ്ക്കുക",
+
+    monitoring:
+      "നിരീക്ഷണം",
+
+    keepWatching:
+      "ശ്രദ്ധിക്കുക",
+
+    expertTitle:
+      "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം — വിദഗ്ധ പരിശോധന ശുപാർശ ചെയ്യുന്നു",
+
+    expertText:
+      "പ്രാദേശിക സാഹചര്യങ്ങളും ഔദ്യോഗിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങളും പരിഗണിക്കുക.",
+
+    fieldRoutine:
+      "വയൽ ദിനചര്യ",
+
+    scoutConsistently:
+      "സ്ഥിരമായി പരിശോധിക്കുക",
+
+    scoutText:
+      "സ്ഥിരമായ നിരീക്ഷണം രോഗം നേരത്തെ കണ്ടെത്താൻ സഹായിക്കുന്നു.",
+
+    recordKeeping:
+      "രേഖ സൂക്ഷിക്കൽ",
+
+    captureLocation:
+      "സ്ഥാനം രേഖപ്പെടുത്തുക",
+
+    recordText:
+      "ഹോട്ട്‌സ്‌പോട്ട് മാപ്പിംഗിനായി ഫീൽഡ് റിപ്പോർട്ടുകൾ ഉപയോഗിക്കുക.",
+
+    escalation:
+      "വിദഗ്ധ സഹായം",
+
+    askExpert:
+      "വിദഗ്ധരോട് ചോദിക്കുക",
+
+    escalationText:
+      "അനിശ്ചിത കേസുകൾ വിദഗ്ധരിലേക്ക് അയയ്ക്കുക.",
+
+    backToDiagnosis:
+      "രോഗനിർണയത്തിലേക്ക് മടങ്ങുക",
+
+    footer:
+      "കൂടുതൽ സ്മാർട്ടും സുരക്ഷിതവുമായ കൃഷിക്കായി",
   },
 
   pa: {
+    ...english,
+
     nav: {
       diagnosis: "ਨਿਦਾਨ",
       risk: "ਖਤਰੇ ਦੀ ਪੇਸ਼ਗੋਈ",
@@ -1574,212 +2904,313 @@ const translations = {
       language: "ਭਾਸ਼ਾ",
     },
 
-    systemOnline: "AI ਸਿਸਟਮ ਆਨਲਾਈਨ",
-    heroTitle: "ਆਪਣੀਆਂ ਫਸਲਾਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
-    heroSubtitle: "ਦੇਰ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ।",
-    startDiagnosis: "ਨਿਦਾਨ ਸ਼ੁਰੂ ਕਰੋ",
-    aiDiagnosis: "AI ਆਧਾਰਿਤ ਨਿਦਾਨ",
-    riskInsights: "ਰੀਅਲ-ਟਾਈਮ ਖਤਰਾ ਜਾਣਕਾਰੀ",
-    cropHealth: "ਫਸਲ ਦੀ ਸਿਹਤ",
-    diagnosisTitle: "AI ਨਿਦਾਨ",
-    detectedCondition: "ਪਛਾਣੀ ਗਈ ਸਥਿਤੀ",
-    analyzingLeaf: "ਪੱਤੇ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
-    ready: "ਵਿਸ਼ਲੇਸ਼ਣ ਲਈ ਤਿਆਰ",
-    uploadHint: "ਫਸਲ ਦੇ ਪੱਤੇ ਦੀ ਸਾਫ਼ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ",
-    confidence: "ਭਰੋਸਾ",
-    aiConfidence: "AI ਭਰੋਸਾ",
-    severity: "ਗੰਭੀਰਤਾ",
-    riskLevel: "ਖਤਰੇ ਦਾ ਪੱਧਰ",
-    cropHealthStatus: "ਫਸਲ ਦੀ ਸਿਹਤ ਦੀ ਸਥਿਤੀ",
-    recommendedAction: "ਸਿਫਾਰਸ਼ੀ ਕਾਰਵਾਈ",
-    whatShouldIDo: "ਕੀ ਕਰਨਾ ਹੈ?",
-    cropAdvisory: "ਫਸਲ ਸਲਾਹ",
-    listen: "ਸਲਾਹ ਸੁਣੋ",
-    speaking: "ਸਲਾਹ ਪੜ੍ਹੀ ਜਾ ਰਹੀ ਹੈ...",
-    highConfidence: "ਉੱਚ ਭਰੋਸੇ ਵਾਲਾ AI ਨਿਦਾਨ",
-    expertValidation: "ਮਾਹਰ ਜਾਂਚ ਦੀ ਸਿਫਾਰਸ਼",
-    analyzingButton: "ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
-    analyzeAnother: "ਹੋਰ ਪੱਤਾ ਜਾਂਚੋ",
-    uploadLeaf: "ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ",
-    scan: "AI ਵਿਸ਼ਲੇਸ਼ਣ ਕਰ ਰਿਹਾ ਹੈ...",
-    riskTitle: "ਫਸਲ ਖਤਰੇ ਦੀ ਪੇਸ਼ਗੋਈ",
-    overallRisk: "ਕੁੱਲ ਖਤਰਾ",
-    currentConditions: "ਮੌਜੂਦਾ ਹਾਲਾਤ",
-    fieldEnvironment: "ਖੇਤ ਦਾ ਵਾਤਾਵਰਣ",
-    earlyWarning: "ਪਹਿਲਾਂ ਤੋਂ ਚੇਤਾਵਨੀ",
-    riskKicker: "ਪਹਿਲਾਂ ਤੋਂ ਚੇਤਾਵਨੀ ਪ੍ਰਣਾਲੀ",
-    riskDescription: "ਇਸ ਲਈ ਨਮੂਨਾ ਖਤਰਾ ਅਨੁਮਾਨ:",
-    sevenDayOutlook: "7-ਦਿਨਾਂ ਦੀ ਭਵਿੱਖਬਾਣੀ",
-    temperature: "ਤਾਪਮਾਨ",
-    humidity: "ਨਮੀ",
-    rainfall: "ਅੱਜ ਦੀ ਬਾਰਿਸ਼",
-    pestActivity: "ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ",
-    cropStage: "ਫਸਲ ਦਾ ਪੜਾਅ",
-    weatherLive: "ਲਾਈਵ ਮੌਸਮ",
-    weatherUpdated: "ਮੌਸਮ ਅਪਡੇਟ",
-    fetchingWeather: "ਲਾਈਵ ਮੌਸਮ ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
-    weatherUnavailable: "ਲਾਈਵ ਮੌਸਮ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
-    refreshWeather: "ਮੌਸਮ ਅਪਡੇਟ ਕਰੋ",
-    warningTitle: "ਮੌਜੂਦਾ ਹਾਲਾਤ ਬਿਮਾਰੀ ਦੇ ਵਿਕਾਸ ਲਈ ਅਨੁਕੂਲ ਹਨ।",
-    warningText: "ਇਹ ਨਮੂਨਾ ਖਤਰਾ ਇੰਜਣ ਵਾਤਾਵਰਣਕ ਹਾਲਾਤ, ਫਸਲ ਦੇ ਪੜਾਅ ਅਤੇ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਨੂੰ ਜੋੜਦਾ ਹੈ।",
-    recommendedActionRisk: "ਸਿਫਾਰਸ਼ੀ ਕਾਰਵਾਈ",
-    recommendedActionText: "ਖੇਤ ਦੀ ਨਿਗਰਾਨੀ ਵਧਾਓ ਅਤੇ ਨੇੜਲੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
-    pestTrap: "ਕੀੜੇ ਟਰੈਪ ਸੰਕੇਤ",
-    pestTrapText: "ਨਮੂਨਾ ਸੈਂਸਰ ਫੀਡ ਵਧੀ ਹੋਈ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਦਰਸਾਉਂਦੀ ਹੈ।",
-    nextUpdate: "ਅਗਲਾ ਅੱਪਡੇਟ",
-    nextUpdateText: "ਨਵੀਂ ਜਾਣਕਾਰੀ ਮਿਲਣ 'ਤੇ ਖਤਰੇ ਦੀ ਮੁੜ ਗਣਨਾ ਕੀਤੀ ਜਾਣੀ ਚਾਹੀਦੀ ਹੈ।",
-    fieldIntelligence: "ਖੇਤ ਦੀ ਜਾਣਕਾਰੀ",
-    sensorPanelTitle: "ਕੀੜੇ ਟਰੈਪ ਅਤੇ ਸੈਂਸਰ",
-    sensorPanelText: "ਨਿਗਰਾਨੀ ਕੀਤੇ ਖੇਤ ਲਈ ਪ੍ਰੋਟੋਟਾਈਪ ਸੈਂਸਰ ਫੀਡ।",
-    pestTrapCount: "ਕੀੜੇ ਟਰੈਪ ਗਿਣਤੀ",
-    soilMoisture: "ਮਿੱਟੀ ਦੀ ਨਮੀ",
-    sensorStatus: "ਸੈਂਸਰ ਸਥਿਤੀ",
-    refreshSensor: "ਸੈਂਸਰ ਅਪਡੇਟ ਕਰੋ",
-    lastUpdate: "ਆਖਰੀ ਅਪਡੇਟ",
-    expertValidationTitle: "ਮਾਹਰ ਜਾਂਚ",
-    expertReviewTitle: "ਮਾਹਰ ਸਮੀਖਿਆ",
-    expertReviewText: "ਅਨਿਸ਼ਚਿਤ AI ਨਤੀਜਿਆਂ ਨੂੰ ਮਾਹਰ ਜਾਂਚ ਲਈ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
-    sendForExpert: "ਮਾਹਰ ਸਮੀਖਿਆ ਲਈ ਭੇਜੋ",
-    requestExpert: "ਮਾਹਰ ਜਾਂਚ ਦੀ ਬੇਨਤੀ ਕਰੋ",
-    caseSubmitted: "ਕੇਸ ਭੇਜਿਆ ਗਿਆ",
-    waitingValidation: "ਮਾਹਰ ਜਾਂਚ ਦੀ ਉਡੀਕ",
-    uploadFirst: "ਪਹਿਲਾਂ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ।",
-    hotspotsKicker: "ਭੂਗੋਲਿਕ ਜਾਣਕਾਰੀ",
-    hotspotTitle: "ਰੋਗ ਹਾਟਸਪਾਟ",
-    hotspotsDescription: "ਰਿਪੋਰਟ ਕੀਤੇ ਫਸਲ ਸਿਹਤ ਮਾਮਲੇ ਵੇਖੋ ਅਤੇ ਖੇਤ ਜਾਂਚ ਨੂੰ ਤਰਜੀਹ ਦਿਓ।",
-    prototypeData: "ਪ੍ਰੋਟੋਟਾਈਪ ਡਾਟਾ",
-    reportedClusters: "ਰਿਪੋਰਟ ਕੀਤੇ ਕਲੱਸਟਰ",
-    highCritical: "ਉੱਚ / ਗੰਭੀਰ",
-    affectedReports: "ਪ੍ਰਭਾਵਿਤ ਰਿਪੋਰਟਾਂ",
-    fieldMap: "ਖੇਤ ਦਾ ਨਕਸ਼ਾ",
-    reportedActivity: "ਰਿਪੋਰਟ ਕੀਤੀ ਰੋਗ ਗਤੀਵਿਧੀ",
-    searchField: "ਖੇਤ ਖੋਜੋ",
-    resetView: "ਨਕਸ਼ਾ ਰੀਸੈਟ",
-    mapHint: "ਹਿਲਾਓ • ਜ਼ੂਮ ਕਰੋ • ਹਾਟਸਪਾਟ ਦਬਾਓ",
-    recentReports: "ਹਾਲੀਆ ਰਿਪੋਰਟਾਂ",
-    priorityAreas: "ਤਰਜੀਹੀ ਖੇਤਰ",
-    reportedCases: "ਰਿਪੋਰਟ ਕੀਤੇ ਕੇਸ",
-    mapRisk: "ਖਤਰਾ",
-    mapReports: "ਰਿਪੋਰਟਾਂ",
-    hotspotValidation: "ਪ੍ਰੋਟੋਟਾਈਪ ਹਾਟਸਪਾਟ ਰਿਕਾਰਡ ਪ੍ਰਦਰਸ਼ਨ ਲਈ ਹਨ।",
-    critical: "ਗੰਭੀਰ",
-    high: "ਉੱਚ",
-    medium: "ਦਰਮਿਆਨਾ",
-    low: "ਘੱਟ",
-    selectDistrict: "ਮਹਾਰਾਸ਼ਟਰ ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ",
-    advisoriesKicker: "ਕਿਸਾਨ ਕਾਰਵਾਈ ਕੇਂਦਰ",
-    advisoriesTitle: "ਫਸਲ ਸਲਾਹ",
-    advisoriesDescription: "AI ਨਿਦਾਨ ਨੂੰ ਸਪਸ਼ਟ ਅਗਲੇ ਕਦਮਾਂ ਅਤੇ ਨਿਗਰਾਨੀ ਮਾਰਗਦਰਸ਼ਨ ਵਿੱਚ ਬਦਲੋ।",
-    aiAssisted: "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ",
-    currentCondition: "ਮੌਜੂਦਾ ਸਥਿਤੀ",
-    noDiagnosis: "ਅਜੇ ਨਿਦਾਨ ਨਹੀਂ",
-    status: "ਸਥਿਤੀ",
-    immediateAction: "ਤੁਰੰਤ ਕਾਰਵਾਈ",
-    whatToDoNow: "ਹੁਣ ਕੀ ਕਰਨਾ ਹੈ",
-    prevention: "ਰੋਕਥਾਮ",
-    reduceFutureRisk: "ਭਵਿੱਖ ਦਾ ਖਤਰਾ ਘਟਾਓ",
-    monitoring: "ਨਿਗਰਾਨੀ",
-    keepWatching: "ਨਜ਼ਰ ਰੱਖੋ",
-    expertTitle: "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ — ਮਾਹਰ ਜਾਂਚ ਦੀ ਸਿਫਾਰਸ਼",
-    expertText: "ਸਥਾਨਕ ਹਾਲਾਤ ਅਤੇ ਅਧਿਕਾਰਤ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ।",
-    fieldRoutine: "ਖੇਤ ਰੁਟੀਨ",
-    scoutConsistently: "ਨਿਯਮਿਤ ਜਾਂਚ ਕਰੋ",
-    scoutText: "ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਨਾਲ ਰੋਗ ਜਲਦੀ ਪਛਾਣਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
-    recordKeeping: "ਰਿਕਾਰਡ ਰੱਖਣਾ",
-    captureLocation: "ਸਥਾਨ ਦਰਜ ਕਰੋ",
-    recordText: "ਹਾਟਸਪਾਟ ਮੈਪਿੰਗ ਲਈ ਖੇਤ ਰਿਪੋਰਟਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
-    escalation: "ਮਾਹਰ ਸਹਾਇਤਾ",
-    askExpert: "ਮਾਹਰ ਨੂੰ ਪੁੱਛੋ",
-    escalationText: "ਅਨਿਸ਼ਚਿਤ ਮਾਮਲੇ ਮਾਹਰ ਨੂੰ ਭੇਜੋ।",
-    backToDiagnosis: "ਨਿਦਾਨ 'ਤੇ ਵਾਪਸ ਜਾਓ",
-    footer: "ਹੋਰ ਸਮਾਰਟ ਅਤੇ ਸੁਰੱਖਿਅਤ ਖੇਤੀ ਲਈ",
-    errors: {
-      prediction: "ਨਿਦਾਨ ਅਸਫਲ ਹੋਇਆ",
-      server: "AI ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕਿਆ।",
-    },
+    systemOnline:
+      "AI ਸਿਸਟਮ ਆਨਲਾਈਨ",
+
+    heroTitle:
+      "ਆਪਣੀਆਂ ਫਸਲਾਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
+
+    heroSubtitle:
+      "ਦੇਰ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ।",
+
+    startDiagnosis:
+      "ਨਿਦਾਨ ਸ਼ੁਰੂ ਕਰੋ",
+
+    cropHealth:
+      "ਫਸਲ ਦੀ ਸਿਹਤ",
+
+    diagnosisTitle:
+      "AI ਨਿਦਾਨ",
+
+    detectedCondition:
+      "ਪਛਾਣੀ ਗਈ ਸਥਿਤੀ",
+
+    analyzingLeaf:
+      "ਪੱਤੇ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
+
+    ready:
+      "ਵਿਸ਼ਲੇਸ਼ਣ ਲਈ ਤਿਆਰ",
+
+    uploadHint:
+      "ਫਸਲ ਦੇ ਪੱਤੇ ਦੀ ਸਾਫ਼ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ",
+
+    confidence:
+      "ਭਰੋਸਾ",
+
+    aiConfidence:
+      "AI ਭਰੋਸਾ",
+
+    listen:
+      "ਸਲਾਹ ਸੁਣੋ",
+
+    speaking:
+      "ਸਲਾਹ ਪੜ੍ਹੀ ਜਾ ਰਹੀ ਹੈ...",
+
+    uploadLeaf:
+      "ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ",
+
+    analyzeAnother:
+      "ਹੋਰ ਪੱਤਾ ਜਾਂਚੋ",
+
+    riskTitle:
+      "ਫਸਲ ਖਤਰੇ ਦੀ ਪੇਸ਼ਗੋਈ",
+
+    overallRisk:
+      "ਕੁੱਲ ਖਤਰਾ",
+
+    currentConditions:
+      "ਮੌਜੂਦਾ ਹਾਲਾਤ",
+
+    fieldEnvironment:
+      "ਖੇਤ ਦਾ ਵਾਤਾਵਰਣ",
+
+    earlyWarning:
+      "ਪਹਿਲਾਂ ਤੋਂ ਚੇਤਾਵਨੀ",
+
+    temperature:
+      "ਤਾਪਮਾਨ",
+
+    humidity:
+      "ਨਮੀ",
+
+    rainfall:
+      "ਅੱਜ ਦੀ ਬਾਰਿਸ਼",
+
+    pestActivity:
+      "ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ",
+
+    cropStage:
+      "ਫਸਲ ਦਾ ਪੜਾਅ",
+
+    weatherLive:
+      "ਲਾਈਵ ਮੌਸਮ",
+
+    fetchingWeather:
+      "ਲਾਈਵ ਮੌਸਮ ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+
+    weatherUnavailable:
+      "ਲਾਈਵ ਮੌਸਮ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+
+    refreshWeather:
+      "ਮੌਸਮ ਅਪਡੇਟ ਕਰੋ",
+
+    fieldIntelligence:
+      "ਖੇਤ ਦੀ ਜਾਣਕਾਰੀ",
+
+    sensorPanelTitle:
+      "ਕੀੜੇ ਟਰੈਪ ਅਤੇ ਸੈਂਸਰ",
+
+    sensorPanelText:
+      "ਨਿਗਰਾਨੀ ਕੀਤੇ ਖੇਤ ਲਈ ਪ੍ਰੋਟੋਟਾਈਪ ਸੈਂਸਰ ਫੀਡ।",
+
+    pestTrapCount:
+      "ਕੀੜੇ ਟਰੈਪ ਗਿਣਤੀ",
+
+    soilMoisture:
+      "ਮਿੱਟੀ ਦੀ ਨਮੀ",
+
+    sensorStatus:
+      "ਸੈਂਸਰ ਸਥਿਤੀ",
+
+    refreshSensor:
+      "ਸੈਂਸਰ ਅਪਡੇਟ ਕਰੋ",
+
+    lastUpdate:
+      "ਆਖਰੀ ਅਪਡੇਟ",
+
+    expertValidationTitle:
+      "ਮਾਹਰ ਜਾਂਚ",
+
+    expertReviewTitle:
+      "ਮਾਹਰ ਸਮੀਖਿਆ",
+
+    expertReviewText:
+      "ਅਨਿਸ਼ਚਿਤ AI ਨਤੀਜਿਆਂ ਨੂੰ ਮਾਹਰ ਜਾਂਚ ਲਈ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+
+    sendForExpert:
+      "ਮਾਹਰ ਸਮੀਖਿਆ ਲਈ ਭੇਜੋ",
+
+    requestExpert:
+      "ਮਾਹਰ ਜਾਂਚ ਦੀ ਬੇਨਤੀ ਕਰੋ",
+
+    caseSubmitted:
+      "ਕੇਸ ਭੇਜਿਆ ਗਿਆ",
+
+    waitingValidation:
+      "ਮਾਹਰ ਜਾਂਚ ਦੀ ਉਡੀਕ",
+
+    uploadFirst:
+      "ਪਹਿਲਾਂ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ।",
+
+    hotspotsKicker:
+      "ਭੂਗੋਲਿਕ ਜਾਣਕਾਰੀ",
+
+    hotspotTitle:
+      "ਰੋਗ ਹਾਟਸਪਾਟ",
+
+    hotspotsDescription:
+      "ਰਿਪੋਰਟ ਕੀਤੇ ਫਸਲ ਸਿਹਤ ਮਾਮਲੇ ਵੇਖੋ ਅਤੇ ਖੇਤ ਜਾਂਚ ਨੂੰ ਤਰਜੀਹ ਦਿਓ।",
+
+    prototypeData:
+      "ਪ੍ਰੋਟੋਟਾਈਪ ਡਾਟਾ",
+
+    reportedClusters:
+      "ਰਿਪੋਰਟ ਕੀਤੇ ਕਲੱਸਟਰ",
+
+    highCritical:
+      "ਉੱਚ / ਗੰਭੀਰ",
+
+    affectedReports:
+      "ਪ੍ਰਭਾਵਿਤ ਰਿਪੋਰਟਾਂ",
+
+    fieldMap:
+      "ਖੇਤ ਦਾ ਨਕਸ਼ਾ",
+
+    reportedActivity:
+      "ਰਿਪੋਰਟ ਕੀਤੀ ਰੋਗ ਗਤੀਵਿਧੀ",
+
+    searchField:
+      "ਖੇਤ ਖੋਜੋ",
+
+    resetView:
+      "ਨਕਸ਼ਾ ਰੀਸੈਟ",
+
+    mapHint:
+      "ਹਿਲਾਓ • ਜ਼ੂਮ ਕਰੋ • ਹਾਟਸਪਾਟ ਦਬਾਓ",
+
+    recentReports:
+      "ਹਾਲੀਆ ਰਿਪੋਰਟਾਂ",
+
+    priorityAreas:
+      "ਤਰਜੀਹੀ ਖੇਤਰ",
+
+    reportedCases:
+      "ਰਿਪੋਰਟ ਕੀਤੇ ਕੇਸ",
+
+    mapRisk:
+      "ਖਤਰਾ",
+
+    mapReports:
+      "ਰਿਪੋਰਟਾਂ",
+
+    critical:
+      "ਗੰਭੀਰ",
+
+    high:
+      "ਉੱਚ",
+
+    medium:
+      "ਦਰਮਿਆਨਾ",
+
+    low:
+      "ਘੱਟ",
+
+    selectDistrict:
+      "ਮਹਾਰਾਸ਼ਟਰ ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ",
+
+    advisoriesKicker:
+      "ਕਿਸਾਨ ਕਾਰਵਾਈ ਕੇਂਦਰ",
+
+    advisoriesTitle:
+      "ਫਸਲ ਸਲਾਹ",
+
+    advisoriesDescription:
+      "AI ਨਿਦਾਨ ਨੂੰ ਸਪਸ਼ਟ ਅਗਲੇ ਕਦਮਾਂ ਅਤੇ ਨਿਗਰਾਨੀ ਮਾਰਗਦਰਸ਼ਨ ਵਿੱਚ ਬਦਲੋ।",
+
+    aiAssisted:
+      "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ",
+
+    currentCondition:
+      "ਮੌਜੂਦਾ ਸਥਿਤੀ",
+
+    noDiagnosis:
+      "ਅਜੇ ਨਿਦਾਨ ਨਹੀਂ",
+
+    status:
+      "ਸਥਿਤੀ",
+
+    immediateAction:
+      "ਤੁਰੰਤ ਕਾਰਵਾਈ",
+
+    whatToDoNow:
+      "ਹੁਣ ਕੀ ਕਰਨਾ ਹੈ",
+
+    prevention:
+      "ਰੋਕਥਾਮ",
+
+    reduceFutureRisk:
+      "ਭਵਿੱਖ ਦਾ ਖਤਰਾ ਘਟਾਓ",
+
+    monitoring:
+      "ਨਿਗਰਾਨੀ",
+
+    keepWatching:
+      "ਨਜ਼ਰ ਰੱਖੋ",
+
+    expertTitle:
+      "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ — ਮਾਹਰ ਜਾਂਚ ਦੀ ਸਿਫਾਰਸ਼",
+
+    expertText:
+      "ਸਥਾਨਕ ਹਾਲਾਤ ਅਤੇ ਅਧਿਕਾਰਤ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ।",
+
+    fieldRoutine:
+      "ਖੇਤ ਰੁਟੀਨ",
+
+    scoutConsistently:
+      "ਨਿਯਮਿਤ ਜਾਂਚ ਕਰੋ",
+
+    scoutText:
+      "ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਨਾਲ ਰੋਗ ਜਲਦੀ ਪਛਾਣਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+
+    recordKeeping:
+      "ਰਿਕਾਰਡ ਰੱਖਣਾ",
+
+    captureLocation:
+      "ਸਥਾਨ ਦਰਜ ਕਰੋ",
+
+    recordText:
+      "ਹਾਟਸਪਾਟ ਮੈਪਿੰਗ ਲਈ ਖੇਤ ਰਿਪੋਰਟਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ.",
+
+    escalation:
+      "ਮਾਹਰ ਸਹਾਇਤਾ",
+
+    askExpert:
+      "ਮਾਹਰ ਨੂੰ ਪੁੱਛੋ",
+
+    escalationText:
+      "ਅਨਿਸ਼ਚਿਤ ਮਾਮਲੇ ਮਾਹਰ ਨੂੰ ਭੇਜੋ।",
+
+    backToDiagnosis:
+      "ਨਿਦਾਨ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+
+    footer:
+      "ਹੋਰ ਸਮਾਰਟ ਅਤੇ ਸੁਰੱਖਿਅਤ ਖੇਤੀ ਲਈ",
   },
 };
 
 /* =========================================================
-   HELPERS
+   DISEASE HELPERS
 ========================================================= */
 
-const getDiseaseInfo = (disease) => {
-  const name = String(disease || "")
+const normalizeDisease = (name) =>
+  String(name || "")
     .replace("Tomato___", "")
     .replaceAll("_", " ")
     .toLowerCase();
 
-  if (name.includes("early blight")) {
-    return {
-      severity: "Moderate",
-      severityLevel: 2,
-      risk: "Medium",
-      action:
-        "Remove visibly affected leaves and monitor nearby plants closely.",
-      advice:
-        "Improve airflow around plants, avoid prolonged leaf wetness, and follow locally approved crop-protection guidance.",
-    };
-  }
-
-  if (name.includes("late blight")) {
-    return {
-      severity: "High",
-      severityLevel: 3,
-      risk: "High",
-      action:
-        "Isolate affected plants and inspect surrounding plants immediately.",
-      advice:
-        "Monitor the crop frequently and follow locally approved disease-management recommendations.",
-    };
-  }
-
-  if (name.includes("leaf mold")) {
-    return {
-      severity: "Moderate",
-      severityLevel: 2,
-      risk: "Medium",
-      action:
-        "Remove severely affected leaves and improve ventilation.",
-      advice:
-        "Reduce prolonged humidity around foliage and monitor new growth for further symptoms.",
-    };
-  }
-
-  if (name.includes("healthy")) {
-    return {
-      severity: "Low",
-      severityLevel: 1,
-      risk: "Low",
-      action:
-        "Continue regular crop monitoring.",
-      advice:
-        "The uploaded image appears healthy. Continue good irrigation, nutrition, and field hygiene practices.",
-    };
-  }
-
-  return {
-    severity: "Unknown",
-    severityLevel: 0,
-    risk: "Review",
-    action:
-      "Send the case for expert validation.",
-    advice:
-      "The AI could not confidently determine the condition. Capture a clearer image and consult an agriculture expert.",
-  };
-};
+const formatDisease = (name) =>
+  String(name || "")
+    .replace("Tomato___", "")
+    .replaceAll("_", " ");
 
 const translateDiseaseName = (
   name,
   language
 ) => {
-  const cleanName = String(name || "")
-    .replace("Tomato___", "")
-    .replaceAll("_", " ")
-    .toLowerCase();
+  const clean = normalizeDisease(name);
 
-  const values = {
-    "early blight": {
+  const diseaseTranslations = {
+    early: {
       en: "Early Blight",
       mr: "अर्ली ब्लाइट",
       hi: "अर्ली ब्लाइट",
@@ -1792,7 +3223,7 @@ const translateDiseaseName = (
       pa: "ਅਰਲੀ ਬਲਾਈਟ",
     },
 
-    "late blight": {
+    late: {
       en: "Late Blight",
       mr: "लेट ब्लाइट",
       hi: "लेट ब्लाइट",
@@ -1805,7 +3236,7 @@ const translateDiseaseName = (
       pa: "ਲੇਟ ਬਲਾਈਟ",
     },
 
-    "leaf mold": {
+    mold: {
       en: "Leaf Mold",
       mr: "लीफ मोल्ड",
       hi: "लीफ मोल्ड",
@@ -1832,35 +3263,35 @@ const translateDiseaseName = (
     },
   };
 
-  if (cleanName.includes("early blight")) {
+  if (clean.includes("early blight")) {
     return (
-      values["early blight"][language] ||
-      values["early blight"].en
+      diseaseTranslations.early[language] ||
+      diseaseTranslations.early.en
     );
   }
 
-  if (cleanName.includes("late blight")) {
+  if (clean.includes("late blight")) {
     return (
-      values["late blight"][language] ||
-      values["late blight"].en
+      diseaseTranslations.late[language] ||
+      diseaseTranslations.late.en
     );
   }
 
-  if (cleanName.includes("leaf mold")) {
+  if (clean.includes("leaf mold")) {
     return (
-      values["leaf mold"][language] ||
-      values["leaf mold"].en
+      diseaseTranslations.mold[language] ||
+      diseaseTranslations.mold.en
     );
   }
 
-  if (cleanName.includes("healthy")) {
+  if (clean.includes("healthy")) {
     return (
-      values.healthy[language] ||
-      values.healthy.en
+      diseaseTranslations.healthy[language] ||
+      diseaseTranslations.healthy.en
     );
   }
 
-  return name;
+  return formatDisease(name);
 };
 
 const localizeLevel = (
@@ -1950,11 +3381,14 @@ const localizeLevel = (
     },
   };
 
-  return maps[language]?.[value] || value;
+  return (
+    maps[language]?.[value] ||
+    value
+  );
 };
 
 /* =========================================================
-   MAP RESET
+   MAP RESET BUTTON
 ========================================================= */
 
 function MapResetView({
@@ -1965,9 +3399,13 @@ function MapResetView({
   const map = useMap();
 
   const reset = () => {
-    map.setView(center, zoom, {
-      animate: true,
-    });
+    map.setView(
+      center,
+      zoom,
+      {
+        animate: true,
+      }
+    );
   };
 
   return (
@@ -2002,9 +3440,6 @@ function App() {
   const [error, setError] =
     useState("");
 
-  const [speaking, setSpeaking] =
-    useState(false);
-
   const [activePage, setActivePage] =
     useState("diagnosis");
 
@@ -2015,6 +3450,21 @@ function App() {
     showLanguageMenu,
     setShowLanguageMenu,
   ] = useState(false);
+
+  const [
+    speaking,
+    setSpeaking,
+  ] = useState(false);
+
+  const [
+    speechError,
+    setSpeechError,
+  ] = useState("");
+
+  const [
+    availableVoices,
+    setAvailableVoices,
+  ] = useState([]);
 
   const [
     selectedDistrict,
@@ -2047,30 +3497,16 @@ function App() {
     setExpertSubmitted,
   ] = useState(false);
 
-  const [
-    availableVoices,
-    setAvailableVoices,
-  ] = useState([]);
-
-  const t = {
-    ...translations.en,
-    ...(translations[language] || {}),
-    nav: {
-      ...translations.en.nav,
-      ...(translations[language]?.nav || {}),
-    },
-    errors: {
-      ...translations.en.errors,
-      ...(translations[language]?.errors || {}),
-    },
-  };
+  /* =======================================================
+     API URL
+  ======================================================= */
 
   const API_URL =
     import.meta.env.VITE_API_URL ||
-    "http://127.0.0.1:8000";
+    "https://cropshield-ai-frbi.onrender.com";
 
   /* =======================================================
-     MAHARASHTRA DISTRICTS
+     DISTRICTS
   ======================================================= */
 
   const maharashtraDistricts = {
@@ -2126,7 +3562,33 @@ function App() {
   };
 
   /* =======================================================
-     LANGUAGE EFFECT
+     TRANSLATION
+  ======================================================= */
+
+  const t = {
+    ...english,
+    ...(translations[language] ||
+      {}),
+    nav: {
+      ...english.nav,
+      ...(
+        translations[
+          language
+        ]?.nav || {}
+      ),
+    },
+    errors: {
+      ...english.errors,
+      ...(
+        translations[
+          language
+        ]?.errors || {}
+      ),
+    },
+  };
+
+  /* =======================================================
+     DOCUMENT LANGUAGE
   ======================================================= */
 
   useEffect(() => {
@@ -2135,7 +3597,7 @@ function App() {
   }, [language]);
 
   /* =======================================================
-     BROWSER VOICES
+     LOAD NATIVE VOICES
   ======================================================= */
 
   useEffect(() => {
@@ -2148,8 +3610,11 @@ function App() {
     }
 
     const loadVoices = () => {
+      const voices =
+        window.speechSynthesis.getVoices();
+
       setAvailableVoices(
-        window.speechSynthesis.getVoices()
+        voices
       );
     };
 
@@ -2177,13 +3642,15 @@ function App() {
   };
 
   /* =======================================================
-     AI ANALYSIS
+     AI IMAGE ANALYSIS
   ======================================================= */
 
   const analyzeImage =
     async (file) => {
       setLoading(true);
       setError("");
+      setSpeechError("");
+      setExpertSubmitted(false);
 
       try {
         const formData =
@@ -2208,11 +3675,11 @@ function App() {
             t.errors.prediction;
 
           try {
-            const errorData =
+            const data =
               await response.json();
 
             message =
-              errorData.detail ||
+              data.detail ||
               message;
           } catch {
             // Keep default.
@@ -2227,9 +3694,11 @@ function App() {
           await response.json();
 
         setResult(data);
-        setExpertSubmitted(false);
       } catch (err) {
-        console.error(err);
+        console.error(
+          "Prediction error:",
+          err
+        );
 
         setError(
           err.message ||
@@ -2245,15 +3714,19 @@ function App() {
       const file =
         event.target.files?.[0];
 
-      if (!file) return;
+      if (!file) {
+        return;
+      }
 
       if (
-        !file.type.startsWith(
-          "image/"
-        )
+        ![
+          "image/jpeg",
+          "image/png",
+          "image/jpg",
+        ].includes(file.type)
       ) {
         setError(
-          "Please select a valid image file."
+          "Please upload a JPG or PNG image."
         );
 
         return;
@@ -2261,14 +3734,19 @@ function App() {
 
       setError("");
       setResult(null);
+      setSpeechError("");
       setExpertSubmitted(false);
 
       const imageUrl =
-        URL.createObjectURL(file);
+        URL.createObjectURL(
+          file
+        );
 
       setPreview(imageUrl);
 
-      await analyzeImage(file);
+      await analyzeImage(
+        file
+      );
 
       event.target.value = "";
     };
@@ -2284,7 +3762,9 @@ function App() {
           selectedDistrict
         ];
 
-      if (!district) return;
+      if (!district) {
+        return;
+      }
 
       const [
         latitude,
@@ -2340,7 +3820,10 @@ function App() {
             data.current?.time,
         });
       } catch (err) {
-        console.error(err);
+        console.error(
+          "Weather error:",
+          err
+        );
 
         setWeatherError(
           t.weatherUnavailable
@@ -2375,7 +3858,8 @@ function App() {
               55
           ),
 
-        status: "ONLINE",
+        status:
+          "ONLINE",
 
         lastUpdate:
           "Just now",
@@ -2392,438 +3876,25 @@ function App() {
         setActivePage(
           "diagnosis"
         );
+
         return;
       }
 
-      setExpertSubmitted(true);
+      setExpertSubmitted(
+        true
+      );
     };
-
-  /* =======================================================
-     SPEECH CONTENT
-  ======================================================= */
-
-  const getSpeechContent = () => {
-    if (!result) return "";
-
-    const info =
-      getDiseaseInfo(
-        result.class
-      );
-
-    const disease =
-      translateDiseaseName(
-        result.class,
-        language
-      );
-
-    const diseaseKey =
-      String(result.class)
-        .toLowerCase();
-
-    const isEarly =
-      diseaseKey.includes(
-        "early_blight"
-      );
-
-    const isLate =
-      diseaseKey.includes(
-        "late_blight"
-      );
-
-    const isMold =
-      diseaseKey.includes(
-        "leaf_mold"
-      );
-
-    const isHealthy =
-      diseaseKey.includes(
-        "healthy"
-      );
-
-    const actions = {
-      en: {
-        intro: "CropShield diagnosis.",
-        condition: `Detected condition: ${disease}.`,
-        confidence: `Confidence: ${result.confidence} percent.`,
-        risk: `Risk level: ${info.risk}.`,
-        action: isEarly
-          ? "Remove visibly affected leaves and monitor nearby plants closely."
-          : isLate
-          ? "Isolate affected plants and inspect surrounding plants immediately."
-          : isMold
-          ? "Remove severely affected leaves and improve ventilation."
-          : isHealthy
-          ? "Continue regular crop monitoring."
-          : "Send this case for expert validation.",
-        advice: isEarly
-          ? "Improve airflow and avoid prolonged leaf wetness."
-          : isLate
-          ? "Monitor the crop frequently and follow local agricultural guidance."
-          : isMold
-          ? "Reduce prolonged humidity around foliage."
-          : isHealthy
-          ? "Continue good irrigation, nutrition and field hygiene."
-          : "Capture a clearer image and consult an agriculture expert.",
-      },
-
-      mr: {
-        intro: "क्रॉपशील्ड निदान.",
-        condition: `ओळखलेली स्थिती: ${disease}.`,
-        confidence: `विश्वास पातळी: ${result.confidence} टक्के.`,
-        risk: `जोखीम पातळी: ${localizeLevel(
-          info.risk,
-          "mr"
-        )}.`,
-        action: isEarly
-          ? "प्रभावित पाने काढा आणि जवळच्या झाडांचे निरीक्षण करा."
-          : isLate
-          ? "प्रभावित झाडे वेगळी करा आणि आजूबाजूच्या झाडांची त्वरित तपासणी करा."
-          : isMold
-          ? "जास्त प्रभावित पाने काढा आणि पिकामध्ये हवा खेळती ठेवा."
-          : isHealthy
-          ? "पिकाचे नियमित निरीक्षण सुरू ठेवा."
-          : "हे प्रकरण तज्ज्ञ पडताळणीसाठी पाठवा.",
-        advice: isEarly
-          ? "झाडांभोवती हवा खेळती ठेवा आणि पानांवर जास्त काळ ओलावा राहू देऊ नका."
-          : isLate
-          ? "पिकाची वारंवार तपासणी करा आणि स्थानिक कृषी मार्गदर्शनाचे पालन करा."
-          : isMold
-          ? "पानांभोवती जास्त आर्द्रता कमी करा."
-          : isHealthy
-          ? "पाणी, पोषण आणि शेत स्वच्छतेची योग्य काळजी घ्या."
-          : "स्पष्ट फोटो घ्या आणि कृषी तज्ज्ञांचा सल्ला घ्या.",
-      },
-
-      hi: {
-        intro: "क्रॉपशील्ड निदान.",
-        condition: `पहचानी गई स्थिति: ${disease}.`,
-        confidence: `विश्वास स्तर: ${result.confidence} प्रतिशत.`,
-        risk: `जोखिम स्तर: ${localizeLevel(
-          info.risk,
-          "hi"
-        )}.`,
-        action: isEarly
-          ? "प्रभावित पत्तियों को हटाएं और आसपास के पौधों की निगरानी करें।"
-          : isLate
-          ? "प्रभावित पौधों को अलग करें और आसपास के पौधों की तुरंत जांच करें।"
-          : isMold
-          ? "बहुत प्रभावित पत्तियों को हटाएं और हवा का प्रवाह बेहतर करें।"
-          : isHealthy
-          ? "फसल की नियमित निगरानी जारी रखें।"
-          : "इस मामले को विशेषज्ञ सत्यापन के लिए भेजें।",
-        advice: isEarly
-          ? "पौधों के आसपास हवा का प्रवाह बेहतर रखें और पत्तियों पर लंबे समय तक नमी न रहने दें।"
-          : isLate
-          ? "फसल की बार-बार निगरानी करें और स्थानीय कृषि मार्गदर्शन का पालन करें।"
-          : isMold
-          ? "पत्तियों के आसपास अत्यधिक नमी कम करें।"
-          : isHealthy
-          ? "उचित सिंचाई, पोषण और खेत की स्वच्छता जारी रखें।"
-          : "एक साफ तस्वीर लें और कृषि विशेषज्ञ से सलाह लें।",
-      },
-
-      te: {
-        intro: "క్రాప్‌షీల్డ్ నిర్ధారణ.",
-        condition: `గుర్తించిన పరిస్థితి: ${disease}.`,
-        confidence: `నమ్మక స్థాయి: ${result.confidence} శాతం.`,
-        risk: `ప్రమాద స్థాయి: ${localizeLevel(
-          info.risk,
-          "te"
-        )}.`,
-        action: isEarly
-          ? "ప్రభావిత ఆకులను తొలగించి సమీపంలోని మొక్కలను పరిశీలించండి."
-          : isLate
-          ? "ప్రభావిత మొక్కలను వేరు చేసి చుట్టుపక్కల మొక్కలను వెంటనే పరిశీలించండి."
-          : isMold
-          ? "తీవ్రంగా ప్రభావితమైన ఆకులను తొలగించి గాలి ప్రసరణ మెరుగుపరచండి."
-          : isHealthy
-          ? "పంటను క్రమం తప్పకుండా పర్యవేక్షించండి."
-          : "ఈ కేసును నిపుణుల ధృవీకరణ కోసం పంపండి.",
-        advice: isEarly
-          ? "మొక్కల చుట్టూ గాలి ప్రసరణ మెరుగుపరచండి మరియు ఆకులపై ఎక్కువసేపు తేమ ఉండకుండా చూడండి."
-          : isLate
-          ? "పంటను తరచుగా పరిశీలించి స్థానిక వ్యవసాయ మార్గదర్శకాలను అనుసరించండి."
-          : isMold
-          ? "ఆకుల చుట్టూ అధిక తేమను తగ్గించండి."
-          : isHealthy
-          ? "సరైన నీటిపారుదల, పోషణ మరియు పొల శుభ్రత కొనసాగించండి."
-          : "స్పష్టమైన చిత్రాన్ని తీసి వ్యవసాయ నిపుణుడిని సంప్రదించండి.",
-      },
-
-      kn: {
-        intro: "ಕ್ರಾಪ್‌ಶೀಲ್ಡ್ ರೋಗನಿರ್ಣಯ.",
-        condition: `ಗುರುತಿಸಿದ ಸ್ಥಿತಿ: ${disease}.`,
-        confidence: `ವಿಶ್ವಾಸ ಮಟ್ಟ: ${result.confidence} ಶೇಕಡಾ.`,
-        risk: `ಅಪಾಯದ ಮಟ್ಟ: ${localizeLevel(
-          info.risk,
-          "kn"
-        )}.`,
-        action: isEarly
-          ? "ಪೀಡಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಹತ್ತಿರದ ಸಸ್ಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
-          : isLate
-          ? "ಪೀಡಿತ ಸಸ್ಯಗಳನ್ನು ಪ್ರತ್ಯೇಕಿಸಿ ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಸಸ್ಯಗಳನ್ನು ತಕ್ಷಣ ಪರಿಶೀಲಿಸಿ."
-          : isMold
-          ? "ತೀವ್ರವಾಗಿ ಪೀಡಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಗಾಳಿಯ ಹರಿವನ್ನು ಸುಧಾರಿಸಿ."
-          : isHealthy
-          ? "ಬೆಳೆಯನ್ನು ನಿಯಮಿತವಾಗಿ ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿ."
-          : "ಈ ಪ್ರಕರಣವನ್ನು ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಿ.",
-        advice: isEarly
-          ? "ಸಸ್ಯಗಳ ಸುತ್ತ ಗಾಳಿಯ ಹರಿವನ್ನು ಸುಧಾರಿಸಿ ಮತ್ತು ಎಲೆಗಳ ಮೇಲೆ ಹೆಚ್ಚು ಸಮಯ ತೇವಾಂಶ ಇರದಂತೆ ನೋಡಿಕೊಳ್ಳಿ."
-          : isLate
-          ? "ಬೆಳೆಯನ್ನು ಆಗಾಗ್ಗೆ ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸ್ಥಳೀಯ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಅನುಸರಿಸಿ."
-          : isMold
-          ? "ಎಲೆಗಳ ಸುತ್ತಲಿನ ಹೆಚ್ಚಿನ ತೇವಾಂಶವನ್ನು ಕಡಿಮೆ ಮಾಡಿ."
-          : isHealthy
-          ? "ಸರಿಯಾದ ನೀರಾವರಿ, ಪೋಷಣೆ ಮತ್ತು ಹೊಲದ ಸ್ವಚ್ಛತೆಯನ್ನು ಮುಂದುವರಿಸಿ."
-          : "ಸ್ಪಷ್ಟ ಚಿತ್ರವನ್ನು ತೆಗೆದು ಕೃಷಿ ತಜ್ಞರನ್ನು ಸಂಪರ್ಕಿಸಿ.",
-      },
-
-      gu: {
-        intro: "ક્રોપશીલ્ડ નિદાન.",
-        condition: `ઓળખાયેલી સ્થિતિ: ${disease}.`,
-        confidence: `વિશ્વાસ સ્તર: ${result.confidence} ટકા.`,
-        risk: `જોખમ સ્તર: ${localizeLevel(
-          info.risk,
-          "gu"
-        )}.`,
-        action: isEarly
-          ? "અસરગ્રસ્ત પાંદડા દૂર કરો અને નજીકના છોડની તપાસ કરો."
-          : isLate
-          ? "અસરગ્રસ્ત છોડને અલગ કરો અને આસપાસના છોડની તરત તપાસ કરો."
-          : isMold
-          ? "ખૂબ અસરગ્રસ્ત પાંદડા દૂર કરો અને હવાની અવરજવર સુધારો."
-          : isHealthy
-          ? "પાકની નિયમિત દેખરેખ રાખો."
-          : "આ કેસને નિષ્ણાત ચકાસણી માટે મોકલો.",
-        advice: isEarly
-          ? "છોડની આસપાસ હવાની અવરજવર સુધારો અને પાંદડા લાંબા સમય સુધી ભીના ન રહે તે સુનિશ્ચિત કરો."
-          : isLate
-          ? "પાકની વારંવાર તપાસ કરો અને સ્થાનિક કૃષિ માર્ગદર્શનનું પાલન કરો."
-          : isMold
-          ? "પાંદડાની આસપાસનો વધુ ભેજ ઘટાડો."
-          : isHealthy
-          ? "યોગ્ય સિંચાઈ, પોષણ અને ખેતરની સ્વચ્છતા ચાલુ રાખો."
-          : "સ્પષ્ટ તસવીર લો અને કૃષિ નિષ્ણાતની સલાહ લો.",
-      },
-
-      ta: {
-        intro: "கிராப்ஷீல்ட் நோயறிதல்.",
-        condition: `கண்டறியப்பட்ட நிலை: ${disease}.`,
-        confidence: `நம்பிக்கை நிலை: ${result.confidence} சதவீதம்.`,
-        risk: `ஆபத்து நிலை: ${localizeLevel(
-          info.risk,
-          "ta"
-        )}.`,
-        action: isEarly
-          ? "பாதிக்கப்பட்ட இலைகளை அகற்றி அருகிலுள்ள செடிகளை கண்காணிக்கவும்."
-          : isLate
-          ? "பாதிக்கப்பட்ட செடிகளை தனிமைப்படுத்தி சுற்றியுள்ள செடிகளை உடனடியாக ஆய்வு செய்யவும்."
-          : isMold
-          ? "கடுமையாக பாதிக்கப்பட்ட இலைகளை அகற்றி காற்றோட்டத்தை மேம்படுத்தவும்."
-          : isHealthy
-          ? "பயிரை தொடர்ந்து கண்காணிக்கவும்."
-          : "இந்த வழக்கை நிபுணர் சரிபார்ப்புக்கு அனுப்பவும்.",
-        advice: isEarly
-          ? "செடிகளுக்கு நல்ல காற்றோட்டத்தை வழங்கி இலைகளில் நீண்ட நேரம் ஈரப்பதம் இருக்காமல் பார்த்துக்கொள்ளவும்."
-          : isLate
-          ? "பயிரை அடிக்கடி கண்காணித்து உள்ளூர் வேளாண் வழிகாட்டுதலைப் பின்பற்றவும்."
-          : isMold
-          ? "இலைகளைச் சுற்றியுள்ள அதிக ஈரப்பதத்தை குறைக்கவும்."
-          : isHealthy
-          ? "சரியான நீர்ப்பாசனம், ஊட்டச்சத்து மற்றும் வயல் சுகாதாரத்தை தொடரவும்."
-          : "தெளிவான படத்தை எடுத்து வேளாண் நிபுணரை அணுகவும்.",
-      },
-
-      bn: {
-        intro: "ক্রপশিল্ড রোগ নির্ণয়।",
-        condition: `শনাক্ত অবস্থা: ${disease}.`,
-        confidence: `বিশ্বাসের মাত্রা: ${result.confidence} শতাংশ.`,
-        risk: `ঝুঁকির স্তর: ${localizeLevel(
-          info.risk,
-          "bn"
-        )}.`,
-        action: isEarly
-          ? "আক্রান্ত পাতা সরিয়ে কাছের গাছগুলো পর্যবেক্ষণ করুন।"
-          : isLate
-          ? "আক্রান্ত গাছ আলাদা করুন এবং আশেপাশের গাছ পরীক্ষা করুন।"
-          : isMold
-          ? "অতিরিক্ত আক্রান্ত পাতা সরিয়ে বাতাস চলাচল বাড়ান।"
-          : isHealthy
-          ? "ফসল নিয়মিত পর্যবেক্ষণ করুন।"
-          : "এই কেসটি বিশেষজ্ঞ যাচাইয়ের জন্য পাঠান।",
-        advice: isEarly
-          ? "গাছের চারপাশে বাতাস চলাচল বাড়ান এবং পাতায় দীর্ঘ সময় আর্দ্রতা থাকতে দেবেন না।"
-          : isLate
-          ? "ফসল ঘন ঘন পর্যবেক্ষণ করুন এবং স্থানীয় কৃষি নির্দেশিকা অনুসরণ করুন।"
-          : isMold
-          ? "পাতার চারপাশের অতিরিক্ত আর্দ্রতা কমান।"
-          : isHealthy
-          ? "সঠিক সেচ, পুষ্টি এবং ক্ষেতের পরিচ্ছন্নতা বজায় রাখুন।"
-          : "একটি পরিষ্কার ছবি নিন এবং কৃষি বিশেষজ্ঞের পরামর্শ নিন।",
-      },
-
-      ml: {
-        intro: "ക്രോപ്പ്‌ഷീൽഡ് രോഗനിർണയം.",
-        condition: `കണ്ടെത്തിയ സ്ഥിതി: ${disease}.`,
-        confidence: `വിശ്വാസ നില: ${result.confidence} ശതമാനം.`,
-        risk: `അപകടനില: ${localizeLevel(
-          info.risk,
-          "ml"
-        )}.`,
-        action: isEarly
-          ? "ബാധിച്ച ഇലകൾ നീക്കം ചെയ്ത് സമീപത്തെ ചെടികൾ പരിശോധിക്കുക."
-          : isLate
-          ? "ബാധിച്ച ചെടികൾ വേർതിരിച്ച് ചുറ്റുമുള്ള ചെടികൾ പരിശോധിക്കുക."
-          : isMold
-          ? "ഗുരുതരമായി ബാധിച്ച ഇലകൾ നീക്കം ചെയ്ത് വായുസഞ്ചാരം മെച്ചപ്പെടുത്തുക."
-          : isHealthy
-          ? "വിള സ്ഥിരമായി നിരീക്ഷിക്കുക."
-          : "ഈ കേസ് വിദഗ്ധ പരിശോധനയ്ക്കായി അയയ്ക്കുക.",
-        advice: isEarly
-          ? "ചെടികൾക്കിടയിൽ നല്ല വായുസഞ്ചാരം ഉറപ്പാക്കുകയും ഇലകളിൽ ദീർഘനേരം ഈർപ്പം നിലനിൽക്കാതിരിക്കുകയും ചെയ്യുക."
-          : isLate
-          ? "വിള പതിവായി പരിശോധിക്കുകയും പ്രാദേശിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങൾ പാലിക്കുകയും ചെയ്യുക."
-          : isMold
-          ? "ഇലകളുടെ ചുറ്റുമുള്ള അധിക ഈർപ്പം കുറയ്ക്കുക."
-          : isHealthy
-          ? "ശരിയായ ജലസേചനം, പോഷണം, വയൽ ശുചിത്വം എന്നിവ തുടരുക."
-          : "വ്യക്തമായ ചിത്രം എടുത്ത് കാർഷിക വിദഗ്ധനെ സമീപിക്കുക.",
-      },
-
-      pa: {
-        intro: "ਕ੍ਰਾਪਸ਼ੀਲਡ ਨਿਦਾਨ।",
-        condition: `ਪਛਾਣੀ ਗਈ ਸਥਿਤੀ: ${disease}.`,
-        confidence: `ਭਰੋਸੇ ਦਾ ਪੱਧਰ: ${result.confidence} ਪ੍ਰਤੀਸ਼ਤ.`,
-        risk: `ਖਤਰੇ ਦਾ ਪੱਧਰ: ${localizeLevel(
-          info.risk,
-          "pa"
-        )}.`,
-        action: isEarly
-          ? "ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਹਟਾਓ ਅਤੇ ਨੇੜਲੇ ਪੌਦਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰੋ."
-          : isLate
-          ? "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਵੱਖ ਕਰੋ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ."
-          : isMold
-          ? "ਜ਼ਿਆਦਾ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਹਟਾਓ ਅਤੇ ਹਵਾ ਦਾ ਪ੍ਰਵਾਹ ਸੁਧਾਰੋ."
-          : isHealthy
-          ? "ਫਸਲ ਦੀ ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਕਰੋ."
-          : "ਇਸ ਕੇਸ ਨੂੰ ਮਾਹਰ ਜਾਂਚ ਲਈ ਭੇਜੋ.",
-        advice: isEarly
-          ? "ਪੌਦਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਹਵਾ ਦਾ ਪ੍ਰਵਾਹ ਸੁਧਾਰੋ ਅਤੇ ਪੱਤਿਆਂ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਗਿੱਲਾ ਨਾ ਰਹਿਣ ਦਿਓ."
-          : isLate
-          ? "ਫਸਲ ਦੀ ਵਾਰ-ਵਾਰ ਨਿਗਰਾਨੀ ਕਰੋ ਅਤੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਦੀ ਪਾਲਣਾ ਕਰੋ."
-          : isMold
-          ? "ਪੱਤਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਵੱਧ ਨਮੀ ਘਟਾਓ."
-          : isHealthy
-          ? "ਸਹੀ ਸਿੰਚਾਈ, ਪੋਸ਼ਣ ਅਤੇ ਖੇਤ ਦੀ ਸਫਾਈ ਜਾਰੀ ਰੱਖੋ."
-          : "ਸਾਫ਼ ਤਸਵੀਰ ਲਓ ਅਤੇ ਖੇਤੀਬਾੜੀ ਮਾਹਰ ਦੀ ਸਲਾਹ ਲਓ.",
-      },
-    };
-
-    const selected =
-      actions[language] ||
-      actions.en;
-
-    return [
-      selected.intro,
-      selected.condition,
-      selected.confidence,
-      selected.risk,
-      selected.action,
-      selected.advice,
-    ].join(" ");
-  };
-
-  /* =======================================================
-     SPEAK
-  ======================================================= */
-
-  const speakAdvice = () => {
-    if (
-      !result ||
-      typeof window ===
-        "undefined" ||
-      !window.speechSynthesis
-    ) {
-      return;
-    }
-
-    window.speechSynthesis.cancel();
-
-    const utterance =
-      new SpeechSynthesisUtterance(
-        getSpeechContent()
-      );
-
-    const activeLanguage =
-      languages.find(
-        (item) =>
-          item.code === language
-      );
-
-    const desiredLang =
-      activeLanguage?.voice ||
-      "en-IN";
-
-    utterance.lang =
-      desiredLang;
-
-    const normalizedDesired =
-      desiredLang.toLowerCase();
-
-    /*
-     * Prefer an installed voice matching the
-     * selected Indian language.
-     */
-    const matchingVoice =
-      availableVoices.find(
-        (voice) =>
-          voice.lang
-            ?.toLowerCase()
-            .startsWith(
-              normalizedDesired
-            )
-      );
-
-    if (matchingVoice) {
-      utterance.voice =
-        matchingVoice;
-    }
-
-    utterance.rate = 0.88;
-    utterance.pitch = 1;
-
-    utterance.onstart =
-      () => setSpeaking(true);
-
-    utterance.onend =
-      () => setSpeaking(false);
-
-    utterance.onerror =
-      () => setSpeaking(false);
-
-    window.speechSynthesis.speak(
-      utterance
-    );
-  };
 
   /* =======================================================
      ADVISORY DATA
   ======================================================= */
 
-  const getAdvisoryInfo =
+  const getDiseaseInfo =
     (disease) => {
-      const name = String(
-        disease || ""
-      )
-        .replace(
-          "Tomato___",
-          ""
-        )
-        .replaceAll(
-          "_",
-          " "
-        )
-        .toLowerCase();
+      const name =
+        normalizeDisease(
+          disease
+        );
 
       if (
         name.includes(
@@ -2831,26 +3902,19 @@ function App() {
         )
       ) {
         return {
-          urgency:
-            "Monitor closely",
+          severity:
+            "Moderate",
 
-          summary:
-            "The AI detected a pattern consistent with Early Blight. Confirm symptoms in the field before taking operational action.",
+          severityLevel: 2,
 
-          immediate: [
-            "Inspect nearby tomato plants for similar symptoms.",
-            "Remove visibly affected foliage and keep the field area clean.",
-            "Improve airflow and avoid prolonged leaf wetness where practical.",
-          ],
+          risk:
+            "Medium",
 
-          prevention: [
-            "Continue regular crop scouting.",
-            "Track new symptoms and affected plant areas.",
-            "Use locally approved crop-management guidance when treatment decisions are needed.",
-          ],
+          action:
+            "Remove visibly affected leaves and monitor nearby plants closely.",
 
-          monitoring:
-            "Recheck the crop regularly and seek expert validation if symptoms spread rapidly.",
+          advice:
+            "Improve airflow around plants, avoid prolonged leaf wetness, and follow locally approved crop-protection guidance.",
         };
       }
 
@@ -2860,26 +3924,19 @@ function App() {
         )
       ) {
         return {
-          urgency:
-            "Priority inspection",
+          severity:
+            "High",
 
-          summary:
-            "The AI detected a pattern consistent with Late Blight. Because disease spread can be rapid, prioritize field inspection and expert confirmation.",
+          severityLevel: 3,
 
-          immediate: [
-            "Inspect surrounding plants and nearby field sections promptly.",
-            "Separate or flag visibly affected plants for closer inspection.",
-            "Follow locally approved disease-management guidance after confirmation.",
-          ],
+          risk:
+            "High",
 
-          prevention: [
-            "Increase scouting frequency during favorable conditions.",
-            "Monitor field areas with persistent moisture or humidity.",
-            "Record new cases to support hotspot and risk tracking.",
-          ],
+          action:
+            "Isolate affected plants and inspect surrounding plants immediately.",
 
-          monitoring:
-            "Escalate for expert review if affected areas increase or symptoms become widespread.",
+          advice:
+            "Monitor the crop frequently and follow locally approved disease-management recommendations.",
         };
       }
 
@@ -2889,26 +3946,19 @@ function App() {
         )
       ) {
         return {
-          urgency:
-            "Monitor closely",
+          severity:
+            "Moderate",
 
-          summary:
-            "The AI detected a pattern consistent with Leaf Mold. Focus on ventilation, moisture management, and continued scouting.",
+          severityLevel: 2,
 
-          immediate: [
-            "Inspect the underside and nearby foliage for additional symptoms.",
-            "Remove severely affected leaves where appropriate.",
-            "Improve ventilation around the crop canopy.",
-          ],
+          risk:
+            "Medium",
 
-          prevention: [
-            "Avoid prolonged moisture on foliage.",
-            "Keep monitoring new growth after corrective field actions.",
-            "Use locally approved agricultural guidance for further management.",
-          ],
+          action:
+            "Remove severely affected leaves and improve ventilation.",
 
-          monitoring:
-            "Recheck high-humidity sections of the field and validate uncertain cases with an expert.",
+          advice:
+            "Reduce prolonged humidity around foliage and monitor new growth for further symptoms.",
         };
       }
 
@@ -2918,83 +3968,750 @@ function App() {
         )
       ) {
         return {
-          urgency:
-            "Routine monitoring",
+          severity:
+            "Low",
 
-          summary:
-            "The AI found no strong visual indication of the four trained disease classes in this image.",
+          severityLevel: 1,
 
-          immediate: [
-            "Continue regular crop scouting.",
-            "Maintain good irrigation and field hygiene practices.",
-            "Capture another image if new symptoms appear.",
-          ],
+          risk:
+            "Low",
 
-          prevention: [
-            "Watch new growth for changes.",
-            "Track crop conditions through the season.",
-            "Use local agricultural guidance when unusual symptoms appear.",
-          ],
+          action:
+            "Continue regular crop monitoring.",
 
-          monitoring:
-            "Routine observation remains appropriate; recheck the crop after major weather or field-condition changes.",
+          advice:
+            "The uploaded image appears healthy. Continue good irrigation, nutrition, and field hygiene practices.",
         };
       }
 
       return {
-        urgency:
-          "Review required",
+        severity:
+          "Unknown",
 
-        summary:
-          "The AI result should be reviewed by an agriculture expert before operational decisions are made.",
+        severityLevel: 0,
 
-        immediate: [
-          "Capture a clearer image with the affected area centered.",
-          "Inspect nearby plants for similar symptoms.",
-          "Record the location and crop stage for follow-up.",
-        ],
+        risk:
+          "Review",
 
-        prevention: [
-          "Continue routine crop monitoring.",
-          "Avoid making treatment decisions from an uncertain AI result alone.",
-          "Use locally approved agricultural guidance.",
-        ],
+        action:
+          "Send the case for expert validation.",
 
-        monitoring:
-          "Repeat the diagnosis with a clearer image and seek expert validation when uncertainty remains.",
+        advice:
+          "The AI could not confidently determine the condition. Capture a clearer image and consult an agriculture expert.",
       };
     };
 
   const advisoryInfo =
     result
-      ? getAdvisoryInfo(
+      ? getDiseaseInfo(
           result.class
         )
       : {
-          urgency:
-            "Awaiting diagnosis",
+          severity:
+            "Unknown",
 
-          summary:
-            "Upload a leaf image first. CropShield will tailor this advisory to the detected condition.",
+          severityLevel: 0,
 
-          immediate: [
-            "Upload a clear crop-leaf image.",
-            "Wait for the AI diagnosis.",
-            "Review the advisory before field action.",
-          ],
+          risk:
+            "Review",
 
-          prevention: [
-            "Scout crops regularly.",
-            "Capture clear images when symptoms appear.",
-            "Use expert confirmation for uncertain cases.",
-          ],
+          action:
+            "Upload a leaf image first.",
 
-          monitoring:
-            "No diagnosis is available yet.",
+          advice:
+            "Upload a clear crop-leaf image for analysis.",
         };
 
   /* =======================================================
-     RISK
+     SPEECH CONTENT
+  ======================================================= */
+
+  const getSpeechContent =
+    () => {
+      if (!result) {
+        return "";
+      }
+
+      const disease =
+        translateDiseaseName(
+          result.class,
+          language
+        );
+
+      const className =
+        String(
+          result.class || ""
+        ).toLowerCase();
+
+      const isEarly =
+        className.includes(
+          "early_blight"
+        );
+
+      const isLate =
+        className.includes(
+          "late_blight"
+        );
+
+      const isMold =
+        className.includes(
+          "leaf_mold"
+        );
+
+      const isHealthy =
+        className.includes(
+          "healthy"
+        );
+
+      const speech = {
+        en: {
+          intro:
+            "CropShield diagnosis.",
+
+          condition:
+            `Detected condition: ${disease}.`,
+
+          confidence:
+            `Confidence: ${result.confidence} percent.`,
+
+          risk:
+            `Risk level: ${advisoryInfo.risk}.`,
+
+          action:
+            isEarly
+              ? "Remove visibly affected leaves and monitor nearby plants closely."
+              : isLate
+              ? "Isolate affected plants and inspect surrounding plants immediately."
+              : isMold
+              ? "Remove severely affected leaves and improve ventilation."
+              : isHealthy
+              ? "Continue regular crop monitoring."
+              : "Send this case for expert validation.",
+
+          advice:
+            isEarly
+              ? "Improve airflow and avoid prolonged leaf wetness."
+              : isLate
+              ? "Monitor the crop frequently and follow local agricultural guidance."
+              : isMold
+              ? "Reduce prolonged humidity around foliage."
+              : isHealthy
+              ? "Continue good irrigation, nutrition and field hygiene."
+              : "Capture a clearer image and consult an agriculture expert.",
+        },
+
+        mr: {
+          intro:
+            "क्रॉपशील्ड निदान.",
+
+          condition:
+            `ओळखलेली स्थिती: ${disease}.`,
+
+          confidence:
+            `विश्वास पातळी ${result.confidence} टक्के आहे.`,
+
+          risk:
+            `जोखीम पातळी ${localizeLevel(
+              advisoryInfo.risk,
+              "mr"
+            )} आहे.`,
+
+          action:
+            isEarly
+              ? "प्रभावित पाने काढा आणि जवळच्या झाडांचे निरीक्षण करा."
+              : isLate
+              ? "प्रभावित झाडे वेगळी करा आणि आजूबाजूच्या झाडांची त्वरित तपासणी करा."
+              : isMold
+              ? "जास्त प्रभावित पाने काढा आणि पिकामध्ये हवा खेळती ठेवा."
+              : isHealthy
+              ? "पिकाचे नियमित निरीक्षण सुरू ठेवा."
+              : "हे प्रकरण तज्ज्ञ पडताळणीसाठी पाठवा.",
+
+          advice:
+            isEarly
+              ? "झाडांभोवती हवा खेळती ठेवा आणि पानांवर जास्त काळ ओलावा राहू देऊ नका."
+              : isLate
+              ? "पिकाची वारंवार तपासणी करा आणि स्थानिक कृषी मार्गदर्शनाचे पालन करा."
+              : isMold
+              ? "पानांभोवती जास्त आर्द्रता कमी करा."
+              : isHealthy
+              ? "योग्य पाणी, पोषण आणि शेत स्वच्छता सुरू ठेवा."
+              : "स्पष्ट फोटो घ्या आणि कृषी तज्ज्ञांचा सल्ला घ्या.",
+        },
+
+        hi: {
+          intro:
+            "क्रॉपशील्ड निदान.",
+
+          condition:
+            `पहचानी गई स्थिति: ${disease}.`,
+
+          confidence:
+            `विश्वास स्तर ${result.confidence} प्रतिशत है.`,
+
+          risk:
+            `जोखिम स्तर ${localizeLevel(
+              advisoryInfo.risk,
+              "hi"
+            )} है.`,
+
+          action:
+            isEarly
+              ? "प्रभावित पत्तियों को हटाएं और आसपास के पौधों की निगरानी करें."
+              : isLate
+              ? "प्रभावित पौधों को अलग करें और आसपास के पौधों की तुरंत जांच करें."
+              : isMold
+              ? "बहुत प्रभावित पत्तियों को हटाएं और हवा का प्रवाह बेहतर करें."
+              : isHealthy
+              ? "फसल की नियमित निगरानी जारी रखें."
+              : "इस मामले को विशेषज्ञ सत्यापन के लिए भेजें.",
+
+          advice:
+            isEarly
+              ? "पौधों के आसपास हवा का प्रवाह बेहतर रखें और पत्तियों पर लंबे समय तक नमी न रहने दें."
+              : isLate
+              ? "फसल की बार-बार निगरानी करें और स्थानीय कृषि मार्गदर्शन का पालन करें."
+              : isMold
+              ? "पत्तियों के आसपास अत्यधिक नमी कम करें."
+              : isHealthy
+              ? "उचित सिंचाई, पोषण और खेत की स्वच्छता जारी रखें."
+              : "एक साफ तस्वीर लें और कृषि विशेषज्ञ से सलाह लें.",
+        },
+
+        te: {
+          intro:
+            "క్రాప్‌షీల్డ్ నిర్ధారణ.",
+
+          condition:
+            `గుర్తించిన పరిస్థితి: ${disease}.`,
+
+          confidence:
+            `నమ్మక స్థాయి ${result.confidence} శాతం.`,
+
+          risk:
+            `ప్రమాద స్థాయి ${localizeLevel(
+              advisoryInfo.risk,
+              "te"
+            )}.`,
+
+          action:
+            isEarly
+              ? "ప్రభావిత ఆకులను తొలగించి సమీపంలోని మొక్కలను పరిశీలించండి."
+              : isLate
+              ? "ప్రభావిత మొక్కలను వేరు చేసి చుట్టుపక్కల మొక్కలను వెంటనే పరిశీలించండి."
+              : isMold
+              ? "తీవ్రంగా ప్రభావితమైన ఆకులను తొలగించి గాలి ప్రసరణ మెరుగుపరచండి."
+              : isHealthy
+              ? "పంటను క్రమం తప్పకుండా పర్యవేక్షించండి."
+              : "ఈ కేసును నిపుణుల ధృవీకరణ కోసం పంపండి.",
+
+          advice:
+            isEarly
+              ? "మొక్కల చుట్టూ గాలి ప్రసరణ మెరుగుపరచండి మరియు ఆకులపై ఎక్కువసేపు తేమ ఉండకుండా చూడండి."
+              : isLate
+              ? "పంటను తరచుగా పరిశీలించి స్థానిక వ్యవసాయ మార్గదర్శకాలను అనుసరించండి."
+              : isMold
+              ? "ఆకుల చుట్టూ అధిక తేమను తగ్గించండి."
+              : isHealthy
+              ? "సరైన నీరు, పోషణ మరియు పొల శుభ్రత కొనసాగించండి."
+              : "స్పష్టమైన చిత్రాన్ని తీసి వ్యవసాయ నిపుణుడిని సంప్రదించండి.",
+        },
+
+        kn: {
+          intro:
+            "ಕ್ರಾಪ್‌ಶೀಲ್ಡ್ ರೋಗನಿರ್ಣಯ.",
+
+          condition:
+            `ಗುರುತಿಸಿದ ಸ್ಥಿತಿ: ${disease}.`,
+
+          confidence:
+            `ವಿಶ್ವಾಸ ಮಟ್ಟ ${result.confidence} ಶೇಕಡಾ.`,
+
+          risk:
+            `ಅಪಾಯದ ಮಟ್ಟ ${localizeLevel(
+              advisoryInfo.risk,
+              "kn"
+            )}.`,
+
+          action:
+            isEarly
+              ? "ಪೀಡಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಹತ್ತಿರದ ಸಸ್ಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
+              : isLate
+              ? "ಪೀಡಿತ ಸಸ್ಯಗಳನ್ನು ಪ್ರತ್ಯೇಕಿಸಿ ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಸಸ್ಯಗಳನ್ನು ತಕ್ಷಣ ಪರಿಶೀಲಿಸಿ."
+              : isMold
+              ? "ತೀವ್ರವಾಗಿ ಪೀಡಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಗಾಳಿಯ ಹರಿವನ್ನು ಸುಧಾರಿಸಿ."
+              : isHealthy
+              ? "ಬೆಳೆಯನ್ನು ನಿಯಮಿತವಾಗಿ ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿ."
+              : "ಈ ಪ್ರಕರಣವನ್ನು ತಜ್ಞರ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಿ.",
+
+          advice:
+            isEarly
+              ? "ಸಸ್ಯಗಳ ಸುತ್ತ ಗಾಳಿಯ ಹರಿವನ್ನು ಸುಧಾರಿಸಿ ಮತ್ತು ಎಲೆಗಳ ಮೇಲೆ ಹೆಚ್ಚು ಸಮಯ ತೇವಾಂಶ ಇರದಂತೆ ನೋಡಿಕೊಳ್ಳಿ."
+              : isLate
+              ? "ಬೆಳೆಯನ್ನು ಆಗಾಗ್ಗೆ ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸ್ಥಳೀಯ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಅನುಸರಿಸಿ."
+              : isMold
+              ? "ಎಲೆಗಳ ಸುತ್ತಲಿನ ಹೆಚ್ಚಿನ ತೇವಾಂಶವನ್ನು ಕಡಿಮೆ ಮಾಡಿ."
+              : isHealthy
+              ? "ಸರಿಯಾದ ನೀರಾವರಿ, ಪೋಷಣೆ ಮತ್ತು ಹೊಲದ ಸ್ವಚ್ಛತೆಯನ್ನು ಮುಂದುವರಿಸಿ."
+              : "ಸ್ಪಷ್ಟ ಚಿತ್ರವನ್ನು ತೆಗೆದು ಕೃಷಿ ತಜ್ಞರನ್ನು ಸಂಪರ್ಕಿಸಿ.",
+        },
+
+        gu: {
+          intro:
+            "ક્રોપશીલ્ડ નિદાન.",
+
+          condition:
+            `ઓળખાયેલી સ્થિતિ: ${disease}.`,
+
+          confidence:
+            `વિશ્વાસ સ્તર ${result.confidence} ટકા છે.`,
+
+          risk:
+            `જોખમ સ્તર ${localizeLevel(
+              advisoryInfo.risk,
+              "gu"
+            )} છે.`,
+
+          action:
+            isEarly
+              ? "અસરગ્રસ્ત પાંદડા દૂર કરો અને નજીકના છોડની તપાસ કરો."
+              : isLate
+              ? "અસરગ્રસ્ત છોડને અલગ કરો અને આસપાસના છોડની તરત તપાસ કરો."
+              : isMold
+              ? "ખૂબ અસરગ્રસ્ત પાંદડા દૂર કરો અને હવાની અવરજવર સુધારો."
+              : isHealthy
+              ? "પાકની નિયમિત દેખરેખ રાખો."
+              : "આ કેસને નિષ્ણાત ચકાસણી માટે મોકલો.",
+
+          advice:
+            isEarly
+              ? "છોડની આસપાસ હવાની અવરજવર સુધારો અને પાંદડા લાંબા સમય સુધી ભીના ન રહે તે સુનિશ્ચિત કરો."
+              : isLate
+              ? "પાકની વારંવાર તપાસ કરો અને સ્થાનિક કૃષિ માર્ગદર્શનનું પાલન કરો."
+              : isMold
+              ? "પાંદડાની આસપાસનો વધુ ભેજ ઘટાડો."
+              : isHealthy
+              ? "યોગ્ય સિંચાઈ, પોષણ અને ખેતરની સ્વચ્છતા ચાલુ રાખો."
+              : "સ્પષ્ટ તસવીર લો અને કૃષિ નિષ્ણાતની સલાહ લો.",
+        },
+
+        ta: {
+          intro:
+            "கிராப்ஷீல்ட் நோயறிதல்.",
+
+          condition:
+            `கண்டறியப்பட்ட நிலை: ${disease}.`,
+
+          confidence:
+            `நம்பிக்கை நிலை ${result.confidence} சதவீதம்.`,
+
+          risk:
+            `ஆபத்து நிலை ${localizeLevel(
+              advisoryInfo.risk,
+              "ta"
+            )}.`,
+
+          action:
+            isEarly
+              ? "பாதிக்கப்பட்ட இலைகளை அகற்றி அருகிலுள்ள செடிகளை கண்காணிக்கவும்."
+              : isLate
+              ? "பாதிக்கப்பட்ட செடிகளை தனிமைப்படுத்தி சுற்றியுள்ள செடிகளை உடனடியாக ஆய்வு செய்யவும்."
+              : isMold
+              ? "கடுமையாக பாதிக்கப்பட்ட இலைகளை அகற்றி காற்றோட்டத்தை மேம்படுத்தவும்."
+              : isHealthy
+              ? "பயிரை தொடர்ந்து கண்காணிக்கவும்."
+              : "இந்த வழக்கை நிபுணர் சரிபார்ப்புக்கு அனுப்பவும்.",
+
+          advice:
+            isEarly
+              ? "செடிகளுக்கு நல்ல காற்றோட்டத்தை வழங்கி இலைகளில் நீண்ட நேரம் ஈரப்பதம் இருக்காமல் பார்த்துக்கொள்ளவும்."
+              : isLate
+              ? "பயிரை அடிக்கடி கண்காணித்து உள்ளூர் வேளாண் வழிகாட்டுதலைப் பின்பற்றவும்."
+              : isMold
+              ? "இலைகளைச் சுற்றியுள்ள அதிக ஈரப்பதத்தை குறைக்கவும்."
+              : isHealthy
+              ? "சரியான நீர்ப்பாசனம், ஊட்டச்சத்து மற்றும் வயல் சுகாதாரத்தை தொடரவும்."
+              : "தெளிவான படத்தை எடுத்து வேளாண் நிபுணரை அணுகவும்.",
+        },
+
+        bn: {
+          intro:
+            "ক্রপশিল্ড রোগ নির্ণয়.",
+
+          condition:
+            `শনাক্ত অবস্থা: ${disease}.`,
+
+          confidence:
+            `বিশ্বাসের মাত্রা ${result.confidence} শতাংশ.`,
+
+          risk:
+            `ঝুঁকির স্তর ${localizeLevel(
+              advisoryInfo.risk,
+              "bn"
+            )}.`,
+
+          action:
+            isEarly
+              ? "আক্রান্ত পাতা সরিয়ে কাছের গাছগুলো পর্যবেক্ষণ করুন."
+              : isLate
+              ? "আক্রান্ত গাছ আলাদা করুন এবং আশেপাশের গাছ পরীক্ষা করুন."
+              : isMold
+              ? "অতিরিক্ত আক্রান্ত পাতা সরিয়ে বাতাস চলাচল বাড়ান."
+              : isHealthy
+              ? "ফসল নিয়মিত পর্যবেক্ষণ করুন."
+              : "এই কেসটি বিশেষজ্ঞ যাচাইয়ের জন্য পাঠান.",
+
+          advice:
+            isEarly
+              ? "গাছের চারপাশে বাতাস চলাচল বাড়ান এবং পাতায় দীর্ঘ সময় আর্দ্রতা থাকতে দেবেন না."
+              : isLate
+              ? "ফসল ঘন ঘন পর্যবেক্ষণ করুন এবং স্থানীয় কৃষি নির্দেশিকা অনুসরণ করুন."
+              : isMold
+              ? "পাতার চারপাশের অতিরিক্ত আর্দ্রতা কমান."
+              : isHealthy
+              ? "সঠিক সেচ, পুষ্টি এবং ক্ষেতের পরিচ্ছন্নতা বজায় রাখুন."
+              : "একটি পরিষ্কার ছবি নিন এবং কৃষি বিশেষজ্ঞের পরামর্শ নিন.",
+        },
+
+        ml: {
+          intro:
+            "ക്രോപ്പ്‌ഷീൽഡ് രോഗനിർണയം.",
+
+          condition:
+            `കണ്ടെത്തിയ സ്ഥിതി: ${disease}.`,
+
+          confidence:
+            `വിശ്വാസ നില ${result.confidence} ശതമാനം.`,
+
+          risk:
+            `അപകടനില ${localizeLevel(
+              advisoryInfo.risk,
+              "ml"
+            )}.`,
+
+          action:
+            isEarly
+              ? "ബാധിച്ച ഇലകൾ നീക്കം ചെയ്ത് സമീപത്തെ ചെടികൾ പരിശോധിക്കുക."
+              : isLate
+              ? "ബാധിച്ച ചെടികൾ വേർതിരിച്ച് ചുറ്റുമുള്ള ചെടികൾ പരിശോധിക്കുക."
+              : isMold
+              ? "ഗുരുതരമായി ബാധിച്ച ഇലകൾ നീക്കം ചെയ്ത് വായുസഞ്ചാരം മെച്ചപ്പെടുത്തുക."
+              : isHealthy
+              ? "വിള സ്ഥിരമായി നിരീക്ഷിക്കുക."
+              : "ഈ കേസ് വിദഗ്ധ പരിശോധനയ്ക്കായി അയയ്ക്കുക.",
+
+          advice:
+            isEarly
+              ? "ചെടികൾക്കിടയിൽ നല്ല വായുസഞ്ചാരം ഉറപ്പാക്കുകയും ഇലകളിൽ ദീർഘനേരം ഈർപ്പം നിലനിൽക്കാതിരിക്കുകയും ചെയ്യുക."
+              : isLate
+              ? "വിള പതിവായി പരിശോധിക്കുകയും പ്രാദേശിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങൾ പാലിക്കുകയും ചെയ്യുക."
+              : isMold
+              ? "ഇലകളുടെ ചുറ്റുമുള്ള അധിക ഈർപ്പം കുറയ്ക്കുക."
+              : isHealthy
+              ? "ശരിയായ ജലസേചനം, പോഷണം, വയൽ ശുചിത്വം എന്നിവ തുടരുക."
+              : "വ്യക്തമായ ചിത്രം എടുത്ത് കാർഷിക വിദഗ്ധനെ സമീപിക്കുക.",
+        },
+
+        pa: {
+          intro:
+            "ਕ੍ਰਾਪਸ਼ੀਲਡ ਨਿਦਾਨ।",
+
+          condition:
+            `ਪਛਾਣੀ ਗਈ ਸਥਿਤੀ: ${disease}.`,
+
+          confidence:
+            `ਭਰੋਸੇ ਦਾ ਪੱਧਰ ${result.confidence} ਪ੍ਰਤੀਸ਼ਤ ਹੈ.`,
+
+          risk:
+            `ਖਤਰੇ ਦਾ ਪੱਧਰ ${localizeLevel(
+              advisoryInfo.risk,
+              "pa"
+            )} ਹੈ.`,
+
+          action:
+            isEarly
+              ? "ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਹਟਾਓ ਅਤੇ ਨੇੜਲੇ ਪੌਦਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰੋ."
+              : isLate
+              ? "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਵੱਖ ਕਰੋ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ."
+              : isMold
+              ? "ਜ਼ਿਆਦਾ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਹਟਾਓ ਅਤੇ ਹਵਾ ਦਾ ਪ੍ਰਵਾਹ ਸੁਧਾਰੋ."
+              : isHealthy
+              ? "ਫਸਲ ਦੀ ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਕਰੋ."
+              : "ਇਸ ਕੇਸ ਨੂੰ ਮਾਹਰ ਜਾਂਚ ਲਈ ਭੇਜੋ.",
+
+          advice:
+            isEarly
+              ? "ਪੌਦਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਹਵਾ ਦਾ ਪ੍ਰਵਾਹ ਸੁਧਾਰੋ ਅਤੇ ਪੱਤਿਆਂ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਗਿੱਲਾ ਨਾ ਰਹਿਣ ਦਿਓ."
+              : isLate
+              ? "ਫਸਲ ਦੀ ਵਾਰ-ਵਾਰ ਨਿਗਰਾਨੀ ਕਰੋ ਅਤੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਦੀ ਪਾਲਣਾ ਕਰੋ."
+              : isMold
+              ? "ਪੱਤਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਵੱਧ ਨਮੀ ਘਟਾਓ."
+              : isHealthy
+              ? "ਸਹੀ ਸਿੰਚਾਈ, ਪੋਸ਼ਣ ਅਤੇ ਖੇਤ ਦੀ ਸਫਾਈ ਜਾਰੀ ਰੱਖੋ."
+              : "ਸਾਫ਼ ਤਸਵੀਰ ਲਓ ਅਤੇ ਖੇਤੀਬਾੜੀ ਮਾਹਰ ਦੀ ਸਲਾਹ ਲਓ.",
+        },
+      };
+
+      const selected =
+        speech[language] ||
+        speech.en;
+
+      return [
+        selected.intro,
+        selected.condition,
+        selected.confidence,
+        selected.risk,
+        selected.action,
+        selected.advice,
+      ].join(" ");
+    };
+
+  /* =======================================================
+     SPEECH
+  ======================================================= */
+
+  const speakAdvice = () => {
+    if (
+      !result ||
+      typeof window ===
+        "undefined" ||
+      !window.speechSynthesis
+    ) {
+      setSpeechError(
+        "Speech synthesis is not available in this browser."
+      );
+
+      return;
+    }
+
+    const synth =
+      window.speechSynthesis;
+
+    synth.cancel();
+
+    setSpeaking(false);
+    setSpeechError("");
+
+    const selectedLanguage =
+      languages.find(
+        (item) =>
+          item.code === language
+      );
+
+    const desiredLang =
+      selectedLanguage?.voice ||
+      "en-IN";
+
+    const text =
+      getSpeechContent();
+
+    if (!text.trim()) {
+      setSpeechError(
+        "No advisory text is available."
+      );
+
+      return;
+    }
+
+    const findVoice = () => {
+      const voices =
+        synth.getVoices();
+
+      if (!voices.length) {
+        return null;
+      }
+
+      const wanted =
+        desiredLang.toLowerCase();
+
+      const base =
+        wanted
+          .split("-")[0]
+          .toLowerCase();
+
+      return (
+        voices.find(
+          (voice) =>
+            voice.lang?.toLowerCase() ===
+            wanted
+        ) ||
+
+        voices.find(
+          (voice) =>
+            voice.lang
+              ?.toLowerCase()
+              .startsWith(base)
+        ) ||
+
+        voices.find(
+          (voice) =>
+            voice.name
+              ?.toLowerCase()
+              .includes(base)
+        ) ||
+
+        availableVoices.find(
+          (voice) =>
+            voice.lang
+              ?.toLowerCase()
+              .startsWith(base)
+        ) ||
+
+        null
+      );
+    };
+
+    const startSpeaking =
+      () => {
+        const voice =
+          findVoice();
+
+        const chunks =
+          text.match(
+            /[^.!?।]+[.!?।]*/g
+          ) || [text];
+
+        let index = 0;
+
+        const speakNext =
+          () => {
+            if (
+              index >=
+              chunks.length
+            ) {
+              setSpeaking(false);
+              return;
+            }
+
+            const chunk =
+              chunks[index]
+                .trim();
+
+            index += 1;
+
+            if (!chunk) {
+              speakNext();
+              return;
+            }
+
+            const utterance =
+              new SpeechSynthesisUtterance(
+                chunk
+              );
+
+            utterance.lang =
+              desiredLang;
+
+            if (voice) {
+              utterance.voice =
+                voice;
+            }
+
+            utterance.rate =
+              0.85;
+
+            utterance.pitch =
+              1;
+
+            utterance.volume =
+              1;
+
+            utterance.onstart =
+              () => {
+                setSpeaking(
+                  true
+                );
+                setSpeechError(
+                  ""
+                );
+              };
+
+            utterance.onend =
+              () => {
+                setTimeout(
+                  speakNext,
+                  100
+                );
+              };
+
+            utterance.onerror =
+              (event) => {
+                console.error(
+                  "Speech error:",
+                  event
+                );
+
+                setSpeaking(
+                  false
+                );
+
+                if (
+                  event.error ===
+                  "language-unavailable"
+                ) {
+                  setSpeechError(
+                    `${desiredLang} voice is not available on this device.`
+                  );
+                } else {
+                  setSpeechError(
+                    "Unable to play the advisory voice."
+                  );
+                }
+              };
+
+            synth.speak(
+              utterance
+            );
+          };
+
+        synth.resume();
+
+        setTimeout(
+          speakNext,
+          100
+        );
+      };
+
+    const currentVoices =
+      synth.getVoices();
+
+    if (
+      currentVoices.length >
+      0
+    ) {
+      startSpeaking();
+      return;
+    }
+
+    const handleVoicesChanged =
+      () => {
+        synth.removeEventListener(
+          "voiceschanged",
+          handleVoicesChanged
+        );
+
+        startSpeaking();
+      };
+
+    synth.addEventListener(
+      "voiceschanged",
+      handleVoicesChanged
+    );
+
+    setTimeout(() => {
+      synth.removeEventListener(
+        "voiceschanged",
+        handleVoicesChanged
+      );
+
+      if (!synth.speaking) {
+        startSpeaking();
+      }
+    }, 1500);
+  };
+
+  /* =======================================================
+     RISK DATA
   ======================================================= */
 
   const forecastDisease =
@@ -3121,7 +4838,9 @@ function App() {
       };
 
       return (
-        labels[language]?.[day] ||
+        labels[language]?.[
+          day
+        ] ||
         labels.en[day]
       );
     };
@@ -3143,19 +4862,26 @@ function App() {
   const hotspotCases = [
     {
       id: 1,
+
       name:
         `${selectedDistrict} Field Cluster A`,
+
       disease:
         translateDiseaseName(
           "Tomato___Early_blight",
           language
         ),
+
       level:
         "High",
-      count: 18,
+
+      count:
+        18,
+
       lat:
         hotspotCenter[0] +
         0.025,
+
       lng:
         hotspotCenter[1] +
         0.035,
@@ -3163,19 +4889,26 @@ function App() {
 
     {
       id: 2,
+
       name:
         `${selectedDistrict} Field Cluster B`,
+
       disease:
         translateDiseaseName(
           "Tomato___Late_blight",
           language
         ),
+
       level:
         "Critical",
-      count: 31,
+
+      count:
+        31,
+
       lat:
         hotspotCenter[0] -
         0.028,
+
       lng:
         hotspotCenter[1] -
         0.025,
@@ -3183,19 +4916,26 @@ function App() {
 
     {
       id: 3,
+
       name:
         `${selectedDistrict} Field Cluster C`,
+
       disease:
         translateDiseaseName(
           "Tomato___Leaf_Mold",
           language
         ),
+
       level:
         "Medium",
-      count: 11,
+
+      count:
+        11,
+
       lat:
         hotspotCenter[0] +
         0.04,
+
       lng:
         hotspotCenter[1] -
         0.02,
@@ -3203,19 +4943,26 @@ function App() {
 
     {
       id: 4,
+
       name:
         `${selectedDistrict} Field Cluster D`,
+
       disease:
         translateDiseaseName(
           "Tomato___Early_blight",
           language
         ),
+
       level:
         "Medium",
-      count: 8,
+
+      count:
+        8,
+
       lat:
         hotspotCenter[0] -
         0.018,
+
       lng:
         hotspotCenter[1] +
         0.045,
@@ -3223,19 +4970,26 @@ function App() {
 
     {
       id: 5,
+
       name:
         `${selectedDistrict} Field Cluster E`,
+
       disease:
         translateDiseaseName(
           "Tomato___healthy",
           language
         ),
+
       level:
         "Low",
-      count: 5,
+
+      count:
+        5,
+
       lat:
         hotspotCenter[0] +
         0.05,
+
       lng:
         hotspotCenter[1] +
         0.025,
@@ -3295,7 +5049,7 @@ function App() {
     };
 
   /* =======================================================
-     DIAGNOSIS
+     DIAGNOSIS PAGE
   ======================================================= */
 
   const renderDiagnosisPage =
@@ -3387,11 +5141,16 @@ function App() {
               <div>
 
                 <span className="small-label">
+
                   {t.cropHealth}
+
                 </span>
 
+
                 <h3>
+
                   {t.diagnosisTitle}
+
                 </h3>
 
               </div>
@@ -3507,7 +5266,9 @@ function App() {
                 {loading ? (
 
                   <h3>
+
                     {t.analyzingLeaf}
+
                   </h3>
 
                 ) : result ? (
@@ -3536,11 +5297,15 @@ function App() {
                   <>
 
                     <h3>
+
                       {t.ready}
+
                     </h3>
 
                     <p>
+
                       {t.uploadHint}
+
                     </p>
 
                   </>
@@ -3632,6 +5397,7 @@ function App() {
 
 
             {result && (
+
               <div className="risk-grid">
 
                 <div className="risk-box">
@@ -3653,12 +5419,11 @@ function App() {
 
                     </span>
 
+
                     <strong>
 
                       {localizeLevel(
-                        getDiseaseInfo(
-                          result.class
-                        ).severity,
+                        advisoryInfo.severity,
                         language
                       )}
 
@@ -3688,12 +5453,11 @@ function App() {
 
                     </span>
 
+
                     <strong>
 
                       {localizeLevel(
-                        getDiseaseInfo(
-                          result.class
-                        ).risk,
+                        advisoryInfo.risk,
                         language
                       )}
 
@@ -3704,6 +5468,7 @@ function App() {
                 </div>
 
               </div>
+
             )}
 
 
@@ -3719,12 +5484,11 @@ function App() {
 
                   </span>
 
+
                   <span>
 
                     {localizeLevel(
-                      getDiseaseInfo(
-                        result.class
-                      ).severity,
+                      advisoryInfo.severity,
                       language
                     )}
 
@@ -3744,10 +5508,7 @@ function App() {
                         }
                         className={`severity-bar ${
                           level <=
-                          getDiseaseInfo(
-                            result.class
-                          )
-                            .severityLevel
+                          advisoryInfo.severityLevel
                             ? "filled"
                             : ""
                         }`}
@@ -3795,9 +5556,7 @@ function App() {
                   <p>
 
                     {
-                      getDiseaseInfo(
-                        result.class
-                      ).action
+                      advisoryInfo.action
                     }
 
                   </p>
@@ -3831,9 +5590,7 @@ function App() {
                 <p>
 
                   {
-                    getDiseaseInfo(
-                      result.class
-                    ).advice
+                    advisoryInfo.advice
                   }
 
                 </p>
@@ -3849,6 +5606,9 @@ function App() {
                 className="voice-btn"
                 onClick={
                   speakAdvice
+                }
+                disabled={
+                  speaking
                 }
               >
 
@@ -3879,6 +5639,27 @@ function App() {
                 )}
 
               </button>
+
+            )}
+
+
+            {speechError && (
+
+              <div
+                className="error-message"
+                style={{
+                  marginTop:
+                    "10px",
+                }}
+              >
+
+                <AlertTriangle
+                  size={17}
+                />
+
+                {speechError}
+
+              </div>
 
             )}
 
@@ -3958,7 +5739,9 @@ function App() {
                     className="spin"
                   />
 
-                  {t.analyzingButton}
+                  {
+                    t.analyzingButton
+                  }
 
                 </>
 
@@ -4005,7 +5788,9 @@ function App() {
             <div className="feature-card">
 
               <div className="feature-icon">
+
                 <Leaf />
+
               </div>
 
               <h3>
@@ -4039,15 +5824,18 @@ function App() {
 
               </div>
 
+
               <h3>
                 Risk Forecasting
               </h3>
+
 
               <p>
                 Combine weather, crop stage,
                 and pest activity to identify
                 emerging risks.
               </p>
+
 
               <button
                 className="feature-link feature-button"
@@ -4072,18 +5860,23 @@ function App() {
             <div className="feature-card">
 
               <div className="feature-icon">
+
                 <Map />
+
               </div>
+
 
               <h3>
                 Geospatial Hotspots
               </h3>
+
 
               <p>
                 Visualize reported disease
                 cases and prioritize
                 field-level intervention.
               </p>
+
 
               <button
                 className="feature-link feature-button"
@@ -4194,6 +5987,8 @@ function App() {
 
         </div>
 
+
+        {/* LIVE WEATHER */}
 
         <div
           style={{
@@ -4482,9 +6277,7 @@ function App() {
                 <div>
 
                   <span>
-
                     {t.temperature}
-
                   </span>
 
                   <strong>
@@ -4512,9 +6305,7 @@ function App() {
                 <div>
 
                   <span>
-
                     {t.humidity}
-
                   </span>
 
                   <strong>
@@ -4542,9 +6333,7 @@ function App() {
                 <div>
 
                   <span>
-
                     {t.rainfall}
-
                   </span>
 
                   <strong>
@@ -4572,9 +6361,7 @@ function App() {
                 <div>
 
                   <span>
-
                     {t.pestActivity}
-
                   </span>
 
                   <strong>
@@ -4605,9 +6392,7 @@ function App() {
                 <div>
 
                   <span>
-
                     {t.cropStage}
-
                   </span>
 
                   <strong>
@@ -5059,7 +6844,7 @@ function App() {
     );
 
   /* =======================================================
-     ADVISORIES
+     ADVISORIES PAGE
   ======================================================= */
 
   const renderAdvisoriesPage =
@@ -5140,9 +6925,9 @@ function App() {
 
             <p>
 
-              {
-                advisoryInfo.summary
-              }
+              {result
+                ? advisoryInfo.advice
+                : "Upload a leaf image first. CropShield will tailor this advisory to the detected condition."}
 
             </p>
 
@@ -5160,7 +6945,9 @@ function App() {
 
             <strong>
 
-              {advisoryInfo.urgency}
+              {result
+                ? result.status
+                : t.noDiagnosis}
 
             </strong>
 
@@ -5198,7 +6985,18 @@ function App() {
 
             <div className="advisory-steps">
 
-              {advisoryInfo.immediate.map(
+              {(result
+                ? [
+                    advisoryInfo.action,
+                    "Inspect nearby plants for similar symptoms.",
+                    "Continue regular crop scouting.",
+                  ]
+                : [
+                    "Upload a clear crop-leaf image.",
+                    "Wait for the AI diagnosis.",
+                    "Review the advisory before field action.",
+                  ]
+              ).map(
                 (
                   item,
                   index
@@ -5259,34 +7057,43 @@ function App() {
 
             <div className="advisory-steps">
 
-              {advisoryInfo.prevention.map(
-                (
-                  item,
-                  index
-                ) => (
+              <div className="advisory-step">
 
-                  <div
-                    className="advisory-step"
-                    key={`${item}-${index}`}
-                  >
+                <span>
+                  ✓
+                </span>
 
-                    <span>
+                <p>
+                  Scout crops regularly.
+                </p>
 
-                      ✓
-
-                    </span>
+              </div>
 
 
-                    <p>
+              <div className="advisory-step">
 
-                      {item}
+                <span>
+                  ✓
+                </span>
 
-                    </p>
+                <p>
+                  Track new symptoms and affected areas.
+                </p>
 
-                  </div>
+              </div>
 
-                )
-              )}
+
+              <div className="advisory-step">
+
+                <span>
+                  ✓
+                </span>
+
+                <p>
+                  Use locally approved agricultural guidance.
+                </p>
+
+              </div>
 
             </div>
 
@@ -5320,9 +7127,9 @@ function App() {
 
             <p>
 
-              {
-                advisoryInfo.monitoring
-              }
+              {result
+                ? "Recheck the crop regularly and seek expert validation if symptoms spread rapidly."
+                : "No diagnosis is available yet."}
 
             </p>
 
@@ -5333,7 +7140,8 @@ function App() {
                 speakAdvice
               }
               disabled={
-                !result
+                !result ||
+                speaking
               }
             >
 
@@ -5467,17 +7275,19 @@ function App() {
           </div>
 
 
+          {/* CLICKABLE ASK EXPERT */}
+
           <div
             className="mini-advisory-card"
+            onClick={
+              submitExpertReview
+            }
             style={{
               cursor:
                 result
                   ? "pointer"
                   : "default",
             }}
-            onClick={
-              submitExpertReview
-            }
           >
 
             <Users
@@ -5497,15 +7307,15 @@ function App() {
               <button
                 type="button"
                 className="feature-button"
-                onClick={
-                  (
-                    event
-                  ) => {
-                    event.stopPropagation();
+                onClick={(
+                  event
+                ) => {
 
-                    submitExpertReview();
-                  }
-                }
+                  event.stopPropagation();
+
+                  submitExpertReview();
+
+                }}
                 disabled={
                   !result
                 }
@@ -5556,7 +7366,7 @@ function App() {
     );
 
   /* =======================================================
-     HOTSPOTS
+     HOTSPOTS PAGE
   ======================================================= */
 
   const renderHotspotsPage =
@@ -5626,9 +7436,7 @@ function App() {
 
 
               <strong>
-
                 5
-
               </strong>
 
             </div>
@@ -5657,9 +7465,7 @@ function App() {
 
 
               <strong>
-
                 2
-
               </strong>
 
             </div>
@@ -5688,9 +7494,7 @@ function App() {
 
 
               <strong>
-
                 73
-
               </strong>
 
             </div>
@@ -5922,11 +7726,15 @@ function App() {
 
                         </strong>
 
+
                         <br />
+
 
                         {spot.disease}
 
+
                         <br />
+
 
                         {t.mapRisk}:{" "}
 
@@ -5934,7 +7742,9 @@ function App() {
                           spot.level
                         )}
 
+
                         <br />
+
 
                         {t.mapReports}:{" "}
 
@@ -6168,9 +7978,7 @@ function App() {
 
 
             <span>
-
               AI Crop Intelligence
-
             </span>
 
           </div>
@@ -6337,6 +8145,22 @@ function App() {
                         item.code
                       );
 
+                      setSpeechError(
+                        ""
+                      );
+
+                      if (
+                        typeof window !==
+                        "undefined" &&
+                        window.speechSynthesis
+                      ) {
+                        window.speechSynthesis.cancel();
+                      }
+
+                      setSpeaking(
+                        false
+                      );
+
                       setShowLanguageMenu(
                         false
                       );
@@ -6346,14 +8170,18 @@ function App() {
 
                     <span>
 
-                      {item.native}
+                      {
+                        item.native
+                      }
 
                     </span>
 
 
                     <small>
 
-                      {item.name}
+                      {
+                        item.name
+                      }
 
                     </small>
 
@@ -6399,6 +8227,7 @@ function App() {
           <strong>
             CropShield AI
           </strong>
+
 
           <span>
             {" "}•{" "}
