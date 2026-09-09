@@ -9,11 +9,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 
 
-# ---------------------------------
-# Configuration
-# ---------------------------------
+# =========================================================
+# CONFIGURATION
+# =========================================================
 
-MODEL_PATH = Path("model/saved/crop_disease_model.keras")
+MODEL_PATH = Path(
+    "model/saved/crop_disease_model.keras"
+)
 
 IMG_SIZE = (224, 224)
 
@@ -25,21 +27,23 @@ CLASS_NAMES = [
 ]
 
 
-# ---------------------------------
-# Load CNN
-# ---------------------------------
+# =========================================================
+# LOAD MODEL
+# =========================================================
 
 if not MODEL_PATH.exists():
     raise FileNotFoundError(
         f"Model not found: {MODEL_PATH}"
     )
 
-model = tf.keras.models.load_model(MODEL_PATH)
+model = tf.keras.models.load_model(
+    MODEL_PATH
+)
 
 
-# ---------------------------------
-# FastAPI
-# ---------------------------------
+# =========================================================
+# FASTAPI APPLICATION
+# =========================================================
 
 app = FastAPI(
     title="CropShield AI",
@@ -48,9 +52,9 @@ app = FastAPI(
 )
 
 
-# ---------------------------------
+# =========================================================
 # CORS
-# ---------------------------------
+# =========================================================
 
 app.add_middleware(
     CORSMiddleware,
@@ -65,45 +69,81 @@ app.add_middleware(
 )
 
 
-# ---------------------------------
-# Prototype Leaf Image Validation
-# ---------------------------------
+# =========================================================
+# CROP-LEAF INPUT VALIDATION
+# =========================================================
 
-def validate_leaf_image(image: Image.Image):
+def validate_leaf_image(
+    image: Image.Image,
+):
     """
-    Prototype input gate.
+    Prototype input-validation gate.
 
-    This does NOT prove that an image is a leaf.
-    It checks whether the image contains enough
-    vegetation-like pixels before sending it
-    to the disease classifier.
+    This checks whether the image has enough
+    vegetation-like characteristics before the
+    disease classifier is used.
+
+    NOTE:
+    This is a prototype safeguard, not a trained
+    leaf/non-leaf classification model.
     """
 
-    # Resize for fast analysis
-    small = image.resize((128, 128)).convert("RGB")
+    # Resize for faster processing
+    small_image = image.resize(
+        (128, 128)
+    ).convert("RGB")
 
-    arr = np.asarray(small).astype(np.float32)
+    # Convert to numpy
+    arr = np.asarray(
+        small_image
+    ).astype(np.float32)
 
+    # RGB channels
     r = arr[:, :, 0]
     g = arr[:, :, 1]
     b = arr[:, :, 2]
 
-    # Vegetation-like pixel rule:
-    # Green should generally be stronger than red/blue.
+    # -----------------------------------------------------
+    # GREEN PIXEL TEST
+    # -----------------------------------------------------
+
     green_pixels = (
         (g > r * 1.05)
         & (g > b * 1.05)
         & (g > 45)
-        & (g < 240)
+        & (g < 245)
     )
 
     green_ratio = float(
         np.mean(green_pixels)
     )
 
-    # Basic texture/edge proxy:
-    # A crop leaf image normally has some
-    # local intensity variation.
+    # -----------------------------------------------------
+    # SATURATION TEST
+    # -----------------------------------------------------
+
+    max_channel = np.max(
+        arr,
+        axis=2,
+    )
+
+    min_channel = np.min(
+        arr,
+        axis=2,
+    )
+
+    saturation = (
+        max_channel - min_channel
+    ) / 255.0
+
+    mean_saturation = float(
+        np.mean(saturation)
+    )
+
+    # -----------------------------------------------------
+    # IMAGE TEXTURE TEST
+    # -----------------------------------------------------
+
     gray = (
         0.299 * r
         + 0.587 * g
@@ -114,30 +154,56 @@ def validate_leaf_image(image: Image.Image):
         np.std(gray) / 255.0
     )
 
-    # Prototype thresholds.
-    # These are intentionally conservative enough
-    # for a quick demo, not a scientific detector.
+    # -----------------------------------------------------
+    # BRIGHTNESS TEST
+    # -----------------------------------------------------
+
+    brightness = float(
+        np.mean(gray) / 255.0
+    )
+
+    # -----------------------------------------------------
+    # PROTOTYPE DECISION
+    # -----------------------------------------------------
+
     looks_like_leaf = (
         green_ratio >= 0.08
-        and texture_score >= 0.08
+        and mean_saturation >= 0.08
+        and texture_score >= 0.07
+        and brightness >= 0.10
+        and brightness <= 0.95
     )
 
     return {
-        "valid": looks_like_leaf,
+        "valid": bool(
+            looks_like_leaf
+        ),
+
         "green_ratio": round(
             green_ratio * 100,
-            2
+            2,
         ),
+
+        "saturation": round(
+            mean_saturation,
+            3,
+        ),
+
         "texture_score": round(
             texture_score,
-            3
+            3,
+        ),
+
+        "brightness": round(
+            brightness,
+            3,
         ),
     }
 
 
-# ---------------------------------
-# Health Check
-# ---------------------------------
+# =========================================================
+# HEALTH CHECK
+# =========================================================
 
 @app.get("/")
 def home():
@@ -150,73 +216,94 @@ def home():
     }
 
 
-# ---------------------------------
-# Disease Prediction
-# ---------------------------------
+# =========================================================
+# DISEASE PREDICTION
+# =========================================================
 
 @app.post("/predict")
 async def predict(
     file: UploadFile = File(...)
 ):
 
-    # ---------------------------------
-    # Check file type
-    # ---------------------------------
+    # -----------------------------------------------------
+    # FILE TYPE CHECK
+    # -----------------------------------------------------
 
     if file.content_type not in [
         "image/jpeg",
         "image/png",
         "image/jpg",
+        "image/webp",
     ]:
         raise HTTPException(
             status_code=400,
-            detail="Please upload a JPG or PNG image.",
+            detail=(
+                "Please upload a JPG, PNG, "
+                "or WEBP image."
+            ),
         )
 
     try:
 
-        # ---------------------------------
-        # Read image
-        # ---------------------------------
+        # -------------------------------------------------
+        # READ UPLOADED FILE
+        # -------------------------------------------------
 
         contents = await file.read()
+
+        if not contents:
+            raise HTTPException(
+                status_code=400,
+                detail="Uploaded image is empty.",
+            )
+
+        # -------------------------------------------------
+        # OPEN IMAGE
+        # -------------------------------------------------
 
         image = Image.open(
             io.BytesIO(contents)
         ).convert("RGB")
 
-        # ---------------------------------
-        # Input validation
-        # ---------------------------------
+        # -------------------------------------------------
+        # INPUT VALIDATION
+        # -------------------------------------------------
 
         validation = validate_leaf_image(
             image
         )
 
+        # -------------------------------------------------
+        # REJECT OBVIOUSLY IRRELEVANT IMAGE
+        # -------------------------------------------------
+
         if not validation["valid"]:
+
             return {
                 "success": False,
                 "valid_image": False,
                 "error_type": "not_leaf",
+
                 "message": (
                     "This image does not appear "
                     "to be a crop leaf. Please "
                     "upload a clear tomato-leaf image."
                 ),
+
                 "validation": validation,
             }
 
-        # ---------------------------------
-        # Resize
-        # ---------------------------------
+        # -------------------------------------------------
+        # RESIZE FOR CNN
+        # -------------------------------------------------
 
         image = image.resize(
             IMG_SIZE
         )
 
-        # ---------------------------------
-        # NumPy conversion
-        # ---------------------------------
+        # -------------------------------------------------
+        # NUMPY CONVERSION
+        # -------------------------------------------------
 
         image_array = np.array(
             image
@@ -224,27 +311,27 @@ async def predict(
             np.float32
         )
 
-        # ---------------------------------
-        # Batch dimension
-        # ---------------------------------
+        # -------------------------------------------------
+        # ADD BATCH DIMENSION
+        # -------------------------------------------------
 
         image_array = np.expand_dims(
             image_array,
             axis=0,
         )
 
-        # ---------------------------------
-        # Prediction
-        # ---------------------------------
+        # -------------------------------------------------
+        # MODEL PREDICTION
+        # -------------------------------------------------
 
         predictions = model.predict(
             image_array,
             verbose=0,
         )[0]
 
-        # ---------------------------------
-        # Best class
-        # ---------------------------------
+        # -------------------------------------------------
+        # BEST CLASS
+        # -------------------------------------------------
 
         predicted_index = int(
             np.argmax(predictions)
@@ -262,25 +349,25 @@ async def predict(
             ]
         )
 
-        # ---------------------------------
-        # Readable name
-        # ---------------------------------
+        # -------------------------------------------------
+        # READABLE DISEASE NAME
+        # -------------------------------------------------
 
         readable_name = (
             predicted_class
             .replace(
                 "Tomato___",
-                ""
+                "",
             )
             .replace(
                 "_",
-                " "
+                " ",
             )
         )
 
-        # ---------------------------------
-        # Confidence
-        # ---------------------------------
+        # -------------------------------------------------
+        # CONFIDENCE STATUS
+        # -------------------------------------------------
 
         if confidence < 0.80:
             diagnosis_status = (
@@ -291,26 +378,36 @@ async def predict(
                 "AI Diagnosis"
             )
 
-        # ---------------------------------
-        # Return result
-        # ---------------------------------
+        # -------------------------------------------------
+        # RESPONSE
+        # -------------------------------------------------
 
         return {
             "success": True,
             "valid_image": True,
+
             "disease": readable_name,
+
             "class": predicted_class,
+
             "confidence": round(
                 confidence * 100,
                 2,
             ),
+
             "status": diagnosis_status,
+
             "validation": validation,
         }
+
+    except HTTPException:
+        raise
 
     except Exception as e:
 
         raise HTTPException(
             status_code=500,
-            detail=f"Prediction failed: {str(e)}",
+            detail=(
+                f"Prediction failed: {str(e)}"
+            ),
         )
