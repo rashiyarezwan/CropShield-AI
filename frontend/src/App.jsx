@@ -69,7 +69,6 @@ const translations = {
     heroTitle: "Protect your crops",
     heroSubtitle: "before it's too late.",
     startDiagnosis: "Start Diagnosis",
-
     aiDiagnosis: "AI-powered diagnosis",
     riskInsights: "Real-time risk insights",
 
@@ -180,13 +179,13 @@ const translations = {
     escalationText:
       "Escalate uncertain or spreading cases.",
 
-    footer: "Built for smarter, safer farming",
-
     errors: {
       prediction: "Prediction failed",
       server:
         "Unable to connect to the AI server. Make sure the FastAPI backend is running.",
     },
+
+    footer: "Built for smarter, safer farming",
   },
 
   mr: {
@@ -200,7 +199,6 @@ const translations = {
     heroTitle: "तुमची पिके जपा",
     heroSubtitle: "उशीर होण्यापूर्वी.",
     startDiagnosis: "निदान सुरू करा",
-
     aiDiagnosis: "AI-आधारित निदान",
     riskInsights: "रिअल-टाइम जोखीम माहिती",
 
@@ -311,6 +309,12 @@ const translations = {
     escalationText:
       "अनिश्चित किंवा वाढणारी प्रकरणे तज्ज्ञांकडे पाठवा.",
 
+    errors: {
+      prediction: "निदान अयशस्वी झाले",
+      server:
+        "AI सर्व्हरशी कनेक्ट होता आले नाही. FastAPI बॅकएंड चालू आहे का ते तपासा.",
+    },
+
     footer: "अधिक स्मार्ट आणि सुरक्षित शेतीसाठी",
   },
 
@@ -361,7 +365,8 @@ const translations = {
     rainfall: "वर्षा",
     pestActivity: "कीट गतिविधि",
     cropStage: "फसल अवस्था",
-    warningTitle: "मौजूदा परिस्थितियाँ रोग विकास के लिए अनुकूल हैं।",
+    warningTitle:
+      "मौजूदा परिस्थितियाँ रोग विकास के लिए अनुकूल हैं।",
     warningText:
       "यह प्रोटोटाइप जोखिम इंजन पर्यावरणीय परिस्थितियों, फसल अवस्था और कीट गतिविधि को मिलाकर संभावित प्रकोपों को प्राथमिकता देता है।",
     recommendedActionRisk: "अनुशंसित कार्रवाई",
@@ -372,8 +377,9 @@ const translations = {
       "प्रोटोटाइप सेंसर फीड निगरानी क्षेत्र में बढ़ी हुई कीट गतिविधि दिखाता है।",
     nextUpdate: "अगला अपडेट",
     nextUpdateText:
-      "नए मौसम, फसल-अवस्था या कीट अवलोकन मिलने पर जोखिम की पुनर्गणना की जानी चाहिए।",
+      "नए मौसम, फसल-अवस्था, या कीट अवलोकन मिलने पर जोखिम की पुनर्गणना की जानी चाहिए।",
     backToDiagnosis: "निदान पर वापस जाएं",
+
     hotspotsKicker: "भौगोलिक जानकारी",
     hotspotTitle: "रोग हॉटस्पॉट",
     hotspotsDescription:
@@ -398,6 +404,7 @@ const translations = {
     high: "उच्च",
     medium: "मध्यम",
     low: "कम",
+
     advisoriesKicker: "किसान कार्रवाई केंद्र",
     advisoriesTitle: "फसल सलाह",
     advisoriesDescription:
@@ -418,13 +425,23 @@ const translations = {
       "CropShield निर्णय सहायता देता है। कार्रवाई से पहले खेत के लक्षण, फसल की किस्म, स्थानीय परिस्थितियों और आधिकारिक कृषि मार्गदर्शन पर विचार करें।",
     fieldRoutine: "खेत की दिनचर्या",
     scoutConsistently: "नियमित निरीक्षण करें",
-    scoutText: "नियमित निरीक्षण से रोग का जल्दी पता लगाने में मदद मिलती है।",
+    scoutText:
+      "नियमित निरीक्षण से रोग का जल्दी पता लगाने में मदद मिलती है।",
     recordKeeping: "रिकॉर्ड रखना",
     captureLocation: "स्थान दर्ज करें",
-    recordText: "हॉटस्पॉट मैपिंग में खेत की रिपोर्ट का उपयोग करें।",
+    recordText:
+      "हॉटस्पॉट मैपिंग में खेत की रिपोर्ट का उपयोग करें।",
     escalation: "विशेषज्ञ सहायता",
     askExpert: "विशेषज्ञ से पूछें",
-    escalationText: "अनिश्चित या फैलते मामलों को विशेषज्ञ के पास भेजें।",
+    escalationText:
+      "अनिश्चित या फैलते मामलों को विशेषज्ञ के पास भेजें.",
+
+    errors: {
+      prediction: "निदान विफल हुआ",
+      server:
+        "AI सर्वर से कनेक्ट नहीं हो सका। FastAPI बैकएंड चल रहा है या नहीं जांचें।",
+    },
+
     footer: "अधिक स्मार्ट और सुरक्षित खेती के लिए",
   },
 
@@ -475,7 +492,8 @@ const translations = {
     rainfall: "వర్షపాతం",
     pestActivity: "పురుగు కార్యకలాపం",
     cropStage: "పంట దశ",
-    warningTitle: "ప్రస్తుత పరిస్థితులు వ్యాధి అభివృద్ధికి అనుకూలంగా ఉన్నాయి.",
+    warningTitle:
+      "ప్రస్తుత పరిస్థితులు వ్యాధి అభివృద్ధికి అనుకూలంగా ఉన్నాయి.",
     warningText:
       "ఈ నమూనా రిస్క్ ఇంజిన్ పర్యావరణ పరిస్థితులు, పంట దశ మరియు పురుగు కార్యకలాపాలను కలిపి సంభావ్య వ్యాప్తికి ప్రాధాన్యత ఇస్తుంది.",
     recommendedActionRisk: "సిఫారసు చేసిన చర్య",
@@ -488,6 +506,7 @@ const translations = {
     nextUpdateText:
       "కొత్త వాతావరణం, పంట దశ లేదా పురుగు పరిశీలనలు అందినప్పుడు ప్రమాదాన్ని తిరిగి లెక్కించాలి.",
     backToDiagnosis: "నిర్ధారణకు తిరిగి వెళ్లండి",
+
     hotspotsKicker: "భౌగోళిక సమాచారం",
     hotspotTitle: "వ్యాధి హాట్‌స్పాట్‌లు",
     hotspotsDescription:
@@ -512,6 +531,7 @@ const translations = {
     high: "అధిక",
     medium: "మధ్యస్థ",
     low: "తక్కువ",
+
     advisoriesKicker: "రైతు చర్య కేంద్రం",
     advisoriesTitle: "పంట సలహాలు",
     advisoriesDescription:
@@ -532,13 +552,23 @@ const translations = {
       "CropShield నిర్ణయ సహాయాన్ని అందిస్తుంది. చర్యకు ముందు పొల లక్షణాలు, పంట రకం, స్థానిక పరిస్థితులు మరియు అధికారిక వ్యవసాయ మార్గదర్శకాలను పరిగణించాలి.",
     fieldRoutine: "పొల దినచర్య",
     scoutConsistently: "క్రమం తప్పకుండా పరిశీలించండి",
-    scoutText: "నిరంతర పరిశీలన వ్యాధిని ముందుగానే గుర్తించడంలో సహాయపడుతుంది.",
+    scoutText:
+      "నిరంతర పరిశీలన వ్యాధిని ముందుగానే గుర్తించడంలో సహాయపడుతుంది.",
     recordKeeping: "రికార్డు నిర్వహణ",
     captureLocation: "స్థానాన్ని నమోదు చేయండి",
-    recordText: "హాట్‌స్పాట్ మ్యాపింగ్ కోసం ఫీల్డ్ నివేదికలను ఉపయోగించండి.",
+    recordText:
+      "హాట్‌స్పాట్ మ్యాపింగ్ కోసం ఫీల్డ్ నివేదికలను ఉపయోగించండి.",
     escalation: "నిపుణుల సహాయం",
     askExpert: "నిపుణుడిని అడగండి",
-    escalationText: "అనిశ్చిత లేదా వ్యాప్తి చెందుతున్న కేసులను నిపుణులకు పంపండి.",
+    escalationText:
+      "అనిశ్చిత లేదా వ్యాప్తి చెందుతున్న కేసులను నిపుణులకు పంపండి.",
+
+    errors: {
+      prediction: "నిర్ధారణ విఫలమైంది",
+      server:
+        "AI సర్వర్‌కు కనెక్ట్ కాలేకపోయింది. FastAPI బ్యాకెండ్ నడుస్తుందో లేదో చూడండి.",
+    },
+
     footer: "మరింత తెలివైన, సురక్షితమైన వ్యవసాయం కోసం",
   },
 
@@ -589,23 +619,25 @@ const translations = {
     rainfall: "ಮಳೆ",
     pestActivity: "ಕೀಟ ಚಟುವಟಿಕೆ",
     cropStage: "ಬೆಳೆ ಹಂತ",
-    warningTitle: "ಪ್ರಸ್ತುತ ಪರಿಸ್ಥಿತಿಗಳು ರೋಗ ಬೆಳವಣಿಗೆಗೆ ಅನುಕೂಲಕರವಾಗಿವೆ.",
+    warningTitle:
+      "ಪ್ರಸ್ತುತ ಪರಿಸ್ಥಿತಿಗಳು ರೋಗ ಬೆಳವಣಿಗೆಗೆ ಅನುಕೂಲಕರವಾಗಿವೆ.",
     warningText:
-      "ಈ ಮಾದರಿ ಅಪಾಯ ಎಂಜಿನ್ ಪರಿಸರ ಪರಿಸ್ಥಿತಿಗಳು, ಬೆಳೆ ಹಂತ ಮತ್ತು ಕೀಟ ಚಟುವಟಿಕೆಯನ್ನು ಸಂಯೋಜಿಸಿ ಸಂಭಾವ್ಯ ಏಕಾಏಕಿಗಳಿಗೆ ಆದ್ಯತೆ ನೀಡುತ್ತದೆ.",
+      "ಈ ಮಾದರಿ ಅಪಾಯ ಎಂಜಿನ್ ಪರಿಸರ ಪರಿಸ್ಥಿತಿಗಳು, ಬೆಳೆ ಹಂತ ಮತ್ತು ಕೀಟ ಚಟುವಟಿಕೆಯನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ.",
     recommendedActionRisk: "ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ರಮ",
     recommendedActionText:
-      "ಹೊಲದ ಮೇಲ್ವಿಚಾರಣೆ ಹೆಚ್ಚಿಸಿ, ಹತ್ತಿರದ ಸಸ್ಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸೂಕ್ತ ಸಮಗ್ರ ಕೀಟ ನಿರ್ವಹಣಾ ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಅನುಸರಿಸಿ.",
+      "ಹೊಲದ ಮೇಲ್ವಿಚಾರಣೆ ಹೆಚ್ಚಿಸಿ, ಹತ್ತಿರದ ಸಸ್ಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸೂಕ್ತ ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಅನುಸರಿಸಿ.",
     pestTrap: "ಕೀಟ ಬಲೆ ಸಂಕೇತ",
     pestTrapText:
       "ಮಾದರಿ ಸೆನ್ಸಾರ್ ಫೀಡ್ ಮೇಲ್ವಿಚಾರಣೆ ಪ್ರದೇಶದಲ್ಲಿ ಹೆಚ್ಚಿದ ಕೀಟ ಚಟುವಟಿಕೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
     nextUpdate: "ಮುಂದಿನ ನವೀಕರಣ",
     nextUpdateText:
-      "ಹೊಸ ಹವಾಮಾನ, ಬೆಳೆ-ಹಂತ ಅಥವಾ ಕೀಟ ಅವಲೋಕನಗಳು ಬಂದಾಗ ಅಪಾಯವನ್ನು ಮರು ಲೆಕ್ಕಾಚಾರ ಮಾಡಬೇಕು.",
+      "ಹೊಸ ಹವಾಮಾನ ಅಥವಾ ಕೀಟ ಅವಲೋಕನಗಳು ಬಂದಾಗ ಅಪಾಯವನ್ನು ಮರು ಲೆಕ್ಕಾಚಾರ ಮಾಡಬೇಕು.",
     backToDiagnosis: "ರೋಗನಿರ್ಣಯಕ್ಕೆ ಹಿಂತಿರುಗಿ",
+
     hotspotsKicker: "ಭೌಗೋಳಿಕ ಮಾಹಿತಿ",
     hotspotTitle: "ರೋಗ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳು",
     hotspotsDescription:
-      "ನಿವೇದಿತ ಬೆಳೆ ಆರೋಗ್ಯ ಪ್ರಕರಣಗಳನ್ನು ನೋಡಿ, ಗುಂಪುಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಹೊಲ ಪರಿಶೀಲನೆಗೆ ಆದ್ಯತೆ ನೀಡಿ.",
+      "ಬೆಳೆ ಆರೋಗ್ಯ ಪ್ರಕರಣಗಳನ್ನು ನೋಡಿ, ಗುಂಪುಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಹೊಲ ಪರಿಶೀಲನೆಗೆ ಆದ್ಯತೆ ನೀಡಿ.",
     prototypeData: "ಪ್ರೋಟೋಟೈಪ್ ಡೇಟಾ",
     reportedClusters: "ವರದಿಯಾದ ಗುಂಪುಗಳು",
     highCritical: "ಹೆಚ್ಚು / ತೀವ್ರ",
@@ -621,15 +653,16 @@ const translations = {
     mapRisk: "ಅಪಾಯ",
     mapReports: "ವರದಿಗಳು",
     hotspotValidation:
-      "ಪ್ರೋಟೋಟೈಪ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ದಾಖಲೆಗಳು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾತ್ರ. ವಾಸ್ತವ ನಿರ್ಧಾರಗಳ ಮೊದಲು ಕ್ಷೇತ್ರ ವರದಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+      "ಪ್ರೋಟೋಟೈಪ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ದಾಖಲೆಗಳು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಮಾತ್ರ.",
     critical: "ತೀವ್ರ",
     high: "ಹೆಚ್ಚು",
     medium: "ಮಧ್ಯಮ",
     low: "ಕಡಿಮೆ",
+
     advisoriesKicker: "ರೈತ ಕಾರ್ಯ ಕೇಂದ್ರ",
     advisoriesTitle: "ಬೆಳೆ ಸಲಹೆಗಳು",
     advisoriesDescription:
-      "AI ರೋಗನಿರ್ಣಯವನ್ನು ಸ್ಪಷ್ಟವಾದ ಮುಂದಿನ ಕ್ರಮಗಳು, ತಡೆಗಟ್ಟುವಿಕೆ ಮತ್ತು ಮೇಲ್ವಿಚಾರಣಾ ಮಾರ್ಗದರ್ಶನವಾಗಿ ಪರಿವರ್ತಿಸಿ.",
+      "AI ರೋಗನಿರ್ಣಯವನ್ನು ಸ್ಪಷ್ಟ ಕ್ರಮಗಳು ಮತ್ತು ಮೇಲ್ವಿಚಾರಣಾ ಮಾರ್ಗದರ್ಶನವಾಗಿ ಪರಿವರ್ತಿಸಿ.",
     aiAssisted: "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ",
     currentCondition: "ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ",
     noDiagnosis: "ಇನ್ನೂ ರೋಗನಿರ್ಣಯವಿಲ್ಲ",
@@ -643,18 +676,26 @@ const translations = {
     expertTitle:
       "AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ — ತಜ್ಞರ ಪರಿಶೀಲನೆ ಶಿಫಾರಸು",
     expertText:
-      "CropShield ನಿರ್ಧಾರ ಸಹಾಯ ಒದಗಿಸುತ್ತದೆ. ಕ್ರಮಕ್ಕೆ ಮೊದಲು ಹೊಲದ ಲಕ್ಷಣಗಳು, ಬೆಳೆ ವೈವಿಧ್ಯ, ಸ್ಥಳೀಯ ಪರಿಸ್ಥಿತಿಗಳು ಮತ್ತು ಅಧಿಕೃತ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಪರಿಗಣಿಸಬೇಕು.",
+      "ಕ್ರಮಕ್ಕೆ ಮೊದಲು ಸ್ಥಳೀಯ ಪರಿಸ್ಥಿತಿಗಳು ಮತ್ತು ಅಧಿಕೃತ ಕೃಷಿ ಮಾರ್ಗದರ್ಶನವನ್ನು ಪರಿಗಣಿಸಬೇಕು.",
     fieldRoutine: "ಹೊಲದ ದಿನಚರಿ",
     scoutConsistently: "ನಿಯಮಿತವಾಗಿ ಪರಿಶೀಲಿಸಿ",
     scoutText:
       "ನಿಯಮಿತ ಗಮನವು ರೋಗವನ್ನು ಬೇಗ ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
     recordKeeping: "ದಾಖಲೆ ನಿರ್ವಹಣೆ",
     captureLocation: "ಸ್ಥಳ ದಾಖಲಿಸಿ",
-    recordText: "ಹಾಟ್‌ಸ್ಪಾಟ್ ಮ್ಯಾಪಿಂಗ್‌ಗೆ ಕ್ಷೇತ್ರ ವರದಿಗಳನ್ನು ಬಳಸಿ.",
+    recordText:
+      "ಹಾಟ್‌ಸ್ಪಾಟ್ ಮ್ಯಾಪಿಂಗ್‌ಗೆ ಕ್ಷೇತ್ರ ವರದಿಗಳನ್ನು ಬಳಸಿ.",
     escalation: "ತಜ್ಞರ ಸಹಾಯ",
     askExpert: "ತಜ್ಞರನ್ನು ಕೇಳಿ",
     escalationText:
-      "ಅನಿಶ್ಚಿತ ಅಥವಾ ಹರಡುತ್ತಿರುವ ಪ್ರಕರಣಗಳನ್ನು ತಜ್ಞರಿಗೆ ಕಳುಹಿಸಿ.",
+      "ಅನಿಶ್ಚಿತ ಪ್ರಕರಣಗಳನ್ನು ತಜ್ಞರಿಗೆ ಕಳುಹಿಸಿ.",
+
+    errors: {
+      prediction: "ರೋಗನಿರ್ಣಯ ವಿಫಲವಾಗಿದೆ",
+      server:
+        "AI ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
+    },
+
     footer: "ಹೆಚ್ಚು ಸ್ಮಾರ್ಟ್ ಮತ್ತು ಸುರಕ್ಷಿತ ಕೃಷಿಗಾಗಿ",
   },
 
@@ -705,19 +746,21 @@ const translations = {
     rainfall: "વરસાદ",
     pestActivity: "જીવાત પ્રવૃત્તિ",
     cropStage: "પાકનો તબક્કો",
-    warningTitle: "હાલની પરિસ્થિતિઓ રોગ વિકાસ માટે અનુકૂળ છે.",
+    warningTitle:
+      "હાલની પરિસ્થિતિઓ રોગ વિકાસ માટે અનુકૂળ છે.",
     warningText:
-      "આ નમૂના જોખમ એન્જિન પર્યાવરણીય પરિસ્થિતિઓ, પાકનો તબક્કો અને જીવાત પ્રવૃત્તિને જોડીને સંભવિત ફાટી નીકળવાની બાબતોને પ્રાધાન્ય આપે છે.",
+      "આ નમૂના જોખમ એન્જિન પર્યાવરણીય પરિસ્થિતિઓ, પાકનો તબક્કો અને જીવાત પ્રવૃત્તિને જોડે છે.",
     recommendedActionRisk: "ભલામણ કરેલ પગલું",
     recommendedActionText:
-      "ખેતરની દેખરેખ વધારો, નજીકના છોડની તપાસ કરો અને યોગ્ય સંકલિત જીવાત વ્યવસ્થાપન માર્ગદર્શિકાનું પાલન કરો.",
+      "ખેતરની દેખરેખ વધારો અને નજીકના છોડની તપાસ કરો.",
     pestTrap: "જીવાત ટ્રેપ સંકેત",
     pestTrapText:
-      "નમૂના સેન્સર ફીડ દેખરેખ વિસ્તારમાં વધેલી જીવાત પ્રવૃત્તિ દર્શાવે છે.",
+      "નમૂના સેન્સર ફીડ વધેલી જીવાત પ્રવૃત્તિ દર્શાવે છે.",
     nextUpdate: "આગલું અપડેટ",
     nextUpdateText:
-      "નવું હવામાન, પાક-તબક્કો અથવા જીવાત અવલોકનો મળે ત્યારે જોખમની ફરી ગણતરી કરવી જોઈએ.",
+      "નવી માહિતી મળ્યા પછી જોખમ ફરી ગણતરી કરવી જોઈએ.",
     backToDiagnosis: "નિદાન પર પાછા જાઓ",
+
     hotspotsKicker: "ભૌગોલિક માહિતી",
     hotspotTitle: "રોગ હોટસ્પોટ્સ",
     hotspotsDescription:
@@ -737,15 +780,16 @@ const translations = {
     mapRisk: "જોખમ",
     mapReports: "અહેવાલો",
     hotspotValidation:
-      "પ્રોટોટાઇપ હોટસ્પોટ રેકોર્ડ પ્રદર્શન માટે છે. વાસ્તવિક નિર્ણય પહેલાં ક્ષેત્ર અહેવાલોની ચકાસણી કરવી.",
+      "પ્રોટોટાઇપ હોટસ્પોટ રેકોર્ડ પ્રદર્શન માટે છે.",
     critical: "ગંભીર",
     high: "ઉચ્ચ",
     medium: "મધ્યમ",
     low: "નીચું",
+
     advisoriesKicker: "ખેડૂત કાર્ય કેન્દ્ર",
     advisoriesTitle: "પાક સલાહ",
     advisoriesDescription:
-      "AI નિદાનને સ્પષ્ટ આગળના પગલાં, નિવારણ અને દેખરેખ માર્ગદર્શનમાં ફેરવો.",
+      "AI નિદાનને સ્પષ્ટ આગળના પગલાં અને દેખરેખ માર્ગદર્શનમાં ફેરવો.",
     aiAssisted: "AI સહાયિત માર્ગદર્શન",
     currentCondition: "વર્તમાન સ્થિતિ",
     noDiagnosis: "હજુ નિદાન નથી",
@@ -759,16 +803,22 @@ const translations = {
     expertTitle:
       "AI સહાયિત માર્ગદર્શન — નિષ્ણાત ચકાસણીની ભલામણ",
     expertText:
-      "CropShield નિર્ણય સહાય આપે છે. પગલાં પહેલાં ખેતરના લક્ષણો, પાકની જાત, સ્થાનિક પરિસ્થિતિઓ અને સત્તાવાર કૃષિ માર્ગદર્શન ધ્યાનમાં લો.",
+      "સ્થાનિક પરિસ્થિતિ અને સત્તાવાર કૃષિ માર્ગદર્શન ધ્યાનમાં લો.",
     fieldRoutine: "ખેતરની દિનચર્યા",
     scoutConsistently: "નિયમિત તપાસ કરો",
-    scoutText: "નિયમિત દેખરેખથી રોગ વહેલો ઓળખવામાં મદદ મળે છે.",
+    scoutText: "નિયમિત દેખરેખથી રોગ વહેલો ઓળખી શકાય છે.",
     recordKeeping: "રેકોર્ડ રાખવું",
     captureLocation: "સ્થાન નોંધો",
     recordText: "હોટસ્પોટ નકશા માટે ક્ષેત્ર અહેવાલોનો ઉપયોગ કરો.",
     escalation: "નિષ્ણાત સહાય",
     askExpert: "નિષ્ણાતને પૂછો",
-    escalationText: "અનિશ્ચિત અથવા ફેલાતા કેસોને નિષ્ણાત પાસે મોકલો.",
+    escalationText: "અનિશ્ચિત કેસોને નિષ્ણાત પાસે મોકલો.",
+
+    errors: {
+      prediction: "નિદાન નિષ્ફળ થયું",
+      server: "AI સર્વર સાથે જોડાઈ શકાઈ નથી.",
+    },
+
     footer: "વધુ સ્માર્ટ અને સુરક્ષિત ખેતી માટે",
   },
 
@@ -819,23 +869,25 @@ const translations = {
     rainfall: "மழைப்பொழிவு",
     pestActivity: "பூச்சி செயல்பாடு",
     cropStage: "பயிர் நிலை",
-    warningTitle: "தற்போதைய நிலைமைகள் நோய் வளர்ச்சிக்கு சாதகமாக உள்ளன.",
+    warningTitle:
+      "தற்போதைய நிலைமைகள் நோய் வளர்ச்சிக்கு சாதகமாக உள்ளன.",
     warningText:
-      "இந்த முன்மாதிரி ஆபத்து இயந்திரம் சுற்றுச்சூழல் நிலைமைகள், பயிர் நிலை மற்றும் பூச்சி செயல்பாட்டை இணைத்து சாத்தியமான பரவல்களுக்கு முன்னுரிமை அளிக்கிறது.",
+      "மாதிரி ஆபத்து அமைப்பு சுற்றுச்சூழல் நிலைமைகள், பயிர் நிலை மற்றும் பூச்சி செயல்பாட்டை இணைக்கிறது.",
     recommendedActionRisk: "பரிந்துரைக்கப்பட்ட நடவடிக்கை",
     recommendedActionText:
-      "வயல் கண்காணிப்பை அதிகரிக்கவும், அருகிலுள்ள செடிகளை ஆய்வு செய்யவும், பொருத்தமான ஒருங்கிணைந்த பூச்சி மேலாண்மை வழிகாட்டுதல்களைப் பின்பற்றவும்.",
+      "வயல் கண்காணிப்பை அதிகரிக்கவும் மற்றும் அருகிலுள்ள செடிகளை ஆய்வு செய்யவும்.",
     pestTrap: "பூச்சி பொறி சமிக்ஞை",
     pestTrapText:
-      "முன்மாதிரி சென்சார் ஊட்டம் கண்காணிக்கப்படும் பகுதியில் அதிகரித்த பூச்சி செயல்பாட்டைக் காட்டுகிறது.",
+      "முன்மாதிரி சென்சார் அதிகரித்த பூச்சி செயல்பாட்டைக் காட்டுகிறது.",
     nextUpdate: "அடுத்த புதுப்பிப்பு",
     nextUpdateText:
-      "புதிய வானிலை, பயிர்-நிலை அல்லது பூச்சி அவதானிப்புகள் கிடைக்கும்போது ஆபத்து மீண்டும் கணக்கிடப்பட வேண்டும்.",
+      "புதிய தரவு கிடைக்கும்போது ஆபத்து மீண்டும் கணக்கிடப்பட வேண்டும்.",
     backToDiagnosis: "நோயறிதலுக்குத் திரும்பு",
+
     hotspotsKicker: "புவியியல் தகவல்",
     hotspotTitle: "நோய் ஹாட்ஸ்பாட்கள்",
     hotspotsDescription:
-      "பதிவான பயிர் ஆரோக்கிய வழக்குகளைப் பார்த்து, குழுக்களை அடையாளம் கண்டு, வயல் ஆய்வுக்கு முன்னுரிமை அளிக்கவும்.",
+      "பதிவான பயிர் ஆரோக்கிய வழக்குகளைப் பார்த்து வயல் ஆய்வுக்கு முன்னுரிமை அளிக்கவும்.",
     prototypeData: "முன்மாதிரி தரவு",
     reportedClusters: "பதிவான குழுக்கள்",
     highCritical: "உயர் / தீவிர",
@@ -851,15 +903,16 @@ const translations = {
     mapRisk: "ஆபத்து",
     mapReports: "அறிக்கைகள்",
     hotspotValidation:
-      "முன்மாதிரி ஹாட்ஸ்பாட் பதிவுகள் விளக்கத்திற்காக மட்டுமே. உண்மையான முடிவுகளுக்கு முன் வயல் அறிக்கைகள் சரிபார்க்கப்பட வேண்டும்.",
+      "முன்மாதிரி ஹாட்ஸ்பாட் பதிவுகள் விளக்கத்திற்காக மட்டுமே.",
     critical: "தீவிர",
     high: "உயர்",
     medium: "மிதமான",
     low: "குறைந்த",
+
     advisoriesKicker: "விவசாயி நடவடிக்கை மையம்",
     advisoriesTitle: "பயிர் ஆலோசனைகள்",
     advisoriesDescription:
-      "AI நோயறிதலை தெளிவான அடுத்த படிகள், தடுப்பு மற்றும் கண்காணிப்பு வழிகாட்டுதலாக மாற்றுங்கள்.",
+      "AI நோயறிதலை அடுத்த நடவடிக்கைகள் மற்றும் கண்காணிப்பு வழிகாட்டுதலாக மாற்றுங்கள்.",
     aiAssisted: "AI உதவியுடன் வழிகாட்டுதல்",
     currentCondition: "தற்போதைய நிலை",
     noDiagnosis: "இன்னும் நோயறிதல் இல்லை",
@@ -873,7 +926,7 @@ const translations = {
     expertTitle:
       "AI உதவியுடன் வழிகாட்டுதல் — நிபுணர் சரிபார்ப்பு பரிந்துரைக்கப்படுகிறது",
     expertText:
-      "CropShield முடிவு ஆதரவை வழங்குகிறது. செயலுக்கு முன் வயல் அறிகுறிகள், பயிர் வகை, உள்ளூர் நிலைமைகள் மற்றும் அதிகாரப்பூர்வ வேளாண் வழிகாட்டுதலை கருத்தில் கொள்ளுங்கள்.",
+      "உள்ளூர் நிலைமைகள் மற்றும் அதிகாரப்பூர்வ வேளாண் வழிகாட்டுதலை கருத்தில் கொள்ளுங்கள்.",
     fieldRoutine: "வயல் நடைமுறை",
     scoutConsistently: "தொடர்ந்து ஆய்வு செய்யுங்கள்",
     scoutText: "தொடர்ச்சியான கண்காணிப்பு ஆரம்பகால கண்டறிதலை மேம்படுத்துகிறது.",
@@ -882,8 +935,13 @@ const translations = {
     recordText: "ஹாட்ஸ்பாட் வரைபடத்திற்கு வயல் அறிக்கைகளைப் பயன்படுத்தவும்.",
     escalation: "நிபுணர் உதவி",
     askExpert: "நிபுணரை கேளுங்கள்",
-    escalationText:
-      "நிச்சயமற்ற அல்லது பரவும் வழக்குகளை நிபுணரிடம் அனுப்பவும்.",
+    escalationText: "நிச்சயமற்ற வழக்குகளை நிபுணரிடம் அனுப்பவும்.",
+
+    errors: {
+      prediction: "நோயறிதல் தோல்வியடைந்தது",
+      server: "AI சேவையகத்துடன் இணைக்க முடியவில்லை.",
+    },
+
     footer: "மேலும் புத்திசாலி மற்றும் பாதுகாப்பான விவசாயத்திற்காக",
   },
 
@@ -934,23 +992,25 @@ const translations = {
     rainfall: "বৃষ্টিপাত",
     pestActivity: "পোকামাকড়ের কার্যকলাপ",
     cropStage: "ফসলের পর্যায়",
-    warningTitle: "বর্তমান পরিস্থিতি রোগ বিকাশের জন্য অনুকূল।",
+    warningTitle:
+      "বর্তমান পরিস্থিতি রোগ বিকাশের জন্য অনুকূল।",
     warningText:
-      "এই প্রোটোটাইপ ঝুঁকি ইঞ্জিন পরিবেশগত পরিস্থিতি, ফসলের পর্যায় এবং পোকামাকড়ের কার্যকলাপকে একত্রিত করে সম্ভাব্য প্রাদুর্ভাবকে অগ্রাধিকার দেয়।",
+      "এই প্রোটোটাইপ ঝুঁকি ইঞ্জিন পরিবেশগত পরিস্থিতি, ফসলের পর্যায় এবং পোকামাকড়ের কার্যকলাপকে একত্রিত করে।",
     recommendedActionRisk: "প্রস্তাবিত পদক্ষেপ",
     recommendedActionText:
-      "ক্ষেতের পর্যবেক্ষণ বাড়ান, আশেপাশের গাছ পরীক্ষা করুন এবং উপযুক্ত সমন্বিত পোকামাকড় ব্যবস্থাপনা নির্দেশিকা অনুসরণ করুন।",
+      "ক্ষেতের পর্যবেক্ষণ বাড়ান এবং আশেপাশের গাছ পরীক্ষা করুন।",
     pestTrap: "পোকা ফাঁদ সংকেত",
     pestTrapText:
-      "প্রোটোটাইপ সেন্সর ফিড পর্যবেক্ষণ এলাকায় বর্ধিত পোকামাকড়ের কার্যকলাপ নির্দেশ করে।",
+      "প্রোটোটাইপ সেন্সর ফিড বর্ধিত পোকামাকড়ের কার্যকলাপ নির্দেশ করে।",
     nextUpdate: "পরবর্তী আপডেট",
     nextUpdateText:
-      "নতুন আবহাওয়া, ফসলের পর্যায় বা পোকামাকড়ের পর্যবেক্ষণ পাওয়া গেলে ঝুঁকি পুনরায় গণনা করা উচিত।",
+      "নতুন তথ্য পাওয়া গেলে ঝুঁকি পুনরায় গণনা করা উচিত।",
     backToDiagnosis: "নির্ণয়ে ফিরে যান",
+
     hotspotsKicker: "ভৌগোলিক তথ্য",
     hotspotTitle: "রোগের হটস্পট",
     hotspotsDescription:
-      "রিপোর্ট করা ফসলের স্বাস্থ্য কেস দেখুন, ক্লাস্টার চিহ্নিত করুন এবং ক্ষেত্র পরিদর্শনকে অগ্রাধিকার দিন।",
+      "রিপোর্ট করা ফসলের স্বাস্থ্য কেস দেখুন এবং ক্ষেত্র পরিদর্শনকে অগ্রাধিকার দিন।",
     prototypeData: "প্রোটোটাইপ ডেটা",
     reportedClusters: "রিপোর্ট করা ক্লাস্টার",
     highCritical: "উচ্চ / গুরুতর",
@@ -966,15 +1026,16 @@ const translations = {
     mapRisk: "ঝুঁকি",
     mapReports: "রিপোর্ট",
     hotspotValidation:
-      "প্রোটোটাইপ হটস্পট রেকর্ড প্রদর্শনের জন্য। বাস্তব সিদ্ধান্তের আগে ক্ষেত্রের রিপোর্ট যাচাই করুন।",
+      "প্রোটোটাইপ হটস্পট রেকর্ড প্রদর্শনের জন্য।",
     critical: "গুরুতর",
     high: "উচ্চ",
     medium: "মাঝারি",
     low: "কম",
+
     advisoriesKicker: "কৃষক কর্ম কেন্দ্র",
     advisoriesTitle: "ফসল পরামর্শ",
     advisoriesDescription:
-      "AI রোগ নির্ণয়কে পরিষ্কার পরবর্তী পদক্ষেপ, প্রতিরোধ এবং পর্যবেক্ষণ নির্দেশিকায় রূপান্তর করুন।",
+      "AI রোগ নির্ণয়কে পরবর্তী পদক্ষেপ এবং পর্যবেক্ষণ নির্দেশিকায় রূপান্তর করুন।",
     aiAssisted: "AI-সহায়িত নির্দেশনা",
     currentCondition: "বর্তমান অবস্থা",
     noDiagnosis: "এখনও রোগ নির্ণয় নেই",
@@ -988,17 +1049,22 @@ const translations = {
     expertTitle:
       "AI-সহায়িত নির্দেশনা — বিশেষজ্ঞ যাচাইয়ের পরামর্শ",
     expertText:
-      "CropShield সিদ্ধান্ত সহায়তা দেয়। পদক্ষেপের আগে ক্ষেতের লক্ষণ, ফসলের জাত, স্থানীয় পরিস্থিতি এবং সরকারি কৃষি নির্দেশিকা বিবেচনা করুন।",
+      "স্থানীয় পরিস্থিতি এবং সরকারি কৃষি নির্দেশিকা বিবেচনা করুন।",
     fieldRoutine: "ক্ষেতের রুটিন",
     scoutConsistently: "নিয়মিত পরিদর্শন করুন",
-    scoutText:
-      "নিয়মিত পর্যবেক্ষণ প্রাথমিকভাবে রোগ শনাক্ত করতে সাহায্য করে।",
+    scoutText: "নিয়মিত পর্যবেক্ষণ প্রাথমিকভাবে রোগ শনাক্ত করতে সাহায্য করে।",
     recordKeeping: "রেকর্ড রাখা",
     captureLocation: "অবস্থান নথিভুক্ত করুন",
     recordText: "হটস্পট ম্যাপিংয়ের জন্য ক্ষেতের রিপোর্ট ব্যবহার করুন।",
     escalation: "বিশেষজ্ঞ সহায়তা",
     askExpert: "বিশেষজ্ঞকে জিজ্ঞাসা করুন",
-    escalationText: "অনিশ্চিত বা ছড়িয়ে পড়া কেস বিশেষজ্ঞের কাছে পাঠান।",
+    escalationText: "অনিশ্চিত কেস বিশেষজ্ঞের কাছে পাঠান।",
+
+    errors: {
+      prediction: "রোগ নির্ণয় ব্যর্থ হয়েছে",
+      server: "AI সার্ভারের সাথে সংযোগ করা যায়নি।",
+    },
+
     footer: "আরও স্মার্ট ও নিরাপদ কৃষির জন্য",
   },
 
@@ -1049,23 +1115,25 @@ const translations = {
     rainfall: "മഴ",
     pestActivity: "കീട പ്രവർത്തനം",
     cropStage: "വിള ഘട്ടം",
-    warningTitle: "നിലവിലെ സാഹചര്യങ്ങൾ രോഗവളർച്ചയ്ക്ക് അനുകൂലമാണ്.",
+    warningTitle:
+      "നിലവിലെ സാഹചര്യങ്ങൾ രോഗവളർച്ചയ്ക്ക് അനുകൂലമാണ്.",
     warningText:
-      "ഈ മാതൃകാ റിസ്ക് എഞ്ചിൻ പാരിസ്ഥിതിക സാഹചര്യങ്ങൾ, വിള ഘട്ടം, കീട പ്രവർത്തനം എന്നിവ സംയോജിപ്പിച്ച് സാധ്യതയുള്ള വ്യാപനങ്ങൾക്ക് മുൻഗണന നൽകുന്നു.",
+      "ഈ മാതൃകാ റിസ്ക് എഞ്ചിൻ പാരിസ്ഥിതിക സാഹചര്യങ്ങൾ, വിള ഘട്ടം, കീട പ്രവർത്തനം എന്നിവ സംയോജിപ്പിക്കുന്നു.",
     recommendedActionRisk: "ശുപാർശ ചെയ്യുന്ന നടപടി",
     recommendedActionText:
-      "വയൽ നിരീക്ഷണം വർദ്ധിപ്പിക്കുക, സമീപത്തെ ചെടികൾ പരിശോധിക്കുക, ഉചിതമായ സംയോജിത കീട നിയന്ത്രണ മാർഗ്ഗനിർദ്ദേശങ്ങൾ പിന്തുടരുക.",
+      "വയൽ നിരീക്ഷണം വർദ്ധിപ്പിച്ച് സമീപത്തെ ചെടികൾ പരിശോധിക്കുക.",
     pestTrap: "കീട കെണി സിഗ്നൽ",
     pestTrapText:
-      "മാതൃകാ സെൻസർ ഫീഡ് നിരീക്ഷിക്കുന്ന പ്രദേശത്ത് വർദ്ധിച്ച കീട പ്രവർത്തനം സൂചിപ്പിക്കുന്നു.",
+      "മാതൃകാ സെൻസർ ഫീഡ് വർദ്ധിച്ച കീട പ്രവർത്തനം സൂചിപ്പിക്കുന്നു.",
     nextUpdate: "അടുത്ത അപ്ഡേറ്റ്",
     nextUpdateText:
-      "പുതിയ കാലാവസ്ഥ, വിള-ഘട്ടം, അല്ലെങ്കിൽ കീട നിരീക്ഷണങ്ങൾ ലഭിക്കുമ്പോൾ അപകടസാധ്യത വീണ്ടും കണക്കാക്കണം.",
+      "പുതിയ വിവരങ്ങൾ ലഭിക്കുമ്പോൾ അപകടസാധ്യത വീണ്ടും കണക്കാക്കണം.",
     backToDiagnosis: "രോഗനിർണയത്തിലേക്ക് മടങ്ങുക",
+
     hotspotsKicker: "ഭൗമ വിവരങ്ങൾ",
     hotspotTitle: "രോഗ ഹോട്ട്‌സ്‌പോട്ടുകൾ",
     hotspotsDescription:
-      "റിപ്പോർട്ട് ചെയ്ത വിള ആരോഗ്യ കേസുകൾ കാണുക, ക്ലസ്റ്ററുകൾ തിരിച്ചറിയുക, വയൽ പരിശോധനയ്ക്ക് മുൻഗണന നൽകുക.",
+      "റിപ്പോർട്ട് ചെയ്ത വിള ആരോഗ്യ കേസുകൾ കാണുകയും വയൽ പരിശോധനയ്ക്ക് മുൻഗണന നൽകുകയും ചെയ്യുക.",
     prototypeData: "പ്രോട്ടോടൈപ്പ് ഡാറ്റ",
     reportedClusters: "റിപ്പോർട്ട് ചെയ്ത ക്ലസ്റ്ററുകൾ",
     highCritical: "ഉയർന്ന / ഗുരുതര",
@@ -1081,15 +1149,16 @@ const translations = {
     mapRisk: "അപകടം",
     mapReports: "റിപ്പോർട്ടുകൾ",
     hotspotValidation:
-      "പ്രോട്ടോടൈപ്പ് ഹോട്ട്‌സ്‌പോട്ട് രേഖകൾ പ്രദർശനത്തിനായി മാത്രമാണ്. യഥാർത്ഥ തീരുമാനങ്ങൾക്ക് മുമ്പ് ഫീൽഡ് റിപ്പോർട്ടുകൾ പരിശോധിക്കുക.",
+      "പ്രോട്ടോടൈപ്പ് ഹോട്ട്‌സ്‌പോട്ട് രേഖകൾ പ്രദർശനത്തിനായി മാത്രമാണ്.",
     critical: "ഗുരുതരം",
     high: "ഉയർന്ന",
     medium: "മിതമായ",
     low: "കുറഞ്ഞ",
+
     advisoriesKicker: "കർഷക പ്രവർത്തന കേന്ദ്രം",
     advisoriesTitle: "വിള ഉപദേശങ്ങൾ",
     advisoriesDescription:
-      "AI രോഗനിർണയത്തെ വ്യക്തമായ അടുത്ത ഘട്ടങ്ങൾ, പ്രതിരോധം, നിരീക്ഷണ മാർഗ്ഗനിർദ്ദേശം എന്നിവയായി മാറ്റുക.",
+      "AI രോഗനിർണയത്തെ അടുത്ത നടപടികളും നിരീക്ഷണ മാർഗ്ഗനിർദ്ദേശവുമാക്കി മാറ്റുക.",
     aiAssisted: "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം",
     currentCondition: "നിലവിലെ സ്ഥിതി",
     noDiagnosis: "ഇനിയും രോഗനിർണയം ഇല്ല",
@@ -1103,7 +1172,7 @@ const translations = {
     expertTitle:
       "AI സഹായമുള്ള മാർഗ്ഗനിർദ്ദേശം — വിദഗ്ധ പരിശോധന ശുപാർശ ചെയ്യുന്നു",
     expertText:
-      "CropShield തീരുമാന പിന്തുണ നൽകുന്നു. പ്രവർത്തനത്തിന് മുമ്പ് വയലിലെ ലക്ഷണങ്ങൾ, വിള ഇനം, പ്രാദേശിക സാഹചര്യങ്ങൾ, ഔദ്യോഗിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങൾ എന്നിവ പരിഗണിക്കുക.",
+      "പ്രാദേശിക സാഹചര്യങ്ങളും ഔദ്യോഗിക കാർഷിക മാർഗ്ഗനിർദ്ദേശങ്ങളും പരിഗണിക്കുക.",
     fieldRoutine: "വയൽ ദിനചര്യ",
     scoutConsistently: "സ്ഥിരമായി പരിശോധിക്കുക",
     scoutText: "സ്ഥിരമായ നിരീക്ഷണം രോഗം നേരത്തെ കണ്ടെത്താൻ സഹായിക്കുന്നു.",
@@ -1112,7 +1181,13 @@ const translations = {
     recordText: "ഹോട്ട്‌സ്‌പോട്ട് മാപ്പിംഗിനായി ഫീൽഡ് റിപ്പോർട്ടുകൾ ഉപയോഗിക്കുക.",
     escalation: "വിദഗ്ധ സഹായം",
     askExpert: "വിദഗ്ധരോട് ചോദിക്കുക",
-    escalationText: "അനിശ്ചിതമോ വ്യാപിക്കുന്നതോ ആയ കേസുകൾ വിദഗ്ധരിലേക്ക് അയയ്ക്കുക.",
+    escalationText: "അനിശ്ചിത കേസുകൾ വിദഗ്ധരിലേക്ക് അയയ്ക്കുക.",
+
+    errors: {
+      prediction: "രോഗനിർണയം പരാജയപ്പെട്ടു",
+      server: "AI സെർവറുമായി ബന്ധിപ്പിക്കാൻ കഴിഞ്ഞില്ല.",
+    },
+
     footer: "കൂടുതൽ സ്മാർട്ടും സുരക്ഷിതവുമായ കൃഷിക്കായി",
   },
 
@@ -1163,23 +1238,25 @@ const translations = {
     rainfall: "ਬਾਰਿਸ਼",
     pestActivity: "ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ",
     cropStage: "ਫਸਲ ਦਾ ਪੜਾਅ",
-    warningTitle: "ਮੌਜੂਦਾ ਹਾਲਾਤ ਬਿਮਾਰੀ ਦੇ ਵਿਕਾਸ ਲਈ ਅਨੁਕੂਲ ਹਨ।",
+    warningTitle:
+      "ਮੌਜੂਦਾ ਹਾਲਾਤ ਬਿਮਾਰੀ ਦੇ ਵਿਕਾਸ ਲਈ ਅਨੁਕੂਲ ਹਨ।",
     warningText:
-      "ਇਹ ਨਮੂਨਾ ਖਤਰਾ ਇੰਜਣ ਵਾਤਾਵਰਣਕ ਹਾਲਾਤ, ਫਸਲ ਦੇ ਪੜਾਅ, ਅਤੇ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਨੂੰ ਜੋੜ ਕੇ ਸੰਭਾਵੀ ਪ੍ਰਕੋਪਾਂ ਨੂੰ ਤਰਜੀਹ ਦਿੰਦਾ ਹੈ।",
+      "ਇਹ ਨਮੂਨਾ ਖਤਰਾ ਇੰਜਣ ਵਾਤਾਵਰਣਕ ਹਾਲਾਤ, ਫਸਲ ਦੇ ਪੜਾਅ, ਅਤੇ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਨੂੰ ਜੋੜਦਾ ਹੈ।",
     recommendedActionRisk: "ਸਿਫਾਰਸ਼ੀ ਕਾਰਵਾਈ",
     recommendedActionText:
-      "ਖੇਤ ਦੀ ਨਿਗਰਾਨੀ ਵਧਾਓ, ਨੇੜਲੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ, ਅਤੇ ਢੁਕਵੇਂ ਏਕੀਕ੍ਰਿਤ ਕੀਟ ਪ੍ਰਬੰਧਨ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼ਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ।",
+      "ਖੇਤ ਦੀ ਨਿਗਰਾਨੀ ਵਧਾਓ ਅਤੇ ਨੇੜਲੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
     pestTrap: "ਕੀੜੇ ਟਰੈਪ ਸੰਕੇਤ",
     pestTrapText:
-      "ਨਮੂਨਾ ਸੈਂਸਰ ਫੀਡ ਨਿਗਰਾਨੀ ਖੇਤਰ ਵਿੱਚ ਵਧੀ ਹੋਈ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਦਰਸਾਉਂਦੀ ਹੈ।",
+      "ਨਮੂਨਾ ਸੈਂਸਰ ਫੀਡ ਵਧੀ ਹੋਈ ਕੀੜੇ ਦੀ ਗਤੀਵਿਧੀ ਦਰਸਾਉਂਦੀ ਹੈ।",
     nextUpdate: "ਅਗਲਾ ਅੱਪਡੇਟ",
     nextUpdateText:
-      "ਨਵਾਂ ਮੌਸਮ, ਫਸਲ-ਪੜਾਅ, ਜਾਂ ਕੀੜੇ ਨਿਰੀਖਣ ਮਿਲਣ 'ਤੇ ਖਤਰੇ ਦੀ ਮੁੜ ਗਣਨਾ ਕੀਤੀ ਜਾਣੀ ਚਾਹੀਦੀ ਹੈ।",
+      "ਨਵੀਂ ਜਾਣਕਾਰੀ ਮਿਲਣ 'ਤੇ ਖਤਰੇ ਦੀ ਮੁੜ ਗਣਨਾ ਕੀਤੀ ਜਾਵੇਗੀ।",
     backToDiagnosis: "ਨਿਦਾਨ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+
     hotspotsKicker: "ਭੂਗੋਲਿਕ ਜਾਣਕਾਰੀ",
     hotspotTitle: "ਰੋਗ ਹਾਟਸਪਾਟ",
     hotspotsDescription:
-      "ਰਿਪੋਰਟ ਕੀਤੇ ਫਸਲ ਸਿਹਤ ਮਾਮਲੇ ਵੇਖੋ, ਕਲੱਸਟਰ ਪਛਾਣੋ ਅਤੇ ਖੇਤ ਜਾਂਚ ਨੂੰ ਤਰਜੀਹ ਦਿਓ।",
+      "ਰਿਪੋਰਟ ਕੀਤੇ ਫਸਲ ਸਿਹਤ ਮਾਮਲੇ ਵੇਖੋ ਅਤੇ ਖੇਤ ਜਾਂਚ ਨੂੰ ਤਰਜੀਹ ਦਿਓ।",
     prototypeData: "ਪ੍ਰੋਟੋਟਾਈਪ ਡਾਟਾ",
     reportedClusters: "ਰਿਪੋਰਟ ਕੀਤੇ ਕਲੱਸਟਰ",
     highCritical: "ਉੱਚ / ਗੰਭੀਰ",
@@ -1195,15 +1272,16 @@ const translations = {
     mapRisk: "ਖਤਰਾ",
     mapReports: "ਰਿਪੋਰਟਾਂ",
     hotspotValidation:
-      "ਪ੍ਰੋਟੋਟਾਈਪ ਹਾਟਸਪਾਟ ਰਿਕਾਰਡ ਪ੍ਰਦਰਸ਼ਨ ਲਈ ਹਨ। ਅਸਲ ਫੈਸਲੇ ਤੋਂ ਪਹਿਲਾਂ ਖੇਤ ਰਿਪੋਰਟਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+      "ਪ੍ਰੋਟੋਟਾਈਪ ਹਾਟਸਪਾਟ ਰਿਕਾਰਡ ਪ੍ਰਦਰਸ਼ਨ ਲਈ ਹਨ।",
     critical: "ਗੰਭੀਰ",
     high: "ਉੱਚ",
     medium: "ਦਰਮਿਆਨਾ",
     low: "ਘੱਟ",
+
     advisoriesKicker: "ਕਿਸਾਨ ਕਾਰਵਾਈ ਕੇਂਦਰ",
     advisoriesTitle: "ਫਸਲ ਸਲਾਹ",
     advisoriesDescription:
-      "AI ਨਿਦਾਨ ਨੂੰ ਸਪਸ਼ਟ ਅਗਲੇ ਕਦਮਾਂ, ਰੋਕਥਾਮ ਅਤੇ ਨਿਗਰਾਨੀ ਮਾਰਗਦਰਸ਼ਨ ਵਿੱਚ ਬਦਲੋ।",
+      "AI ਨਿਦਾਨ ਨੂੰ ਸਪਸ਼ਟ ਅਗਲੇ ਕਦਮਾਂ ਅਤੇ ਨਿਗਰਾਨੀ ਮਾਰਗਦਰਸ਼ਨ ਵਿੱਚ ਬਦਲੋ।",
     aiAssisted: "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ",
     currentCondition: "ਮੌਜੂਦਾ ਸਥਿਤੀ",
     noDiagnosis: "ਅਜੇ ਨਿਦਾਨ ਨਹੀਂ",
@@ -1217,7 +1295,7 @@ const translations = {
     expertTitle:
       "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਮਾਰਗਦਰਸ਼ਨ — ਮਾਹਰ ਜਾਂਚ ਦੀ ਸਿਫਾਰਸ਼",
     expertText:
-      "CropShield ਫੈਸਲਾ ਸਹਾਇਤਾ ਦਿੰਦਾ ਹੈ। ਕਾਰਵਾਈ ਤੋਂ ਪਹਿਲਾਂ ਖੇਤ ਦੇ ਲੱਛਣ, ਫਸਲ ਦੀ ਕਿਸਮ, ਸਥਾਨਕ ਹਾਲਾਤ ਅਤੇ ਅਧਿਕਾਰਤ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ।",
+      "ਸਥਾਨਕ ਹਾਲਾਤ ਅਤੇ ਅਧਿਕਾਰਤ ਖੇਤੀਬਾੜੀ ਮਾਰਗਦਰਸ਼ਨ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ।",
     fieldRoutine: "ਖੇਤ ਰੁਟੀਨ",
     scoutConsistently: "ਨਿਯਮਿਤ ਜਾਂਚ ਕਰੋ",
     scoutText: "ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਨਾਲ ਰੋਗ ਜਲਦੀ ਪਛਾਣਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
@@ -1226,13 +1304,19 @@ const translations = {
     recordText: "ਹਾਟਸਪਾਟ ਮੈਪਿੰਗ ਲਈ ਖੇਤ ਰਿਪੋਰਟਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
     escalation: "ਮਾਹਰ ਸਹਾਇਤਾ",
     askExpert: "ਮਾਹਰ ਨੂੰ ਪੁੱਛੋ",
-    escalationText: "ਅਨਿਸ਼ਚਿਤ ਜਾਂ ਫੈਲ ਰਹੇ ਮਾਮਲੇ ਮਾਹਰ ਨੂੰ ਭੇਜੋ।",
+    escalationText: "ਅਨਿਸ਼ਚਿਤ ਮਾਮਲੇ ਮਾਹਰ ਨੂੰ ਭੇਜੋ।",
+
+    errors: {
+      prediction: "ਨਿਦਾਨ ਅਸਫਲ ਹੋਇਆ",
+      server: "AI ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕਿਆ।",
+    },
+
     footer: "ਹੋਰ ਸਮਾਰਟ ਅਤੇ ਸੁਰੱਖਿਅਤ ਖੇਤੀ ਲਈ",
   },
 };
 
 /* =========================================================
-   DISEASE NAME TRANSLATION
+   DISEASE TRANSLATION
 ========================================================= */
 
 const translateDiseaseName = (name, language) => {
@@ -1245,6 +1329,7 @@ const translateDiseaseName = (name, language) => {
 
   if (cleanName.includes("early blight")) {
     const values = {
+      en: "Early Blight",
       mr: "अर्ली ब्लाइट",
       hi: "अर्ली ब्लाइट",
       te: "ఎర్లీ బ్లైట్",
@@ -1254,7 +1339,6 @@ const translateDiseaseName = (name, language) => {
       bn: "আর্লি ব্লাইট",
       ml: "ഏർലി ബ്ലൈറ്റ്",
       pa: "ਅਰਲੀ ਬਲਾਈਟ",
-      en: "Early Blight",
     };
 
     return values[language] || values.en;
@@ -1262,6 +1346,7 @@ const translateDiseaseName = (name, language) => {
 
   if (cleanName.includes("late blight")) {
     const values = {
+      en: "Late Blight",
       mr: "लेट ब्लाइट",
       hi: "लेट ब्लाइट",
       te: "లేట్ బ్లైట్",
@@ -1271,7 +1356,6 @@ const translateDiseaseName = (name, language) => {
       bn: "লেট ব্লাইট",
       ml: "ലേറ്റ് ബ്ലൈറ്റ്",
       pa: "ਲੇਟ ਬਲਾਈਟ",
-      en: "Late Blight",
     };
 
     return values[language] || values.en;
@@ -1279,6 +1363,7 @@ const translateDiseaseName = (name, language) => {
 
   if (cleanName.includes("leaf mold")) {
     const values = {
+      en: "Leaf Mold",
       mr: "लीफ मोल्ड",
       hi: "लीफ मोल्ड",
       te: "లీఫ్ మోల్డ్",
@@ -1288,7 +1373,6 @@ const translateDiseaseName = (name, language) => {
       bn: "লিফ মোল্ড",
       ml: "ലീഫ് മോൾഡ്",
       pa: "ਲੀਫ ਮੋਲਡ",
-      en: "Leaf Mold",
     };
 
     return values[language] || values.en;
@@ -1296,6 +1380,7 @@ const translateDiseaseName = (name, language) => {
 
   if (cleanName.includes("healthy")) {
     const values = {
+      en: "Healthy",
       mr: "निरोगी",
       hi: "स्वस्थ",
       te: "ఆరోగ్యంగా ఉంది",
@@ -1305,7 +1390,6 @@ const translateDiseaseName = (name, language) => {
       bn: "সুস্থ",
       ml: "ആരോഗ്യമുണ്ട്",
       pa: "ਤੰਦਰੁਸਤ",
-      en: "Healthy",
     };
 
     return values[language] || values.en;
@@ -1315,7 +1399,7 @@ const translateDiseaseName = (name, language) => {
 };
 
 /* =========================================================
-   LEVEL TRANSLATION
+   RISK LEVEL TRANSLATION
 ========================================================= */
 
 const localizeLevel = (value, language) => {
@@ -1328,6 +1412,7 @@ const localizeLevel = (value, language) => {
       Critical: "गंभीर",
       Review: "पडताळणी",
     },
+
     hi: {
       Moderate: "मध्यम",
       Medium: "मध्यम",
@@ -1336,6 +1421,7 @@ const localizeLevel = (value, language) => {
       Critical: "गंभीर",
       Review: "समीक्षा",
     },
+
     te: {
       Moderate: "మధ్యస్థ",
       Medium: "మధ్యస్థ",
@@ -1344,6 +1430,7 @@ const localizeLevel = (value, language) => {
       Critical: "తీవ్రమైన",
       Review: "సమీక్ష",
     },
+
     kn: {
       Moderate: "ಮಧ್ಯಮ",
       Medium: "ಮಧ್ಯಮ",
@@ -1352,6 +1439,7 @@ const localizeLevel = (value, language) => {
       Critical: "ತೀವ್ರ",
       Review: "ಪರಿಶೀಲನೆ",
     },
+
     gu: {
       Moderate: "મધ્યમ",
       Medium: "મધ્યમ",
@@ -1360,6 +1448,7 @@ const localizeLevel = (value, language) => {
       Critical: "ગંભીર",
       Review: "સમીક્ષા",
     },
+
     ta: {
       Moderate: "மிதமான",
       Medium: "மிதமான",
@@ -1368,6 +1457,7 @@ const localizeLevel = (value, language) => {
       Critical: "தீவிரம்",
       Review: "மதிப்பாய்வு",
     },
+
     bn: {
       Moderate: "মাঝারি",
       Medium: "মাঝারি",
@@ -1376,6 +1466,7 @@ const localizeLevel = (value, language) => {
       Critical: "গুরুতর",
       Review: "পর্যালোচনা",
     },
+
     ml: {
       Moderate: "മിതമായ",
       Medium: "മിതമായ",
@@ -1384,6 +1475,7 @@ const localizeLevel = (value, language) => {
       Critical: "ഗുരുതരം",
       Review: "പരിശോധന",
     },
+
     pa: {
       Moderate: "ਦਰਮਿਆਨਾ",
       Medium: "ਦਰਮਿਆਨਾ",
@@ -1398,11 +1490,21 @@ const localizeLevel = (value, language) => {
 };
 
 /* =========================================================
-   MAP RESET
+   MAP RESET VIEW
 ========================================================= */
 
-function MapResetView({ center, zoom, label }) {
+function MapResetView({
+  center,
+  zoom,
+  label,
+}) {
   const map = useMap();
+
+  useEffect(() => {
+    map.setView(center, zoom, {
+      animate: true,
+    });
+  }, [map, center, zoom]);
 
   const reset = () => {
     map.setView(center, zoom, {
@@ -1434,93 +1536,177 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [speaking, setSpeaking] = useState(false);
-  const [activePage, setActivePage] = useState("diagnosis");
-  const [language, setLanguage] = useState("mr");
-  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [activePage, setActivePage] =
+    useState("diagnosis");
 
-  /* -------------------------------------------------------
-     Translation fallback
-  ------------------------------------------------------- */
+  const [language, setLanguage] =
+    useState("mr");
+
+  const [showLanguageMenu, setShowLanguageMenu] =
+    useState(false);
+
+  /* =======================================================
+     MAHARASHTRA DISTRICTS
+  ======================================================= */
+
+  const [selectedDistrict, setSelectedDistrict] =
+    useState("Pune");
+
+  const maharashtraDistricts = {
+    Pune: {
+      center: [18.5204, 73.8567],
+      zoom: 11,
+    },
+
+    Nashik: {
+      center: [19.9975, 73.7898],
+      zoom: 11,
+    },
+
+    Nagpur: {
+      center: [21.1458, 79.0882],
+      zoom: 11,
+    },
+
+    Kolhapur: {
+      center: [16.7050, 74.2433],
+      zoom: 11,
+    },
+
+    Sangli: {
+      center: [16.8524, 74.5815],
+      zoom: 11,
+    },
+
+    Satara: {
+      center: [17.6805, 74.0183],
+      zoom: 11,
+    },
+
+    Solapur: {
+      center: [17.6599, 75.9064],
+      zoom: 11,
+    },
+
+    Ahmednagar: {
+      center: [19.0948, 74.7480],
+      zoom: 11,
+    },
+
+    Jalgaon: {
+      center: [21.0077, 75.5626],
+      zoom: 11,
+    },
+
+    Amravati: {
+      center: [20.9374, 77.7796],
+      zoom: 11,
+    },
+  };
+
+  /* =======================================================
+     TRANSLATION FALLBACK
+  ======================================================= */
 
   const t = {
     ...translations.en,
     ...(translations[language] || {}),
   };
 
-  /* -------------------------------------------------------
-     API URL
-  ------------------------------------------------------- */
+  /* =======================================================
+     API
+  ======================================================= */
 
   const API_URL =
     import.meta.env.VITE_API_URL ||
     "http://127.0.0.1:8000";
 
-  /* -------------------------------------------------------
-     Browser language
-  ------------------------------------------------------- */
+  /* =======================================================
+     LANGUAGE EFFECT
+  ======================================================= */
 
   useEffect(() => {
-    document.documentElement.lang = language;
+    document.documentElement.lang =
+      language;
   }, [language]);
 
-  /* -------------------------------------------------------
-     File picker
-  ------------------------------------------------------- */
+  /* =======================================================
+     FILE PICKER
+  ======================================================= */
 
   const openFilePicker = () => {
     fileInputRef.current?.click();
   };
 
-  /* -------------------------------------------------------
-     Image selection
-  ------------------------------------------------------- */
+  /* =======================================================
+     IMAGE SELECTION
+  ======================================================= */
 
-  const handleImageSelect = async (event) => {
-    const file = event.target.files?.[0];
+  const handleImageSelect = async (
+    event
+  ) => {
+    const file =
+      event.target.files?.[0];
 
     if (!file) return;
 
-    if (!file.type.startsWith("image/")) {
-      setError("Please select a valid image file.");
+    if (
+      !file.type.startsWith("image/")
+    ) {
+      setError(
+        "Please select a valid image file."
+      );
       return;
     }
 
     setError("");
     setResult(null);
 
-    const imageUrl = URL.createObjectURL(file);
+    const imageUrl =
+      URL.createObjectURL(file);
+
     setPreview(imageUrl);
 
     await analyzeImage(file);
 
-    /* Allow selecting the same file again */
     event.target.value = "";
   };
 
-  /* -------------------------------------------------------
-     API prediction
-  ------------------------------------------------------- */
+  /* =======================================================
+     AI PREDICTION
+  ======================================================= */
 
-  const analyzeImage = async (file) => {
+  const analyzeImage = async (
+    file
+  ) => {
     setLoading(true);
 
     try {
-      const formData = new FormData();
-      formData.append("file", file);
+      const formData =
+        new FormData();
 
-      const response = await fetch(
-        `${API_URL}/predict`,
-        {
-          method: "POST",
-          body: formData,
-        }
+      formData.append(
+        "file",
+        file
       );
 
+      const response =
+        await fetch(
+          `${API_URL}/predict`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+
       if (!response.ok) {
-        let message = t.errors.prediction;
+        let message =
+          t.errors.prediction;
 
         try {
-          const errorData = await response.json();
+          const errorData =
+            await response.json();
+
           message =
             errorData.detail ||
             message;
@@ -1531,71 +1717,107 @@ function App() {
         throw new Error(message);
       }
 
-      const data = await response.json();
+      const data =
+        await response.json();
 
       setResult(data);
     } catch (err) {
       console.error(err);
 
-      setError(t.errors.server);
+      setError(
+        t.errors.server
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  /* -------------------------------------------------------
-     Disease info
-  ------------------------------------------------------- */
+  /* =======================================================
+     DISEASE INFO
+  ======================================================= */
 
-  const getDiseaseInfo = (disease) => {
-    const name = disease
-      ?.replace("Tomato___", "")
-      ?.replaceAll("_", " ")
-      ?.toLowerCase();
+  const getDiseaseInfo = (
+    disease
+  ) => {
+    const name =
+      disease
+        ?.replace(
+          "Tomato___",
+          ""
+        )
+        ?.replaceAll(
+          "_",
+          " "
+        )
+        ?.toLowerCase();
 
-    if (name?.includes("early blight")) {
+    if (
+      name?.includes(
+        "early blight"
+      )
+    ) {
       return {
         severity: "Moderate",
         severityLevel: 2,
         risk: "Medium",
+
         action:
           "Remove visibly affected leaves and monitor nearby plants closely.",
+
         advice:
           "Improve airflow around plants, avoid prolonged leaf wetness, and follow locally approved crop-protection guidance.",
       };
     }
 
-    if (name?.includes("late blight")) {
+    if (
+      name?.includes(
+        "late blight"
+      )
+    ) {
       return {
         severity: "High",
         severityLevel: 3,
         risk: "High",
+
         action:
           "Isolate affected plants and inspect surrounding plants immediately.",
+
         advice:
           "Monitor the crop frequently and follow locally approved disease-management recommendations.",
       };
     }
 
-    if (name?.includes("leaf mold")) {
+    if (
+      name?.includes(
+        "leaf mold"
+      )
+    ) {
       return {
         severity: "Moderate",
         severityLevel: 2,
         risk: "Medium",
+
         action:
           "Remove severely affected leaves and improve ventilation.",
+
         advice:
           "Reduce prolonged humidity around foliage and monitor new growth for further symptoms.",
       };
     }
 
-    if (name?.includes("healthy")) {
+    if (
+      name?.includes(
+        "healthy"
+      )
+    ) {
       return {
         severity: "Low",
         severityLevel: 1,
         risk: "Low",
+
         action:
           "Continue regular crop monitoring.",
+
         advice:
           "The uploaded image appears healthy. Continue good irrigation, nutrition, and field hygiene practices.",
       };
@@ -1605,42 +1827,55 @@ function App() {
       severity: "Unknown",
       severityLevel: 0,
       risk: "Review",
+
       action:
         "Send the case for expert validation.",
+
       advice:
         "The AI could not confidently determine the condition. Capture a clearer image and consult an agriculture expert.",
     };
   };
 
-  const diseaseInfo = result
-    ? getDiseaseInfo(result.class)
-    : null;
+  const diseaseInfo =
+    result
+      ? getDiseaseInfo(
+          result.class
+        )
+      : null;
 
-  /* -------------------------------------------------------
-     Voice
-  ------------------------------------------------------- */
+  /* =======================================================
+     VOICE ADVISORY
+  ======================================================= */
 
   const speakAdvice = () => {
     if (
       !result ||
-      typeof window === "undefined" ||
+      typeof window ===
+        "undefined" ||
       !window.speechSynthesis
     ) {
       return;
     }
 
-    const info = getDiseaseInfo(result.class);
+    const info =
+      getDiseaseInfo(
+        result.class
+      );
 
-    const detectedName = translateDiseaseName(
-      result.class,
-      language
-    );
+    const diseaseName =
+      translateDiseaseName(
+        result.class,
+        language
+      );
 
     const text = `
       CropShield diagnosis.
-      Detected condition: ${detectedName}.
+      Detected condition: ${diseaseName}.
       Confidence: ${result.confidence} percent.
-      Risk level: ${localizeLevel(info.risk, language)}.
+      Risk level: ${localizeLevel(
+        info.risk,
+        language
+      )}.
       Recommended action: ${info.action}.
       Advisory: ${info.advice}.
     `;
@@ -1648,193 +1883,273 @@ function App() {
     window.speechSynthesis.cancel();
 
     const utterance =
-      new SpeechSynthesisUtterance(text);
+      new SpeechSynthesisUtterance(
+        text
+      );
 
-    const activeLanguage = languages.find(
-      (item) => item.code === language
-    );
+    const activeLanguage =
+      languages.find(
+        (item) =>
+          item.code === language
+      );
 
     utterance.lang =
-      activeLanguage?.voice || "en-IN";
+      activeLanguage?.voice ||
+      "en-IN";
 
     utterance.rate = 0.9;
 
-    utterance.onstart = () => {
+    utterance.onstart = () =>
       setSpeaking(true);
-    };
 
-    utterance.onend = () => {
+    utterance.onend = () =>
       setSpeaking(false);
-    };
 
-    utterance.onerror = () => {
+    utterance.onerror = () =>
       setSpeaking(false);
-    };
 
     window.speechSynthesis.speak(
       utterance
     );
   };
 
-  /* -------------------------------------------------------
-     Advisory data
-  ------------------------------------------------------- */
+  /* =======================================================
+     ADVISORY DATA
+  ======================================================= */
 
-  const getAdvisoryInfo = (disease) => {
-    const name = disease
-      ?.replace("Tomato___", "")
-      ?.replaceAll("_", " ")
-      ?.toLowerCase();
+  const getAdvisoryInfo = (
+    disease
+  ) => {
+    const name =
+      disease
+        ?.replace(
+          "Tomato___",
+          ""
+        )
+        ?.replaceAll(
+          "_",
+          " "
+        )
+        ?.toLowerCase();
 
-    if (name?.includes("early blight")) {
+    if (
+      name?.includes(
+        "early blight"
+      )
+    ) {
       return {
-        title: "Early Blight Advisory",
-        urgency: "Monitor closely",
+        title:
+          "Early Blight Advisory",
+
+        urgency:
+          "Monitor closely",
+
         summary:
           "The AI detected a pattern consistent with Early Blight. Confirm symptoms in the field before taking operational action.",
+
         immediate: [
           "Inspect nearby tomato plants for similar symptoms.",
           "Remove visibly affected foliage and keep the field area clean.",
           "Improve airflow and avoid prolonged leaf wetness where practical.",
         ],
+
         prevention: [
           "Continue regular crop scouting.",
           "Track new symptoms and affected plant areas.",
           "Use locally approved crop-management guidance when treatment decisions are needed.",
         ],
+
         monitoring:
           "Recheck the crop regularly and seek expert validation if symptoms spread rapidly.",
       };
     }
 
-    if (name?.includes("late blight")) {
+    if (
+      name?.includes(
+        "late blight"
+      )
+    ) {
       return {
-        title: "Late Blight Advisory",
-        urgency: "Priority inspection",
+        title:
+          "Late Blight Advisory",
+
+        urgency:
+          "Priority inspection",
+
         summary:
           "The AI detected a pattern consistent with Late Blight. Because disease spread can be rapid, prioritize field inspection and expert confirmation.",
+
         immediate: [
           "Inspect surrounding plants and nearby field sections promptly.",
           "Separate or flag visibly affected plants for closer inspection.",
           "Follow locally approved disease-management guidance after confirmation.",
         ],
+
         prevention: [
           "Increase scouting frequency during favorable conditions.",
           "Monitor field areas with persistent moisture or humidity.",
           "Record new cases to support hotspot and risk tracking.",
         ],
+
         monitoring:
           "Escalate for expert review if affected areas increase or symptoms become widespread.",
       };
     }
 
-    if (name?.includes("leaf mold")) {
+    if (
+      name?.includes(
+        "leaf mold"
+      )
+    ) {
       return {
-        title: "Leaf Mold Advisory",
-        urgency: "Monitor closely",
+        title:
+          "Leaf Mold Advisory",
+
+        urgency:
+          "Monitor closely",
+
         summary:
           "The AI detected a pattern consistent with Leaf Mold. Focus on ventilation, moisture management, and continued scouting.",
+
         immediate: [
           "Inspect the underside and nearby foliage for additional symptoms.",
           "Remove severely affected leaves where appropriate.",
           "Improve ventilation around the crop canopy.",
         ],
+
         prevention: [
           "Avoid prolonged moisture on foliage.",
           "Keep monitoring new growth after corrective field actions.",
           "Use locally approved agricultural guidance for further management.",
         ],
+
         monitoring:
           "Recheck high-humidity sections of the field and validate uncertain cases with an expert.",
       };
     }
 
-    if (name?.includes("healthy")) {
+    if (
+      name?.includes(
+        "healthy"
+      )
+    ) {
       return {
-        title: "Healthy Crop Advisory",
-        urgency: "Routine monitoring",
+        title:
+          "Healthy Crop Advisory",
+
+        urgency:
+          "Routine monitoring",
+
         summary:
           "The AI found no strong visual indication of the four trained disease classes in this image.",
+
         immediate: [
           "Continue regular crop scouting.",
           "Maintain good irrigation and field hygiene practices.",
           "Capture another image if new symptoms appear.",
         ],
+
         prevention: [
           "Watch new growth for changes.",
           "Track crop conditions through the season.",
           "Use local agricultural guidance when unusual symptoms appear.",
         ],
+
         monitoring:
           "Routine observation remains appropriate; recheck the crop after major weather or field-condition changes.",
       };
     }
 
     return {
-      title: "Expert Review Advisory",
-      urgency: "Review required",
+      title:
+        "Expert Review Advisory",
+
+      urgency:
+        "Review required",
+
       summary:
         "The AI result should be reviewed by an agriculture expert before operational decisions are made.",
+
       immediate: [
         "Capture a clearer image with the affected area centered.",
         "Inspect nearby plants for similar symptoms.",
         "Record the location and crop stage for follow-up.",
       ],
+
       prevention: [
         "Continue routine crop monitoring.",
         "Avoid making treatment decisions from an uncertain AI result alone.",
         "Use locally approved agricultural guidance.",
       ],
+
       monitoring:
         "Repeat the diagnosis with a clearer image and seek expert validation when uncertainty remains.",
     };
   };
 
-  const advisoryInfo = result
-    ? getAdvisoryInfo(result.class)
-    : {
-        title: "Crop Advisory Center",
-        urgency: "Awaiting diagnosis",
-        summary:
-          "Upload a leaf image first. CropShield will tailor this advisory to the detected condition.",
-        immediate: [
-          "Upload a clear crop-leaf image.",
-          "Wait for the AI diagnosis.",
-          "Review the advisory before field action.",
-        ],
-        prevention: [
-          "Scout crops regularly.",
-          "Capture clear images when symptoms appear.",
-          "Use expert confirmation for uncertain cases.",
-        ],
-        monitoring:
-          "No diagnosis is available yet.",
-      };
+  const advisoryInfo =
+    result
+      ? getAdvisoryInfo(
+          result.class
+        )
+      : {
+          title:
+            "Crop Advisory Center",
 
-  /* This fixes the undefined currentAdvisory error */
-  const currentAdvisory = advisoryInfo;
+          urgency:
+            "Awaiting diagnosis",
 
-  /* -------------------------------------------------------
-     Risk data
-  ------------------------------------------------------- */
+          summary:
+            "Upload a leaf image first. CropShield will tailor this advisory to the detected condition.",
 
-  const forecastDisease = result
-    ? translateDiseaseName(
-        result.class,
-        language
-      )
-    : "Disease";
+          immediate: [
+            "Upload a clear crop-leaf image.",
+            "Wait for the AI diagnosis.",
+            "Review the advisory before field action.",
+          ],
+
+          prevention: [
+            "Scout crops regularly.",
+            "Capture clear images when symptoms appear.",
+            "Use expert confirmation for uncertain cases.",
+          ],
+
+          monitoring:
+            "No diagnosis is available yet.",
+        };
+
+  const currentAdvisory =
+    advisoryInfo;
+
+  /* =======================================================
+     RISK DATA
+  ======================================================= */
+
+  const forecastDisease =
+    result
+      ? translateDiseaseName(
+          result.class,
+          language
+        )
+      : "Disease";
 
   const riskData = {
-    overall: result?.class?.includes("healthy")
-      ? 18
-      : 64,
+    overall:
+      result?.class?.includes(
+        "healthy"
+      )
+        ? 18
+        : 64,
 
-    level: result?.class?.includes("healthy")
-      ? "Low"
-      : "Medium",
+    level:
+      result?.class?.includes(
+        "healthy"
+      )
+        ? "Low"
+        : "Medium",
 
-    disease: forecastDisease,
+    disease:
+      forecastDisease,
 
     temperature: "28°C",
     humidity: "84%",
@@ -1844,16 +2159,39 @@ function App() {
   };
 
   const riskTrend = [
-    { day: "Today", value: 58 },
-    { day: "Tue", value: 61 },
-    { day: "Wed", value: 65 },
-    { day: "Thu", value: 69 },
-    { day: "Fri", value: 73 },
-    { day: "Sat", value: 68 },
-    { day: "Sun", value: 63 },
+    {
+      day: "Today",
+      value: 58,
+    },
+    {
+      day: "Tue",
+      value: 61,
+    },
+    {
+      day: "Wed",
+      value: 65,
+    },
+    {
+      day: "Thu",
+      value: 69,
+    },
+    {
+      day: "Fri",
+      value: 73,
+    },
+    {
+      day: "Sat",
+      value: 68,
+    },
+    {
+      day: "Sun",
+      value: 63,
+    },
   ];
 
-  const getDayLabel = (day) => {
+  const getDayLabel = (
+    day
+  ) => {
     const labels = {
       en: {
         Today: "Today",
@@ -1894,6 +2232,66 @@ function App() {
         Sat: "శని",
         Sun: "ఆది",
       },
+
+      kn: {
+        Today: "ಇಂದು",
+        Tue: "ಮಂಗಳ",
+        Wed: "ಬುಧ",
+        Thu: "ಗುರು",
+        Fri: "ಶುಕ್ರ",
+        Sat: "ಶನಿ",
+        Sun: "ಭಾನು",
+      },
+
+      gu: {
+        Today: "આજે",
+        Tue: "મંગળ",
+        Wed: "બુધ",
+        Thu: "ગુરુ",
+        Fri: "શુક્ર",
+        Sat: "શનિ",
+        Sun: "રવિ",
+      },
+
+      ta: {
+        Today: "இன்று",
+        Tue: "செவ்",
+        Wed: "புத",
+        Thu: "வியா",
+        Fri: "வெள்",
+        Sat: "சனி",
+        Sun: "ஞாயி",
+      },
+
+      bn: {
+        Today: "আজ",
+        Tue: "মঙ্গল",
+        Wed: "বুধ",
+        Thu: "বৃহস্পতি",
+        Fri: "শুক্র",
+        Sat: "শনি",
+        Sun: "রবি",
+      },
+
+      ml: {
+        Today: "ഇന്ന്",
+        Tue: "ചൊവ്വ",
+        Wed: "ബുധൻ",
+        Thu: "വ്യാഴം",
+        Fri: "വെള്ളി",
+        Sat: "ശനി",
+        Sun: "ഞായർ",
+      },
+
+      pa: {
+        Today: "ਅੱਜ",
+        Tue: "ਮੰਗਲ",
+        Wed: "ਬੁੱਧ",
+        Thu: "ਵੀਰ",
+        Fri: "ਸ਼ੁੱਕਰ",
+        Sat: "ਸ਼ਨੀ",
+        Sun: "ਐਤ",
+      },
     };
 
     return (
@@ -1902,73 +2300,131 @@ function App() {
     );
   };
 
-  /* -------------------------------------------------------
-     Hotspots
-  ------------------------------------------------------- */
+  /* =======================================================
+     MAHARASHTRA HOTSPOT CENTER
+  ======================================================= */
 
-  const hotspotCenter = [
-    16.3067,
-    80.4365,
-  ];
+  const hotspotCenter =
+    maharashtraDistricts[
+      selectedDistrict
+    ].center;
 
-  const hotspotZoom = 11;
+  const hotspotZoom =
+    maharashtraDistricts[
+      selectedDistrict
+    ].zoom;
+
+  /* =======================================================
+     HOTSPOT DATA
+  ======================================================= */
 
   const hotspotCases = [
     {
       id: 1,
-      name: "Field Cluster A",
-      disease: translateDiseaseName(
-        "Tomato___Early_blight",
-        language
-      ),
+
+      name:
+        `${selectedDistrict} Field Cluster A`,
+
+      disease:
+        translateDiseaseName(
+          "Tomato___Early_blight",
+          language
+        ),
+
       level: "High",
+
       count: 18,
-      lat: 16.315,
-      lng: 80.455,
+
+      lat:
+        hotspotCenter[0] +
+        0.025,
+
+      lng:
+        hotspotCenter[1] +
+        0.035,
     },
 
     {
       id: 2,
-      name: "Field Cluster B",
-      disease: translateDiseaseName(
-        "Tomato___Late_blight",
-        language
-      ),
+
+      name:
+        `${selectedDistrict} Field Cluster B`,
+
+      disease:
+        translateDiseaseName(
+          "Tomato___Late_blight",
+          language
+        ),
+
       level: "Critical",
+
       count: 31,
-      lat: 16.278,
-      lng: 80.405,
+
+      lat:
+        hotspotCenter[0] -
+        0.028,
+
+      lng:
+        hotspotCenter[1] -
+        0.025,
     },
 
     {
       id: 3,
-      name: "Field Cluster C",
-      disease: translateDiseaseName(
-        "Tomato___Leaf_Mold",
-        language
-      ),
+
+      name:
+        `${selectedDistrict} Field Cluster C`,
+
+      disease:
+        translateDiseaseName(
+          "Tomato___Leaf_Mold",
+          language
+        ),
+
       level: "Medium",
+
       count: 11,
-      lat: 16.342,
-      lng: 80.425,
+
+      lat:
+        hotspotCenter[0] +
+        0.040,
+
+      lng:
+        hotspotCenter[1] -
+        0.020,
     },
 
     {
       id: 4,
-      name: "Field Cluster D",
-      disease: translateDiseaseName(
-        "Tomato___Early_blight",
-        language
-      ),
+
+      name:
+        `${selectedDistrict} Field Cluster D`,
+
+      disease:
+        translateDiseaseName(
+          "Tomato___Early_blight",
+          language
+        ),
+
       level: "Medium",
+
       count: 8,
-      lat: 16.291,
-      lng: 80.472,
+
+      lat:
+        hotspotCenter[0] -
+        0.018,
+
+      lng:
+        hotspotCenter[1] +
+        0.045,
     },
 
     {
       id: 5,
-      name: "Field Cluster E",
+
+      name:
+        `${selectedDistrict} Field Cluster E`,
+
       disease:
         language === "mr"
           ? "निरोगी / निरीक्षण"
@@ -1989,39 +2445,63 @@ function App() {
           : language === "pa"
           ? "ਤੰਦਰੁਸਤ / ਨਿਗਰਾਨੀ"
           : "Healthy / Monitoring",
+
       level: "Low",
+
       count: 5,
-      lat: 16.358,
-      lng: 80.454,
+
+      lat:
+        hotspotCenter[0] +
+        0.050,
+
+      lng:
+        hotspotCenter[1] +
+        0.025,
     },
   ];
 
-  const getHotspotClass = (level) => {
-    if (level === "Critical") {
+  const getHotspotClass = (
+    level
+  ) => {
+    if (
+      level === "Critical"
+    ) {
       return "critical";
     }
 
-    if (level === "High") {
+    if (
+      level === "High"
+    ) {
       return "high";
     }
 
-    if (level === "Medium") {
+    if (
+      level === "Medium"
+    ) {
       return "medium";
     }
 
     return "low";
   };
 
-  const getHotspotLabel = (level) => {
-    if (level === "Critical") {
+  const getHotspotLabel = (
+    level
+  ) => {
+    if (
+      level === "Critical"
+    ) {
       return t.critical;
     }
 
-    if (level === "High") {
+    if (
+      level === "High"
+    ) {
       return t.high;
     }
 
-    if (level === "Medium") {
+    if (
+      level === "Medium"
+    ) {
       return t.medium;
     }
 
@@ -2032,49 +2512,767 @@ function App() {
      DIAGNOSIS PAGE
   ======================================================= */
 
-  const renderDiagnosisPage = () => (
-    <>
-      <section className="hero">
+  const renderDiagnosisPage =
+    () => (
+      <>
+        <section className="hero">
 
-        <div className="hero-content">
+          <div className="hero-content">
 
-          <div className="status-pill">
-            <span className="status-dot"></span>
-            {t.systemOnline}
-          </div>
-
-          <h1>
-            {t.heroTitle}
-            <br />
-            <span>{t.heroSubtitle}</span>
-          </h1>
-
-          <p>
-            Upload a leaf image and let
-            CropShield's AI detect crop
-            diseases instantly, assess risk,
-            and guide you toward the right
-            action.
-          </p>
-
-          <button
-            className="primary-btn"
-            onClick={openFilePicker}
-          >
-            {t.startDiagnosis}
-            <ChevronRight size={20} />
-          </button>
-
-          <div className="trust-row">
-
-            <div>
-              <ShieldCheck size={19} />
-              {t.aiDiagnosis}
+            <div className="status-pill">
+              <span className="status-dot"></span>
+              {t.systemOnline}
             </div>
 
-            <div>
-              <Activity size={19} />
-              {t.riskInsights}
+            <h1>
+
+              {t.heroTitle}
+
+              <br />
+
+              <span>
+                {t.heroSubtitle}
+              </span>
+
+            </h1>
+
+            <p>
+              Upload a leaf image and let
+              CropShield's AI detect crop
+              diseases instantly, assess risk,
+              and guide you toward the right
+              action.
+            </p>
+
+            <button
+              className="primary-btn"
+              onClick={openFilePicker}
+            >
+
+              {t.startDiagnosis}
+
+              <ChevronRight
+                size={20}
+              />
+
+            </button>
+
+            <div className="trust-row">
+
+              <div>
+                <ShieldCheck
+                  size={19}
+                />
+                {t.aiDiagnosis}
+              </div>
+
+              <div>
+                <Activity
+                  size={19}
+                />
+                {t.riskInsights}
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div className="diagnosis-card">
+
+            <div className="card-top">
+
+              <div>
+
+                <span className="small-label">
+                  {t.cropHealth}
+                </span>
+
+                <h3>
+                  {t.diagnosisTitle}
+                </h3>
+
+              </div>
+
+              <div className="ai-badge">
+
+                <Activity
+                  size={15}
+                />
+
+                AI
+
+              </div>
+
+            </div>
+
+
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/jpg"
+              onChange={
+                handleImageSelect
+              }
+              style={{
+                display: "none",
+              }}
+            />
+
+
+            <div
+              className={`leaf-preview ${
+                preview
+                  ? "has-image"
+                  : ""
+              }`}
+              onClick={
+                openFilePicker
+              }
+            >
+
+              {preview ? (
+
+                <img
+                  src={preview}
+                  alt="Selected crop leaf"
+                  className="uploaded-image"
+                />
+
+              ) : (
+
+                <>
+                  <div className="preview-glow"></div>
+
+                  <Leaf
+                    size={110}
+                    strokeWidth={1.2}
+                  />
+
+                  <div className="scan-line"></div>
+                </>
+
+              )}
+
+
+              {loading && (
+
+                <div className="scanning-overlay">
+
+                  <LoaderCircle
+                    size={42}
+                    className="spin"
+                  />
+
+                  <span>
+                    {t.scan}
+                  </span>
+
+                </div>
+
+              )}
+
+            </div>
+
+
+            <div className="diagnosis-result">
+
+              <div>
+
+                <span className="result-label">
+                  {t.detectedCondition}
+                </span>
+
+                {loading ? (
+
+                  <h3>
+                    {t.analyzingLeaf}
+                  </h3>
+
+                ) : result ? (
+
+                  <>
+                    <h3>
+                      {translateDiseaseName(
+                        result.class,
+                        language
+                      )}
+                    </h3>
+
+                    <p>
+                      {result.status}
+                    </p>
+                  </>
+
+                ) : (
+
+                  <>
+                    <h3>
+                      {t.ready}
+                    </h3>
+
+                    <p>
+                      {t.uploadHint}
+                    </p>
+                  </>
+
+                )}
+
+              </div>
+
+
+              <div className="confidence">
+
+                {result ? (
+
+                  <>
+                    <span>
+                      {result.confidence}%
+                    </span>
+
+                    <small>
+                      {t.confidence}
+                    </small>
+                  </>
+
+                ) : (
+
+                  <>
+                    <span>
+                      —
+                    </span>
+
+                    <small>
+                      {t.confidence}
+                    </small>
+                  </>
+
+                )}
+
+              </div>
+
+            </div>
+
+
+            {result && (
+
+              <div className="confidence-panel">
+
+                <div className="confidence-header">
+
+                  <span>
+                    {t.aiConfidence}
+                  </span>
+
+                  <strong>
+                    {result.confidence}%
+                  </strong>
+
+                </div>
+
+                <div className="confidence-track">
+
+                  <div
+                    className="confidence-fill"
+                    style={{
+                      width:
+                        `${result.confidence}%`,
+                    }}
+                  ></div>
+
+                </div>
+
+              </div>
+
+            )}
+
+
+            {result &&
+              diseaseInfo && (
+
+                <div className="risk-grid">
+
+                  <div className="risk-box">
+
+                    <div className="risk-box-icon">
+
+                      <ThermometerSun
+                        size={18}
+                      />
+
+                    </div>
+
+                    <div>
+
+                      <span>
+                        {t.severity}
+                      </span>
+
+                      <strong>
+                        {localizeLevel(
+                          diseaseInfo.severity,
+                          language
+                        )}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+
+                  <div className="risk-box">
+
+                    <div className="risk-box-icon">
+
+                      <Activity
+                        size={18}
+                      />
+
+                    </div>
+
+                    <div>
+
+                      <span>
+                        {t.riskLevel}
+                      </span>
+
+                      <strong>
+                        {localizeLevel(
+                          diseaseInfo.risk,
+                          language
+                        )}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              )}
+
+
+            {result &&
+              diseaseInfo && (
+
+                <div className="severity-section">
+
+                  <div className="severity-header">
+
+                    <span>
+                      {t.cropHealthStatus}
+                    </span>
+
+                    <span>
+                      {localizeLevel(
+                        diseaseInfo.severity,
+                        language
+                      )}
+                    </span>
+
+                  </div>
+
+
+                  <div className="severity-bars">
+
+                    {[1, 2, 3].map(
+                      (level) => (
+
+                        <div
+                          key={level}
+                          className={`severity-bar ${
+                            level <=
+                            diseaseInfo.severityLevel
+                              ? "filled"
+                              : ""
+                          }`}
+                        ></div>
+
+                      )
+                    )}
+
+                  </div>
+
+                </div>
+
+              )}
+
+
+            {result &&
+              diseaseInfo && (
+
+                <div className="recommendation-card">
+
+                  <div className="recommendation-icon">
+
+                    <Sprout
+                      size={20}
+                    />
+
+                  </div>
+
+                  <div>
+
+                    <span className="recommendation-label">
+                      {t.recommendedAction}
+                    </span>
+
+                    <h4>
+                      {t.whatShouldIDo}
+                    </h4>
+
+                    <p>
+                      {diseaseInfo.action}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              )}
+
+
+            {result &&
+              diseaseInfo && (
+
+                <div className="advisory-box">
+
+                  <div>
+
+                    <ShieldCheck
+                      size={18}
+                    />
+
+                    <span>
+                      {t.cropAdvisory}
+                    </span>
+
+                  </div>
+
+                  <p>
+                    {diseaseInfo.advice}
+                  </p>
+
+                </div>
+
+              )}
+
+
+            {result && (
+
+              <button
+                className="voice-btn"
+                onClick={speakAdvice}
+              >
+
+                {speaking ? (
+
+                  <>
+                    <Activity
+                      size={18}
+                    />
+
+                    {t.speaking}
+                  </>
+
+                ) : (
+
+                  <>
+                    <Volume2
+                      size={18}
+                    />
+
+                    {t.listen}
+                  </>
+
+                )}
+
+              </button>
+
+            )}
+
+
+            {result && (
+
+              <div
+                className={`result-status ${
+                  result.confidence >=
+                  80
+                    ? "success"
+                    : "warning"
+                }`}
+              >
+
+                {result.confidence >=
+                80 ? (
+
+                  <CheckCircle2
+                    size={17}
+                  />
+
+                ) : (
+
+                  <AlertTriangle
+                    size={17}
+                  />
+
+                )}
+
+                <span>
+
+                  {result.confidence >=
+                  80
+                    ? t.highConfidence
+                    : t.expertValidation}
+
+                </span>
+
+              </div>
+
+            )}
+
+
+            {error && (
+
+              <div className="error-message">
+
+                <AlertTriangle
+                  size={17}
+                />
+
+                {error}
+
+              </div>
+
+            )}
+
+
+            <button
+              className="upload-btn"
+              onClick={
+                openFilePicker
+              }
+              disabled={loading}
+            >
+
+              {loading ? (
+
+                <>
+                  <LoaderCircle
+                    size={18}
+                    className="spin"
+                  />
+
+                  {t.analyzingButton}
+                </>
+
+              ) : (
+
+                <>
+                  <Upload
+                    size={18}
+                  />
+
+                  {preview
+                    ? t.analyzeAnother
+                    : t.uploadLeaf}
+                </>
+
+              )}
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <section className="features">
+
+          <div className="section-heading">
+
+            <span>
+              ONE PLATFORM
+            </span>
+
+            <h2>
+              From detection to action.
+            </h2>
+
+          </div>
+
+
+          <div className="feature-grid">
+
+            <div className="feature-card">
+
+              <div className="feature-icon">
+                <Leaf />
+              </div>
+
+              <h3>
+                AI Disease Detection
+              </h3>
+
+              <p>
+                Analyze crop leaf images
+                using our trained computer
+                vision model.
+              </p>
+
+              <span className="feature-link">
+
+                Instant diagnosis
+
+                <ChevronRight
+                  size={16}
+                />
+
+              </span>
+
+            </div>
+
+
+            <div className="feature-card">
+
+              <div className="feature-icon">
+                <CloudSun />
+              </div>
+
+              <h3>
+                Risk Forecasting
+              </h3>
+
+              <p>
+                Combine weather, crop stage,
+                and pest activity to identify
+                emerging risks.
+              </p>
+
+              <button
+                className="feature-link feature-button"
+                onClick={() =>
+                  setActivePage(
+                    "risk"
+                  )
+                }
+              >
+
+                Predict outbreaks
+
+                <ChevronRight
+                  size={16}
+                />
+
+              </button>
+
+            </div>
+
+
+            <div className="feature-card">
+
+              <div className="feature-icon">
+                <Map />
+              </div>
+
+              <h3>
+                Geospatial Hotspots
+              </h3>
+
+              <p>
+                Visualize confirmed disease
+                cases and prioritize
+                field-level intervention.
+              </p>
+
+              <button
+                className="feature-link feature-button"
+                onClick={() =>
+                  setActivePage(
+                    "hotspots"
+                  )
+                }
+              >
+
+                View hotspots
+
+                <ChevronRight
+                  size={16}
+                />
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+      </>
+    );
+
+  /* =======================================================
+     RISK PAGE
+  ======================================================= */
+
+  const renderRiskPage =
+    () => (
+      <section className="risk-dashboard">
+
+        <button
+          className="back-btn"
+          onClick={() =>
+            setActivePage(
+              "diagnosis"
+            )
+          }
+        >
+
+          <ArrowLeft
+            size={17}
+          />
+
+          {t.backToDiagnosis}
+
+        </button>
+
+
+        <div className="risk-hero">
+
+          <div>
+
+            <span className="dashboard-kicker">
+              {t.riskKicker}
+            </span>
+
+            <h1>
+              {t.riskTitle}
+            </h1>
+
+            <p>
+              {t.riskDescription}{" "}
+              {riskData.disease}
+            </p>
+
+          </div>
+
+
+          <div className="risk-score-card">
+
+            <span>
+              {t.overallRisk}
+            </span>
+
+            <strong>
+              {riskData.overall}%
+            </strong>
+
+            <div className="risk-score-level">
+
+              {localizeLevel(
+                riskData.level,
+                language
+              )}
+
             </div>
 
           </div>
@@ -2082,299 +3280,73 @@ function App() {
         </div>
 
 
-        <div className="diagnosis-card">
+        <div className="risk-main-grid">
 
-          <div className="card-top">
+          <div className="forecast-card large">
 
-            <div>
+            <div className="forecast-header">
 
-              <span className="small-label">
-                {t.cropHealth}
-              </span>
+              <div>
 
-              <h3>
-                {t.diagnosisTitle}
-              </h3>
-
-            </div>
-
-            <div className="ai-badge">
-              <Activity size={15} />
-              AI
-            </div>
-
-          </div>
-
-
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/jpeg,image/png,image/jpg"
-            onChange={handleImageSelect}
-            style={{ display: "none" }}
-          />
-
-
-          <div
-            className={`leaf-preview ${
-              preview ? "has-image" : ""
-            }`}
-            onClick={openFilePicker}
-          >
-
-            {preview ? (
-
-              <img
-                src={preview}
-                alt="Selected crop leaf"
-                className="uploaded-image"
-              />
-
-            ) : (
-
-              <>
-                <div className="preview-glow"></div>
-
-                <Leaf
-                  size={110}
-                  strokeWidth={1.2}
-                />
-
-                <div className="scan-line"></div>
-              </>
-
-            )}
-
-
-            {loading && (
-
-              <div className="scanning-overlay">
-
-                <LoaderCircle
-                  size={42}
-                  className="spin"
-                />
-
-                <span>
-                  {t.scan}
+                <span className="small-label">
+                  {t.sevenDayOutlook}
                 </span>
-
-              </div>
-
-            )}
-
-          </div>
-
-
-          <div className="diagnosis-result">
-
-            <div>
-
-              <span className="result-label">
-                {t.detectedCondition}
-              </span>
-
-
-              {loading ? (
 
                 <h3>
-                  {t.analyzingLeaf}
+                  {riskData.disease}
                 </h3>
 
-              ) : result ? (
-
-                <>
-
-                  <h3>
-                    {translateDiseaseName(
-                      result.class,
-                      language
-                    )}
-                  </h3>
-
-                  <p>
-                    {result.status}
-                  </p>
-
-                </>
-
-              ) : (
-
-                <>
-
-                  <h3>
-                    {t.ready}
-                  </h3>
-
-                  <p>
-                    {t.uploadHint}
-                  </p>
-
-                </>
-
-              )}
-
-            </div>
-
-
-            <div className="confidence">
-
-              {result ? (
-
-                <>
-
-                  <span>
-                    {result.confidence}%
-                  </span>
-
-                  <small>
-                    {t.confidence}
-                  </small>
-
-                </>
-
-              ) : (
-
-                <>
-
-                  <span>—</span>
-
-                  <small>
-                    {t.confidence}
-                  </small>
-
-                </>
-
-              )}
-
-            </div>
-
-          </div>
-
-
-          {result && (
-
-            <div className="confidence-panel">
-
-              <div className="confidence-header">
-
-                <span>
-                  {t.aiConfidence}
-                </span>
-
-                <strong>
-                  {result.confidence}%
-                </strong>
-
               </div>
 
-              <div className="confidence-track">
+              <div className="high-risk-pill">
 
-                <div
-                  className="confidence-fill"
-                  style={{
-                    width:
-                      `${result.confidence}%`,
-                  }}
-                ></div>
+                {localizeLevel(
+                  riskData.level,
+                  language
+                )}
 
               </div>
 
             </div>
 
-          )}
 
+            <div className="forecast-chart">
 
-          {result && diseaseInfo && (
+              <div className="chart-lines">
 
-            <div className="risk-grid">
-
-              <div className="risk-box">
-
-                <div className="risk-box-icon">
-                  <ThermometerSun size={18} />
-                </div>
-
-                <div>
-
-                  <span>
-                    {t.severity}
-                  </span>
-
-                  <strong>
-                    {localizeLevel(
-                      diseaseInfo.severity,
-                      language
-                    )}
-                  </strong>
-
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
 
               </div>
 
 
-              <div className="risk-box">
+              <div className="chart-bars">
 
-                <div className="risk-box-icon">
-                  <Activity size={18} />
-                </div>
-
-                <div>
-
-                  <span>
-                    {t.riskLevel}
-                  </span>
-
-                  <strong>
-                    {localizeLevel(
-                      diseaseInfo.risk,
-                      language
-                    )}
-                  </strong>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          )}
-
-
-          {result && diseaseInfo && (
-
-            <div className="severity-section">
-
-              <div className="severity-header">
-
-                <span>
-                  {t.cropHealthStatus}
-                </span>
-
-                <span>
-                  {localizeLevel(
-                    diseaseInfo.severity,
-                    language
-                  )}
-                </span>
-
-              </div>
-
-
-              <div className="severity-bars">
-
-                {[1, 2, 3].map(
-                  (level) => (
+                {riskTrend.map(
+                  (item) => (
 
                     <div
-                      key={level}
-                      className={`severity-bar ${
-                        level <=
-                        diseaseInfo.severityLevel
-                          ? "filled"
-                          : ""
-                      }`}
-                    ></div>
+                      className="chart-column"
+                      key={item.day}
+                    >
+
+                      <div
+                        className="chart-value"
+                        style={{
+                          height:
+                            `${item.value * 0.65}px`,
+                        }}
+                      ></div>
+
+                      <small>
+                        {getDayLabel(
+                          item.day
+                        )}
+                      </small>
+
+                    </div>
 
                   )
                 )}
@@ -2383,79 +3355,476 @@ function App() {
 
             </div>
 
-          )}
+          </div>
 
 
-          {result && diseaseInfo && (
+          <div className="forecast-card">
 
-            <div className="recommendation-card">
+            <span className="small-label">
+              {t.currentConditions}
+            </span>
 
-              <div className="recommendation-icon">
-                <Sprout size={20} />
+            <h3>
+              {t.fieldEnvironment}
+            </h3>
+
+
+            <div className="condition-list">
+
+              <div className="condition-row">
+
+                <div className="condition-icon">
+
+                  <ThermometerSun
+                    size={18}
+                  />
+
+                </div>
+
+                <div>
+
+                  <span>
+                    {t.temperature}
+                  </span>
+
+                  <strong>
+                    {riskData.temperature}
+                  </strong>
+
+                </div>
+
               </div>
 
-              <div>
 
-                <span className="recommendation-label">
-                  {t.recommendedAction}
-                </span>
+              <div className="condition-row">
 
-                <h4>
-                  {t.whatShouldIDo}
-                </h4>
+                <div className="condition-icon">
 
-                <p>
-                  {diseaseInfo.action}
-                </p>
+                  <Droplets
+                    size={18}
+                  />
+
+                </div>
+
+                <div>
+
+                  <span>
+                    {t.humidity}
+                  </span>
+
+                  <strong>
+                    {riskData.humidity}
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <div className="condition-row">
+
+                <div className="condition-icon">
+
+                  <CloudSun
+                    size={18}
+                  />
+
+                </div>
+
+                <div>
+
+                  <span>
+                    {t.rainfall}
+                  </span>
+
+                  <strong>
+                    {riskData.rainfall}
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <div className="condition-row">
+
+                <div className="condition-icon">
+
+                  <Bug
+                    size={18}
+                  />
+
+                </div>
+
+                <div>
+
+                  <span>
+                    {t.pestActivity}
+                  </span>
+
+                  <strong>
+                    {localizeLevel(
+                      riskData.pestActivity,
+                      language
+                    )}
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <div className="condition-row">
+
+                <div className="condition-icon">
+
+                  <CalendarDays
+                    size={18}
+                  />
+
+                </div>
+
+                <div>
+
+                  <span>
+                    {t.cropStage}
+                  </span>
+
+                  <strong>
+                    {riskData.cropStage}
+                  </strong>
+
+                </div>
 
               </div>
 
             </div>
 
-          )}
+          </div>
+
+        </div>
 
 
-          {result && diseaseInfo && (
+        <div className="warning-panel">
 
-            <div className="advisory-box">
+          <div className="warning-icon">
 
-              <div>
+            <AlertTriangle
+              size={21}
+            />
 
-                <ShieldCheck size={18} />
+          </div>
 
-                <span>
-                  {t.cropAdvisory}
-                </span>
+          <div>
 
-              </div>
+            <span>
+              {t.earlyWarning}
+            </span>
 
-              <p>
-                {diseaseInfo.advice}
-              </p>
+            <h3>
+              {t.warningTitle}
+            </h3>
+
+            <p>
+              {t.warningText}
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div className="forecast-action-grid">
+
+          <div className="forecast-card action-card">
+
+            <div className="feature-icon">
+              <Sprout />
+            </div>
+
+            <h3>
+              {t.recommendedActionRisk}
+            </h3>
+
+            <p>
+              {t.recommendedActionText}
+            </p>
+
+          </div>
+
+
+          <div className="forecast-card action-card">
+
+            <div className="feature-icon">
+              <Bug />
+            </div>
+
+            <h3>
+              {t.pestTrap}
+            </h3>
+
+            <p>
+              {t.pestTrapText}
+            </p>
+
+          </div>
+
+
+          <div className="forecast-card action-card">
+
+            <div className="feature-icon">
+              <Activity />
+            </div>
+
+            <h3>
+              {t.nextUpdate}
+            </h3>
+
+            <p>
+              {t.nextUpdateText}
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+    );
+
+  /* =======================================================
+     ADVISORIES PAGE
+  ======================================================= */
+
+  const renderAdvisoriesPage =
+    () => (
+      <section className="advisories-dashboard">
+
+        <div className="advisory-hero">
+
+          <div>
+
+            <span className="dashboard-kicker">
+              {t.advisoriesKicker}
+            </span>
+
+            <h1>
+              {t.advisoriesTitle}
+            </h1>
+
+            <p>
+              {t.advisoriesDescription}
+            </p>
+
+          </div>
+
+
+          <div className="advisory-badge">
+
+            <ShieldCheck
+              size={15}
+            />
+
+            {t.aiAssisted}
+
+          </div>
+
+        </div>
+
+
+        <div className="advisory-status-card">
+
+          <div className="advisory-status-icon">
+
+            <Sprout
+              size={22}
+            />
+
+          </div>
+
+
+          <div className="advisory-status-main">
+
+            <span>
+              {t.currentCondition}
+            </span>
+
+            <h2>
+
+              {result
+                ? translateDiseaseName(
+                    result.class,
+                    language
+                  )
+                : t.noDiagnosis}
+
+            </h2>
+
+            <p>
+              {currentAdvisory.summary}
+            </p>
+
+          </div>
+
+
+          <div className="advisory-status-side">
+
+            <span>
+              {t.status}
+            </span>
+
+            <strong>
+              {currentAdvisory.urgency}
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div className="advisory-grid">
+
+          <div className="advisory-action-card">
+
+            <div className="advisory-card-icon green">
+
+              <CheckCircle2
+                size={20}
+              />
 
             </div>
 
-          )}
+            <span className="small-label">
+              {t.immediateAction}
+            </span>
+
+            <h3>
+              {t.whatToDoNow}
+            </h3>
 
 
-          {result && (
+            <div className="advisory-steps">
+
+              {currentAdvisory.immediate.map(
+                (item, index) => (
+
+                  <div
+                    className="advisory-step"
+                    key={`${item}-${index}`}
+                  >
+
+                    <span>
+                      {index + 1}
+                    </span>
+
+                    <p>
+                      {item}
+                    </p>
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
+
+          <div className="advisory-action-card">
+
+            <div className="advisory-card-icon amber">
+
+              <ShieldCheck
+                size={20}
+              />
+
+            </div>
+
+            <span className="small-label">
+              {t.prevention}
+            </span>
+
+            <h3>
+              {t.reduceFutureRisk}
+            </h3>
+
+
+            <div className="advisory-steps">
+
+              {currentAdvisory.prevention.map(
+                (item, index) => (
+
+                  <div
+                    className="advisory-step"
+                    key={`${item}-${index}`}
+                  >
+
+                    <span>
+                      ✓
+                    </span>
+
+                    <p>
+                      {item}
+                    </p>
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
+
+          <div className="advisory-action-card advisory-monitor-card">
+
+            <div className="advisory-card-icon forest">
+
+              <Activity
+                size={20}
+              />
+
+            </div>
+
+            <span className="small-label">
+              {t.monitoring}
+            </span>
+
+            <h3>
+              {t.keepWatching}
+            </h3>
+
+            <p>
+              {currentAdvisory.monitoring}
+            </p>
+
 
             <button
-              className="voice-btn"
-              onClick={speakAdvice}
+              className="voice-btn advisory-voice-btn"
+              onClick={
+                speakAdvice
+              }
+              disabled={!result}
             >
 
               {speaking ? (
 
                 <>
-                  <Activity size={18} />
+                  <Activity
+                    size={18}
+                  />
+
                   {t.speaking}
                 </>
 
               ) : (
 
                 <>
-                  <Volume2 size={18} />
+                  <Volume2
+                    size={18}
+                  />
+
                   {t.listen}
                 </>
 
@@ -2463,446 +3832,103 @@ function App() {
 
             </button>
 
-          )}
-
-
-          {result && (
-
-            <div
-              className={`result-status ${
-                result.confidence >= 80
-                  ? "success"
-                  : "warning"
-              }`}
-            >
-
-              {result.confidence >= 80 ? (
-
-                <CheckCircle2 size={17} />
-
-              ) : (
-
-                <AlertTriangle size={17} />
-
-              )}
-
-              <span>
-
-                {result.confidence >= 80
-                  ? t.highConfidence
-                  : t.expertValidation}
-
-              </span>
-
-            </div>
-
-          )}
-
-
-          {error && (
-
-            <div className="error-message">
-
-              <AlertTriangle size={17} />
-
-              {error}
-
-            </div>
-
-          )}
-
-
-          <button
-            className="upload-btn"
-            onClick={openFilePicker}
-            disabled={loading}
-          >
-
-            {loading ? (
-
-              <>
-                <LoaderCircle
-                  size={18}
-                  className="spin"
-                />
-
-                {t.analyzingButton}
-              </>
-
-            ) : (
-
-              <>
-                <Upload size={18} />
-
-                {preview
-                  ? t.analyzeAnother
-                  : t.uploadLeaf}
-              </>
-
-            )}
-
-          </button>
-
-        </div>
-
-      </section>
-
-
-      <section className="features">
-
-        <div className="section-heading">
-
-          <span>
-            ONE PLATFORM
-          </span>
-
-          <h2>
-            From detection to action.
-          </h2>
+          </div>
 
         </div>
 
 
-        <div className="feature-grid">
+        <div className="expert-note">
 
-          <div className="feature-card">
+          <AlertTriangle
+            size={18}
+          />
 
-            <div className="feature-icon">
-              <Leaf />
-            </div>
+          <div>
 
-            <h3>
-              AI Disease Detection
-            </h3>
+            <strong>
+              {t.expertTitle}
+            </strong>
 
             <p>
-              Analyze crop leaf images
-              using our trained computer
-              vision model.
+              {t.expertText}
             </p>
-
-            <span className="feature-link">
-              Instant diagnosis
-              <ChevronRight size={16} />
-            </span>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-icon">
-              <CloudSun />
-            </div>
-
-            <h3>
-              Risk Forecasting
-            </h3>
-
-            <p>
-              Combine weather, crop stage,
-              and pest activity to identify
-              emerging risks.
-            </p>
-
-            <button
-              className="feature-link feature-button"
-              onClick={() =>
-                setActivePage("risk")
-              }
-            >
-              Predict outbreaks
-              <ChevronRight size={16} />
-            </button>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-icon">
-              <Map />
-            </div>
-
-            <h3>
-              Geospatial Hotspots
-            </h3>
-
-            <p>
-              Visualize confirmed disease
-              cases and prioritize field-level
-              intervention.
-            </p>
-
-            <button
-              className="feature-link feature-button"
-              onClick={() =>
-                setActivePage("hotspots")
-              }
-            >
-              View hotspots
-              <ChevronRight size={16} />
-            </button>
 
           </div>
 
         </div>
 
-      </section>
-    </>
-  );
 
-  /* =======================================================
-     RISK PAGE
-  ======================================================= */
+        <div className="advisory-footer-grid">
 
-  const renderRiskPage = () => (
-    <section className="risk-dashboard">
+          <div className="mini-advisory-card">
 
-      <button
-        className="back-btn"
-        onClick={() =>
-          setActivePage("diagnosis")
-        }
-      >
-        <ArrowLeft size={17} />
-        {t.backToDiagnosis}
-      </button>
-
-
-      <div className="risk-hero">
-
-        <div>
-
-          <span className="dashboard-kicker">
-            {t.riskKicker}
-          </span>
-
-          <h1>
-            {t.riskTitle}
-          </h1>
-
-          <p>
-            {t.riskDescription}{" "}
-            {riskData.disease}
-          </p>
-
-        </div>
-
-
-        <div className="risk-score-card">
-
-          <span>
-            {t.overallRisk}
-          </span>
-
-          <strong>
-            {riskData.overall}%
-          </strong>
-
-          <div className="risk-score-level">
-            {localizeLevel(
-              riskData.level,
-              language
-            )}
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div className="risk-main-grid">
-
-        <div className="forecast-card large">
-
-          <div className="forecast-header">
+            <CalendarDays
+              size={19}
+            />
 
             <div>
 
-              <span className="small-label">
-                {t.sevenDayOutlook}
+              <span>
+                {t.fieldRoutine}
               </span>
 
-              <h3>
-                {riskData.disease}
-              </h3>
+              <strong>
+                {t.scoutConsistently}
+              </strong>
 
-            </div>
-
-            <div className="high-risk-pill">
-              {localizeLevel(
-                riskData.level,
-                language
-              )}
-            </div>
-
-          </div>
-
-
-          <div className="forecast-chart">
-
-            <div className="chart-lines">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-
-            <div className="chart-bars">
-
-              {riskTrend.map(
-                (item) => (
-
-                  <div
-                    className="chart-column"
-                    key={item.day}
-                  >
-
-                    <div
-                      className="chart-value"
-                      style={{
-                        height:
-                          `${item.value * 0.65}px`,
-                      }}
-                    ></div>
-
-                    <small>
-                      {getDayLabel(
-                        item.day
-                      )}
-                    </small>
-
-                  </div>
-
-                )
-              )}
+              <p>
+                {t.scoutText}
+              </p>
 
             </div>
 
           </div>
 
-        </div>
 
+          <div className="mini-advisory-card">
 
-        <div className="forecast-card">
+            <MapPin
+              size={19}
+            />
 
-          <span className="small-label">
-            {t.currentConditions}
-          </span>
+            <div>
 
-          <h3>
-            {t.fieldEnvironment}
-          </h3>
+              <span>
+                {t.recordKeeping}
+              </span>
 
+              <strong>
+                {t.captureLocation}
+              </strong>
 
-          <div className="condition-list">
-
-            <div className="condition-row">
-
-              <div className="condition-icon">
-                <ThermometerSun size={18} />
-              </div>
-
-              <div>
-
-                <span>
-                  {t.temperature}
-                </span>
-
-                <strong>
-                  {riskData.temperature}
-                </strong>
-
-              </div>
+              <p>
+                {t.recordText}
+              </p>
 
             </div>
 
-
-            <div className="condition-row">
-
-              <div className="condition-icon">
-                <Droplets size={18} />
-              </div>
-
-              <div>
-
-                <span>
-                  {t.humidity}
-                </span>
-
-                <strong>
-                  {riskData.humidity}
-                </strong>
-
-              </div>
-
-            </div>
+          </div>
 
 
-            <div className="condition-row">
+          <div className="mini-advisory-card">
 
-              <div className="condition-icon">
-                <CloudSun size={18} />
-              </div>
+            <Users
+              size={19}
+            />
 
-              <div>
+            <div>
 
-                <span>
-                  {t.rainfall}
-                </span>
+              <span>
+                {t.escalation}
+              </span>
 
-                <strong>
-                  {riskData.rainfall}
-                </strong>
+              <strong>
+                {t.askExpert}
+              </strong>
 
-              </div>
-
-            </div>
-
-
-            <div className="condition-row">
-
-              <div className="condition-icon">
-                <Bug size={18} />
-              </div>
-
-              <div>
-
-                <span>
-                  {t.pestActivity}
-                </span>
-
-                <strong>
-                  {localizeLevel(
-                    riskData.pestActivity,
-                    language
-                  )}
-                </strong>
-
-              </div>
-
-            </div>
-
-
-            <div className="condition-row">
-
-              <div className="condition-icon">
-                <CalendarDays size={18} />
-              </div>
-
-              <div>
-
-                <span>
-                  {t.cropStage}
-                </span>
-
-                <strong>
-                  {riskData.cropStage}
-                </strong>
-
-              </div>
+              <p>
+                {t.escalationText}
+              </p>
 
             </div>
 
@@ -2910,786 +3936,533 @@ function App() {
 
         </div>
 
-      </div>
-
-
-      <div className="warning-panel">
-
-        <div className="warning-icon">
-          <AlertTriangle size={21} />
-        </div>
-
-        <div>
-
-          <span>
-            {t.earlyWarning}
-          </span>
-
-          <h3>
-            {t.warningTitle}
-          </h3>
-
-          <p>
-            {t.warningText}
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div className="forecast-action-grid">
-
-        <div className="forecast-card action-card">
-
-          <div className="feature-icon">
-            <Sprout />
-          </div>
-
-          <h3>
-            {t.recommendedActionRisk}
-          </h3>
-
-          <p>
-            {t.recommendedActionText}
-          </p>
-
-        </div>
-
-
-        <div className="forecast-card action-card">
-
-          <div className="feature-icon">
-            <Bug />
-          </div>
-
-          <h3>
-            {t.pestTrap}
-          </h3>
-
-          <p>
-            {t.pestTrapText}
-          </p>
-
-        </div>
-
-
-        <div className="forecast-card action-card">
-
-          <div className="feature-icon">
-            <Activity />
-          </div>
-
-          <h3>
-            {t.nextUpdate}
-          </h3>
-
-          <p>
-            {t.nextUpdateText}
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-  );
-
-  /* =======================================================
-     ADVISORIES PAGE
-  ======================================================= */
-
-  const renderAdvisoriesPage = () => (
-    <section className="advisories-dashboard">
-
-      <div className="advisory-hero">
-
-        <div>
-
-          <span className="dashboard-kicker">
-            {t.advisoriesKicker}
-          </span>
-
-          <h1>
-            {t.advisoriesTitle}
-          </h1>
-
-          <p>
-            {t.advisoriesDescription}
-          </p>
-
-        </div>
-
-
-        <div className="advisory-badge">
-
-          <ShieldCheck size={15} />
-
-          {t.aiAssisted}
-
-        </div>
-
-      </div>
-
-
-      <div className="advisory-status-card">
-
-        <div className="advisory-status-icon">
-          <Sprout size={22} />
-        </div>
-
-
-        <div className="advisory-status-main">
-
-          <span>
-            {t.currentCondition}
-          </span>
-
-          <h2>
-
-            {result
-              ? translateDiseaseName(
-                  result.class,
-                  language
-                )
-              : t.noDiagnosis}
-
-          </h2>
-
-          <p>
-            {currentAdvisory.summary}
-          </p>
-
-        </div>
-
-
-        <div className="advisory-status-side">
-
-          <span>
-            {t.status}
-          </span>
-
-          <strong>
-            {currentAdvisory.urgency}
-          </strong>
-
-        </div>
-
-      </div>
-
-
-      <div className="advisory-grid">
-
-        <div className="advisory-action-card">
-
-          <div className="advisory-card-icon green">
-
-            <CheckCircle2 size={20} />
-
-          </div>
-
-          <span className="small-label">
-            {t.immediateAction}
-          </span>
-
-          <h3>
-            {t.whatToDoNow}
-          </h3>
-
-
-          <div className="advisory-steps">
-
-            {currentAdvisory.immediate.map(
-              (item, index) => (
-
-                <div
-                  className="advisory-step"
-                  key={`${item}-${index}`}
-                >
-
-                  <span>
-                    {index + 1}
-                  </span>
-
-                  <p>
-                    {item}
-                  </p>
-
-                </div>
-
-              )
-            )}
-
-          </div>
-
-        </div>
-
-
-        <div className="advisory-action-card">
-
-          <div className="advisory-card-icon amber">
-
-            <ShieldCheck size={20} />
-
-          </div>
-
-          <span className="small-label">
-            {t.prevention}
-          </span>
-
-          <h3>
-            {t.reduceFutureRisk}
-          </h3>
-
-
-          <div className="advisory-steps">
-
-            {currentAdvisory.prevention.map(
-              (item, index) => (
-
-                <div
-                  className="advisory-step"
-                  key={`${item}-${index}`}
-                >
-
-                  <span>
-                    ✓
-                  </span>
-
-                  <p>
-                    {item}
-                  </p>
-
-                </div>
-
-              )
-            )}
-
-          </div>
-
-        </div>
-
-
-        <div className="advisory-action-card advisory-monitor-card">
-
-          <div className="advisory-card-icon forest">
-
-            <Activity size={20} />
-
-          </div>
-
-          <span className="small-label">
-            {t.monitoring}
-          </span>
-
-          <h3>
-            {t.keepWatching}
-          </h3>
-
-          <p>
-            {currentAdvisory.monitoring}
-          </p>
-
-
-          <button
-            className="voice-btn advisory-voice-btn"
-            onClick={speakAdvice}
-            disabled={!result}
-          >
-
-            {speaking ? (
-
-              <>
-                <Activity size={18} />
-                {t.speaking}
-              </>
-
-            ) : (
-
-              <>
-                <Volume2 size={18} />
-                {t.listen}
-              </>
-
-            )}
-
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <div className="expert-note">
-
-        <AlertTriangle size={18} />
-
-        <div>
-
-          <strong>
-            {t.expertTitle}
-          </strong>
-
-          <p>
-            {t.expertText}
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div className="advisory-footer-grid">
-
-        <div className="mini-advisory-card">
-
-          <CalendarDays size={19} />
-
-          <div>
-
-            <span>
-              {t.fieldRoutine}
-            </span>
-
-            <strong>
-              {t.scoutConsistently}
-            </strong>
-
-            <p>
-              {t.scoutText}
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div className="mini-advisory-card">
-
-          <MapPin size={19} />
-
-          <div>
-
-            <span>
-              {t.recordKeeping}
-            </span>
-
-            <strong>
-              {t.captureLocation}
-            </strong>
-
-            <p>
-              {t.recordText}
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div className="mini-advisory-card">
-
-          <Users size={19} />
-
-          <div>
-
-            <span>
-              {t.escalation}
-            </span>
-
-            <strong>
-              {t.askExpert}
-            </strong>
-
-            <p>
-              {t.escalationText}
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-  );
+      </section>
+    );
 
   /* =======================================================
      HOTSPOTS PAGE
   ======================================================= */
 
-  const renderHotspotsPage = () => (
-    <section className="hotspots-dashboard">
+  const renderHotspotsPage =
+    () => (
+      <section className="hotspots-dashboard">
 
-      <div className="hotspot-header">
-
-        <div>
-
-          <span className="dashboard-kicker">
-            {t.hotspotsKicker}
-          </span>
-
-          <h1>
-            {t.hotspotTitle}
-          </h1>
-
-          <p>
-            {t.hotspotsDescription}
-          </p>
-
-        </div>
-
-
-        <div className="prototype-badge">
-
-          <MapPin size={15} />
-
-          {t.prototypeData}
-
-        </div>
-
-      </div>
-
-
-      <div className="hotspot-stats">
-
-        <div className="hotspot-stat-card">
-
-          <div className="hotspot-stat-icon">
-            <MapPin size={19} />
-          </div>
+        <div className="hotspot-header">
 
           <div>
 
-            <span>
-              {t.reportedClusters}
+            <span className="dashboard-kicker">
+              {t.hotspotsKicker}
             </span>
 
-            <strong>
-              5
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <div className="hotspot-stat-card">
-
-          <div className="hotspot-stat-icon">
-            <AlertTriangle size={19} />
-          </div>
-
-          <div>
-
-            <span>
-              {t.highCritical}
-            </span>
-
-            <strong>
-              2
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <div className="hotspot-stat-card">
-
-          <div className="hotspot-stat-icon">
-            <Users size={19} />
-          </div>
-
-          <div>
-
-            <span>
-              {t.affectedReports}
-            </span>
-
-            <strong>
-              73
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div className="hotspot-layout">
-
-        <div className="map-card">
-
-          <div className="map-card-head">
-
-            <div>
-
-              <span className="small-label">
-                {t.fieldMap}
-              </span>
-
-              <h3>
-                {t.reportedActivity}
-              </h3>
-
-            </div>
-
-
-            <div className="map-search">
-
-              <Search size={15} />
-
-              {t.searchField}
-
-            </div>
-
-          </div>
-
-
-          <div className="map-shell">
-
-            <MapContainer
-              center={hotspotCenter}
-              zoom={hotspotZoom}
-              scrollWheelZoom={true}
-              className="hotspot-map"
-            >
-
-              <TileLayer
-                attribution="&copy; OpenStreetMap contributors"
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-
-
-              <MapResetView
-                center={hotspotCenter}
-                zoom={hotspotZoom}
-                label={t.resetView}
-              />
-
-
-              {hotspotCases.map(
-                (spot) => (
-
-                  <CircleMarker
-                    key={spot.id}
-                    center={[
-                      spot.lat,
-                      spot.lng,
-                    ]}
-                    radius={
-                      spot.level === "Critical"
-                        ? 17
-                        : 13
-                    }
-                    pathOptions={{
-                      color:
-                        spot.level === "Critical"
-                          ? "#b23b37"
-                          : spot.level === "High"
-                          ? "#c9821e"
-                          : spot.level === "Medium"
-                          ? "#2e7d32"
-                          : "#6b8f77",
-
-                      fillColor:
-                        spot.level === "Critical"
-                          ? "#d9534f"
-                          : spot.level === "High"
-                          ? "#e3a23b"
-                          : spot.level === "Medium"
-                          ? "#4b9b55"
-                          : "#91ad9a",
-
-                      fillOpacity: 0.72,
-                      weight: 3,
-                    }}
-                  >
-
-                    <Popup>
-
-                      <strong>
-                        {spot.name}
-                      </strong>
-
-                      <br />
-
-                      {spot.disease}
-
-                      <br />
-
-                      {t.mapRisk}:{" "}
-                      {getHotspotLabel(
-                        spot.level
-                      )}
-
-                      <br />
-
-                      {t.mapReports}:{" "}
-                      {spot.count}
-
-                    </Popup>
-
-                  </CircleMarker>
-
-                )
-              )}
-
-            </MapContainer>
-
-
-            <div className="map-control-hint">
-
-              <Navigation size={14} />
-
-              {t.mapHint}
-
-            </div>
-
-
-            <div className="map-legend">
-
-              <span className="legend-title">
-                {t.mapRisk}
-              </span>
-
-              <span>
-                <i className="legend-dot critical"></i>
-                {t.critical}
-              </span>
-
-              <span>
-                <i className="legend-dot high"></i>
-                {t.high}
-              </span>
-
-              <span>
-                <i className="legend-dot medium"></i>
-                {t.medium}
-              </span>
-
-              <span>
-                <i className="legend-dot low"></i>
-                {t.low}
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div className="hotspot-list-card">
-
-          <div className="map-card-head compact">
-
-            <div>
-
-              <span className="small-label">
-                {t.recentReports}
-              </span>
-
-              <h3>
-                {t.priorityAreas}
-              </h3>
-
-            </div>
-
-          </div>
-
-
-          <div className="hotspot-list">
-
-            {hotspotCases.map(
-              (spot) => (
-
-                <div
-                  className="hotspot-item"
-                  key={spot.id}
-                >
-
-                  <div
-                    className={`hotspot-marker ${
-                      getHotspotClass(
-                        spot.level
-                      )
-                    }`}
-                  >
-
-                    <MapPin size={16} />
-
-                  </div>
-
-
-                  <div className="hotspot-item-main">
-
-                    <div className="hotspot-item-top">
-
-                      <strong>
-                        {spot.name}
-                      </strong>
-
-                      <span
-                        className={`hotspot-level ${
-                          getHotspotClass(
-                            spot.level
-                          )
-                        }`}
-                      >
-
-                        {getHotspotLabel(
-                          spot.level
-                        )}
-
-                      </span>
-
-                    </div>
-
-
-                    <span>
-                      {spot.disease}
-                    </span>
-
-
-                    <small>
-
-                      {spot.count}{" "}
-                      {t.reportedCases}
-
-                    </small>
-
-                  </div>
-
-                </div>
-
-              )
-            )}
-
-          </div>
-
-
-          <div className="hotspot-note">
-
-            <ShieldCheck size={17} />
+            <h1>
+              {t.hotspotTitle}
+            </h1>
 
             <p>
-              {t.hotspotValidation}
+              {t.hotspotsDescription}
             </p>
 
           </div>
 
+
+          <div className="prototype-badge">
+
+            <MapPin
+              size={15}
+            />
+
+            {t.prototypeData}
+
+          </div>
+
         </div>
 
-      </div>
 
-    </section>
-  );
+        <div className="hotspot-stats">
+
+          <div className="hotspot-stat-card">
+
+            <div className="hotspot-stat-icon">
+
+              <MapPin
+                size={19}
+              />
+
+            </div>
+
+            <div>
+
+              <span>
+                {t.reportedClusters}
+              </span>
+
+              <strong>
+                5
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div className="hotspot-stat-card">
+
+            <div className="hotspot-stat-icon">
+
+              <AlertTriangle
+                size={19}
+              />
+
+            </div>
+
+            <div>
+
+              <span>
+                {t.highCritical}
+              </span>
+
+              <strong>
+                2
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div className="hotspot-stat-card">
+
+            <div className="hotspot-stat-icon">
+
+              <Users
+                size={19}
+              />
+
+            </div>
+
+            <div>
+
+              <span>
+                {t.affectedReports}
+              </span>
+
+              <strong>
+                73
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="hotspot-layout">
+
+          <div className="map-card">
+
+            <div className="map-card-head">
+
+              <div>
+
+                <span className="small-label">
+                  {t.fieldMap}
+                </span>
+
+                <h3>
+                  {t.reportedActivity}
+                </h3>
+
+              </div>
+
+
+              <div
+                style={{
+                  display:
+                    "flex",
+
+                  alignItems:
+                    "center",
+
+                  gap: "10px",
+
+                  flexWrap:
+                    "wrap",
+                }}
+              >
+
+                <div className="map-search">
+
+                  <Search
+                    size={15}
+                  />
+
+                  {t.searchField}
+
+                </div>
+
+
+                <select
+                  value={
+                    selectedDistrict
+                  }
+                  onChange={(
+                    event
+                  ) =>
+                    setSelectedDistrict(
+                      event.target.value
+                    )
+                  }
+                  aria-label="Select Maharashtra district"
+                  style={{
+                    padding:
+                      "10px 12px",
+
+                    borderRadius:
+                      "10px",
+
+                    border:
+                      "1px solid #e3e9e4",
+
+                    background:
+                      "white",
+
+                    color:
+                      "#12372a",
+
+                    fontFamily:
+                      "inherit",
+
+                    fontSize:
+                      "12px",
+
+                    fontWeight:
+                      600,
+
+                    cursor:
+                      "pointer",
+                  }}
+                >
+
+                  {Object.keys(
+                    maharashtraDistricts
+                  ).map(
+                    (
+                      district
+                    ) => (
+
+                      <option
+                        key={
+                          district
+                        }
+                        value={
+                          district
+                        }
+                      >
+                        {district}
+                      </option>
+
+                    )
+                  )}
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div className="map-shell">
+
+              <MapContainer
+                key={
+                  selectedDistrict
+                }
+                center={
+                  hotspotCenter
+                }
+                zoom={
+                  hotspotZoom
+                }
+                scrollWheelZoom={
+                  true
+                }
+                className="hotspot-map"
+              >
+
+                <TileLayer
+                  attribution="&copy; OpenStreetMap contributors"
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+
+                <MapResetView
+                  center={
+                    hotspotCenter
+                  }
+                  zoom={
+                    hotspotZoom
+                  }
+                  label={
+                    t.resetView
+                  }
+                />
+
+
+                {hotspotCases.map(
+                  (spot) => (
+
+                    <CircleMarker
+                      key={
+                        spot.id
+                      }
+                      center={[
+                        spot.lat,
+                        spot.lng,
+                      ]}
+                      radius={
+                        spot.level ===
+                        "Critical"
+                          ? 17
+                          : 13
+                      }
+                      pathOptions={{
+                        color:
+                          spot.level ===
+                          "Critical"
+                            ? "#b23b37"
+                            : spot.level ===
+                              "High"
+                            ? "#c9821e"
+                            : spot.level ===
+                              "Medium"
+                            ? "#2e7d32"
+                            : "#6b8f77",
+
+                        fillColor:
+                          spot.level ===
+                          "Critical"
+                            ? "#d9534f"
+                            : spot.level ===
+                              "High"
+                            ? "#e3a23b"
+                            : spot.level ===
+                              "Medium"
+                            ? "#4b9b55"
+                            : "#91ad9a",
+
+                        fillOpacity:
+                          0.72,
+
+                        weight:
+                          3,
+                      }}
+                    >
+
+                      <Popup>
+
+                        <strong>
+                          {spot.name}
+                        </strong>
+
+                        <br />
+
+                        {spot.disease}
+
+                        <br />
+
+                        {t.mapRisk}:{" "}
+                        {getHotspotLabel(
+                          spot.level
+                        )}
+
+                        <br />
+
+                        {t.mapReports}:{" "}
+                        {spot.count}
+
+                      </Popup>
+
+                    </CircleMarker>
+
+                  )
+                )}
+
+              </MapContainer>
+
+
+              <div className="map-control-hint">
+
+                <Navigation
+                  size={14}
+                />
+
+                {t.mapHint}
+
+              </div>
+
+
+              <div className="map-legend">
+
+                <span className="legend-title">
+                  {t.mapRisk}
+                </span>
+
+                <span>
+
+                  <i className="legend-dot critical"></i>
+
+                  {t.critical}
+
+                </span>
+
+                <span>
+
+                  <i className="legend-dot high"></i>
+
+                  {t.high}
+
+                </span>
+
+                <span>
+
+                  <i className="legend-dot medium"></i>
+
+                  {t.medium}
+
+                </span>
+
+                <span>
+
+                  <i className="legend-dot low"></i>
+
+                  {t.low}
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div className="hotspot-list-card">
+
+            <div className="map-card-head compact">
+
+              <div>
+
+                <span className="small-label">
+                  {t.recentReports}
+                </span>
+
+                <h3>
+                  {t.priorityAreas}
+                </h3>
+
+              </div>
+
+            </div>
+
+
+            <div className="hotspot-list">
+
+              {hotspotCases.map(
+                (spot) => (
+
+                  <div
+                    className="hotspot-item"
+                    key={
+                      spot.id
+                    }
+                  >
+
+                    <div
+                      className={`hotspot-marker ${
+                        getHotspotClass(
+                          spot.level
+                        )
+                      }`}
+                    >
+
+                      <MapPin
+                        size={16}
+                      />
+
+                    </div>
+
+
+                    <div className="hotspot-item-main">
+
+                      <div className="hotspot-item-top">
+
+                        <strong>
+                          {spot.name}
+                        </strong>
+
+                        <span
+                          className={`hotspot-level ${
+                            getHotspotClass(
+                              spot.level
+                            )
+                          }`}
+                        >
+
+                          {getHotspotLabel(
+                            spot.level
+                          )}
+
+                        </span>
+
+                      </div>
+
+
+                      <span>
+                        {spot.disease}
+                      </span>
+
+
+                      <small>
+
+                        {spot.count}{" "}
+
+                        {t.reportedCases}
+
+                      </small>
+
+                    </div>
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+
+            <div className="hotspot-note">
+
+              <ShieldCheck
+                size={17}
+              />
+
+              <p>
+                {t.hotspotValidation}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+    );
 
   /* =======================================================
-     FINAL APP RETURN
+     FINAL RETURN
   ======================================================= */
 
   return (
@@ -3700,8 +4473,13 @@ function App() {
         <div className="brand">
 
           <div className="brand-icon">
-            <Leaf size={22} />
+
+            <Leaf
+              size={22}
+            />
+
           </div>
+
 
           <div>
 
@@ -3740,12 +4518,15 @@ function App() {
 
           <button
             className={`nav-link ${
-              activePage === "diagnosis"
+              activePage ===
+              "diagnosis"
                 ? "active"
                 : ""
             }`}
             onClick={() =>
-              setActivePage("diagnosis")
+              setActivePage(
+                "diagnosis"
+              )
             }
           >
             {t.diagnosis}
@@ -3759,7 +4540,9 @@ function App() {
                 : ""
             }`}
             onClick={() =>
-              setActivePage("risk")
+              setActivePage(
+                "risk"
+              )
             }
           >
             {t.risk}
@@ -3768,12 +4551,15 @@ function App() {
 
           <button
             className={`nav-link ${
-              activePage === "hotspots"
+              activePage ===
+              "hotspots"
                 ? "active"
                 : ""
             }`}
             onClick={() =>
-              setActivePage("hotspots")
+              setActivePage(
+                "hotspots"
+              )
             }
           >
             {t.hotspots}
@@ -3782,12 +4568,15 @@ function App() {
 
           <button
             className={`nav-link ${
-              activePage === "advisories"
+              activePage ===
+              "advisories"
                 ? "active"
                 : ""
             }`}
             onClick={() =>
-              setActivePage("advisories")
+              setActivePage(
+                "advisories"
+              )
             }
           >
             {t.advisories}
@@ -3799,7 +4588,8 @@ function App() {
         <div
           className="language-switcher"
           style={{
-            position: "relative",
+            position:
+              "relative",
           }}
         >
 
@@ -3808,19 +4598,24 @@ function App() {
             type="button"
             onClick={() =>
               setShowLanguageMenu(
-                (value) => !value
+                (value) =>
+                  !value
               )
             }
           >
 
-            <Languages size={17} />
+            <Languages
+              size={17}
+            />
 
             {
               languages.find(
                 (item) =>
-                  item.code === language
+                  item.code ===
+                  language
               )?.native
             }
+
 
             <ChevronRight
               size={15}
@@ -3846,14 +4641,18 @@ function App() {
                 (item) => (
 
                   <button
-                    key={item.code}
+                    key={
+                      item.code
+                    }
                     type="button"
                     className={
-                      language === item.code
+                      language ===
+                      item.code
                         ? "language-option active"
                         : "language-option"
                     }
                     onClick={() => {
+
                       setLanguage(
                         item.code
                       );
@@ -3861,6 +4660,7 @@ function App() {
                       setShowLanguageMenu(
                         false
                       );
+
                     }}
                   >
 
@@ -3888,16 +4688,20 @@ function App() {
 
       <main>
 
-        {activePage === "diagnosis" &&
+        {activePage ===
+          "diagnosis" &&
           renderDiagnosisPage()}
 
-        {activePage === "risk" &&
+        {activePage ===
+          "risk" &&
           renderRiskPage()}
 
-        {activePage === "hotspots" &&
+        {activePage ===
+          "hotspots" &&
           renderHotspotsPage()}
 
-        {activePage === "advisories" &&
+        {activePage ===
+          "advisories" &&
           renderAdvisoriesPage()}
 
       </main>
@@ -3913,6 +4717,7 @@ function App() {
 
           <span>
             {" "}•{" "}
+
             {language === "mr"
               ? "स्मार्ट कृषी बुद्धिमत्ता"
               : language === "hi"
@@ -3932,6 +4737,7 @@ function App() {
               : language === "pa"
               ? "ਸਮਾਰਟ ਖੇਤੀਬਾੜੀ ਬੁੱਧੀ"
               : "Smart agriculture intelligence"}
+
           </span>
 
         </div>
