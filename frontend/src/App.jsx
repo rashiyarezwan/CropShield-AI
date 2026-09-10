@@ -46,7 +46,7 @@ import "leaflet/dist/leaflet.css";
 import "./App.css";
 
 /* =========================================================
-   CONFIG
+   CONFIGURATION
 ========================================================= */
 
 const API_URL =
@@ -500,7 +500,7 @@ const baseTranslation = {
     "Sign out",
 
   voiceUnavailable:
-    "Regional voice is not available on this device. The advisory text is still available in the selected language.",
+    "A regional voice is not available on this device. The advisory text is still available in the selected language.",
 
   errors: {
     prediction:
@@ -512,7 +512,7 @@ const baseTranslation = {
 };
 
 /* =========================================================
-   TRANSLATIONS - REGIONAL
+   REGIONAL TRANSLATIONS
 ========================================================= */
 
 const translations = {
@@ -522,48 +522,28 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "निदान",
-
-      risk:
-        "जोखीम अंदाज",
-
-      hotspots:
-        "हॉटस्पॉट्स",
-
-      advisories:
-        "सल्ला",
-
-      language:
-        "भाषा",
+      diagnosis: "निदान",
+      risk: "जोखीम अंदाज",
+      hotspots: "हॉटस्पॉट्स",
+      advisories: "सल्ला",
+      language: "भाषा",
     },
 
-    systemOnline:
-      "AI प्रणाली कार्यरत",
+    systemOnline: "AI प्रणाली कार्यरत",
 
-    heroTitle:
-      "तुमची पिके जपा",
-
-    heroSubtitle:
-      "उशीर होण्यापूर्वी.",
+    heroTitle: "तुमची पिके जपा",
+    heroSubtitle: "उशीर होण्यापूर्वी.",
 
     heroDescription:
       "पिकाच्या पानाचा फोटो अपलोड करा आणि CropShield AI च्या मदतीने रोग ओळखा, जोखीम समजा आणि योग्य कृती मिळवा.",
 
-    startDiagnosis:
-      "निदान सुरू करा",
+    startDiagnosis: "निदान सुरू करा",
 
-    aiDiagnosis:
-      "AI-आधारित निदान",
+    aiDiagnosis: "AI-आधारित निदान",
+    riskInsights: "रिअल-टाइम जोखीम माहिती",
 
-    riskInsights:
-      "रिअल-टाइम जोखीम माहिती",
-
-    cropHealth:
-      "पीक आरोग्य",
-
-    diagnosisTitle:
-      "AI निदान",
+    cropHealth: "पीक आरोग्य",
+    diagnosisTitle: "AI निदान",
 
     detectedCondition:
       "ओळखलेली स्थिती",
@@ -577,17 +557,11 @@ const translations = {
     uploadHint:
       "पिकाच्या पानाचा स्पष्ट फोटो अपलोड करा",
 
-    confidence:
-      "विश्वास",
+    confidence: "विश्वास",
+    aiConfidence: "AI विश्वास पातळी",
 
-    aiConfidence:
-      "AI विश्वास पातळी",
-
-    severity:
-      "तीव्रता",
-
-    riskLevel:
-      "जोखीम पातळी",
+    severity: "तीव्रता",
+    riskLevel: "जोखीम पातळी",
 
     cropHealthStatus:
       "पीक आरोग्य स्थिती",
@@ -613,11 +587,17 @@ const translations = {
     expertValidation:
       "तज्ज्ञ पडताळणीची शिफारस",
 
+    analyzingButton:
+      "विश्लेषण करत आहे...",
+
     analyzeAnother:
       "दुसरे पान तपासा",
 
     uploadLeaf:
       "पानाचा फोटो अपलोड करा",
+
+    scan:
+      "AI विश्लेषण करत आहे...",
 
     notLeaf:
       "हा फोटो पिकाच्या पानाचा दिसत नाही. कृपया टोमॅटोच्या पानाचा स्पष्ट फोटो अपलोड करा.",
@@ -739,8 +719,7 @@ const translations = {
     expertQuestionPlaceholder:
       "लक्षणे किंवा तुमचा प्रश्न येथे लिहा...",
 
-    cancel:
-      "रद्द करा",
+    cancel: "रद्द करा",
 
     submitQuestion:
       "पडताळणीसाठी पाठवा",
@@ -805,26 +784,16 @@ const translations = {
     hotspotDemoNotice:
       "हे नकाशावरील बिंदू आणि संख्या सिम्युलेटेड प्रोटोटाइप रेकॉर्ड आहेत.",
 
-    critical:
-      "गंभीर",
-
-    high:
-      "उच्च",
-
-    medium:
-      "मध्यम",
-
-    low:
-      "कमी",
+    critical: "गंभीर",
+    high: "उच्च",
+    medium: "मध्यम",
+    low: "कमी",
 
     advisoriesKicker:
       "शेतकरी कृती केंद्र",
 
     advisoriesTitle:
       "पीक सल्ला",
-
-    askExpert:
-      "तज्ज्ञांचा सल्ला घ्या",
 
     backToDiagnosis:
       "निदानाकडे परत जा",
@@ -835,15 +804,9 @@ const translations = {
     loginDescription:
       "AI पीक निदान, जोखीम अंदाज आणि शेत बुद्धिमत्ता वापरण्यासाठी साइन इन करा.",
 
-    email:
-      "ईमेल",
-
-    password:
-      "पासवर्ड",
-
-    signIn:
-      "साइन इन",
-
+    email: "ईमेल",
+    password: "पासवर्ड",
+    signIn: "साइन इन",
     signInGoogle:
       "Google सह साइन इन करा",
 
@@ -853,31 +816,21 @@ const translations = {
     invalidCredentials:
       "डेमो खाते तपशील चुकीचे आहेत.",
 
-    signOut:
-      "साइन आउट",
+    signOut: "साइन आउट",
 
     voiceUnavailable:
-      "या डिव्हाइसवर मराठी आवाज उपलब्ध नाही. निवडलेल्या भाषेत सल्ला मजकूर उपलब्ध आहे.",
+      "या डिव्हाइसवर प्रादेशिक आवाज उपलब्ध नाही. निवडलेल्या भाषेत सल्ला मजकूर उपलब्ध आहे.",
   },
 
   hi: {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "निदान",
-
-      risk:
-        "जोखिम पूर्वानुमान",
-
-      hotspots:
-        "हॉटस्पॉट",
-
-      advisories:
-        "सलाह",
-
-      language:
-        "भाषा",
+      diagnosis: "निदान",
+      risk: "जोखिम पूर्वानुमान",
+      hotspots: "हॉटस्पॉट",
+      advisories: "सलाह",
+      language: "भाषा",
     },
 
     systemOnline:
@@ -891,6 +844,12 @@ const translations = {
 
     startDiagnosis:
       "निदान शुरू करें",
+
+    aiDiagnosis:
+      "AI-संचालित निदान",
+
+    riskInsights:
+      "रियल-टाइम जोखिम जानकारी",
 
     cropHealth:
       "फसल स्वास्थ्य",
@@ -940,14 +899,23 @@ const translations = {
     speaking:
       "सलाह सुनाई जा रही है...",
 
+    highConfidence:
+      "उच्च-विश्वास AI निदान",
+
     expertValidation:
       "विशेषज्ञ सत्यापन की सलाह",
+
+    analyzingButton:
+      "विश्लेषण हो रहा है...",
 
     analyzeAnother:
       "दूसरी पत्ती जांचें",
 
     uploadLeaf:
       "पत्ती की तस्वीर अपलोड करें",
+
+    scan:
+      "AI विश्लेषण कर रहा है...",
 
     notLeaf:
       "यह तस्वीर फसल की पत्ती जैसी नहीं लगती। कृपया साफ टमाटर-पत्ती की तस्वीर अपलोड करें।",
@@ -1060,8 +1028,7 @@ const translations = {
     expertQuestionPlaceholder:
       "लक्षण या अपना प्रश्न लिखें...",
 
-    cancel:
-      "रद्द करें",
+    cancel: "रद्द करें",
 
     submitQuestion:
       "समीक्षा के लिए भेजें",
@@ -1108,17 +1075,10 @@ const translations = {
     hotspotValidation:
       "केवल डेमो डेटा। ये क्लस्टर और रिपोर्ट संख्या भौगोलिक निगरानी वर्कफ़्लो को प्रदर्शित करने के लिए सिमुलेटेड हैं। वास्तविक प्रणाली में सत्यापित फील्ड रिपोर्ट, सेंसर और विशेषज्ञ-पुष्ट मामलों का उपयोग किया जाएगा।",
 
-    critical:
-      "गंभीर",
-
-    high:
-      "उच्च",
-
-    medium:
-      "मध्यम",
-
-    low:
-      "कम",
+    critical: "गंभीर",
+    high: "उच्च",
+    medium: "मध्यम",
+    low: "कम",
 
     advisoriesKicker:
       "किसान कार्रवाई केंद्र",
@@ -1135,14 +1095,9 @@ const translations = {
     loginDescription:
       "AI फसल निदान, जोखिम पूर्वानुमान और खेत की जानकारी के लिए साइन इन करें।",
 
-    email:
-      "ईमेल",
-
-    password:
-      "पासवर्ड",
-
-    signIn:
-      "साइन इन",
+    email: "ईमेल",
+    password: "पासवर्ड",
+    signIn: "साइन इन",
 
     signInGoogle:
       "Google से साइन इन करें",
@@ -1157,273 +1112,19 @@ const translations = {
       "साइन आउट",
 
     voiceUnavailable:
-      "इस डिवाइस पर हिंदी आवाज उपलब्ध नहीं है। चुनी गई भाषा में सलाह का टेक्स्ट उपलब्ध है।",
+      "इस डिवाइस पर क्षेत्रीय आवाज उपलब्ध नहीं है। चुनी गई भाषा में सलाह का टेक्स्ट उपलब्ध है।",
   },
 
   te: {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "నిర్ధారణ",
-      risk:
-        "ప్రమాద అంచనా",
-      hotspots:
-        "హాట్‌స్పాట్‌లు",
-      advisories:
-        "సలహాలు",
-      language:
-        "భాష",
+      diagnosis: "నిర్ధారణ",
+      risk: "ప్రమాద అంచనా",
+      hotspots: "హాట్‌స్పాట్‌లు",
+      advisories: "సలహాలు",
+      language: "భాష",
     },
-
-    systemOnline:
-      "AI వ్యవస్థ ఆన్‌లైన్‌లో ఉంది",
-
-    heroTitle:
-      "మీ పంటలను రక్షించండి",
-
-    heroSubtitle:
-      "చాలా ఆలస్యం కాకముందే.",
-
-    startDiagnosis:
-      "నిర్ధారణ ప్రారంభించండి",
-
-    cropHealth:
-      "పంట ఆరోగ్యం",
-
-    diagnosisTitle:
-      "AI నిర్ధారణ",
-
-    detectedCondition:
-      "గుర్తించిన పరిస్థితి",
-
-    analyzingLeaf:
-      "ఆకును విశ్లేషిస్తోంది...",
-
-    ready:
-      "విశ్లేషణకు సిద్ధంగా ఉంది",
-
-    uploadHint:
-      "పంట ఆకు యొక్క స్పష్టమైన చిత్రాన్ని అప్లోడ్ చేయండి",
-
-    confidence:
-      "నమ్మకం",
-
-    aiConfidence:
-      "AI నమ్మక స్థాయి",
-
-    severity:
-      "తీవ్రత",
-
-    riskLevel:
-      "ప్రమాద స్థాయి",
-
-    cropHealthStatus:
-      "పంట ఆరోగ్య స్థితి",
-
-    recommendedAction:
-      "సిఫారసు చేసిన చర్య",
-
-    whatShouldIDo:
-      "ఏం చేయాలి?",
-
-    cropAdvisory:
-      "పంట సలహా",
-
-    listen:
-      "సలహా వినండి",
-
-    speaking:
-      "సలహా చదువుతోంది...",
-
-    analyzeAnother:
-      "మరో ఆకును విశ్లేషించండి",
-
-    uploadLeaf:
-      "ఆకు చిత్రాన్ని అప్లోడ్ చేయండి",
-
-    notLeaf:
-      "ఈ చిత్రం పంట ఆకు లాగా కనిపించడం లేదు. స్పష్టమైన టమాటా ఆకు చిత్రాన్ని అప్లోడ్ చేయండి.",
-
-    riskTitle:
-      "పంట ప్రమాద అంచనా",
-
-    overallRisk:
-      "మొత్తం ప్రమాదం",
-
-    currentConditions:
-      "ప్రస్తుత పరిస్థితులు",
-
-    fieldEnvironment:
-      "పొల వాతావరణం",
-
-    riskKicker:
-      "ముందస్తు హెచ్చరిక వ్యవస్థ",
-
-    riskDescription:
-      "ఎంచుకున్న జిల్లా కోసం ప్రోటోటైప్ ప్రమాద అంచనా:",
-
-    sevenDayOutlook:
-      "7-రోజుల ప్రోటోటైప్ ప్రమాద ధోరణి",
-
-    temperature:
-      "ఉష్ణోగ్రత",
-
-    humidity:
-      "తేమ",
-
-    rainfall:
-      "వర్షపాతం",
-
-    pestActivity:
-      "పురుగు కార్యకలాపం",
-
-    cropStage:
-      "పంట దశ",
-
-    weatherLive:
-      "ప్రత్యక్ష వాతావరణం",
-
-    weatherUpdated:
-      "వాతావరణ నవీకరణ",
-
-    fetchingWeather:
-      "ప్రత్యక్ష వాతావరణాన్ని పొందుతోంది...",
-
-    weatherUnavailable:
-      "ప్రత్యక్ష వాతావరణం అందుబాటులో లేదు",
-
-    refreshWeather:
-      "వాతావరణాన్ని నవీకరించండి",
-
-    weatherSource:
-      "వాతావరణ మూలం: Open-Meteo",
-
-    fieldIntelligence:
-      "ఫీల్డ్ ఇంటెలిజెన్స్",
-
-    sensorPanelTitle:
-      "పురుగు ఉచ్చు మరియు సెన్సర్",
-
-    sensorPanelText:
-      "ప్రోటోటైప్ సెన్సర్ ఫీడ్. IoT ఏకీకరణను చూపించడానికి విలువలు సిమ్యులేట్ చేయబడ్డాయి.",
-
-    pestTrapCount:
-      "పురుగు ఉచ్చు సంఖ్య",
-
-    soilMoisture:
-      "మట్టి తేమ",
-
-    sensorStatus:
-      "సెన్సర్ స్థితి",
-
-    refreshSensor:
-      "సెన్సర్ నవీకరించండి",
-
-    expertValidationTitle:
-      "నిపుణుల ధృవీకరణ",
-
-    expertReviewTitle:
-      "నిపుణుల సమీక్ష",
-
-    expertReviewText:
-      "అనిశ్చిత AI ఫలితాలను నిపుణుల ధృవీకరణ కోసం పంపవచ్చు.",
-
-    requestExpert:
-      "నిపుణుల ధృవీకరణ అభ్యర్థించండి",
-
-    caseSubmitted:
-      "కేసు పంపబడింది",
-
-    waitingValidation:
-      "నిపుణుల ధృవీకరణ కోసం వేచి ఉంది",
-
-    uploadFirst:
-      "ముందుగా ఆకు చిత్రాన్ని అప్లోడ్ చేయండి.",
-
-    askExpert:
-      "నిపుణుడిని అడగండి",
-
-    expertModalTitle:
-      "వ్యవసాయ నిపుణుడిని అడగండి",
-
-    expertModalDescription:
-      "ఈ కేసును నిపుణుల సమీక్షకు పంపండి మరియు పొల వివరాలను జోడించండి.",
-
-    expertQuestionPlaceholder:
-      "లక్షణాలు లేదా మీ ప్రశ్నను రాయండి...",
-
-    cancel:
-      "రద్దు చేయండి",
-
-    submitQuestion:
-      "సమీక్ష కోసం పంపండి",
-
-    questionSubmitted:
-      "నిపుణుల అభ్యర్థన పంపబడింది.",
-
-    hotspotsKicker:
-      "భౌగోళిక సమాచారం",
-
-    hotspotTitle:
-      "వ్యాధి హాట్‌స్పాట్‌లు",
-
-    hotspotsDescription:
-      "నివేదించిన పంట ఆరోగ్య కేసులను చూడండి మరియు పొల పరిశీలనకు ప్రాధాన్యత ఇవ్వండి.",
-
-    prototypeData:
-      "ప్రోటోటైప్ / డెమో డేటా",
-
-    reportedClusters:
-      "ప్రోటోటైప్ క్లస్టర్లు",
-
-    highCritical:
-      "అధిక / తీవ్రమైన ప్రాంతాలు",
-
-    affectedReports:
-      "డెమో ఫీల్డ్ నివేదికలు",
-
-    fieldMap:
-      "పొల మ్యాప్",
-
-    reportedActivity:
-      "ప్రోటోటైప్ వ్యాధి కార్యకలాపం",
-
-    recentReports:
-      "ప్రోటోటైప్ నివేదికలు",
-
-    priorityAreas:
-      "ప్రాధాన్య ప్రాంతాలు",
-
-    reportedCases:
-      "డెమో నివేదికలు",
-
-    hotspotValidation:
-      "డెమో డేటా మాత్రమే. ఈ క్లస్టర్లు మరియు నివేదికల సంఖ్య భౌగోళిక పర్యవేక్షణ వర్క్‌ఫ్లోను చూపించడానికి సిమ్యులేట్ చేయబడ్డాయి. నిజమైన వ్యవస్థలో ధృవీకరించిన ఫీల్డ్ నివేదికలు, సెన్సర్లు మరియు నిపుణుల నిర్ధారిత కేసులు ఉపయోగించబడతాయి.",
-
-    critical:
-      "తీవ్రమైన",
-
-    high:
-      "అధిక",
-
-    medium:
-      "మధ్యస్థ",
-
-    low:
-      "తక్కువ",
-
-    advisoriesKicker:
-      "రైతు చర్య కేంద్రం",
-
-    advisoriesTitle:
-      "పంట సలహాలు",
-
-    askExpert:
-      "నిపుణుడిని అడగండి",
-
-    backToDiagnosis:
-      "నిర్ధారణకు తిరిగి వెళ్లండి",
 
     loginTitle:
       "CropShield కు స్వాగతం",
@@ -1452,24 +1153,49 @@ const translations = {
     signOut:
       "సైన్ అవుట్",
 
+    hotspotTitle:
+      "వ్యాధి హాట్‌స్పాట్‌లు",
+
+    advisoriesTitle:
+      "పంట సలహాలు",
+
+    askExpert:
+      "నిపుణుడిని అడగండి",
+
+    prototypeData:
+      "ప్రోటోటైప్ / డెమో డేటా",
+
+    reportedClusters:
+      "ప్రోటోటైప్ క్లస్టర్లు",
+
+    highCritical:
+      "అధిక / తీవ్రమైన ప్రాంతాలు",
+
+    affectedReports:
+      "డెమో ఫీల్డ్ నివేదికలు",
+
+    reportedActivity:
+      "ప్రోటోటైప్ వ్యాధి కార్యకలాపం",
+
+    recentReports:
+      "ప్రోటోటైప్ నివేదికలు",
+
+    hotspotValidation:
+      "డెమో డేటా మాత్రమే. ఈ క్లస్టర్లు మరియు నివేదికల సంఖ్య భౌగోళిక పర్యవేక్షణ వర్క్‌ఫ్లోను చూపించడానికి సిమ్యులేట్ చేయబడ్డాయి. నిజమైన వ్యవస్థలో ధృవీకరించిన ఫీల్డ్ నివేదికలు, సెన్సర్లు మరియు నిపుణుల నిర్ధారిత కేసులు ఉపయోగించబడతాయి.",
+
     voiceUnavailable:
-      "ఈ పరికరంలో తెలుగు వాయిస్ అందుబాటులో లేదు. ఎంచుకున్న భాషలో సలహా టెక్స్ట్ అందుబాటులో ఉంది.",
+      "ఈ పరికరంలో ప్రాదేశిక వాయిస్ అందుబాటులో లేదు. ఎంచుకున్న భాషలో సలహా టెక్స్ట్ అందుబాటులో ఉంది.",
   },
 
   ta: {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "நோயறிதல்",
-      risk:
-        "ஆபத்து கணிப்பு",
-      hotspots:
-        "ஹாட்ஸ்பாட்கள்",
-      advisories:
-        "ஆலோசனைகள்",
-      language:
-        "மொழி",
+      diagnosis: "நோயறிதல்",
+      risk: "ஆபத்து கணிப்பு",
+      hotspots: "ஹாட்ஸ்பாட்கள்",
+      advisories: "ஆலோசனைகள்",
+      language: "மொழி",
     },
 
     loginTitle:
@@ -1531,16 +1257,11 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "ರೋಗನಿರ್ಣಯ",
-      risk:
-        "ಅಪಾಯದ ಮುನ್ಸೂಚನೆ",
-      hotspots:
-        "ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳು",
-      advisories:
-        "ಸಲಹೆಗಳು",
-      language:
-        "ಭಾಷೆ",
+      diagnosis: "ರೋಗನಿರ್ಣಯ",
+      risk: "ಅಪಾಯದ ಮುನ್ಸೂಚನೆ",
+      hotspots: "ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳು",
+      advisories: "ಸಲಹೆಗಳು",
+      language: "ಭಾಷೆ",
     },
 
     loginTitle:
@@ -1602,16 +1323,11 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "નિદાન",
-      risk:
-        "જોખમ આગાહી",
-      hotspots:
-        "હોટસ્પોટ્સ",
-      advisories:
-        "સલાહ",
-      language:
-        "ભાષા",
+      diagnosis: "નિદાન",
+      risk: "જોખમ આગાહી",
+      hotspots: "હોટસ્પોટ્સ",
+      advisories: "સલાહ",
+      language: "ભાષા",
     },
 
     loginTitle:
@@ -1673,16 +1389,11 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "রোগ নির্ণয়",
-      risk:
-        "ঝুঁকি পূর্বাভাস",
-      hotspots:
-        "হটস্পট",
-      advisories:
-        "পরামর্শ",
-      language:
-        "ভাষা",
+      diagnosis: "রোগ নির্ণয়",
+      risk: "ঝুঁকি পূর্বাভাস",
+      hotspots: "হটস্পট",
+      advisories: "পরামর্শ",
+      language: "ভাষা",
     },
 
     loginTitle:
@@ -1744,16 +1455,11 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "രോഗനിർണയം",
-      risk:
-        "അപകട പ്രവചനം",
-      hotspots:
-        "ഹോട്ട്‌സ്‌പോട്ടുകൾ",
-      advisories:
-        "ഉപദേശങ്ങൾ",
-      language:
-        "ഭാഷ",
+      diagnosis: "രോഗനിർണയം",
+      risk: "അപകട പ്രവചനം",
+      hotspots: "ഹോട്ട്‌സ്‌പോട്ടുകൾ",
+      advisories: "ഉപദേശങ്ങൾ",
+      language: "ഭാഷ",
     },
 
     loginTitle:
@@ -1815,16 +1521,11 @@ const translations = {
     ...baseTranslation,
 
     nav: {
-      diagnosis:
-        "ਨਿਦਾਨ",
-      risk:
-        "ਖਤਰੇ ਦੀ ਪੇਸ਼ਗੋਈ",
-      hotspots:
-        "ਹਾਟਸਪਾਟ",
-      advisories:
-        "ਸਲਾਹ",
-      language:
-        "ਭਾਸ਼ਾ",
+      diagnosis: "ਨਿਦਾਨ",
+      risk: "ਖਤਰੇ ਦੀ ਪੇਸ਼ਗੋਈ",
+      hotspots: "ਹਾਟਸਪਾਟ",
+      advisories: "ਸਲਾਹ",
+      language: "ਭਾਸ਼ਾ",
     },
 
     loginTitle:
@@ -1970,24 +1671,21 @@ function GoogleSignInButton({
       );
     } else {
       const timer =
-        setInterval(
-          () => {
-            if (
-              window.google
-                ?.accounts
-                ?.id
-            ) {
-              clearInterval(
-                timer
-              );
+        setInterval(() => {
+          if (
+            window.google
+              ?.accounts
+              ?.id
+          ) {
+            clearInterval(
+              timer
+            );
 
-              setGoogleReady(
-                true
-              );
-            }
-          },
-          100
-        );
+            setGoogleReady(
+              true
+            );
+          }
+        }, 100);
 
       return () =>
         clearInterval(
@@ -2196,22 +1894,26 @@ function LoginScreen({
       style={{
         minHeight:
           "100vh",
+
         display:
           "flex",
+
         alignItems:
           "center",
+
         justifyContent:
           "center",
+
         padding:
           "24px",
+
         position:
           "relative",
+
         background:
           "radial-gradient(circle at 85% 10%, rgba(199,217,205,.30), transparent 28%), #f5f6f3",
       }}
     >
-      {/* LOGIN LANGUAGE */}
-
       <div
         style={{
           position:
@@ -2257,8 +1959,7 @@ function LoginScreen({
             }
             onChange={(event) =>
               onLanguageChange(
-                event.target
-                  .value
+                event.target.value
               )
             }
             style={{
@@ -2281,7 +1982,9 @@ function LoginScreen({
             }}
           >
             {languages.map(
-              (item) => (
+              (
+                item
+              ) => (
                 <option
                   key={
                     item.code
@@ -2299,8 +2002,6 @@ function LoginScreen({
           </select>
         </div>
       </div>
-
-      {/* LOGIN CARD */}
 
       <form
         onSubmit={
@@ -2345,7 +2046,11 @@ function LoginScreen({
               "18px",
           }}
         >
-          <Leaf size={26} />
+          <Leaf
+            size={
+              26
+            }
+          />
         </div>
 
         <span className="small-label">
@@ -2416,8 +2121,7 @@ function LoginScreen({
           }
           onChange={(event) =>
             setEmail(
-              event.target
-                .value
+              event.target.value
             )
           }
           placeholder="farmer@cropshield.ai"
@@ -2467,8 +2171,7 @@ function LoginScreen({
           }
           onChange={(event) =>
             setPassword(
-              event.target
-                .value
+              event.target.value
             )
           }
           placeholder="Enter password"
@@ -2677,6 +2380,358 @@ function MapResetView({
 }
 
 /* =========================================================
+   DISEASE HELPERS
+========================================================= */
+
+function formatDisease(
+  name
+) {
+  return String(
+    name || ""
+  )
+    .replace(
+      "Tomato___",
+      ""
+    )
+    .replaceAll(
+      "_",
+      " "
+    );
+}
+
+function getDiseaseType(
+  name
+) {
+  const clean =
+    formatDisease(
+      name
+    ).toLowerCase();
+
+  if (
+    clean.includes(
+      "early blight"
+    )
+  ) {
+    return "early";
+  }
+
+  if (
+    clean.includes(
+      "late blight"
+    )
+  ) {
+    return "late";
+  }
+
+  if (
+    clean.includes(
+      "leaf mold"
+    )
+  ) {
+    return "mold";
+  }
+
+  if (
+    clean.includes(
+      "healthy"
+    )
+  ) {
+    return "healthy";
+  }
+
+  return "unknown";
+}
+
+function translateDiseaseName(
+  name,
+  language
+) {
+  const type =
+    getDiseaseType(
+      name
+    );
+
+  const names = {
+    early: {
+      en: "Early Blight",
+      mr: "अर्ली ब्लाइट",
+      hi: "अर्ली ब्लाइट",
+      te: "ఎర్లీ బ్లైట్",
+      kn: "ಅರ್ಲಿ ಬ್ಲೈಟ್",
+      gu: "અર્લી બ્લાઈટ",
+      ta: "எர்லி ப்ளைட்",
+      bn: "আর্লি ব্লাইট",
+      ml: "ഏർലി ബ്ലൈറ്റ്",
+      pa: "ਅਰਲੀ ਬਲਾਈਟ",
+    },
+
+    late: {
+      en: "Late Blight",
+      mr: "लेट ब्लाइट",
+      hi: "लेट ब्लाइट",
+      te: "లేట్ బ్లైట్",
+      kn: "ಲೇಟ್ ಬ್ಲೈಟ್",
+      gu: "લેટ બ્લાઈટ",
+      ta: "லேட் ப்ளைட்",
+      bn: "লেট ব্লাইট",
+      ml: "ലേറ്റ് ബ്ലൈറ്റ്",
+      pa: "ਲੇਟ ਬਲਾਈટ",
+    },
+
+    mold: {
+      en: "Leaf Mold",
+      mr: "लीफ मोल्ड",
+      hi: "लीफ मोल्ड",
+      te: "లీఫ్ మోల్డ్",
+      kn: "ಲೀಫ್ ಮೋಲ್ಡ್",
+      gu: "લીફ મોલ્ડ",
+      ta: "லீஃப் மோல்ட்",
+      bn: "লিফ মোল্ড",
+      ml: "ലീഫ് മോൾഡ്",
+      pa: "ਲੀਫ ਮੋਲਡ",
+    },
+
+    healthy: {
+      en: "Healthy",
+      mr: "निरोगी",
+      hi: "स्वस्थ",
+      te: "ఆరోగ్యంగా ఉంది",
+      kn: "ಆರೋಗ್ಯಕರ",
+      gu: "સ્વસ્થ",
+      ta: "ஆரோக்கியமானது",
+      bn: "সুস্থ",
+      ml: "ആരോഗ്യമുണ്ട്",
+      pa: "ਤੰਦਰੁਸਤ",
+    },
+  };
+
+  return (
+    names[type]?.[
+      language
+    ] ||
+    names[type]?.en ||
+    formatDisease(name)
+  );
+}
+
+function getDiseaseInfo(
+  disease
+) {
+  const type =
+    getDiseaseType(
+      disease
+    );
+
+  if (
+    type ===
+    "early"
+  ) {
+    return {
+      severity:
+        "Moderate",
+
+      severityLevel:
+        2,
+
+      risk:
+        "Medium",
+
+      action:
+        "Remove visibly affected leaves and monitor nearby plants closely.",
+
+      advice:
+        "Improve airflow around plants, avoid prolonged leaf wetness, and follow locally approved crop-protection guidance.",
+    };
+  }
+
+  if (
+    type ===
+    "late"
+  ) {
+    return {
+      severity:
+        "High",
+
+      severityLevel:
+        3,
+
+      risk:
+        "High",
+
+      action:
+        "Isolate affected plants and inspect surrounding plants immediately.",
+
+      advice:
+        "Monitor the crop frequently and follow locally approved disease-management recommendations.",
+    };
+  }
+
+  if (
+    type ===
+    "mold"
+  ) {
+    return {
+      severity:
+        "Moderate",
+
+      severityLevel:
+        2,
+
+      risk:
+        "Medium",
+
+      action:
+        "Remove severely affected leaves and improve ventilation.",
+
+      advice:
+        "Reduce prolonged humidity around foliage and monitor new growth for further symptoms.",
+    };
+  }
+
+  if (
+    type ===
+    "healthy"
+  ) {
+    return {
+      severity:
+        "Low",
+
+      severityLevel:
+        1,
+
+      risk:
+        "Low",
+
+      action:
+        "Continue regular crop monitoring.",
+
+      advice:
+        "The uploaded image appears healthy. Continue good irrigation, nutrition, and field hygiene practices.",
+    };
+  }
+
+  return {
+    severity:
+      "Unknown",
+
+    severityLevel:
+      0,
+
+    risk:
+      "Review",
+
+    action:
+      "Send the case for expert validation.",
+
+    advice:
+      "The AI could not confidently determine the condition. Capture a clearer image and consult an agriculture expert.",
+  };
+}
+
+function localizeLevel(
+  value,
+  language
+) {
+  const map = {
+    mr: {
+      Moderate:
+        "मध्यम",
+      Medium:
+        "मध्यम",
+      High:
+        "उच्च",
+      Low:
+        "कमी",
+      Critical:
+        "गंभीर",
+      Review:
+        "पडताळणी",
+    },
+
+    hi: {
+      Moderate:
+        "मध्यम",
+      Medium:
+        "मध्यम",
+      High:
+        "उच्च",
+      Low:
+        "कम",
+      Critical:
+        "गंभीर",
+      Review:
+        "समीक्षा",
+    },
+
+    te: {
+      Moderate:
+        "మధ్యస్థ",
+      Medium:
+        "మధ్యస్థ",
+      High:
+        "అధిక",
+      Low:
+        "తక్కువ",
+      Critical:
+        "తీవ్రమైన",
+      Review:
+        "సమీక్ష",
+    },
+
+    kn: {
+      Moderate:
+        "ಮಧ್ಯಮ",
+      Medium:
+        "ಮಧ್ಯಮ",
+      High:
+        "ಹೆಚ್ಚು",
+      Low:
+        "ಕಡಿಮೆ",
+      Critical:
+        "ತೀವ್ರ",
+      Review:
+        "ಪರಿಶೀಲನೆ",
+    },
+
+    gu: {
+      Moderate:
+        "મધ્યમ",
+      Medium:
+        "મધ્યમ",
+      High:
+        "ઉચ્ચ",
+      Low:
+        "ઓછું",
+      Critical:
+        "ગંભીર",
+      Review:
+        "સમીક્ષા",
+    },
+
+    ta: {
+      Moderate:
+        "மிதமான",
+      Medium:
+        "மிதமான",
+      High:
+        "உயர்",
+      Low:
+        "குறைவு",
+      Critical:
+        "தீவிரம்",
+      Review:
+        "மதிப்பாய்வு",
+    },
+  };
+
+  return (
+    map[language]?.[
+      value
+    ] || value
+  );
+}
+
+/* =========================================================
    APP
 ========================================================= */
 
@@ -2687,7 +2742,9 @@ function App() {
   const [
     language,
     setLanguage,
-  ] = useState("en");
+  ] = useState(
+    "en"
+  );
 
   const [
     isLoggedIn,
@@ -2697,7 +2754,8 @@ function App() {
       "undefined" &&
     sessionStorage.getItem(
       "cropshield_logged_in"
-    ) === "true"
+    ) ===
+      "true"
   );
 
   const [
@@ -2745,13 +2803,9 @@ function App() {
   const [
     showLanguageMenu,
     setShowLanguageMenu,
-  ] = useState(false);
-
-  /* IMPORTANT:
-     Location is selected from the Maharashtra
-     district list. No random city or external
-     reverse-geocoded location is used here.
-  */
+  ] = useState(
+    false
+  );
 
   const [
     selectedDistrict,
@@ -2795,16 +2849,12 @@ function App() {
   const [
     expertSubmitted,
     setExpertSubmitted,
-  ] = useState(
-    false
-  );
+  ] = useState(false);
 
   const [
     expertModalOpen,
     setExpertModalOpen,
-  ] = useState(
-    false
-  );
+  ] = useState(false);
 
   const [
     expertQuestion,
@@ -2851,7 +2901,7 @@ function App() {
   }, [language]);
 
   /* =======================================================
-     LOAD SPEECH VOICES
+     LOAD AVAILABLE BROWSER VOICES
   ======================================================= */
 
   useEffect(() => {
@@ -2865,8 +2915,24 @@ function App() {
 
     const loadVoices =
       () => {
+        const available =
+          window.speechSynthesis.getVoices();
+
         setVoices(
-          window.speechSynthesis.getVoices()
+          available
+        );
+
+        console.log(
+          "CropShield available browser voices:",
+          available.map(
+            (voice) => ({
+              name:
+                voice.name,
+
+              lang:
+                voice.lang,
+            })
+          )
         );
       };
 
@@ -2895,7 +2961,7 @@ function App() {
     };
 
   /* =======================================================
-     IMAGE PREDICTION
+     IMAGE ANALYSIS
   ======================================================= */
 
   const analyzeImage =
@@ -2904,7 +2970,9 @@ function App() {
         true
       );
 
-      setError("");
+      setError(
+        ""
+      );
 
       setResult(
         null
@@ -2995,16 +3063,16 @@ function App() {
     };
 
   const handleImageSelect =
-    async (
-      event
-    ) => {
+    async (event) => {
       const file =
         event.target.files?.[0];
 
       if (!file)
         return;
 
-      setError("");
+      setError(
+        ""
+      );
 
       setResult(
         null
@@ -3032,13 +3100,13 @@ function App() {
         return;
       }
 
-      const url =
+      const imageUrl =
         URL.createObjectURL(
           file
         );
 
       setPreview(
-        url
+        imageUrl
       );
 
       await analyzeImage(
@@ -3050,7 +3118,7 @@ function App() {
     };
 
   /* =======================================================
-     WEATHER
+     LIVE WEATHER
   ======================================================= */
 
   const fetchWeather =
@@ -3178,7 +3246,7 @@ function App() {
     };
 
   /* =======================================================
-     EXPERT REVIEW
+     EXPERT
   ======================================================= */
 
   const openExpertReview =
@@ -3232,13 +3300,18 @@ function App() {
     };
 
   /* =======================================================
-     SPEECH
-  ======================================================= */
+     VOICE ASSISTANT
+========================================================= */
 
   const speakAdvice =
     () => {
       if (
-        !result ||
+        !result
+      ) {
+        return;
+      }
+
+      if (
         typeof window ===
           "undefined" ||
         !window.speechSynthesis
@@ -3275,30 +3348,68 @@ function App() {
           .split("-")[0]
           .toLowerCase();
 
-      const matchingVoice =
+      console.log(
+        "CropShield requested speech language:",
+        targetLanguage
+      );
+
+      console.log(
+        "CropShield available voices:",
+        voices.map(
+          (voice) => ({
+            name:
+              voice.name,
+
+            lang:
+              voice.lang,
+          })
+        )
+      );
+
+      const exactVoice =
         voices.find(
           (voice) =>
             voice.lang
               ?.toLowerCase() ===
             targetLanguage.toLowerCase()
-        ) ||
+        );
+
+      const regionalVoice =
         voices.find(
           (voice) =>
             voice.lang
               ?.toLowerCase()
               .startsWith(
-                baseLanguage
+                `${baseLanguage}-`
               )
         );
 
+      const matchingVoice =
+        exactVoice ||
+        regionalVoice;
+
+      console.log(
+        "CropShield selected voice:",
+        matchingVoice
+          ? {
+              name:
+                matchingVoice.name,
+
+              lang:
+                matchingVoice.lang,
+            }
+          : "NO REGIONAL VOICE FOUND"
+      );
+
       /*
-       * Important:
-       * We still allow the browser to speak
-       * when it has a matching regional voice.
+       * IMPORTANT:
        *
-       * If it does not, we explicitly inform
-       * the user instead of pretending the
-       * regional voice is working.
+       * For regional languages we DO NOT
+       * silently fall back to an English voice.
+       *
+       * This is what was causing the user
+       * to hear English even after selecting
+       * Marathi / Telugu / Hindi.
        */
 
       if (
@@ -3306,9 +3417,15 @@ function App() {
           "en" &&
         !matchingVoice
       ) {
+        setSpeaking(
+          false
+        );
+
         setSpeechError(
           t.voiceUnavailable
         );
+
+        return;
       }
 
       const info =
@@ -3402,7 +3519,12 @@ function App() {
         };
 
       utterance.onerror =
-        () => {
+        (event) => {
+          console.error(
+            "CropShield speech error:",
+            event
+          );
+
           setSpeaking(
             false
           );
@@ -3424,7 +3546,7 @@ function App() {
     };
 
   /* =======================================================
-     GOOGLE LOGIN
+     GOOGLE SUCCESS
   ======================================================= */
 
   const handleGoogleSuccess =
@@ -3440,13 +3562,9 @@ function App() {
           return;
         }
 
-        /*
-         * Hackathon prototype login.
-         *
-         * Production version should send
-         * response.credential to FastAPI
-         * and verify the ID token server-side.
-         */
+        console.log(
+          "Google credential received."
+        );
 
         sessionStorage.setItem(
           "cropshield_logged_in",
@@ -3463,366 +3581,7 @@ function App() {
     );
 
   /* =======================================================
-     DISEASE HELPERS
-  ======================================================= */
-
-  const getDiseaseType =
-    (name) => {
-      const clean =
-        String(
-          name || ""
-        )
-          .replace(
-            "Tomato___",
-            ""
-          )
-          .replaceAll(
-            "_",
-            " "
-          )
-          .toLowerCase();
-
-      if (
-        clean.includes(
-          "early blight"
-        )
-      ) {
-        return "early";
-      }
-
-      if (
-        clean.includes(
-          "late blight"
-        )
-      ) {
-        return "late";
-      }
-
-      if (
-        clean.includes(
-          "leaf mold"
-        )
-      ) {
-        return "mold";
-      }
-
-      if (
-        clean.includes(
-          "healthy"
-        )
-      ) {
-        return "healthy";
-      }
-
-      return "unknown";
-    };
-
-  const formatDisease =
-    (name) =>
-      String(
-        name || ""
-      )
-        .replace(
-          "Tomato___",
-          ""
-        )
-        .replaceAll(
-          "_",
-          " "
-        );
-
-  const translateDiseaseName =
-    (
-      name,
-      lang
-    ) => {
-      const type =
-        getDiseaseType(
-          name
-        );
-
-      const names = {
-        early: {
-          en: "Early Blight",
-          mr: "अर्ली ब्लाइट",
-          hi: "अर्ली ब्लाइट",
-          te: "ఎర్లీ బ్లైట్",
-          kn: "ಅರ್ಲಿ ಬ್ಲೈಟ್",
-          gu: "અર્લી બ્લાઈટ",
-          ta: "எர்லி ப்ளைட்",
-          bn: "আর্লি ব্লাইট",
-          ml: "ഏർലി ബ്ലൈറ്റ്",
-          pa: "ਅਰਲੀ ਬਲਾਈਟ",
-        },
-
-        late: {
-          en: "Late Blight",
-          mr: "लेट ब्लाइट",
-          hi: "लेट ब्लाइट",
-          te: "లేట్ బ్లైట్",
-          kn: "ಲೇಟ್ ಬ್ಲೈಟ್",
-          gu: "લેટ બ્લાઈટ",
-          ta: "லேட் ப்ளைட்",
-          bn: "লেট ব্লাইট",
-          ml: "ലേറ്റ് ബ്ലൈറ്റ്",
-          pa: "ਲੇਟ ਬਲਾਈਟ",
-        },
-
-        mold: {
-          en: "Leaf Mold",
-          mr: "लीफ मोल्ड",
-          hi: "लीफ मोल्ड",
-          te: "లీఫ్ మోల్డ్",
-          kn: "ಲೀಫ್ ಮೋಲ್ಡ್",
-          gu: "લીફ મોલ્ડ",
-          ta: "லீஃப் மோல்ட்",
-          bn: "লিফ মোল্ড",
-          ml: "ലീഫ് മോൾഡ്",
-          pa: "ਲੀਫ ਮੋਲਡ",
-        },
-
-        healthy: {
-          en: "Healthy",
-          mr: "निरोगी",
-          hi: "स्वस्थ",
-          te: "ఆరోగ్యంగా ఉంది",
-          kn: "ಆರೋಗ್ಯಕರ",
-          gu: "સ્વસ્થ",
-          ta: "ஆரோக்கியமானது",
-          bn: "সুস্থ",
-          ml: "ആരോഗ്യമുണ്ട്",
-          pa: "ਤੰਦਰੁਸਤ",
-        },
-      };
-
-      return (
-        names[type]?.[
-          lang
-        ] ||
-        names[type]?.en ||
-        formatDisease(name)
-      );
-    };
-
-  const getDiseaseInfo =
-    (disease) => {
-      const type =
-        getDiseaseType(
-          disease
-        );
-
-      if (
-        type ===
-        "early"
-      ) {
-        return {
-          severity:
-            "Moderate",
-
-          severityLevel:
-            2,
-
-          risk:
-            "Medium",
-
-          action:
-            "Remove visibly affected leaves and monitor nearby plants closely.",
-
-          advice:
-            "Improve airflow around plants, avoid prolonged leaf wetness, and follow locally approved crop-protection guidance.",
-        };
-      }
-
-      if (
-        type ===
-        "late"
-      ) {
-        return {
-          severity:
-            "High",
-
-          severityLevel:
-            3,
-
-          risk:
-            "High",
-
-          action:
-            "Isolate affected plants and inspect surrounding plants immediately.",
-
-          advice:
-            "Monitor the crop frequently and follow locally approved disease-management recommendations.",
-        };
-      }
-
-      if (
-        type ===
-        "mold"
-      ) {
-        return {
-          severity:
-            "Moderate",
-
-          severityLevel:
-            2,
-
-          risk:
-            "Medium",
-
-          action:
-            "Remove severely affected leaves and improve ventilation.",
-
-          advice:
-            "Reduce prolonged humidity around foliage and monitor new growth for further symptoms.",
-        };
-      }
-
-      if (
-        type ===
-        "healthy"
-      ) {
-        return {
-          severity:
-            "Low",
-
-          severityLevel:
-            1,
-
-          risk:
-            "Low",
-
-          action:
-            "Continue regular crop monitoring.",
-
-          advice:
-            "The uploaded image appears healthy. Continue good irrigation, nutrition, and field hygiene practices.",
-        };
-      }
-
-      return {
-        severity:
-          "Unknown",
-
-        severityLevel:
-          0,
-
-        risk:
-          "Review",
-
-        action:
-          "Send the case for expert validation.",
-
-        advice:
-          "The AI could not confidently determine the condition. Capture a clearer image and consult an agriculture expert.",
-      };
-    };
-
-  const localizeLevel =
-    (
-      value,
-      lang
-    ) => {
-      const map = {
-        mr: {
-          Moderate:
-            "मध्यम",
-          Medium:
-            "मध्यम",
-          High:
-            "उच्च",
-          Low:
-            "कमी",
-          Critical:
-            "गंभीर",
-          Review:
-            "पडताळणी",
-        },
-
-        hi: {
-          Moderate:
-            "मध्यम",
-          Medium:
-            "मध्यम",
-          High:
-            "उच्च",
-          Low:
-            "कम",
-          Critical:
-            "गंभीर",
-          Review:
-            "समीक्षा",
-        },
-
-        te: {
-          Moderate:
-            "మధ్యస్థ",
-          Medium:
-            "మధ్యస్థ",
-          High:
-            "అధిక",
-          Low:
-            "తక్కువ",
-          Critical:
-            "తీవ్రమైన",
-          Review:
-            "సమీక్ష",
-        },
-
-        kn: {
-          Moderate:
-            "ಮಧ್ಯಮ",
-          Medium:
-            "ಮಧ್ಯಮ",
-          High:
-            "ಹೆಚ್ಚು",
-          Low:
-            "ಕಡಿಮೆ",
-          Critical:
-            "ತೀವ್ರ",
-          Review:
-            "ಪರಿಶೀಲನೆ",
-        },
-
-        gu: {
-          Moderate:
-            "મધ્યમ",
-          Medium:
-            "મધ્યમ",
-          High:
-            "ઉચ્ચ",
-          Low:
-            "ઓછું",
-          Critical:
-            "ગંભીર",
-          Review:
-            "સમીક્ષા",
-        },
-
-        ta: {
-          Moderate:
-            "மிதமான",
-          Medium:
-            "மிதமான",
-          High:
-            "உயர்",
-          Low:
-            "குறைவு",
-          Critical:
-            "தீவிரம்",
-          Review:
-            "மதிப்பாய்வு",
-        },
-      };
-
-      return (
-        map[lang]?.[
-          value
-        ] || value
-      );
-    };
-
-  /* =======================================================
-     DISEASE INFO
+     RISK DATA
   ======================================================= */
 
   const diseaseInfo =
@@ -3831,10 +3590,6 @@ function App() {
           result.class
         )
       : null;
-
-  /* =======================================================
-     RISK DATA
-  ======================================================= */
 
   const riskData = {
     overall:
@@ -3877,21 +3632,12 @@ function App() {
         ? `${weather.precipitation} mm`
         : "—",
 
-    /*
-     * Prototype inputs.
-     * NOT live sensor values.
-     */
-
     pestActivity:
       "High",
 
     cropStage:
       "Flowering",
   };
-
-  /* =======================================================
-     PROTOTYPE RISK TREND
-========================================================= */
 
   const riskTrend = [
     {
@@ -4029,7 +3775,7 @@ function App() {
   /* =======================================================
      HOTSPOTS
      SIMULATED DATA
-========================================================= */
+  ======================================================= */
 
   const hotspotCenter =
     districts[
@@ -4064,9 +3810,6 @@ function App() {
         lng:
           hotspotCenter[1] +
           0.035,
-
-        source:
-          "Simulated demonstration record",
       },
 
       {
@@ -4095,9 +3838,6 @@ function App() {
         lng:
           hotspotCenter[1] -
           0.025,
-
-        source:
-          "Simulated demonstration record",
       },
 
       {
@@ -4126,9 +3866,6 @@ function App() {
         lng:
           hotspotCenter[1] -
           0.02,
-
-        source:
-          "Simulated demonstration record",
       },
 
       {
@@ -4157,9 +3894,6 @@ function App() {
         lng:
           hotspotCenter[1] +
           0.045,
-
-        source:
-          "Simulated demonstration record",
       },
 
       {
@@ -4188,9 +3922,6 @@ function App() {
         lng:
           hotspotCenter[1] +
           0.025,
-
-        source:
-          "Simulated demonstration record",
       },
     ];
 
@@ -4248,7 +3979,7 @@ function App() {
 
   /* =======================================================
      DIAGNOSIS PAGE
-========================================================= */
+  ======================================================= */
 
   const renderDiagnosis =
     () => (
@@ -5401,24 +5132,34 @@ function App() {
           style={{
             marginTop:
               "20px",
+
             marginBottom:
               "18px",
+
             padding:
               "16px 18px",
+
             borderRadius:
               "14px",
+
             background:
               "rgba(255,255,255,.82)",
+
             border:
               "1px solid rgba(18,55,42,.08)",
+
             display:
               "flex",
+
             alignItems:
               "center",
+
             justifyContent:
               "space-between",
+
             gap:
               "16px",
+
             flexWrap:
               "wrap",
           }}
@@ -5542,18 +5283,25 @@ function App() {
           style={{
             marginBottom:
               "16px",
+
             padding:
               "11px 13px",
+
             borderRadius:
               "11px",
+
             background:
               "#f5f7f5",
+
             border:
               "1px solid #e1e6e2",
+
             color:
               "#68746e",
+
             fontSize:
               "10px",
+
             lineHeight:
               1.55,
           }}
@@ -5568,7 +5316,7 @@ function App() {
 
         <div className="risk-main-grid">
 
-          {/* RISK GRAPH */}
+          {/* GRAPH */}
 
           <div className="forecast-card large">
 
@@ -5730,9 +5478,11 @@ function App() {
                   1.5,
               }}
             >
+
               {
                 t.liveWeatherExplanation
               }
+
             </p>
 
 
@@ -6195,7 +5945,7 @@ function App() {
           </div>
 
 
-          {/* TREND EXPLANATION */}
+          {/* RISK EXPLANATION */}
 
           <div className="forecast-card action-card">
 
@@ -6720,7 +6470,6 @@ function App() {
                             spot.count
                           }
 
-
                         </div>
 
                       </Popup>
@@ -7057,7 +6806,7 @@ function App() {
 
               {result
                 ? diseaseInfo?.advice
-                : "Upload a leaf image first. CropShield will tailor the advisory to the detected condition."}
+                : "Upload a leaf image first. CropShield will tailor this advisory to the detected condition."}
 
             </p>
 
@@ -7126,16 +6875,12 @@ function App() {
               {(result
                 ? [
                     diseaseInfo.action,
-
                     "Inspect nearby plants for similar symptoms.",
-
                     "Continue regular crop scouting.",
                   ]
                 : [
                     "Upload a clear crop-leaf image.",
-
                     "Wait for the AI diagnosis.",
-
                     "Review the advisory before field action.",
                   ]
               ).map(
@@ -7212,9 +6957,7 @@ function App() {
 
               {[
                 "Scout crops regularly.",
-
                 "Track new symptoms and affected areas.",
-
                 "Use locally approved agricultural guidance.",
               ].map(
                 (
@@ -7234,9 +6977,11 @@ function App() {
 
 
                     <p>
+
                       {
                         item
                       }
+
                     </p>
 
                   </div>
@@ -7313,6 +7058,7 @@ function App() {
                   {
                     t.speaking
                   }
+
                 </>
 
               ) : (
@@ -7588,7 +7334,7 @@ function App() {
     };
 
   /* =======================================================
-     LOGIN
+     LOGIN ROUTE
   ======================================================= */
 
   if (!isLoggedIn) {
@@ -7993,9 +7739,7 @@ function App() {
         >
 
           <div
-            onClick={(
-              event
-            ) =>
+            onClick={(event) =>
               event.stopPropagation()
             }
             style={{
